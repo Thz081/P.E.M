@@ -3,7 +3,7 @@ export default {
  async fetch(request) {
   const incoming=new URL(request.url);
   const path=incoming.searchParams.get('__pem_path') || incoming.pathname;
-  const upstream=new URL(path.startsWith('/')?path:'/'+path,UPSTREAM);
+  const upstream=new URL(UPSTREAM); upstream.pathname=path.startsWith('/')?path:'/'+path;
   const headers=new Headers(request.headers);
   headers.delete('host'); headers.delete('content-length'); headers.delete('accept-encoding');
   if(!['GET','HEAD'].includes(request.method)){
