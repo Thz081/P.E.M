@@ -4,6 +4,8 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 
 ## Concluído
 
+- [x] **P08a · P0 · Persistência, exportação e isolamento demo.** Notas, leitura, respostas, materiais e continuidade sobreviveram ao reload; download JSON conferido integralmente; chaves sintéticas de outros acessos preservadas e contexto separado vazio. Dois novos testes em tests/e2e/p08a.spec.ts (desktop/mobile); total de 6 E2E, 4 unitários, tipos e conteúdo passaram. Sem correções no aplicativo. Limites e evidências em docs/STATUS.md; commit desta entrega identificado no histórico por `test: verify P08a local persistence export and demo isolation`.
+
 - [x] **P07a · P0 · Grants explícitos e isolamento SQL.** Migração 002 aplicada; tests/rls-isolation.sql passou com duas identidades sintéticas, compartilhamento/revogação/desativação e rollback. Relatório: docs/MISSAO-P07a.md. P07 completo ainda exige integração de contas.
 
 - [x] **P01 · P0 · Cópia da produção.** Aceite: clone com commit de referência e archive externo; produção intacta. Evidência: branch codex/plataforma-estudos; arquivo ../output/PEM-producao-baseline.zip; baseline 5e1982b.
@@ -18,8 +20,6 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 - [ ] **P07 · P0 · Schema e RLS.** Aceite: isolamento real entre duas contas, admin controlado, nenhuma tabela exposta indevidamente. Evidência parcial: migration aplicada; teste RLS/advisors pendentes.
 
 ## Em andamento
-
-- [ ] **P08a · P0 · Próxima missão delimitada.** Testar notas/progresso após reload, download JSON e isolamento da demonstração; corrigir somente falhas encontradas. Entregar com testes, checkpoint e commit.
 
 - [ ] **P08 · P0 · Regressão e correções.** Dependência P04. Corrigir persistência/importação/continuidade, testar CLI+browser e guardar resultados.
 - [ ] **P09 · P0 · Configuração de contas.** Dependência P03/P07. Chave secreta precisa ser salva pelo dono em .env.local; preparar importação somente 41 matrículas 3A DS.

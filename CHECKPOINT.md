@@ -27,7 +27,9 @@ Atualizado em 22/09/2026. Leia este arquivo antes de alterar o projeto.
 - Login redesenhado; MONARCAS; demo aluno/professor; leitura, notas e exportação.
 - Redação: 8 lições e versões locais; ainda sem avaliação real por IA.
 - Demo local: botão de visita ou visitante / monarcas; não é conta privada.
-- Últimas verificações locais: tipos, build, conteúdo, 4 testes unitários e 4 E2E passaram.
+- P08a concluída: notas/progresso após reload, download JSON e isolamento demo validados em 1280×844 e 390×844. Nenhuma correção no aplicativo necessária.
+- Verificações P08a: tipos, conteúdo, 4 testes unitários e 6 E2E passaram. Build passou na execução anterior; não repetido nesta missão de testes.
+- Console P08a: 404 conhecido de favicon.ico, fora do escopo; nenhum outro erro nos fluxos testados. Detalhes em docs/STATUS.md.
 - npm audit: zero vulnerabilidades na execução registrada; não substitui auditoria completa.
 - Missão P07a: permissões SQL e RLS testadas com duas identidades fictícias e rollback.
 - Teste tests/rls-isolation.sql passou: isolamento, papel, compartilhamento, revogação e desativação.
@@ -46,6 +48,6 @@ Atualizado em 22/09/2026. Leia este arquivo antes de alterar o projeto.
 - Extração privada retomável: scripts/prepare_acervo.py --manifest ../analise/acervo/manifest.json.
 - Último checkpoint conferido: 58 documentos, 508 páginas, zero erros; conferir índice para atualização.
 - Extração NÃO significa revisão, OCR concluído, embeddings ou publicação autorizada.
-- Próxima missão sugerida P08a: testar persistência local após recarregar, exportação e isolamento demo.
+- P08a entregue com tests/e2e/p08a.spec.ts; isolamento validado apenas com dados locais sintéticos e contextos separados, sem autenticação real.
 - Depois: P09/P11 contas reais quando chaves estiverem configuradas; seguir restante do Kanban.
 - Histórico longo opcional: ../CONTEXTO-COMPLETO-PEM.md; o código e testes prevalecem sobre textos antigos.
