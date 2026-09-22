@@ -1,1 +1,12 @@
-{"rewrites":[{"source":"/:path*","destination":"/api/index?__pem_path=/:path*"}]}
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/index?__pem_path=/"
+    },
+    {
+      "source": "/:path+",
+      "destination": "/api/index?__pem_path=/:path+"
+    }
+  ]
+}
