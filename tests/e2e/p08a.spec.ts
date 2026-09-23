@@ -8,9 +8,7 @@ for (const width of [1280, 390]) {
   const privateRequests:string[]=[];
   page.on('pageerror', error=>errors.push(error.message));
   page.on('console', message=>{
-   // Known missing favicon is unrelated to persistence; recorded in STATUS.md.
-   const favicon404 = message.location().url.endsWith('/favicon.ico') && message.text().includes('404');
-   if(message.type()==='error' && !favicon404) errors.push(`${message.text()} ${message.location().url}`);
+   if(message.type()==='error') errors.push(`${message.text()} ${message.location().url}`);
   });
   page.on('request', request=>{if(/\/api\/(progress|essays)/.test(request.url())) privateRequests.push(request.url());});
   await page.goto('/demonstracao');

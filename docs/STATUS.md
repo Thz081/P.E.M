@@ -1,4 +1,26 @@
 # Estado atual — 22/09/2026
+## 23/09 — trabalho em andamento
+Marco posterior: E2E real de duas contas de aluno mais conta admin separada passou 1/1 após corrigir redirect. Admins definitivos2 e alunos41 no Supabase;4 códigos iniciais pendentes em arquivo privado fora do repo, expiram 24/09 00h14 Brasília. Ainda nenhum acesso real ativado. Testes completos não foram repetidos após só a correção de redirect; os outros10 E2E haviam passado na execução imediatamente anterior.
+Backup privado filtrado:41 estudantes 3A DS com nome/matrícula/turma importados; nenhuma senha ou código do backup reutilizado. Banco confirmou41 distintos/41 nomes/0 ativados. Acesso separado aluno/admin para dois responsáveis em implementação, migração aplicada; script dry-run passou, importação dos dois admins ainda pendente.
+
+Login legado preservado para matrículas não cadastradas. IA: resposta real com fonte passou; pergunta sem base mostrou citação irrelevante, então filtro de concordância lexical+semântica foi adicionado; falta teste real após esse filtro. IA segue desativada. Cloudflare reservou7200/8500 neurônios em23/09 na última consulta.
+
+Tipos, lint,8 unitários e build passaram após implementação inicial. E2E sobre build:10 passaram,1 falha em redirect aluno /admin,1 IA pulado; correção feita, nova execução pendente. Produção antiga intacta. PDF final do Claude em Downloads revisado visualmente; atualizar após mudança efetiva no site. Guia ainda sem upload no Drive por403 da pasta.
+
+## Fechamento atualizado — prevalece sobre histórico abaixo
+Produção antiga preservada. Nova versão NÃO publicada. Retomada exata em ../CONTEXTO.md. Autorização ampliada para múltiplas missões por dependência, priorizando estabilidade.
+
+Validação final: build, lint66 arquivos, tipos, conteúdo, 8 unitários, 2 Python, audit zero e diff-check passaram. PEM_REAL_AUTH_TESTS=1 npm run test:e2e sobre produção local com IA off: 11 passaram, 1 IA pulado, 50,8s. Contas fictícias em Supabase real validaram ativação concorrente/expirada, login, admin, perfil, isolamento, compartilhamento/revogação/exclusão/desativação/logout. Fixtures removidas.
+
+Perfil, admin, recuperação e redações no banco implementados; favicon corrigido. Contador dos dois dias implementado no início e ENEM. Nenhum aluno real/admin definitivo cadastrado. Credenciais locais presentes e conexões validadas, sem revelar valores.
+
+Extração:185 PDFs/1868 páginas/2296 trechos;323 páginas exigem revisão/OCR. Piloto2docs/6embeddings indexado. IA falhou503 após um sucesso com fonte; feedback real não validado. Manter flags off. Ledger de orçamento aplicado remotamente.
+
+Faltam transição login/progresso legado, preview Vercel, configuração de ambientes, revisão/commit/CI e rollback. Vercel produção READY baseline5e1982b consultada com teamId vazio; equipe explícita403. Sem push/deploy.
+
+Guia completo em GUIA-PROFESSOR.txt. Upload para pasta correta do Drive recusado403 insufficientParentPermissions; guia somente local. Recursos futuros identificados como planejados.
+
+## Histórico anterior
 
 Entrada curta: CHECKPOINT.md. Uma missão por entrega; backlog em tasks/todo.md.
 

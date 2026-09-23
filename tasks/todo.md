@@ -1,4 +1,28 @@
 # Quadro de trabalho — P.E.M
+## Atualização 23/09 — andamento atual
+- [x] P09: 41 contas de aluno importadas do backup filtrado 3A DS, nomes/matrículas/turma conferidos no banco; senhas do backup não usadas. Pendente para uso: emitir códigos individuais aos outros39 conforme responsável.
+- [x] P12 parcial de contas: dois admins definitivos separados das contas de aluno, quatro códigos de uso único pendentes; E2E sintético separado passou. Painel ainda não testado após ativação real das duas pessoas.
+- [x] P09 parcial: backup privado517 filtrado por turma,41 estudantes 3A DS importados com nome/turma/matrícula; banco confirmou41 distintos/0 ativados. Senhas do backup ignoradas.
+- [ ] P12 ampliado: duas pessoas com conta de aluno e conta admin distintas. Migração e interface em implementação; script dry-run passou. Teste E2E falhou no redirect aluno /admin, corrigido, repetição pendente. Códigos reais ainda não emitidos.
+- [ ] P19: piloto respondeu com fonte; busca sem fonte citou material irrelevante. Filtro de acordo semântico+lexical implementado, teste real pendente. IA desativada. Cota Cloudflare do dia quase no limite.
+- [ ] P25/P26: nova estabilização e preview após fechar mudanças. Site público ainda é versão antiga. PDF final do professor em Downloads, atualização após publicação. Drive upload da pasta P.E.M segue403.
+
+## Prioridades atualizadas no fechamento de 22/09
+Esta seção prevalece sobre os estados históricos abaixo. Detalhes em ../CONTEXTO.md.
+
+1. P25/P26: preservar produção antiga até validar login/progresso legado, preview/ambientes e rollback. Build e11 E2E locais passaram; não houve deploy.
+2. P09/P11/P12/P13/P14: credenciais presentes; implementação e teste com contas reais temporárias passaram. Faltam lista correta41/admin definitivo e validação específica da migração/sincronização entre dispositivos.
+3. P15: guia completo ../docs/GUIA-PROFESSOR.txt pronto; upload Drive falhou403 por falta de escrita na pasta. Resolver permissão, enviar e conferir. Atualizar disponibilidade após publicação.
+4. P17/P18: extração185 PDFs concluída;323 páginas pendentes de revisão/OCR. Piloto2docs/6embeddings indexado, benchmark30 perguntas pendente.
+5. P19/P20: geração real falhou503, feedback real não aprovado; IA off. Diagnosticar etapa sem expor dados/respeitando orçamento.
+6. Depois P16 e P22–P24. Não abrir novas implementações antes de fechar estabilidade.
+
+- [x] P08b: contador real dos dois dias ENEM no início e ENEM, Brasília, atualização por minuto/zero após prova; testes de limites passaram. Disponível localmente, publicação pendente.
+- [x] P08c: build, lint, tipos, conteúdo, 8 unitários, 2 Python, 11 E2E com IA off e audit zero. Teste IA pulado nesta candidata, não aprovado.
+- [ ] P10: workflow/lint preparados; CI remota e proteção de branch pendentes.
+- [ ] Fechamento Git: migração completa ainda no working tree. Revisar arquivos públicos/segredos e registrar commit reproduzível, sem push main antes de P25/P26.
+
+## Kanban histórico e critérios de aceite preservados
 
 Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atualização: 22/09/2026.
 

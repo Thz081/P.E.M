@@ -1,0 +1,4 @@
+import {createServerClient} from '@supabase/ssr';
+import {NextResponse,type NextRequest} from 'next/server';
+export async function proxy(request:NextRequest){let response=NextResponse.next({request});if(!process.env.SUPABASE_URL||!process.env.SUPABASE_ANON_KEY)return response;const db=createServerClient(process.env.SUPABASE_URL,process.env.SUPABASE_ANON_KEY,{cookies:{getAll:()=>request.cookies.getAll(),setAll:values=>{values.forEach(({name,value})=>request.cookies.set(name,value));response=NextResponse.next({request});values.forEach(({name,value,options})=>response.cookies.set(name,value,options));}}});try{await db.auth.getClaims();}catch{/* Personal routes deny access; editorial demo stays available. */}response.headers.set('Cache-Control','private, no-store');return response;}
+export const config={matcher:['/estudar/:path*','/admin/:path*','/api/:path*']};

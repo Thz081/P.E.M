@@ -1,0 +1,6 @@
+import {z} from 'zod';
+import {json,readJson} from '@/lib/server/http';
+import {student} from '@/lib/server/security';
+import {adminDb,identifier} from '@/lib/server/admin';
+const schema=z.object({essayId:z.string().uuid(),matricula:z.string().regex(/^\d{5,12}$/),revoke:z.boolean().optional()});
+export async function POST(req:Request){try{const user=await student();if(!user)return json({error:'Entre com sua conta pessoal.'},401);const value=schema.parse(await readJson(req,1500));const db=adminDb();const {data:essay}=await db.from('essays').select('id').eq('id',value.essayId).eq('user_id',user.id).maybeSingle();if(!essay)return json({error:'Texto não encontrado.'},404);const {data:recipient}=await db.from('roster').select('user_id').eq('identifier',identifier(value.matricula)).not('activated_at','is',null).maybeSingle();if(!recipient)return json({error:'Destinatário não disponível.'},400);const result=value.revoke?await db.from('essay_shares').delete().eq('essay_id',value.essayId).eq('recipient',recipient.user_id).eq('owner_id',user.id):await db.from('essay_shares').upsert({essay_id:value.essayId,recipient:recipient.user_id,owner_id:user.id});return result.error?json({error:'Não foi possível atualizar o compartilhamento.'},503):json({ok:true});}catch{return json({error:'Confira os dados.'},400);}}

@@ -1,0 +1,20 @@
+import {test,expect} from '@playwright/test';
+test('demo: study, notes, questions, flashcards, ENEM and writing stay functional',async({page})=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('/');await expect(page.getByRole('heading',{name:'Bom ter você aqui.'})).toBeVisible();
+ await page.getByRole('link',{name:'Explorar demonstração'}).click();await expect(page.locator('.home-hero')).toBeVisible();
+ await page.getByRole('link',{name:'Matérias',exact:true}).click();await expect(page.locator('.subject-tile')).toHaveCount(12);
+ await page.getByRole('button',{name:/MATEMÁTICA|Matemática/}).click();await expect(page.locator('.lesson-list button')).toHaveCount(4);
+ await page.locator('.lesson-list button').first().click();await page.getByLabel('Suas anotações').fill('Revisar radianos no próximo estudo.');await page.getByLabel('Consigo explicar este assunto').check();
+ await page.getByRole('button',{name:'Voltar aos assuntos'}).click();await page.locator('.lesson-list button').first().click();await expect(page.getByLabel('Suas anotações')).toHaveValue('Revisar radianos no próximo estudo.');
+ await page.getByRole('link',{name:'Questões',exact:true}).click();await page.getByLabel('Matéria das questões').selectOption('FÍSICA');await page.locator('.options button').first().click();await expect(page.locator('.answer-feedback')).toBeVisible();await page.getByRole('button',{name:'Refazer seleção'}).click();await expect(page.locator('.answer-feedback')).toHaveCount(0);
+ await page.getByRole('link',{name:'Flashcards',exact:true}).click();await page.getByRole('button',{name:'Revelar resposta',exact:true}).click();await expect(page.locator('.flashcard>span')).toHaveText('RESPOSTA');
+ await page.getByRole('link',{name:'Biblioteca',exact:true}).click();await expect(page.locator('.resource-list>div')).toHaveCount(25);
+ await page.getByRole('link',{name:'ENEM',exact:true}).click();await expect(page.locator('.roadmap>article')).toHaveCount(9);await page.getByRole('button',{name:'Videoaulas',exact:true}).click();await expect(page.locator('.video-grid article')).toHaveCount(29);await page.getByRole('button',{name:'Questões ENEM',exact:true}).click();await page.locator('.options button').first().click();await expect(page.locator('.answer-feedback')).toBeVisible();
+ await page.getByRole('link',{name:'Redação',exact:true}).click();await expect(page.locator('.writing-lessons details')).toHaveCount(8);await page.getByRole('button',{name:'Escrever e revisar'}).click();await page.getByLabel('Tema da redação').fill('Acesso à leitura');await page.getByLabel('Seu texto',{exact:true}).fill('Uma versão de teste para conferir o salvamento do rascunho.');await page.getByRole('button',{name:'Salvar versão',exact:true}).click();await expect(page.getByText('Versão salva neste navegador.',{exact:true})).toBeVisible();await page.getByRole('button',{name:'Minhas versões'}).click();await expect(page.getByRole('heading',{name:'Acesso à leitura',exact:true})).toBeVisible();
+ expect(errors).toEqual([]);
+});
+test('public preview never authorizes private APIs or AI',async({request})=>{for(const path of ['/api/progress','/api/essays','/api/admin']){const r=await request.get(path);expect([401,403]).toContain(r.status());}const r=await request.post('/api/login',{data:{matricula:'00000',senha:'invalid'},headers:{origin:'https://foreign.test'}});expect(r.ok()).toBeFalsy();});
+test('mobile pages have no horizontal overflow',async({page})=>{await page.setViewportSize({width:390,height:844});for(const path of ['/','/demonstracao','/demonstracao/materias','/demonstracao/enem','/demonstracao/redacao']){await page.goto(path);await expect(page.locator('main')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy();}});
+
+test('demo cannot call AI endpoints even with a same-origin request',async({request})=>{for(const path of ['/api/chat','/api/essays/review']){const response=await request.post(path,{headers:{origin:'http://localhost:4180'},data:{message:'teste'}});expect(response.status()).toBe(401);}});

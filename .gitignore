@@ -11,3 +11,4 @@ acervo/
 *.pdf
 __pycache__/
 *.pyc
+supabase/.temp/
