@@ -1,4 +1,9 @@
 # P.E.M — entrada para Codex ou Claude
+## Marco de 23/09/2026 — P11 concluída e modelos por missão
+- P11 concluída após E2E real (35,8 s): ativação concorrente/expirada/inválida, uso único, não enumeração, rate limit, recuperação, troca de senha, recusa da senha anterior e do código reutilizado. `playwright.config.ts` ganhou limites por ação/navegação/expectativa; o teardown reserva tempo e não deixa fixtures. Supabase confirmado com zero usuários sintéticos após o teste.
+- Regressão final da etapa: 11 E2E passaram em 55,6 s; somente IA real pulada por estar desligada. P10 também concluída com CI/proteção da main verificadas. Kanban principal: 6/26 missões concluídas, 20 abertas. `tasks/todo.md` recomenda GPT-6 Luna para lotes/rotina, GPT-6 Sol para desenvolvimento e GPT-6 Astra para arquitetura/revisões críticas. GPT-6 Sol médio é a recomendação atual para P12/P13; preços de API não equivalem necessariamente à porcentagem da cota do Codex.
+- CI do commit `eae78c2` passou e proteção de `main` está ativa. Mudanças de P11/modelos ainda precisam de commit/CI. Próxima missão: P12, sem promover produção antes de P25/P26.
+
 ## Estado verificado em 23/09/2026 — leia antes das notas históricas
 - Branch `codex/plataforma-estudos`: migração pública commitada e enviada em `1b8bd39`; PR draft #1 aberto. CI `PEM quality` passou no GitHub. Preview Vercel criado, mas a leitura da URL pelo conector foi negada; QA de preview ainda pendente. Produção `pem-monarcas.vercel.app` segue no baseline antigo `5e1982b`.
 - Turma 3A DS: 41 alunos importados com nome, turma e matrícula; dois administradores autorizados têm contas de aluno e admin separadas. Quatro códigos de ativação estão apenas no arquivo privado `../analise/codigos-acesso-inicial-20260923.json`, expiram 24/09 00h14 Brasília. Nenhuma conta ativada; outros 39 alunos ainda não receberam código.

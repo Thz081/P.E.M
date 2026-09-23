@@ -1,33 +1,37 @@
 # Quadro de trabalho — P.E.M
-## Situação confirmada em 23/09 — prevalece sobre linhas históricas
-- [x] Branch de trabalho enviada em `1b8bd39`, PR draft #1 e CI `PEM quality` verde. Produção antiga preservada; preview gerado, acesso de QA ainda negado pelo conector Vercel.
-- [x] 41 alunos de 3A DS e duas contas admin separadas provisionados; quatro códigos privados emitidos para as duas pessoas indicadas. E2E da separação admin/aluno passou após correção do redirecionamento. Nenhuma ativação pessoal realizada.
-- [x] Correção local do filtro de fontes: tipos, lint, 9 unitários e build passaram. Falta teste real de recuperação/resposta e feedback de redação; IA desligada.
-- [ ] Concluir P10/P25/P26: enviar a correção, repetir CI, abrir e testar preview, validar ambientes, regressão e rollback antes de promover. Não atualizar PDF como versão publicada antes da publicação.
-- [ ] Ativação pessoal dos dois responsáveis e emissão dos códigos dos outros 39 alunos, com entrega privada coordenada.
+## Estado atual — 23/09/2026
 
-## Atualização 23/09 — andamento atual
-- [x] P09: 41 contas de aluno importadas do backup filtrado 3A DS, nomes/matrículas/turma conferidos no banco; senhas do backup não usadas. Pendente para uso: emitir códigos individuais aos outros39 conforme responsável.
-- [x] P12 parcial de contas: dois admins definitivos separados das contas de aluno, quatro códigos de uso único pendentes; E2E sintético separado passou. Painel ainda não testado após ativação real das duas pessoas.
-- [x] P09 parcial: backup privado517 filtrado por turma,41 estudantes 3A DS importados com nome/turma/matrícula; banco confirmou41 distintos/0 ativados. Senhas do backup ignoradas.
-- [ ] P12 ampliado: duas pessoas com conta de aluno e conta admin distintas. Migração e interface em implementação; script dry-run passou. Teste E2E falhou no redirect aluno /admin, corrigido, repetição pendente. Códigos reais ainda não emitidos.
-- [ ] P19: piloto respondeu com fonte; busca sem fonte citou material irrelevante. Filtro de acordo semântico+lexical implementado, teste real pendente. IA desativada. Cota Cloudflare do dia quase no limite.
-- [ ] P25/P26: nova estabilização e preview após fechar mudanças. Site público ainda é versão antiga. PDF final do professor em Downloads, atualização após publicação. Drive upload da pasta P.E.M segue403.
+Contagem principal: 26 missões; 6 concluídas (P01, P02, P03, P09, P10, P11), 20 abertas. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
 
-## Prioridades atualizadas no fechamento de 22/09
-Esta seção prevalece sobre os estados históricos abaixo. Detalhes em ../CONTEXTO.md.
+### Prioridade e modelo recomendado
 
-1. P25/P26: preservar produção antiga até validar login/progresso legado, preview/ambientes e rollback. Build e11 E2E locais passaram; não houve deploy.
-2. P09/P11/P12/P13/P14: credenciais presentes; implementação e teste com contas reais temporárias passaram. Faltam lista correta41/admin definitivo e validação específica da migração/sincronização entre dispositivos.
-3. P15: guia completo ../docs/GUIA-PROFESSOR.txt pronto; upload Drive falhou403 por falta de escrita na pasta. Resolver permissão, enviar e conferir. Atualizar disponibilidade após publicação.
-4. P17/P18: extração185 PDFs concluída;323 páginas pendentes de revisão/OCR. Piloto2docs/6embeddings indexado, benchmark30 perguntas pendente.
-5. P19/P20: geração real falhou503, feedback real não aprovado; IA off. Diagnosticar etapa sem expor dados/respeitando orçamento.
-6. Depois P16 e P22–P24. Não abrir novas implementações antes de fechar estabilidade.
+Use o modelo mais leve que mantenha o critério de qualidade. `GPT-6 Luna` atende tarefas frequentes e bem delimitadas; `GPT-6 Sol` é o modelo principal para código e decisões do dia a dia; `GPT-6 Astra` fica reservado para análise profunda, arquitetura e aprovação de mudanças críticas. A recomendação segue o guia oficial de seleção da OpenAI e o catálogo vigente em 23/09/2026. Na API, GPT-6 Luna custa US$0,10/US$0,50 e GPT-6 Sol US$2/US$10 por milhão de tokens de entrada/saída; GPT-5.6 Sol custa US$4/US$20. O consumo percentual da cota do Codex pode usar outra métrica e não deve ser inferido diretamente do preço da API.
 
-- [x] P08b: contador real dos dois dias ENEM no início e ENEM, Brasília, atualização por minuto/zero após prova; testes de limites passaram. Disponível localmente, publicação pendente.
-- [x] P08c: build, lint, tipos, conteúdo, 8 unitários, 2 Python, 11 E2E com IA off e audit zero. Teste IA pulado nesta candidata, não aprovado.
-- [ ] P10: workflow/lint preparados; CI remota e proteção de branch pendentes.
-- [ ] Fechamento Git: migração completa ainda no working tree. Revisar arquivos públicos/segredos e registrar commit reproduzível, sem push main antes de P25/P26.
+| Ordem | Missões | Prioridade operacional | Modelo recomendado |
+|---:|---|---|---|
+| 1 | P10 | CI e proteção de branch | **GPT-6 Luna baixo** para conferir execuções e documentação; **GPT-6 Sol baixo** para corrigir workflow |
+| 2 | P11, P12 | Ativação, recuperação e painel admin | **GPT-6 Sol médio**; subir para **Sol alto** apenas em concorrência, Auth ou falha difícil |
+| 3 | P13, P14 | Sincronização, perfil e redações privadas | **GPT-6 Sol médio**; **Astra médio** para revisar conflitos e isolamento antes de fechar |
+| 4 | P04, P05, P06, P08 | Regressão de frontend, demonstração e oficina de redação | **GPT-6 Luna médio** para repetir QA; **GPT-6 Sol médio** para corrigir comportamento/UI |
+| 5 | P07 | Schema, RLS e isolamento | **GPT-6 Sol alto** para implementação; **GPT-6 Astra médio** para auditoria final de autorização |
+| 6 | P25, P26 | Segurança, preview, rollback e publicação | **GPT-6 Astra alto** para decisão final; **GPT-6 Sol médio** para executar correções e testes definidos |
+| 7 | P15 | Atualizar, revisar e enviar guia/PDF | **GPT-6 Luna médio** para atualização mecânica; **GPT-6 Sol médio** para revisão editorial final |
+| 8 | P16, P17 | Mapa curricular, OCR e organização do acervo | **GPT-6 Luna médio/alto** para processamento em lote; **GPT-6 Sol médio** nos casos ambíguos |
+| 9 | P18 | Curadoria, índice e benchmark de busca | **GPT-6 Sol alto** para construir; **GPT-6 Astra alto** para avaliar o benchmark e riscos de fonte |
+| 10 | P19, P20, P21 | Tutor, feedback de redação e fallback | **GPT-6 Astra alto** para arquitetura, injeção e critérios; **GPT-6 Sol alto** para implementação e depuração |
+| 11 | P22 | Conferir e cadastrar 40 questões | **GPT-6 Luna médio** para cadastro e checagens repetitivas; **GPT-6 Sol médio** para revisão pedagógica/fontes |
+| 12 | P23, P24 | Simulado e relatório PDF | **GPT-6 Sol alto** para implementação integrada; **GPT-6 Astra médio/alto** para revisão final das regras e do relatório |
+
+Trocar modelo ou esforço somente ao chegar ao tipo de trabalho indicado. Para reduzir cota: usar Luna nas etapas repetitivas, Sol no desenvolvimento normal e Astra apenas nos pontos críticos. Se GPT-6 não estiver disponível, usar GPT-5.6 Sol no mesmo esforço como alternativa.
+
+1. P10 concluída: workflow executa lint, tipos, conteúdo, testes TS/Python, audit, build e E2E; proteção da main exige o check `quality` atualizado e vale para admin, sem force push/exclusão. CI de a8278cc e eae78c2 passaram; preview continua separado da produção. Detalhes em ../docs/CI.md.
+2. P11 concluída: E2E real passou em 35,8 s para ativação concorrente, expirada e inválida, mensagens sem enumeração, rate limit, recuperação completa, troca de senha e uso único. Playwright agora limita cada ação/expectativa e reserva tempo de limpeza; zero fixtures sintéticas restantes. P12 segue aberta para o painel e a ativação real dos dois responsáveis. Quatro códigos privados iniciais expiram em 24/09 00h14 Brasília; outros 39 alunos ainda sem código.
+3. P13/P25/P26: testar sincronização entre duas sessões, transição de login/progresso legado, preview/ambientes e rollback. Produção permanece no baseline antigo. Vercel foi reconectada pelo usuário, mas ferramentas retornaram Unknown tool nesta sessão; acesso remoto ainda não validado.
+4. P15: PDF final do professor revisado localmente (7 páginas), atualizar após a publicação. Drive segue com bloqueio de escrita 403; não anunciar upload.
+5. P18/P19/P20: lote de 2 documentos/6 trechos indexado. Filtro de fontes passou em tipos/lint/9 unitários/build/conteúdo, mas teste com IA real e feedback de redação pendentes. IA off. Último orçamento Cloudflare: 7200/8500 neurônios reservados em 23/09 UTC.
+6. P16/P17/P18 e P22–P24: currículo/curadoria/OCR, questões, simulado e relatório conforme critérios abaixo. Pode haver versão estável com IA desligada antes de concluir todo o backlog.
+
+Concluído também: P07a, P08a, contador dos dois dias ENEM. Extração de 185 PDFs/1868 páginas/2296 trechos feita; 323 páginas ainda exigem revisão/OCR. Não confundir extração com acervo pronto para o tutor.
 
 ## Kanban histórico e critérios de aceite preservados
 
@@ -53,12 +57,12 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 ## Em andamento
 
 - [ ] **P08 · P0 · Regressão e correções.** Dependência P04. Corrigir persistência/importação/continuidade, testar CLI+browser e guardar resultados.
-- [ ] **P09 · P0 · Configuração de contas.** Dependência P03/P07. Chave secreta precisa ser salva pelo dono em .env.local; preparar importação somente 41 matrículas 3A DS.
+- [x] **P09 · P0 · Configuração de contas.** Credenciais configuradas; 41 registros de 3A DS importados com nome/turma/matrícula e conferidos no banco. Senhas antigas ignoradas. Ativação e entrega de códigos continuam em P11/P12.
 
 ## A fazer — Sprint 1/2
 
-- [ ] **P10 · P0 · CI e proteção de branch.** Aceite: lint/tipos/conteúdo/testes/build/security no GitHub; falha impede merge; preview não substitui produção.
-- [ ] **P11 · P0 · Ativação e recuperação.** Aceite: código individual expira/uso único, senha pessoal, rate limit, erros sem enumeração; teste concorrente e inválido.
+- [x] **P10 · P0 · CI e proteção de branch.** Workflow cobre lint/tipos/conteúdo/testes TS e Python/audit/build/E2E. `main` exige o check `quality` atualizado, inclusive para admin, e bloqueia force push/exclusão; preview não promove produção. CI remota passou nos commits a8278cc e eae78c2.
+- [x] **P11 · P0 · Ativação e recuperação.** Código individual expira e é de uso único, senha pessoal e recuperação validadas, rate limit confirmado, respostas não enumeram matrículas e corrida concorrente deixa apenas uma ativação válida. E2E real passou em 35,8 s; limpeza confirmou zero fixtures sintéticas.
 - [ ] **P12 · P1 · Painel admin.** Aceite: lista 3A DS, estado ativado, códigos e pedidos de recuperação; aluno/demo recebem 403.
 - [ ] **P13 · P1 · Perfil e persistência.** Aceite: progresso/anotações sincronizados sem sobrescrever conflito, apelido/avatar, logout, migração ligada à mesma conta.
 - [ ] **P14 · P1 · Redações privadas.** Aceite: versões em banco, compartilhamento autenticado/revogável, exportação/exclusão; teste entre duas contas.

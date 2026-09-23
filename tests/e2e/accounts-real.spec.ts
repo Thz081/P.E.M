@@ -3,14 +3,15 @@ import {createClient} from '@supabase/supabase-js';
 import {createHmac,randomBytes,randomInt,randomUUID} from 'node:crypto';
 
 // Explicit opt-in: uses the dedicated PEM service, real Auth and RLS, synthetic users only.
-test('real accounts: activation race, expiry, login, admin, isolation and revocation',async({browser,request,baseURL})=>{
+test('real accounts: activation race, expiry, login, admin, isolation and revocation',async({browser,request,baseURL},testInfo)=>{
  test.skip(process.env.PEM_REAL_AUTH_TESTS!=='1','Requires explicit PEM_REAL_AUTH_TESTS=1 and server credentials.');
- test.setTimeout(180000);
+ test.setTimeout(300000);
  process.loadEnvFile('.env.local');
  expect(process.env.SUPABASE_URL==='https://jfvfckkulpcqvhkjwgvy.supabase.co').toBe(true);
  const db=createClient(process.env.SUPABASE_URL!,process.env.SUPABASE_SERVICE_ROLE_KEY!,{auth:{persistSession:false,autoRefreshToken:false}});
  const hash=(value:string)=>createHmac('sha256',process.env.IDENTITY_HMAC_KEY!).update(value).digest('hex');
  const fixture=randomUUID();const password=randomBytes(24).toString('base64url');
+ const absentMatricula=`98${randomInt(1000000000,9999999999)}`;
  const users:{id:string;matricula:string;identifier:string;code:string}[]=[];
  let operatorId:string|undefined;
  const contexts=[];
@@ -34,6 +35,10 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
   const concurrent=await Promise.all([activate(a),activate(a)]);
   expect(concurrent.map(response=>response.status()).sort()).toEqual([200,400]);
   expect((await activate(a)).status()).toBe(400);
+  const wrongCode=randomBytes(18).toString('base64url');
+  const invalid=await request.post('/api/activate',{headers,data:{matricula:a.matricula,code:wrongCode,senha:password}});
+  const absent=await request.post('/api/activate',{headers,data:{matricula:absentMatricula,code:wrongCode,senha:password}});
+  expect(absent.status()).toBe(invalid.status());expect(await absent.json()).toEqual(await invalid.json());
   await db.from('roster').update({code_expires_at:new Date(Date.now()-1000).toISOString()}).eq('identifier',b.identifier);
   expect((await activate(b)).status()).toBe(400);
   await db.from('roster').update({code_expires_at:new Date(Date.now()+3600000).toISOString()}).eq('identifier',b.identifier);
@@ -87,15 +92,35 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
   expect((await (await cb.request.get('/api/essays')).json()).essays).toHaveLength(0);
   await pb.reload();await pb.getByRole('button',{name:'Minhas versões',exact:true}).click();await expect(pb.getByRole('heading',{name:'Tema sintético',exact:true})).toHaveCount(0);
   pa.once('dialog',dialog=>dialog.accept());await pa.getByRole('button',{name:'Excluir',exact:true}).click();await expect(pa.getByText('Versão excluída da sua conta.')).toBeVisible();
-  expect((await request.post('/api/recovery',{headers,data:{matricula:b.matricula}})).status()).toBe(200);
+  const recovery=()=>request.post('/api/recovery',{headers,data:{matricula:b.matricula}});
+  const firstRecovery=await recovery();expect(firstRecovery.status()).toBe(200);
+  const unknownRecovery=await request.post('/api/recovery',{headers,data:{matricula:absentMatricula}});
+  expect(unknownRecovery.status()).toBe(200);expect(await unknownRecovery.json()).toEqual(await firstRecovery.json());
+  expect((await recovery()).status()).toBe(200);
+  const beforeLimit=await db.from('reset_requests').select('requested_at').eq('identifier',b.identifier).single();
+  expect((await recovery()).status()).toBe(200);
+  const afterLimit=await db.from('reset_requests').select('requested_at').eq('identifier',b.identifier).single();
+  expect(afterLimit.data).toEqual(beforeLimit.data);
   await pc.goto('/admin');
   await pc.getByRole('button',{name:'Atualizar turma'}).click();
   const row=pc.locator('.resource-list>div').filter({has:pc.getByRole('heading',{name:`Matrícula ${b.matricula}`,exact:true})});
   await expect(row).toContainText('Recuperação solicitada');
+  const resetResponse=pc.waitForResponse(response=>response.url().endsWith('/api/admin')&&response.request().method()==='POST');
   await row.getByRole('button',{name:'Gerar código de recuperação'}).click();
+  const resetCode=(await (await resetResponse).json()).code;
   await expect(pc.getByRole('region',{name:'Código individual gerado'})).toBeVisible();
   await pc.getByRole('button',{name:'Ocultar código'}).click();
   await expect(pc.getByRole('region',{name:'Código individual gerado'})).toHaveCount(0);
+  const newPassword=randomBytes(24).toString('base64url');
+  const resetData={matricula:b.matricula,code:resetCode,senha:newPassword};
+  expect((await request.post('/api/activate',{headers,data:resetData})).status()).toBe(200);
+  expect((await request.post('/api/activate',{headers,data:resetData})).status()).toBe(400);
+  expect((await request.post('/api/login',{headers,data:{matricula:b.matricula,senha:password}})).status()).toBe(401);
+  expect((await request.post('/api/login',{headers,data:{matricula:b.matricula,senha:newPassword}})).status()).toBe(200);
+  const resolved=await db.from('reset_requests').select('resolved_at').eq('identifier',b.identifier).single();
+  expect(resolved.data?.resolved_at).toBeTruthy();
+  expect((await request.post('/api/activate',{headers,data:{...resetData,code:wrongCode}})).status()).toBe(400);
+  expect((await request.post('/api/activate',{headers,data:{...resetData,code:wrongCode}})).status()).toBe(429);
   expect((await ca.request.post('/api/chat',{headers,data:{question:'Teste'}})).status()).toBe(503);
   await db.from('profiles').update({active:false}).eq('id',b.id);
   expect((await cb.request.get('/api/progress')).status()).toBe(401);
@@ -103,15 +128,21 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
   expect((await ca.request.post('/api/logout',{headers})).status()).toBe(200);
   expect((await ca.request.get('/api/progress')).status()).toBe(401);
  }finally{
-  for(const context of contexts)await context.close();
+  testInfo.setTimeout(testInfo.timeout+60000);
+  // Browser teardown must never prevent removal of synthetic database fixtures.
+  await Promise.allSettled(contexts.map(context=>context.close()));
   if(operatorId){const current=await db.auth.admin.getUserById(operatorId);if(current.data.user?.app_metadata?.pem_test_fixture!==fixture)throw Error('Admin fixture ownership check failed.');await db.from('admin_access').delete().eq('user_id',operatorId);expect(!(await db.auth.admin.deleteUser(operatorId)).error).toBe(true);}
   for(const user of users){
    const current=await db.auth.admin.getUserById(user.id);
    if(current.data.user?.app_metadata?.pem_test_fixture!==fixture)throw Error('Fixture ownership check failed; cleanup stopped.');
    const resets=await db.from('reset_requests').delete().eq('identifier',user.identifier);expect(!resets.error).toBe(true);
    const roster=await db.from('roster').delete().eq('user_id',user.id);expect(!roster.error).toBe(true);
-   const limits=await db.from('rate_limits').delete().in('key',['activation','recovery'].map(scope=>hash(`${scope}:${user.identifier}`)));expect(!limits.error).toBe(true);
+   const limits=await db.from('rate_limits').delete().in('key',['activation:student','recovery'].map(scope=>hash(`${scope}:${user.identifier}`)));expect(!limits.error).toBe(true);
    const deleted=await db.auth.admin.deleteUser(user.id);expect(!deleted.error).toBe(true);
   }
+  const extraLimits=await db.from('rate_limits').delete().in('key',[
+   hash(`activation:student:${hash(absentMatricula)}`),hash(`recovery:${hash(absentMatricula)}`),
+   ...users.slice(0,1).map(user=>hash(`activation:admin:${hash(`admin:${user.matricula}`)}`)),
+  ]);expect(!extraLimits.error).toBe(true);
  }
 });

@@ -1,4 +1,7 @@
 # Retomada exata — 23/09/2026
+## Último marco — P11 fechada
+P11 passou integralmente em E2E real (35,8 s) e está marcada concluída: corrida de ativação, expiração, código inválido/uso único, não enumeração, rate limit, recuperação e troca de senha. A primeira ampliação do teste revelou timeout do próprio Playwright; corrigidos limites individuais e limpeza com tempo reservado. Banco confirmado com zero fixtures sintéticas. Typecheck/lint verdes; regressão completa 11 E2E aprovados em 55,6 s e IA real pulada por estar off. P10 também concluída após CI/proteção da main. Kanban: 6 de 26 completas, 20 abertas. Próximo foco P12; usar GPT-6 Sol médio. Matriz completa Luna/Sol/Astra em tasks/todo.md.
+
 ## Estado mais recente — prevalece sobre o histórico abaixo
 Branch `codex/plataforma-estudos` publicada em `1b8bd39`, PR draft #1 e CI `PEM quality` verde. Preview Vercel criado, mas acesso pelo conector negado; produção no baseline antigo `5e1982b`. 41 alunos 3A DS e dois administradores com contas distintas provisionados. Quatro códigos privados em `../analise/codigos-acesso-inicial-20260923.json`, expiração 24/09 00h14 Brasília. Nenhuma conta ativada. E2E de separação aluno/admin passou após correção do redirecionamento. Última correção local: filtro de fontes da IA, tipos/lint/9 unitários/build verdes; ainda falta teste real e publicação dessa correção na branch. IA desligada. PDF do professor revisado localmente, Drive 403.
 

@@ -1,4 +1,7 @@
 # Estado atual — 23/09/2026
+## P11 concluída
+Ativação e recuperação passaram em E2E real (1/1, 35,8 s): concorrência, expiração, uso único, código inválido, não enumeração, limite de tentativas, pedido de recuperação, emissão pelo admin, troca de senha e recusa da senha/código antigos. O teste recebeu timeout individual de ações e teardown resiliente; zero fixtures sintéticas ficaram no Supabase. Typecheck e lint passaram. Regressão completa: 11 E2E passaram em 55,6 s e 1 IA real foi pulado porque a IA permanece off. P10 e P11 concluídas; Kanban: 6/26 concluídas, 20 abertas.
+
 ## Verificação mais recente
 Branch `codex/plataforma-estudos` enviada em `1b8bd39`, PR draft #1; CI remota `PEM quality` passou. Preview Vercel pronto, porém o conector negou acesso à URL e o QA remoto está pendente. Produção antiga preservada. No Supabase há 41 contas de aluno de 3A DS e duas contas admin separadas; quatro códigos privados emitidos, nenhuma ativação. O E2E de redirecionamento admin/aluno passou 1/1. Filtro de fontes do tutor: tipos, lint, 9 unitários e build passaram; teste com modelo real ainda pendente, IA off. Guia PDF de 7 páginas revisado localmente, sem upload no Drive devido a 403.
 
