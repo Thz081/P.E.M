@@ -1,4 +1,7 @@
 # Retomada exata — 23/09/2026
+## Estado vigente — revisão P13/P14 exige correções
+P13/P14 foram reabertas: migração por chave única no navegador não comprova o titular; exportação omite redações além das 200 carregadas. Inferência insegura já retirada; originais preservados. Contas Supabase só poderão importar após vínculo verificável no servidor. Tipos/lint/build e E2E real de contas (43,7 s) passaram após mitigação. Relatório completo e critérios restantes: `docs/REVISAO-P13-P14.md`. Kanban corrigido: 7/26 concluídas, 19 abertas. Próximo: Sol médio nas correções, revisão dirigida, depois QA no Luna. Não promover produção nem interpretar os marcos antigos abaixo como aprovação atual.
+
 ## Último marco — P14 fechada
 P14 passou no Supabase real: versão persistida, download JSON inspecionado, isolamento, compartilhamento autenticado e revogável entre duas contas, destinatário impedido de excluir e exclusão pelo dono. A API retorna 404 quando o texto não pertence ao solicitante. Build, tipos e lint verdes; regressão completa com 11 E2E aprovados em 1,1 min e IA real pulada. Kanban 9/26, 17 abertas. Próximo passo: revisão conjunta P13/P14 no GPT-6 Astra médio; depois P04/P05/P06/P08.
 

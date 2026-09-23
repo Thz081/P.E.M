@@ -61,10 +61,10 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
    localStorage.setItem(`pem-note-${key}-${lessonId}`,'Nota antiga preservada e vinculada pelo aluno.');
   },{key:legacyKey,lessonId:legacyLesson.id,materialId:legacyMaterial.id});
   await pb.reload();
-  await pb.getByRole('button',{name:'Importar dados locais deste acesso antigo'}).click();
-  await expect(pb.getByRole('status')).toContainText('Dados deste acesso importados');
-  await expect.poll(async()=>await (await cb.request.get('/api/progress')).json()).toMatchObject({progress:{read:{[legacyLesson.id]:true},notes:{[legacyLesson.id]:'Nota antiga preservada e vinculada pelo aluno.'},materials:{[legacyMaterial.id]:true}}});
-  expect(await pb.evaluate(({key,lessonId,userId})=>({progress:localStorage.getItem(`pem-progress-${key}`),note:localStorage.getItem(`pem-note-${key}-${lessonId}`),marker:localStorage.getItem(`pem-legacy-imported-${userId}-${key}`)}),{key:legacyKey,lessonId:legacyLesson.id,userId:b.id})).toEqual({progress:expect.any(String),note:'Nota antiga preservada e vinculada pelo aluno.',marker:'1'});
+  await expect(pb.locator('main')).toHaveAttribute('aria-busy','false');
+  await expect(pb.getByRole('button',{name:'Importar dados locais deste acesso antigo'})).toHaveCount(0);
+  expect((await (await cb.request.get('/api/progress')).json()).progress).toBeNull();
+  expect(await pb.evaluate(({key,lessonId,userId})=>({progress:localStorage.getItem(`pem-progress-${key}`),note:localStorage.getItem(`pem-note-${key}-${lessonId}`),marker:localStorage.getItem(`pem-legacy-imported-${userId}-${key}`)}),{key:legacyKey,lessonId:legacyLesson.id,userId:b.id})).toEqual({progress:expect.any(String),note:'Nota antiga preservada e vinculada pelo aluno.',marker:null});
   await pc.goto('/');await pc.getByRole('button',{name:'Administração',exact:true}).click();
   await pc.getByLabel('Matrícula',{exact:true}).fill(a.matricula);await pc.getByLabel('Senha',{exact:true}).fill(password);
   await pc.getByRole('button',{name:'Entrar na administração'}).click();await expect(pc).toHaveURL(/\/admin$/);
@@ -92,8 +92,7 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
   const save=await ca.request.put('/api/progress',{headers,data:{progress,revision:0}});expect(save.status()).toBe(200);
   expect((await ca.request.put('/api/progress',{headers,data:{progress,revision:0}})).status()).toBe(409);
   expect((await (await ca.request.get('/api/progress')).json()).progress).toEqual(progress);
-  expect((await (await cb.request.get('/api/progress')).json()).progress).toMatchObject({read:{[legacyLesson.id]:true},notes:{[legacyLesson.id]:'Nota antiga preservada e vinculada pelo aluno.'},materials:{[legacyMaterial.id]:true}});
-  expect((await (await cb.request.get('/api/progress')).json()).progress).not.toEqual(progress);
+  expect((await (await cb.request.get('/api/progress')).json()).progress).toBeNull();
   const cd=await browser.newContext({baseURL});contexts.push(cd);const pd=await cd.newPage();
   await pd.goto('/');await pd.getByLabel('Matrícula',{exact:true}).fill(a.matricula);
   await pd.getByLabel('Senha',{exact:true}).fill(password);await pd.getByRole('button',{name:'Entrar para estudar'}).click();

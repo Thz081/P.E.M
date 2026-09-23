@@ -1,4 +1,7 @@
 # Estado atual — 23/09/2026
+## Revisão vigente: alterações necessárias em P13/P14
+Conclusões anteriores superadas. P13 reaberta por migração sem prova de titularidade; P14 reaberta por exportação truncada em 200 versões. Descoberta insegura de chave local removida, importação depende de identidade antiga autenticada e originais preservados. Tipos/lint/build passaram; E2E real de contas passou em 43,7 s após mitigação. O caso de 201 redações segue pendente. Contagem: 7/26 concluídas, 19 abertas. Próximas correções no Sol médio descritas em `REVISAO-P13-P14.md`; produção permanece antiga.
+
 ## P14 concluída
 Redações privadas validadas no Supabase real: versão no banco, download JSON com conteúdo conferido, isolamento, compartilhamento e revogação entre duas contas, bloqueio de exclusão pelo destinatário e exclusão pelo dono. A API retorna 404 quando o texto não pertence ao solicitante. Build, tipos e lint passaram; regressão completa teve 11 E2E aprovados em 1,1 min e somente IA real pulada. Kanban: 9/26 concluídas, 17 abertas. Revisão conjunta P13/P14 no Astra médio vem antes de P04/P05/P06/P08.
 

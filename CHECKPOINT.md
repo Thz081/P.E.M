@@ -1,4 +1,10 @@
 # P.E.M — entrada para Codex ou Claude
+## Revisão de 23/09/2026 — P13/P14 reabertas (prevalece sobre os marcos abaixo)
+- A revisão de `eb3f2b7` encontrou dois casos não cobertos: importação de dados antigos sem prova de titularidade e exportação de redações truncada após 200 versões. Relatório e testes de aceite em `docs/REVISAO-P13-P14.md`.
+- Correção imediata: removida a descoberta de identidade antiga no localStorage. Somente `legacyKey` autenticada pelo servidor pode selecionar dados; contas Supabase ficam sem importação até existir vínculo comprovado. Nenhum dado antigo foi removido.
+- Validação da mitigação: tipos, lint e build passaram; E2E real de contas passou em 43,7 s, incluindo recusa de importação sem vínculo, preservação local, conflito, perfil e compartilhamento/exclusão. Não foi repetida a suíte inteira nem o caso de 201 redações. IA off; produção preservada.
+- Contagem corrigida: 7/26 concluídas, 19 abertas. Próximo modelo: Sol médio para concluir as correções P13/P14, depois revisão dirigida; só então Luna médio para P04/P05/P06/P08. Marcas anteriores de conclusão estão superadas.
+
 ## Marco de 23/09/2026 — P14 concluída
 - Redações privadas passaram no Supabase real: versão persistida, download JSON com conteúdo inspecionado, isolamento, compartilhamento/revogação entre duas contas, destinatário impedido de excluir e exclusão pelo dono. A API agora responde 404 quando o usuário não possui o texto solicitado.
 - Build, tipos e lint verdes; regressão completa: 11 E2E passaram em 1,1 min e somente IA real foi pulada por estar desligada. Kanban: 9/26 concluídas, 17 abertas. Próximo passo é revisão conjunta P13/P14 no GPT-6 Astra médio; depois P04/P05/P06/P08.

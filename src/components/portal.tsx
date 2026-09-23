@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import {useEffect,useState,useRef} from 'react';
+import {useState,useRef} from 'react';
 import dynamic from 'next/dynamic';
 import {useProgress} from '@/hooks/use-progress';
 import {BookOpen,Compass,Feather,Library,Sparkles,Home,ArrowUpRight,LogOut,Menu,Layers,GraduationCap,ScrollText} from 'lucide-react';
@@ -18,27 +18,20 @@ const Tutor=dynamic(()=>import('./tutor').then(m=>m.Tutor));
 import {Countdown} from './countdown';
 import {Profile} from './profile';
 const nav=[['inicio','Início',Home],['materias','Matérias',BookOpen],['questoes','Questões',Layers],['enem','ENEM',Compass],['redacao','Redação',Feather],['biblioteca','Biblioteca',Library],['tutor','Tutor',Sparkles]] as const;
-export function Portal({section,user:initialUser,initialLesson}:{section:string;user:Identity;initialLesson?:string}){
- const [legacyCandidate,setLegacyCandidate]=useState<string|null>(null);
- const user:Identity=legacyCandidate&&!initialUser.legacyKey?{...initialUser,legacyKey:legacyCandidate}:initialUser;
+export function Portal({section,user,initialLesson}:{section:string;user:Identity;initialLesson?:string}){
  const base=user.kind==='demo'?'/demonstracao':'/estudar';
  const {progress,update,ready,saved,setSaved}=useProgress(user);
  const [menu,setMenu]=useState(false),[search,setSearch]=useState(''),[format,setFormat]=useState('');
  const imported=useRef(false);
- useEffect(()=>{if(user.kind!=='student')return;try{
-  const candidates=new Set<string>();
-  for(let index=0;index<localStorage.length;index++){const key=localStorage.key(index);if(key?.startsWith('pem-progress-'))candidates.add(key.slice('pem-progress-'.length));}
-  for(const lesson of lessons)for(let index=0;index<localStorage.length;index++){const key=localStorage.key(index),suffix=`-${lesson.id}`;if(key?.startsWith('pem-note-')&&key.endsWith(suffix))candidates.add(key.slice('pem-note-'.length,-suffix.length));}
-  const available=[...candidates].filter(key=>localStorage.getItem(`pem-legacy-imported-${user.id}-${key}`)!=='1');
-  setLegacyCandidate(available.length===1?available[0]:null);
- }catch{setLegacyCandidate(null);}},[user.id,user.kind]);
- function importLegacy(){const legacyKey=user.legacyKey||legacyCandidate;if(!legacyKey)return;try{
+ // Only a server-authenticated legacy identity can select its local data.
+ // A unique browser key does not establish ownership on a shared computer.
+ function importLegacy(){const legacyKey=user.legacyKey;if(!legacyKey||!ready)return;try{
   const done=JSON.parse(localStorage.getItem(`pem-progress-${legacyKey}`)||'{}');
   const next={...progress,read:{...progress.read},notes:{...progress.notes},materials:{...progress.materials}};
   lessons.forEach(l=>{if(done['read-'+l.id])next.read[l.id]=true;const note=localStorage.getItem(`pem-note-${legacyKey}-${l.id}`);if(note&&!next.notes[l.id])next.notes[l.id]=note;});
   materials.forEach(m=>{if(done[m.id])next.materials[m.id]=true;});
   if(new TextEncoder().encode(JSON.stringify(next)).length>200000){setSaved('Os dados antigos são grandes demais para importar automaticamente. Os originais foram preservados.');return;}
-  update(next);localStorage.setItem(`pem-legacy-imported-${user.id}-${legacyKey}`,'1');setLegacyCandidate(null);imported.current=true;setSaved('Dados deste acesso importados. Os originais foram mantidos.');
+  update(next);imported.current=true;setSaved('Dados deste acesso importados. Os originais foram mantidos.');
  }catch{setSaved('Não foi possível importar os dados antigos.');}}
  function exportProgress(){const blob=new Blob([JSON.stringify({format:'pem-progress-v1',exportedAt:new Date().toISOString(),progress},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download='meus-estudos-pem.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
  async function logout(){if(user.kind!=='demo')await fetch('/api/logout',{method:'POST'});location.href='/';}
