@@ -1,6 +1,6 @@
 # Estado atual — 23/09/2026
 ## P16 em andamento; prioridade de publicação movida para depois das funcionalidades
-Mapa privado de 22 capturas, 165 grupos e 183 PDFs: 146 vínculos diretos, 37 lacunas, ordem visível de estudo e 30 incidências diretas do gráfico do Assad (estimativas, não dados oficiais). Pré-requisitos são propostas para validação. Relatório `MAPA-CURRICULAR.md`. P25/P26 permanecem bloqueio obrigatório antes de promover produção; P15 final acompanha a versão publicada. Kanban 14/26.
+Mapa privado de 22 capturas, 165 grupos e 183 PDFs: 146 vínculos diretos, 37 lacunas, ordem visível de estudo, 30 incidências diretas do gráfico do Assad (estimativas, não dados oficiais) e 11 tópicos suplementares do mapa de progresso. Há 29 referências suplementares a PDFs pendentes (26 propostas de Redação) e 8 sem referência. Pré-requisitos são propostas para validação. Relatório `MAPA-CURRICULAR.md`. P25/P26 permanecem bloqueio obrigatório antes de promover produção; P15 final acompanha a versão publicada. Kanban 14/26.
 P17 começou com fila privada e reproduzível de 323 páginas para revisão visual/OCR; 183 em Biologia. Ver `TRIAGEM-P17.md`.
 Piloto P17: 12 capas/divisórias conferidas visualmente e retiradas da fila; OCR seletivo aplicado em 25 páginas de Biologia, com 24 aguardando conferência e uma marcada para corrigir fórmulas. Fila atual 311, incluindo 286 sem tentativa. Trechos privados continuam `authorized: false`. Ver `TRIAGEM-P17.md`.
 

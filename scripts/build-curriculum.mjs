@@ -65,6 +65,32 @@ const assadCharts = [
  ['História','Brasil Império',14.4,'101-151'],['História','Idade Contemporânea',10.5,'101-151'],
  ['Geografia','Geopolítica',11.9,'101-151'],['Geografia','Geografia Agrária',16.7,'101-151'],
 ];
+const assadProgressSource = 'conteudos assad/MAPA DE PROGRESSO COMPETITIVO - COM LINKS.pdf';
+const assadProgressTopics = [
+ ['Português','Literatura',18],['Português','Progressão temática e organização textual',18],
+ ['Português','Gêneros Textuais',18],['História','Idade Antiga',19],
+ ['Redação','Estrutura do Enem',76],['Redação','Planejamento Textual',76],
+ ['Redação','Coesão e Clareza',78],['Redação','Gramática e Vocabulário',78],
+ ['Redação','Engenharia Argumentativa',78],['Redação','Intervenção',81],
+ ['Redação','Autonomia e Autocorreção',81],
+ ];
+const progressAliases = new Map([
+ ['História|Idade Antiga','Idade Antiga','exact'],
+ ['Português|Gênero Textual','Gêneros Textuais','same_topic'],
+ ['Português|Literatura-Realismo','Literatura','broader_topic'],
+].map(([key,title,matchType])=>{const [subject,topic]=key.split('|');return [`${subject}|${normal(topic)}`,{title,matchType}];}));
+function proposedRedacaoGroup(topic){
+ const title=normal(topic);
+ if(/^100 redacoes/.test(title))return null; // examples, not a lesson in the Assad sequence
+ if(/conclusao|agentes da conclusao/.test(title))return 'Intervenção';
+ if(/coesao|operadores argumentativos/.test(title))return 'Coesão e Clareza';
+ if(/gramaticais|virgula|crase/.test(title))return 'Gramática e Vocabulário';
+ if(/planejamento|teses/.test(title))return 'Planejamento Textual';
+ if(/argumentacao|desenvolvimento|autoria/.test(title))return 'Engenharia Argumentativa';
+ if(/introducao|redacao do enem|temas|banca|grade especifica|estudando a redacao/.test(title))
+  return 'Estrutura do Enem';
+ return null;
+}
 const area = {
  'Português':'Linguagens, Códigos e suas Tecnologias', 'Filosofia':'Ciências Humanas e suas Tecnologias',
  'Sociologia':'Ciências Humanas e suas Tecnologias', 'Geografia':'Ciências Humanas e suas Tecnologias',
@@ -134,6 +160,19 @@ for(const [subject,tracks] of Object.entries(courseTracks))for(const [trackIndex
 const chartByTopic=new Map(assadCharts.map(([subject,title,percent,part])=>[
  `${subject}|${normal(title)}`,{percent,source:`MAPA DE INCIDENCIAS_compressed-${part}.docx`,period:'até ENEM 2025',kind:'estimativa_Assad'}
 ]));
+const extractionIndex=JSON.parse(readFileSync(resolve(privateRoot,'extracted','index.json'),'utf8'));
+const progressRecord=extractionIndex.documents[assadProgressSource];
+if(!progressRecord||progressRecord.status!=='extracted')throw Error('Assad progress map extraction missing');
+const progressDocument=JSON.parse(readFileSync(resolve(privateRoot,'extracted',progressRecord.file),'utf8'));
+if(progressDocument.sha256!==progressRecord.sha256||progressDocument.source!==assadProgressSource)
+ throw Error('Assad progress map identity mismatch');
+for(const [subject,title,page] of assadProgressTopics){
+ if(!area[subject]||!normal(progressDocument.pages.find(item=>item.page===page)?.text||'').includes(normal(title)))
+  throw Error(`Assad progress topic not found on page ${page}: ${title}`);
+}
+const progressByTopic=new Map(assadProgressTopics.map(([subject,title,page])=>[
+ `${subject}|${normal(title)}`,{title,source:assadProgressSource,page}
+]));
 if(new Set(assadCharts.map(([subject,title])=>`${subject}|${normal(title)}`)).size!==assadCharts.length)
  throw Error('Duplicate Assad topic');
 for(const [, , percent, part] of assadCharts){
@@ -157,8 +196,12 @@ const documents=entries.filter(item=>item.extension==='.pdf'&&item.path.startsWi
   (subject==='Português'&&normal(topic).includes('crase')?'Crase':undefined)||
   (subject==='Química'&&normal(topic).includes('funcoes nitrogenadas')?'Funções Nitrogenadas':undefined);
  const matches=alias===null?[]:groups.filter(group=>group.subject===subject&&normal(group.title)===normal(alias||topic));
+ const progressAlias=progressAliases.get(key)||
+  (subject==='Redação'&&proposedRedacaoGroup(topic)?{title:proposedRedacaoGroup(topic),matchType:'proposed_from_pdf_title'}:null);
+ const progressGroup=progressAlias?progressByTopic.get(`${subject}|${normal(progressAlias.title)}`):null;
  return {source:item.path,subject,topic,courseGroup:matches.length===1?matches[0].title:null,
   matchStatus:matches.length===1?'screenshot_title_or_explicit_alias':'requires_review',
+  assadProgress:progressGroup?{...progressGroup,matchType:progressAlias.matchType}:null,
   enemArea:area[subject],enemIncidence:matches.length===1?matches[0].enemIncidence:null,publication:'private-unreviewed'};
 });
 if(screenshots.length!==22||documents.length!==183)throw Error(`Unexpected corpus: ${screenshots.length} screenshots, ${documents.length} PDFs`);
@@ -166,12 +209,14 @@ if(groups.length!==165||groups.some(group=>!group.studyOrder||group.images.lengt
 if(documents.some(doc=>!doc.enemArea)||new Set(documents.map(doc=>doc.source)).size!==documents.length)throw Error('Area or source path missing');
 if(!relative(root,output).startsWith('..')||isAbsolute(relative(root,output)))throw Error('Private map must stay outside the repository');
 const result={version:2,manifestSha256:createHash('sha256').update(raw).digest('hex'),
- source:'22 private course screenshots, 183 private PDF filenames and Assad incidence chart',
- limitations:'Study order is only the visible course sequence; Assad incidence is an attributed estimate, not Inep data. Prerequisites are proposals.',
+ source:'22 private course screenshots, 183 private PDF filenames, Assad incidence chart and progress map',
+ limitations:'Study order is only the visible course sequence; supplemental Assad topics have a separate order. Incidence is an attributed estimate, not Inep data. Prerequisites are proposals.',
  summary:{screenshots:screenshots.length,courseGroups:groups.length,documents:documents.length,
   matchedDocuments:documents.filter(doc=>doc.courseGroup).length,unmatchedDocuments:documents.filter(doc=>!doc.courseGroup).length,
-  groupsWithDirectIncidence:groups.filter(group=>group.enemIncidence).length},
+  groupsWithDirectIncidence:groups.filter(group=>group.enemIncidence).length,
+  assadProgressTopics:assadProgressTopics.length,assadProgressDocumentLinks:documents.filter(doc=>doc.assadProgress).length},
  screenshots:screenshots.map(({image,subject})=>({image,subject})),
+ progressTopics:assadProgressTopics.map(([subject,title,page])=>({subject,title,page,source:assadProgressSource})),
  incidenceReferences:assadCharts.map(([subject,title,percent,part])=>({subject,title,percent,source:`MAPA DE INCIDENCIAS_compressed-${part}.docx`,period:'até ENEM 2025',kind:'estimativa_Assad'})),
  groups,documents};
 mkdirSync(dirname(output),{recursive:true});writeFileSync(output,JSON.stringify(result,null,2)+'\n');
