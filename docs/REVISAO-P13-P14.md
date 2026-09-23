@@ -1,5 +1,11 @@
 # Revisão P13/P14 — 23/09/2026
 
+## Resolução posterior — 23/09/2026
+
+Os dois achados abaixo foram corrigidos. P13 usa a matrícula obtida pelo servidor da conta Supabase, autentica no serviço antigo e só apresenta a importação se a chave devolvida coincidir com dados locais. Teste unitário cobre autenticação, cookie, resposta inválida e login recusado; chamada real ao serviço antigo para a matrícula autorizada confirmou o fluxo. E2E real cobre ausência de vínculo, chave alheia e importação com chave correspondente, com persistência e preservação dos originais.
+
+P14 pagina por UUID estável e refaz a leitura completa ao exportar. E2E real criou 201 versões: páginas 200+1, 201 IDs únicos e 201 versões no arquivo. Falha simulada na segunda página produz erro, sem download parcial. Validação geral: tipos, lint, build, 11 unitários e 11 E2E aprovados; IA real pulada. O relatório abaixo fica como histórico do achado e seus critérios. Kanban voltou a 9/26, com 17 abertas.
+
 Base revisada: `eb3f2b7`. Resultado: **alterações necessárias**. Os marcos anteriores de conclusão foram prematuros; testes verdes cobriam os fluxos usuais, mas não os casos abaixo. Não promover produção.
 
 ## P13 — vínculo da migração antiga (prioridade alta)

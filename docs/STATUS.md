@@ -1,5 +1,8 @@
 # Estado atual — 23/09/2026
-## Revisão vigente: alterações necessárias em P13/P14
+## P13/P14 corrigidas após revisão
+Vínculo da migração verificado pelo servidor legado a partir da matrícula da conta Supabase; chave alheia recusada. Paginação por ID e exportação de 201 versões testadas no Supabase real; erro na segunda página não gera arquivo parcial. Tipos/lint/build e 11 testes unitários verdes; regressão 11 E2E aprovados e IA real pulada por estar off. Kanban: 9/26 concluídas, 17 abertas. Produção antiga preservada; próximo P04/P05/P06/P08.
+
+## Revisão anterior: alterações necessárias em P13/P14 (resolvidas acima)
 Conclusões anteriores superadas. P13 reaberta por migração sem prova de titularidade; P14 reaberta por exportação truncada em 200 versões. Descoberta insegura de chave local removida, importação depende de identidade antiga autenticada e originais preservados. Tipos/lint/build passaram; E2E real de contas passou em 43,7 s após mitigação. O caso de 201 redações segue pendente. Contagem: 7/26 concluídas, 19 abertas. Próximas correções no Sol médio descritas em `REVISAO-P13-P14.md`; produção permanece antiga.
 
 ## P14 concluída

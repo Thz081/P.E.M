@@ -1,5 +1,8 @@
 # Retomada exata — 23/09/2026
-## Estado vigente — revisão P13/P14 exige correções
+## Estado vigente — P13/P14 corrigidas
+Migração antiga vinculada pela matrícula autenticada e confirmação do servidor legado; a chave presente no navegador só é aceita se corresponder à chave confirmada. Originais preservados; importação bloqueada durante conflito. Redações paginadas e exportação de 201 versões verificada no Supabase real, inclusive falha da segunda página. Tipos/lint/build, 11 unitários e regressão E2E: 11 aprovados, IA real pulada por estar off. Kanban 9/26 concluídas, 17 abertas. Próximo P04/P05/P06/P08 com Luna médio no QA e Sol médio em correções. Produção antiga preservada. Relatório de revisão e resolução em `docs/REVISAO-P13-P14.md`.
+
+## Estado anterior — revisão P13/P14 exigia correções (resolvido acima)
 P13/P14 foram reabertas: migração por chave única no navegador não comprova o titular; exportação omite redações além das 200 carregadas. Inferência insegura já retirada; originais preservados. Contas Supabase só poderão importar após vínculo verificável no servidor. Tipos/lint/build e E2E real de contas (43,7 s) passaram após mitigação. Relatório completo e critérios restantes: `docs/REVISAO-P13-P14.md`. Kanban corrigido: 7/26 concluídas, 19 abertas. Próximo: Sol médio nas correções, revisão dirigida, depois QA no Luna. Não promover produção nem interpretar os marcos antigos abaixo como aprovação atual.
 
 ## Último marco — P14 fechada

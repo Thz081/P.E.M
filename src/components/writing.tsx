@@ -8,12 +8,20 @@ import lessons from '../../content/writing.json';
 import type {Identity} from '@/lib/identity';
 import {parseDrafts,type Draft} from '@/lib/writing';
 const source='https://www.gov.br/inep/pt-br/centrais-de-conteudo/acervo-linha-editorial/publicacoes-institucionais/avaliacoes-e-exames-da-educacao-basica/a-redacao-do-enem-2026-cartilha-do-a-participante';
+async function loadAccountEssays(userId:string,signal?:AbortSignal):Promise<Draft[]>{
+ const versions:Draft[]=[],seen=new Set<string>();let cursor:string|null=null;
+ do{const endpoint:string=`/api/essays${cursor?`?after=${encodeURIComponent(cursor)}`:''}`;const response:Response=await fetch(endpoint,{signal});const data:{essays:{id:string;theme:string;body:string;created_at:string;user_id:string}[];next:string|null;error?:string}=await response.json();if(!response.ok)throw Error(data.error||'Não foi possível carregar todas as versões.');
+  for(const essay of data.essays as {id:string;theme:string;body:string;created_at:string;user_id:string}[]){if(seen.has(essay.id))throw Error('A lista mudou durante a exportação. Tente novamente.');seen.add(essay.id);versions.push({id:essay.id,theme:essay.theme,text:essay.body,date:essay.created_at,shared:essay.user_id!==userId});}
+  cursor=data.next;if(cursor&&cursor!==data.essays.at(-1)?.id)throw Error('A lista mudou durante a exportação. Tente novamente.');
+ }while(cursor);
+ return versions.sort((a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id));
+}
 export function Writing({user}:{user:Identity}){
  const [tab,setTab]=useState('aprender'),[theme,setTheme]=useState(''),[text,setText]=useState(''),[versions,setVersions]=useState<Draft[]>([]),[status,setStatus]=useState(''),[feedback,setFeedback]=useState(''),[busy,setBusy]=useState(false),[compare,setCompare]=useState(''),[recipient,setRecipient]=useState(''),[sharing,setSharing]=useState('');
  const key=`pem-v2-writing-${user.id}`;
  useEffect(()=>{const controller=new AbortController();setVersions([]);setTheme('');setText('');setCompare('');setSharing('');
   if(user.kind==='student'){
-   setBusy(true);void(async()=>{try{const response=await fetch('/api/essays',{signal:controller.signal});const data=await response.json();if(!response.ok)throw Error(data.error);setVersions(data.essays.map((essay:{id:string;theme:string;body:string;created_at:string;user_id:string})=>({id:essay.id,theme:essay.theme,text:essay.body,date:essay.created_at,shared:essay.user_id!==user.id})));setStatus('Versões carregadas da sua conta.');}catch(error){if(!controller.signal.aborted)setStatus(error instanceof Error?error.message:'Não foi possível carregar suas versões.');}finally{if(!controller.signal.aborted)setBusy(false);}})();
+   setBusy(true);void(async()=>{try{const essays=await loadAccountEssays(user.id,controller.signal);setVersions(essays);setStatus('Versões carregadas da sua conta.');}catch(error){if(!controller.signal.aborted)setStatus(error instanceof Error?error.message:'Não foi possível carregar suas versões.');}finally{if(!controller.signal.aborted)setBusy(false);}})();
   }else try{setVersions(parseDrafts(JSON.parse(localStorage.getItem(key)||'[]')));}catch{setStatus('Não foi possível ler as versões deste navegador.');}
   return()=>controller.abort();
  },[key,user.kind,user.id]);
@@ -24,7 +32,7 @@ export function Writing({user}:{user:Identity}){
   }
   const next=[{id:crypto.randomUUID(),theme,text,date:new Date().toISOString()},...versions].slice(0,30);try{localStorage.setItem(key,JSON.stringify(next));setVersions(next);setStatus('Versão salva neste navegador.');}catch{setStatus('Não foi possível salvar. Exporte seu texto antes de sair.');}
  }
- function download(){const blob=new Blob([JSON.stringify({theme,text,versions},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='minhas-redacoes-pem.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+ async function download(){setBusy(true);try{const all=user.kind==='student'?await loadAccountEssays(user.id):versions;const blob=new Blob([JSON.stringify({theme,text,versions:all},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='minhas-redacoes-pem.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}catch(error){setStatus(error instanceof Error?error.message:'Não foi possível exportar todas as versões.');}finally{setBusy(false);}}
  async function remove(id:string){
   if(!confirm(user.kind==='student'?'Excluir esta versão da sua conta e revogar seus compartilhamentos?':'Excluir esta versão deste navegador?'))return;
   const next=versions.filter(v=>v.id!==id);setBusy(true);

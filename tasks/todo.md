@@ -1,7 +1,7 @@
 # Quadro de trabalho — P.E.M
 ## Estado atual — 23/09/2026
 
-Contagem principal: 26 missões; 7 concluídas (P01, P02, P03, P09, P10, P11, P12), 19 abertas. P13/P14 reabertas na revisão de 23/09; detalhes em ../docs/REVISAO-P13-P14.md. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
+Contagem principal: 26 missões; 9 concluídas (P01, P02, P03, P09, P10, P11, P12, P13, P14), 17 abertas. P13/P14 foram reabertas na revisão e fechadas após correção e testes reais; detalhes em ../docs/REVISAO-P13-P14.md. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
 
 ### Prioridade e modelo recomendado
 
@@ -26,8 +26,8 @@ Trocar modelo ou esforço somente ao chegar ao tipo de trabalho indicado. Para r
 
 1. P10 concluída: workflow executa lint, tipos, conteúdo, testes TS/Python, audit, build e E2E; proteção da main exige o check `quality` atualizado e vale para admin, sem force push/exclusão. CI de a8278cc e eae78c2 passaram; preview continua separado da produção. Detalhes em ../docs/CI.md.
 2. P11/P12 concluídas: E2E real passou para ativação/recuperação e painel. Admin listou 41 alunos reais + 2 fixtures temporárias, todas 3A DS com nome; estado, busca, pedido e código funcionaram. Aluno/público bloqueados e zero fixtures restantes. A ativação pessoal dos dois responsáveis continua operacional, pois cada titular deve escolher a senha. Quatro códigos privados iniciais expiram em 24/09 00h14 Brasília; outros 39 alunos ainda sem código.
-3. P13 reaberta: a chave única no navegador não prova titularidade. Inferência insegura removida; falta vínculo verificável entre conta Supabase e identidade antiga. Próximo trabalho: Sol médio, casos e critérios em ../docs/REVISAO-P13-P14.md. Produção permanece no baseline antigo.
-4. P14 reaberta: exportação usa lista limitada a 200 versões, sem avisar que está incompleta. Implementar paginação/exportação completa e testar 201 versões, falha de página e isolamento. Sol médio; revisão dirigida antes de avançar ao QA no Luna.
+3. P13 corrigida: matrícula da conta autenticada é verificada no serviço legado; só a chave correspondente autoriza importação local. Teste real cobre chave errada/certa e persistência, com originais preservados. Produção permanece no baseline antigo.
+4. P14 corrigida: exportação pagina todas as versões; teste real de 201 linhas confirmou 200+1 e arquivo completo. Falha de página é exibida sem download parcial. Próximo bloco P04/P05/P06/P08 no Luna médio para QA e Sol médio para correções.
 5. P15: PDF final do professor revisado localmente (7 páginas), atualizar após a publicação. Drive segue com bloqueio de escrita 403; não anunciar upload.
 6. P18/P19/P20: lote de 2 documentos/6 trechos indexado. Filtro de fontes passou em tipos/lint/9 unitários/build/conteúdo, mas teste com IA real e feedback de redação pendentes. IA off. Último orçamento Cloudflare: 7200/8500 neurônios reservados em 23/09 UTC.
 7. P16/P17/P18 e P22–P24: currículo/curadoria/OCR, questões, simulado e relatório conforme critérios abaixo. Pode haver versão estável com IA desligada antes de concluir todo o backlog.
@@ -65,8 +65,8 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 - [x] **P10 · P0 · CI e proteção de branch.** Workflow cobre lint/tipos/conteúdo/testes TS e Python/audit/build/E2E. `main` exige o check `quality` atualizado, inclusive para admin, e bloqueia force push/exclusão; preview não promove produção. CI remota passou nos commits a8278cc e eae78c2.
 - [x] **P11 · P0 · Ativação e recuperação.** Código individual expira e é de uso único, senha pessoal e recuperação validadas, rate limit confirmado, respostas não enumeram matrículas e corrida concorrente deixa apenas uma ativação válida. E2E real passou em 35,8 s; limpeza confirmou zero fixtures sintéticas.
 - [x] **P12 · P1 · Painel admin.** E2E real validou lista completa da 3A DS com nome, contagem/estado ativado, busca, pedido de recuperação e emissão/ocultação de código. Aluno e público recebem 403; conta admin não acessa progresso de aluno. Zero fixtures após o teste.
-- [ ] **P13 · P1 · Perfil e persistência.** Perfil/sincronização/conflito básicos testados. Reaberta: falta migração com vínculo de titularidade comprovado no servidor. Descoberta por chave única removida; originais preservados. Ver revisão P13/P14.
-- [ ] **P14 · P1 · Redações privadas.** Banco, compartilhamento/revogação e exclusão básicos testados. Reaberta: exportação omite versões acima de 200; faltam paginação completa e testes desse limite/falha. Ver revisão P13/P14.
+- [x] **P13 · P1 · Perfil e persistência.** Perfil/sincronização/conflito e migração vinculada à matrícula autenticada. Chave alheia recusada, chave correta importada e sincronizada no teste real; originais preservados. Importação local bloqueada em conflito.
+- [x] **P14 · P1 · Redações privadas.** Banco, compartilhamento/revogação e exclusão reais; exportação paginada de 201 versões testada e falha na segunda página tratada sem arquivo parcial.
 - [ ] **P15 · P1 · Guia do professor.** Aceite: documento amigável com link correto, demonstração e limitações reais; revisado visualmente.
 
 ## Backlog de produto — conhecimento e IA

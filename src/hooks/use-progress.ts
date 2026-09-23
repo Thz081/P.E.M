@@ -15,7 +15,7 @@ export function useProgress(user:Identity){
    if(alive)setReady(true);
   }void load();return()=>{alive=false;};
  },[key,user.kind]);
- const update=useCallback((p:Progress)=>{latest.current=p;generation.current++;setProgress(p);changed.current=true;try{localStorage.setItem(key,JSON.stringify({progress:p,revision:revision.current,pending:user.kind==='student'}));setSaved('Salvo neste navegador');}catch{setSaved('Falha ao salvar. Exporte suas anotações.');}},[key,user.kind]);
+ const update=useCallback((p:Progress)=>{try{localStorage.setItem(key,JSON.stringify({progress:p,revision:revision.current,pending:user.kind==='student'}));latest.current=p;generation.current++;setProgress(p);changed.current=true;setSaved('Salvo neste navegador');return true;}catch{setSaved('Falha ao salvar. Exporte suas anotações.');return false;}},[key,user.kind]);
  useEffect(()=>{if(!ready||user.kind!=='student')return;const timer=setInterval(async()=>{if(!changed.current||blocked.current||sending.current)return;sending.current=true;const sentGeneration=generation.current;try{const r=await fetch('/api/progress',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({progress:latest.current,revision:revision.current})});const result=await r.json();if(!r.ok){blocked.current=true;setSaved(result.error||'Sem sincronização · cópia local mantida');return;}revision.current=result.revision;changed.current=sentGeneration!==generation.current;localStorage.setItem(key,JSON.stringify({progress:latest.current,revision:revision.current,pending:changed.current}));setSaved(changed.current?'Salvo localmente; sincronização pendente':'Sincronizado com sua conta');}catch{blocked.current=true;setSaved('Sem sincronização · cópia local mantida');}finally{sending.current=false;}},1500);return()=>clearInterval(timer);},[ready,user.kind,key]);
- return {progress,update,ready,saved,setSaved};
+ return {progress,update,ready,saved,setSaved,syncBlocked:blocked.current};
 }

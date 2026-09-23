@@ -1,5 +1,10 @@
 # P.E.M — entrada para Codex ou Claude
-## Revisão de 23/09/2026 — P13/P14 reabertas (prevalece sobre os marcos abaixo)
+## Marco de 23/09/2026 — P13/P14 corrigidas e verificadas (estado vigente)
+- P13: conta Supabase só descobre a chave antiga após consulta ao servidor legado com a matrícula da própria conta autenticada. Chave de outro aluno e chave arbitrária no navegador não autorizam importação. Original local preservado, persistência local confirmada antes da marca de importação e importação suspensa em conflito. Serviço antigo respondeu autenticamente para matrícula de teste real do titular (somente resultado booleano registrado, sem segredo).
+- P14: lista/exportação paginadas por ID; E2E real inseriu 201 versões sintéticas, comprovou 200+1 páginas, 201 IDs únicos e 201 versões no JSON. Falha da segunda página mostra erro e não entrega exportação parcial. Compartilhamento, revogação e exclusão continuam cobertos.
+- Validação: tipos, lint, build, 11 unitários e regressão E2E completa (11 passaram em 1,2 min; IA real pulada por estar desligada). Teste de contas limpou as fixtures. Kanban 9/26 concluídas, 17 abertas. Próximo bloco P04/P05/P06/P08, Luna médio para QA repetitivo e Sol médio para correções. Produção antiga preservada até P25/P26.
+
+## Revisão anterior de 23/09/2026 — P13/P14 reabertas (resolvida no marco acima)
 - A revisão de `eb3f2b7` encontrou dois casos não cobertos: importação de dados antigos sem prova de titularidade e exportação de redações truncada após 200 versões. Relatório e testes de aceite em `docs/REVISAO-P13-P14.md`.
 - Correção imediata: removida a descoberta de identidade antiga no localStorage. Somente `legacyKey` autenticada pelo servidor pode selecionar dados; contas Supabase ficam sem importação até existir vínculo comprovado. Nenhum dado antigo foi removido.
 - Validação da mitigação: tipos, lint e build passaram; E2E real de contas passou em 43,7 s, incluindo recusa de importação sem vínculo, preservação local, conflito, perfil e compartilhamento/exclusão. Não foi repetida a suíte inteira nem o caso de 201 redações. IA off; produção preservada.
