@@ -3,7 +3,7 @@ on:
   pull_request:
     branches: [main]
   push:
-    branches: ['codex/**']
+    branches: [main, 'codex/**']
 permissions:
   contents: read
 concurrency:
