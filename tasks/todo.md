@@ -5,6 +5,8 @@ Contagem principal: 26 missões; **14 concluídas (P01–P14), 12 abertas (P15�
 
 Atualização: revisão adicional UI concluída; auditoria final P07 no Astra médio encontrou e corrigiu falta da lista admin ativada na política SQL. Migração aplicada, SQL red/green e E2E real com JWT (53,1 s) passaram. Próximo bloco P25/P26, preparação no Sol médio e decisão final no Astra alto. Evidências em `../docs/REVISAO-UI-P04-P08.md` e `../docs/REVISAO-P07.md`.
 
+Direção do usuário em 23/09: aproveitar a cota nas missões de produto antes da publicação. P25/P26 ficam como porta obrigatória da versão que for publicada; P15 recebe revisão final depois de fixar essa versão. Foco atual: P16/P17. P16 gerou mapa privado de 22 capturas, 165 grupos e 183 PDFs; 146 vínculos diretos, 37 pendentes, ordem visível de estudo e 30 incidências diretas do mapa do Assad. É estudo para ENEM, não trimestre da turma. Relatório em `../docs/MAPA-CURRICULAR.md`. A contagem de missões fechadas não mudou.
+
 ### Prioridade e modelo recomendado
 
 Use o modelo mais leve que mantenha o critério de qualidade. `GPT-6 Luna` atende tarefas frequentes e bem delimitadas; `GPT-6 Sol` é o modelo principal para código e decisões do dia a dia; `GPT-6 Astra` fica reservado para análise profunda, arquitetura e aprovação de mudanças críticas. A recomendação segue o guia oficial de seleção da OpenAI e o catálogo vigente em 23/09/2026. Na API, GPT-6 Luna custa US$0,10/US$0,50 e GPT-6 Sol US$2/US$10 por milhão de tokens de entrada/saída; GPT-5.6 Sol custa US$4/US$20. O consumo percentual da cota do Codex pode usar outra métrica e não deve ser inferido diretamente do preço da API.
@@ -16,13 +18,13 @@ Use o modelo mais leve que mantenha o critério de qualidade. `GPT-6 Luna` atend
 | 3 | P13, P14 | Sincronização, perfil e redações privadas | **GPT-6 Sol médio**; **Astra médio** para revisar conflitos e isolamento antes de fechar |
 | 4 | P04, P05, P06, P08 | Regressão de frontend, demonstração e oficina de redação | **Concluídas em 23/09 com GPT-6 Luna médio**; usar **GPT-6 Sol médio** para revisão adicional de UI/comportamentos |
 | 5 | P07 | Schema, RLS e isolamento | **Concluída em 23/09**; correção e auditoria final com **GPT-6 Astra médio**, após verificações no Sol médio |
-| 6 | P25, P26 | Segurança, preview, rollback e publicação | **GPT-6 Astra alto** para decisão final; **GPT-6 Sol médio** para executar correções e testes definidos |
-| 7 | P15 | Atualizar, revisar e enviar guia/PDF | **GPT-6 Luna médio** para atualização mecânica; **GPT-6 Sol médio** para revisão editorial final |
-| 8 | P16, P17 | Mapa curricular, OCR e organização do acervo | **GPT-6 Luna médio/alto** para processamento em lote; **GPT-6 Sol médio** nos casos ambíguos |
-| 9 | P18 | Curadoria, índice e benchmark de busca | **GPT-6 Sol alto** para construir; **GPT-6 Astra alto** para avaliar o benchmark e riscos de fonte |
-| 10 | P19, P20, P21 | Tutor, feedback de redação e fallback | **GPT-6 Astra alto** para arquitetura, injeção e critérios; **GPT-6 Sol alto** para implementação e depuração |
-| 11 | P22 | Conferir e cadastrar 40 questões | **GPT-6 Luna médio** para cadastro e checagens repetitivas; **GPT-6 Sol médio** para revisão pedagógica/fontes |
-| 12 | P23, P24 | Simulado e relatório PDF | **GPT-6 Sol alto** para implementação integrada; **GPT-6 Astra médio/alto** para revisão final das regras e do relatório |
+| 6 | P16, P17 | Mapa curricular, OCR e organização do acervo | **GPT-6 Luna médio/alto** para processamento em lote; **GPT-6 Sol médio** nos casos ambíguos |
+| 7 | P18 | Curadoria, índice e benchmark de busca | **GPT-6 Sol alto** para construir; **GPT-6 Astra alto** para avaliar o benchmark e riscos de fonte |
+| 8 | P19, P20, P21 | Tutor, feedback de redação e fallback | **GPT-6 Astra alto** para arquitetura, injeção e critérios; **GPT-6 Sol alto** para implementação e depuração |
+| 9 | P22 | Conferir e cadastrar 40 questões | **GPT-6 Luna médio** para cadastro e checagens repetitivas; **GPT-6 Sol médio** para revisão pedagógica/fontes |
+| 10 | P23, P24 | Simulado e relatório PDF | **GPT-6 Sol alto** para implementação integrada; **GPT-6 Astra médio/alto** para revisão final das regras e do relatório |
+| 11 | P25, P26 | Segurança, preview, rollback e publicação | **GPT-6 Sol médio** para preparar/corrigir/testar; **GPT-6 Astra alto** só para a decisão final se ainda necessária |
+| 12 | P15 | Atualizar, revisar e enviar guia/PDF da versão publicada | **GPT-6 Luna médio** para atualização mecânica; **GPT-6 Sol médio** para revisão editorial final |
 
 Trocar modelo ou esforço somente ao chegar ao tipo de trabalho indicado. Para reduzir cota: usar Luna nas etapas repetitivas, Sol no desenvolvimento normal e Astra apenas nos pontos críticos. Se GPT-6 não estiver disponível, usar GPT-5.6 Sol no mesmo esforço como alternativa.
 
@@ -73,7 +75,7 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 
 ## Backlog de produto — conhecimento e IA
 
-- [ ] **P16 · P1 · Mapa curricular unificado.** Ler as 22 imagens e nomes dos PDFs; mapear matéria/assunto/pré-requisito/trimestre/ENEM. Sem inventar incidência.
+- [ ] **P16 · P1 · Mapa curricular unificado.** 22 imagens lidas e 183 títulos vinculados em mapa privado: 165 grupos na ordem visível de estudo, 146 vínculos diretos e 37 pendências explícitas. Gráfico do Assad cruzado em 30 tópicos de correspondência direta; percentuais são estimativas até ENEM 2025, não estatística oficial. Categorias amplas permanecem separadas; pré-requisitos e ligações ambíguas pedem revisão pedagógica antes do `[x]`. Relatório `../docs/MAPA-CURRICULAR.md`.
 - [ ] **P17 · P1 · Extração retomável dos 183 PDFs.** SHA/página/estado, OCR só quando necessário, logs sem textos privados, duplicatas identificadas; relançar sem retrabalho.
 - [ ] **P18 · P1 · Curadoria e índice.** Revisar lotes prioritários, permissões, fontes/página, embeddings e busca híbrida. Acerto >=90% em 30 perguntas de referência.
 - [ ] **P19 · P1 · Tutor.** Fontes válidas, ausência de base, conflito e injeção testados; mensagens privadas; AI Elements; cota/concorrência/idempotência/reserva.

@@ -1,7 +1,7 @@
 # Plano do P.E.M
-Prioridade no fechamento22/09: estabilizar candidata com IA off, preservar produção até validar login legado/preview/rollback. Guia do professor pronto em texto; envio Drive pendente de permissão. Retomada exata em ../CONTEXTO.md.
+Prioridade vigente em 23/09: desenvolver o acervo e as missões de produto antes da próxima publicação, conforme orientação do usuário. Segurança, preview e rollback continuam portas obrigatórias da versão escolhida para publicar. Guia final acompanha essa versão; envio Drive ainda depende de permissão. Retomada exata em ../CONTEXTO.md.
 
-Objetivo: transformar a monitoria MONARCAS em um caminho de estudo por matéria, com trimestre, ENEM, redação e tutor fundamentado. Custo: gratuito. A produção e o QR continuam no mesmo endereço. O clone desta pasta é a aplicação; acervos originais e documentos da Ordem ficam fora dele.
+Objetivo: transformar a monitoria MONARCAS em um caminho de estudo por matéria, com sequência de conteúdos e incidência para o ENEM, redação e tutor fundamentado. Custo: gratuito. A produção e o QR continuam no mesmo endereço. O clone desta pasta é a aplicação; acervos originais e documentos da Ordem ficam fora dele.
 
 ## Método de trabalho
 
