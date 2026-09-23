@@ -3,7 +3,7 @@
 
 - Revisão adicional P04/P05/P06/P08 com GPT-6 Sol médio concluída: ajuda do login separada, guia do professor encaminha à demonstração sem prometer upload no Drive, avatar imediato no cabeçalho, link oficial do Inep no contador. Tipos/lint/build, cinco E2E focados e revisão visual de 12 telas desktop/mobile passaram. Evidência: `docs/REVISAO-UI-P04-P08.md`.
 - P07: catálogo do Supabase confirmou 12/12 tabelas públicas com RLS e zero SELECT para `anon`; teste SQL ampliado e executado com rollback passou isolamento, admin, compartilhamento, revogação e desativação. E2E real de contas passou; zero fixtures persistiram. Advisors têm avisos informativos de tabelas internas sem políticas e aviso de proteção contra senhas vazadas desativada, registrado para P25. P07 **ainda aberta** até auditoria final de autorização em GPT-6 Astra médio; detalhes em `docs/REVISAO-P07.md`.
-- Kanban 13/26 concluídas e 13 abertas. Produção Vercel permanece no baseline antigo; IA real desligada, preview ainda não validada. PDF na pasta PEM não deve ser anunciado como guia atualizado até a publicação e revisão correspondente.
+- Commit `8da1700` enviado à branch; CI remoto `PEM quality` passou e o status Vercel do commit ficou verde. A prévia ainda não teve QA remoto. Kanban 13/26 concluídas e 13 abertas. Produção Vercel permanece no baseline antigo; IA real desligada. PDF na pasta PEM não deve ser anunciado como guia atualizado até a publicação e revisão correspondente.
 
 ## Marco de 23/09/2026 — QA P04/P05/P06/P08 concluído
 - `npm run check:content`: baseline e contagens preservadas, 25 links e validações de questões/fontes ENEM passaram. `npm test`: 11 unitários passaram.

@@ -1,6 +1,6 @@
 # Estado atual — 23/09/2026
 ## Revisão adicional concluída; P07 em auditoria
-Login/professor/avatar/fonte ENEM corrigidos e verificados em desktop/mobile, cinco E2E focados, tipos/lint/build. P07: 12 tabelas públicas com RLS, nenhuma leitura anônima, isolamento SQL e E2E real passaram; falta auditoria final Astra médio. Advisor sinaliza proteção contra senhas vazadas desativada para P25. Relatórios: `REVISAO-UI-P04-P08.md` e `REVISAO-P07.md`. Kanban 13/26; produção antiga preservada.
+Login/professor/avatar/fonte ENEM corrigidos e verificados em desktop/mobile, cinco E2E focados, tipos/lint/build. P07: 12 tabelas públicas com RLS, nenhuma leitura anônima, isolamento SQL e E2E real passaram; falta auditoria final Astra médio. Advisor sinaliza proteção contra senhas vazadas desativada para P25. Commit `8da1700` enviado; CI remoto e status Vercel passaram, sem QA da prévia. Relatórios: `REVISAO-UI-P04-P08.md` e `REVISAO-P07.md`. Kanban 13/26; produção antiga preservada.
 
 ## QA P04/P05/P06/P08 concluído
 Baseline/conteúdo preservado; 25 links conferidos; 11 testes unitários e 11 E2E passaram. A IA real foi pulada porque está desligada. Fluxos de demonstração, professor, oficina de redação e persistência/exportação/isolation foram verificados em desktop e mobile; as capturas foram revisadas sem overflow ou erro visível. Kanban 13/26 concluídas, 13 abertas. Revisão adicional de UI/comportamentos fica para GPT-6 Sol médio conforme pedido. Screenshots fora do repo em `%TEMP%\pem-qa-p04-p08`.
