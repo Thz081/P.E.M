@@ -1,4 +1,7 @@
 # Retomada exata — 23/09/2026
+## Último marco — P12 fechada
+Painel admin passou em E2E real (35,4 s): lista 41 alunos reais + 2 fixtures temporárias, todas com nome/turma 3A DS, contagem e estado ativado, busca, recuperação e emissão/ocultação de código. Aluno/público bloqueados, admin sem progresso de aluno e zero fixtures restantes. Typecheck/lint verdes. Kanban 7/26 concluídas, 19 abertas. Próximo foco P13 com GPT-6 Sol médio; ativação pessoal dos dois responsáveis depende da senha escolhida por cada titular.
+
 ## Último marco — P11 fechada
 P11 passou integralmente em E2E real (35,8 s) e está marcada concluída: corrida de ativação, expiração, código inválido/uso único, não enumeração, rate limit, recuperação e troca de senha. A primeira ampliação do teste revelou timeout do próprio Playwright; corrigidos limites individuais e limpeza com tempo reservado. Banco confirmado com zero fixtures sintéticas. Typecheck/lint verdes; regressão completa 11 E2E aprovados em 55,6 s e IA real pulada por estar off. P10 também concluída após CI/proteção da main. Kanban: 6 de 26 completas, 20 abertas. Próximo foco P12; usar GPT-6 Sol médio. Matriz completa Luna/Sol/Astra em tasks/todo.md.
 

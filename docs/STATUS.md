@@ -1,4 +1,7 @@
 # Estado atual — 23/09/2026
+## P12 concluída
+Painel administrativo validado em E2E real: lista completa da 3A DS (41 registros reais + 2 fixtures durante o teste), nomes/turma, estado e contagem de ativação, busca, pedido de recuperação, geração e ocultação de código. Aluno/público recebem 403 e admin não usa progresso de aluno. Teste passou em 35,4 s; zero fixtures ao final; tipos e lint passaram. Kanban: 7/26 concluídas, 19 abertas.
+
 ## P11 concluída
 Ativação e recuperação passaram em E2E real (1/1, 35,8 s): concorrência, expiração, uso único, código inválido, não enumeração, limite de tentativas, pedido de recuperação, emissão pelo admin, troca de senha e recusa da senha/código antigos. O teste recebeu timeout individual de ações e teardown resiliente; zero fixtures sintéticas ficaram no Supabase. Typecheck e lint passaram. Regressão completa: 11 E2E passaram em 55,6 s e 1 IA real foi pulado porque a IA permanece off. P10 e P11 concluídas; Kanban: 6/26 concluídas, 20 abertas.
 

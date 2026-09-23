@@ -59,6 +59,15 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
   await pc.getByRole('button',{name:'Entrar na administração'}).click();await expect(pc).toHaveURL(/\/admin$/);
   await expect(pc.getByRole('heading',{name:'Acompanhar os acessos.'})).toBeVisible();
   await expect(pc.getByRole('heading',{name:`Matrícula ${b.matricula}`,exact:true})).toBeVisible();
+  const adminResponse=await cc.request.get('/api/admin');expect(adminResponse.status()).toBe(200);
+  const adminData=await adminResponse.json();expect(adminData.roster).toHaveLength(43);
+  expect(adminData.roster.every((entry:{nome:string;turma:string})=>entry.nome.trim()&&entry.turma==='3A DS')).toBe(true);
+  expect(adminData.roster.filter((entry:{activated_at:string|null})=>entry.activated_at)).toHaveLength(2);
+  await expect(pc.getByText('43 matrículas · 2 ativadas · 0 pedidos de recuperação')).toBeVisible();
+  await pc.getByLabel('Buscar matrícula').fill(b.matricula);
+  await expect(pc.locator('.resource-list>div')).toHaveCount(1);
+  await expect(pc.locator('.resource-list>div')).toContainText('Conta ativada');
+  await pc.getByLabel('Buscar matrícula').fill('');
   expect((await cc.request.get('/api/progress')).status()).toBe(401);
   expect((await cb.request.get('/api/admin')).status()).toBe(403);
   await pb.goto('/admin');await expect(pb).toHaveURL(/\/estudar$/);

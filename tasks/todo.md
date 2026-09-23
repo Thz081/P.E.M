@@ -1,7 +1,7 @@
 # Quadro de trabalho — P.E.M
 ## Estado atual — 23/09/2026
 
-Contagem principal: 26 missões; 6 concluídas (P01, P02, P03, P09, P10, P11), 20 abertas. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
+Contagem principal: 26 missões; 7 concluídas (P01, P02, P03, P09, P10, P11, P12), 19 abertas. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
 
 ### Prioridade e modelo recomendado
 
@@ -25,7 +25,7 @@ Use o modelo mais leve que mantenha o critério de qualidade. `GPT-6 Luna` atend
 Trocar modelo ou esforço somente ao chegar ao tipo de trabalho indicado. Para reduzir cota: usar Luna nas etapas repetitivas, Sol no desenvolvimento normal e Astra apenas nos pontos críticos. Se GPT-6 não estiver disponível, usar GPT-5.6 Sol no mesmo esforço como alternativa.
 
 1. P10 concluída: workflow executa lint, tipos, conteúdo, testes TS/Python, audit, build e E2E; proteção da main exige o check `quality` atualizado e vale para admin, sem force push/exclusão. CI de a8278cc e eae78c2 passaram; preview continua separado da produção. Detalhes em ../docs/CI.md.
-2. P11 concluída: E2E real passou em 35,8 s para ativação concorrente, expirada e inválida, mensagens sem enumeração, rate limit, recuperação completa, troca de senha e uso único. Playwright agora limita cada ação/expectativa e reserva tempo de limpeza; zero fixtures sintéticas restantes. P12 segue aberta para o painel e a ativação real dos dois responsáveis. Quatro códigos privados iniciais expiram em 24/09 00h14 Brasília; outros 39 alunos ainda sem código.
+2. P11/P12 concluídas: E2E real passou para ativação/recuperação e painel. Admin listou 41 alunos reais + 2 fixtures temporárias, todas 3A DS com nome; estado, busca, pedido e código funcionaram. Aluno/público bloqueados e zero fixtures restantes. A ativação pessoal dos dois responsáveis continua operacional, pois cada titular deve escolher a senha. Quatro códigos privados iniciais expiram em 24/09 00h14 Brasília; outros 39 alunos ainda sem código.
 3. P13/P25/P26: testar sincronização entre duas sessões, transição de login/progresso legado, preview/ambientes e rollback. Produção permanece no baseline antigo. Vercel foi reconectada pelo usuário, mas ferramentas retornaram Unknown tool nesta sessão; acesso remoto ainda não validado.
 4. P15: PDF final do professor revisado localmente (7 páginas), atualizar após a publicação. Drive segue com bloqueio de escrita 403; não anunciar upload.
 5. P18/P19/P20: lote de 2 documentos/6 trechos indexado. Filtro de fontes passou em tipos/lint/9 unitários/build/conteúdo, mas teste com IA real e feedback de redação pendentes. IA off. Último orçamento Cloudflare: 7200/8500 neurônios reservados em 23/09 UTC.
@@ -63,7 +63,7 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 
 - [x] **P10 · P0 · CI e proteção de branch.** Workflow cobre lint/tipos/conteúdo/testes TS e Python/audit/build/E2E. `main` exige o check `quality` atualizado, inclusive para admin, e bloqueia force push/exclusão; preview não promove produção. CI remota passou nos commits a8278cc e eae78c2.
 - [x] **P11 · P0 · Ativação e recuperação.** Código individual expira e é de uso único, senha pessoal e recuperação validadas, rate limit confirmado, respostas não enumeram matrículas e corrida concorrente deixa apenas uma ativação válida. E2E real passou em 35,8 s; limpeza confirmou zero fixtures sintéticas.
-- [ ] **P12 · P1 · Painel admin.** Aceite: lista 3A DS, estado ativado, códigos e pedidos de recuperação; aluno/demo recebem 403.
+- [x] **P12 · P1 · Painel admin.** E2E real validou lista completa da 3A DS com nome, contagem/estado ativado, busca, pedido de recuperação e emissão/ocultação de código. Aluno e público recebem 403; conta admin não acessa progresso de aluno. Zero fixtures após o teste.
 - [ ] **P13 · P1 · Perfil e persistência.** Aceite: progresso/anotações sincronizados sem sobrescrever conflito, apelido/avatar, logout, migração ligada à mesma conta.
 - [ ] **P14 · P1 · Redações privadas.** Aceite: versões em banco, compartilhamento autenticado/revogável, exportação/exclusão; teste entre duas contas.
 - [ ] **P15 · P1 · Guia do professor.** Aceite: documento amigável com link correto, demonstração e limitações reais; revisado visualmente.

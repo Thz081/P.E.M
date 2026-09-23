@@ -1,4 +1,8 @@
 # P.E.M — entrada para Codex ou Claude
+## Marco de 23/09/2026 — P12 concluída
+- Painel admin passou no Supabase real: durante o E2E exibiu 41 alunos provisionados + 2 fixtures, todas as 43 linhas com nome e turma 3A DS; contagem de ativadas, busca, recuperação e código funcionaram. Aluno/público bloqueados, admin separado de progresso e zero fixtures ao final. Typecheck/lint verdes. A ativação pessoal dos dois responsáveis permanece como operação do titular.
+- Kanban principal: 7/26 concluídas, 19 abertas. Próximo foco P13 (perfil, persistência e conflito entre sessões), recomendado GPT-6 Sol médio.
+
 ## Marco de 23/09/2026 — P11 concluída e modelos por missão
 - P11 concluída após E2E real (35,8 s): ativação concorrente/expirada/inválida, uso único, não enumeração, rate limit, recuperação, troca de senha, recusa da senha anterior e do código reutilizado. `playwright.config.ts` ganhou limites por ação/navegação/expectativa; o teardown reserva tempo e não deixa fixtures. Supabase confirmado com zero usuários sintéticos após o teste.
 - Regressão final da etapa: 11 E2E passaram em 55,6 s; somente IA real pulada por estar desligada. P10 também concluída com CI/proteção da main verificadas. Kanban principal: 6/26 missões concluídas, 20 abertas. `tasks/todo.md` recomenda GPT-6 Luna para lotes/rotina, GPT-6 Sol para desenvolvimento e GPT-6 Astra para arquitetura/revisões críticas. GPT-6 Sol médio é a recomendação atual para P12/P13; preços de API não equivalem necessariamente à porcentagem da cota do Codex.
