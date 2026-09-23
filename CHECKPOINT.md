@@ -1,4 +1,9 @@
 # P.E.M — entrada para Codex ou Claude
+## Marco de 23/09/2026 — QA P04/P05/P06/P08 concluído
+- `npm run check:content`: baseline e contagens preservadas, 25 links e validações de questões/fontes ENEM passaram. `npm test`: 11 unitários passaram.
+- Regressão Playwright: 11 E2E passaram em 1,2 min; IA real pulada por estar desligada. Cobriu contas reais sintéticas e RLS funcional, P08a desktop/mobile (persistência, exportação JSON, isolamento), navegação demo, proteção privada, responsividade, oficina de redação e guia do professor. Capturas revisadas em `%TEMP%\pem-qa-p04-p08`; sem overflow ou erro de renderização visível.
+- Kanban principal: 13/26 concluídas, 13 abertas. P04/P05/P06/P08 marcadas somente após aceite verificado. Próximo passo recomendado pelo usuário: GPT-6 Sol médio para revisar e corrigir UI/comportamentos. P07 continua pedindo GPT-6 Sol alto e revisão Astra médio. Produção permanece no baseline antigo.
+
 ## Marco de 23/09/2026 — P13/P14 corrigidas e verificadas (estado vigente)
 - P13: conta Supabase só descobre a chave antiga após consulta ao servidor legado com a matrícula da própria conta autenticada. Chave de outro aluno e chave arbitrária no navegador não autorizam importação. Original local preservado, persistência local confirmada antes da marca de importação e importação suspensa em conflito. Serviço antigo respondeu autenticamente para matrícula de teste real do titular (somente resultado booleano registrado, sem segredo).
 - P14: lista/exportação paginadas por ID; E2E real inseriu 201 versões sintéticas, comprovou 200+1 páginas, 201 IDs únicos e 201 versões no JSON. Falha da segunda página mostra erro e não entrega exportação parcial. Compartilhamento, revogação e exclusão continuam cobertos.

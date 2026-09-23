@@ -1,4 +1,7 @@
 # Estado atual — 23/09/2026
+## QA P04/P05/P06/P08 concluído
+Baseline/conteúdo preservado; 25 links conferidos; 11 testes unitários e 11 E2E passaram. A IA real foi pulada porque está desligada. Fluxos de demonstração, professor, oficina de redação e persistência/exportação/isolation foram verificados em desktop e mobile; as capturas foram revisadas sem overflow ou erro visível. Kanban 13/26 concluídas, 13 abertas. Revisão adicional de UI/comportamentos fica para GPT-6 Sol médio conforme pedido. Screenshots fora do repo em `%TEMP%\pem-qa-p04-p08`.
+
 ## P13/P14 corrigidas após revisão
 Vínculo da migração verificado pelo servidor legado a partir da matrícula da conta Supabase; chave alheia recusada. Paginação por ID e exportação de 201 versões testadas no Supabase real; erro na segunda página não gera arquivo parcial. Tipos/lint/build e 11 testes unitários verdes; regressão 11 E2E aprovados e IA real pulada por estar off. Kanban: 9/26 concluídas, 17 abertas. Produção antiga preservada; próximo P04/P05/P06/P08.
 

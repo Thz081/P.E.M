@@ -1,4 +1,7 @@
 # Retomada exata — 23/09/2026
+## Estado vigente — QA P04/P05/P06/P08 concluído
+Conteúdo/baseline e 25 links passaram; 11 unitários; regressão E2E 11 passaram, IA real pulada. Demonstracão, guia, oficina de redação e P08a em desktop/mobile passaram em fluxos; capturas revisadas sem overflow/erro visível. Kanban 13/26 concluídas, 13 abertas. Próxima tarefa: revisão UI e comportamentos no GPT-6 Sol médio, solicitada pelo usuário; P07 requer depois Sol alto e Astra médio. Produção antiga mantida. Capturas locais em `%TEMP%\pem-qa-p04-p08`.
+
 ## Estado vigente — P13/P14 corrigidas
 Migração antiga vinculada pela matrícula autenticada e confirmação do servidor legado; a chave presente no navegador só é aceita se corresponder à chave confirmada. Originais preservados; importação bloqueada durante conflito. Redações paginadas e exportação de 201 versões verificada no Supabase real, inclusive falha da segunda página. Tipos/lint/build, 11 unitários e regressão E2E: 11 aprovados, IA real pulada por estar off. Kanban 9/26 concluídas, 17 abertas. Próximo P04/P05/P06/P08 com Luna médio no QA e Sol médio em correções. Produção antiga preservada. Relatório de revisão e resolução em `docs/REVISAO-P13-P14.md`.
 

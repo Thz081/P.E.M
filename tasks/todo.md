@@ -1,7 +1,7 @@
 # Quadro de trabalho — P.E.M
 ## Estado atual — 23/09/2026
 
-Contagem principal: 26 missões; 9 concluídas (P01, P02, P03, P09, P10, P11, P12, P13, P14), 17 abertas. P13/P14 foram reabertas na revisão e fechadas após correção e testes reais; detalhes em ../docs/REVISAO-P13-P14.md. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
+Contagem principal: 26 missões; 13 concluídas (P01, P02, P03, P04, P05, P06, P08, P09, P10, P11, P12, P13, P14), 13 abertas. P13/P14 foram reabertas na revisão e fechadas após correção e testes reais; detalhes em ../docs/REVISAO-P13-P14.md. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
 
 ### Prioridade e modelo recomendado
 
@@ -12,7 +12,7 @@ Use o modelo mais leve que mantenha o critério de qualidade. `GPT-6 Luna` atend
 | 1 | P10 | CI e proteção de branch | **GPT-6 Luna baixo** para conferir execuções e documentação; **GPT-6 Sol baixo** para corrigir workflow |
 | 2 | P11, P12 | Ativação, recuperação e painel admin | **GPT-6 Sol médio**; subir para **Sol alto** apenas em concorrência, Auth ou falha difícil |
 | 3 | P13, P14 | Sincronização, perfil e redações privadas | **GPT-6 Sol médio**; **Astra médio** para revisar conflitos e isolamento antes de fechar |
-| 4 | P04, P05, P06, P08 | Regressão de frontend, demonstração e oficina de redação | **GPT-6 Luna médio** para repetir QA; **GPT-6 Sol médio** para corrigir comportamento/UI |
+| 4 | P04, P05, P06, P08 | Regressão de frontend, demonstração e oficina de redação | **Concluídas em 23/09 com GPT-6 Luna médio**; usar **GPT-6 Sol médio** para revisão adicional de UI/comportamentos |
 | 5 | P07 | Schema, RLS e isolamento | **GPT-6 Sol alto** para implementação; **GPT-6 Astra médio** para auditoria final de autorização |
 | 6 | P25, P26 | Segurança, preview, rollback e publicação | **GPT-6 Astra alto** para decisão final; **GPT-6 Sol médio** para executar correções e testes definidos |
 | 7 | P15 | Atualizar, revisar e enviar guia/PDF | **GPT-6 Luna médio** para atualização mecânica; **GPT-6 Sol médio** para revisão editorial final |
@@ -27,7 +27,7 @@ Trocar modelo ou esforço somente ao chegar ao tipo de trabalho indicado. Para r
 1. P10 concluída: workflow executa lint, tipos, conteúdo, testes TS/Python, audit, build e E2E; proteção da main exige o check `quality` atualizado e vale para admin, sem force push/exclusão. CI de a8278cc e eae78c2 passaram; preview continua separado da produção. Detalhes em ../docs/CI.md.
 2. P11/P12 concluídas: E2E real passou para ativação/recuperação e painel. Admin listou 41 alunos reais + 2 fixtures temporárias, todas 3A DS com nome; estado, busca, pedido e código funcionaram. Aluno/público bloqueados e zero fixtures restantes. A ativação pessoal dos dois responsáveis continua operacional, pois cada titular deve escolher a senha. Quatro códigos privados iniciais expiram em 24/09 00h14 Brasília; outros 39 alunos ainda sem código.
 3. P13 corrigida: matrícula da conta autenticada é verificada no serviço legado; só a chave correspondente autoriza importação local. Teste real cobre chave errada/certa e persistência, com originais preservados. Produção permanece no baseline antigo.
-4. P14 corrigida: exportação pagina todas as versões; teste real de 201 linhas confirmou 200+1 e arquivo completo. Falha de página é exibida sem download parcial. Próximo bloco P04/P05/P06/P08 no Luna médio para QA e Sol médio para correções.
+4. P04/P05/P06/P08 concluídas na regressão local e capturas desktop/mobile. Baseline/conteúdo, demo, professor, redação, persistência, exportação e sem overflow cobertos. Próximo: revisão adicional UI/comportamentos no Sol médio conforme pedido do usuário, depois P07 pede Sol alto e Astra médio.
 5. P15: PDF final do professor revisado localmente (7 páginas), atualizar após a publicação. Drive segue com bloqueio de escrita 403; não anunciar upload.
 6. P18/P19/P20: lote de 2 documentos/6 trechos indexado. Filtro de fontes passou em tipos/lint/9 unitários/build/conteúdo, mas teste com IA real e feedback de redação pendentes. IA off. Último orçamento Cloudflare: 7200/8500 neurônios reservados em 23/09 UTC.
 7. P16/P17/P18 e P22–P24: currículo/curadoria/OCR, questões, simulado e relatório conforme critérios abaixo. Pode haver versão estável com IA desligada antes de concluir todo o backlog.
@@ -50,14 +50,14 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 
 ## Em teste
 
-- [ ] **P04 · P0 · Migração do frontend e conteúdo.** Aceite: baseline 46/52/61/25/9/29/15 preservado, links e funções em desktop/mobile. Evidência parcial: build Next passou; faltam testes completos.
-- [ ] **P05 · P1 · Demonstração e professor.** Aceite: navegação sem dados reais, entrada por botão/login público, guia alinhado ao que funciona. Evidência parcial: rotas escritas; QA pendente.
-- [ ] **P06 · P1 · Oficina de redação.** Aceite: oito lições, escrita, versões, comparação, exportação/exclusão; não simular nota. Evidência parcial: implementado localmente; QA pendente.
+- [x] **P04 · P0 · Migração do frontend e conteúdo.** Conteúdo validado contra baseline integral, 25 links e questões ENEM com opções/origem; E2E funcional desktop/mobile e sem overflow.
+- [x] **P05 · P1 · Demonstração e professor.** Botão/login público leva à demonstração; guia testado; navegação, materiais e tentativa de acesso privado não vazam dados reais nem autorizam APIs.
+- [x] **P06 · P1 · Oficina de redação.** Oito lições, validação de campos, gravação/reload, reabertura, comparação, exportação e exclusão verificadas em 1280 e 390 px. Demo não exibe avaliação por IA nem nota.
 - [ ] **P07 · P0 · Schema e RLS.** Aceite: isolamento real entre duas contas, admin controlado, nenhuma tabela exposta indevidamente. Evidência parcial: migration aplicada; teste RLS/advisors pendentes.
 
 ## Em andamento
 
-- [ ] **P08 · P0 · Regressão e correções.** Dependência P04. Corrigir persistência/importação/continuidade, testar CLI+browser e guardar resultados.
+- [x] **P08 · P0 · Regressão e correções.** `check:content`, 11 unitários e regressão completa com 11 E2E aprovados; IA real explicitamente pulada. P08a desktop/mobile validou persistência, exportação e isolamento demo. Screenshots fora do repositório em `%TEMP%\pem-qa-p04-p08`.
 - [x] **P09 · P0 · Configuração de contas.** Credenciais configuradas; 41 registros de 3A DS importados com nome/turma/matrícula e conferidos no banco. Senhas antigas ignoradas. Ativação e entrega de códigos continuam em P11/P12.
 
 ## A fazer — Sprint 1/2
