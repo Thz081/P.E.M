@@ -1,7 +1,7 @@
 # Quadro de trabalho — P.E.M
 ## Estado atual — 23/09/2026
 
-Contagem principal: 26 missões; 7 concluídas (P01, P02, P03, P09, P10, P11, P12), 19 abertas. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
+Contagem principal: 26 missões; 9 concluídas (P01, P02, P03, P09, P10, P11, P12, P13, P14), 17 abertas. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
 
 ### Prioridade e modelo recomendado
 
@@ -26,10 +26,11 @@ Trocar modelo ou esforço somente ao chegar ao tipo de trabalho indicado. Para r
 
 1. P10 concluída: workflow executa lint, tipos, conteúdo, testes TS/Python, audit, build e E2E; proteção da main exige o check `quality` atualizado e vale para admin, sem force push/exclusão. CI de a8278cc e eae78c2 passaram; preview continua separado da produção. Detalhes em ../docs/CI.md.
 2. P11/P12 concluídas: E2E real passou para ativação/recuperação e painel. Admin listou 41 alunos reais + 2 fixtures temporárias, todas 3A DS com nome; estado, busca, pedido e código funcionaram. Aluno/público bloqueados e zero fixtures restantes. A ativação pessoal dos dois responsáveis continua operacional, pois cada titular deve escolher a senha. Quatro códigos privados iniciais expiram em 24/09 00h14 Brasília; outros 39 alunos ainda sem código.
-3. P13/P25/P26: testar sincronização entre duas sessões, transição de login/progresso legado, preview/ambientes e rollback. Produção permanece no baseline antigo. Vercel foi reconectada pelo usuário, mas ferramentas retornaram Unknown tool nesta sessão; acesso remoto ainda não validado.
-4. P15: PDF final do professor revisado localmente (7 páginas), atualizar após a publicação. Drive segue com bloqueio de escrita 403; não anunciar upload.
-5. P18/P19/P20: lote de 2 documentos/6 trechos indexado. Filtro de fontes passou em tipos/lint/9 unitários/build/conteúdo, mas teste com IA real e feedback de redação pendentes. IA off. Último orçamento Cloudflare: 7200/8500 neurônios reservados em 23/09 UTC.
-6. P16/P17/P18 e P22–P24: currículo/curadoria/OCR, questões, simulado e relatório conforme critérios abaixo. Pode haver versão estável com IA desligada antes de concluir todo o backlog.
+3. P13 concluída: E2E real cobre perfil/avatar/logout, sincronização, conflito sem sobrescrita e importação explícita do único conjunto legado encontrado no navegador, preservando os originais e vinculando-os à conta autenticada. P25/P26 ainda cobrem preview/ambientes e rollback. Produção permanece no baseline antigo.
+4. P14 concluída: E2E real cobre versão no banco, download JSON inspecionado, isolamento, compartilhamento autenticado e revogável entre duas contas, bloqueio de exclusão pelo destinatário e exclusão pelo dono. Revisão conjunta P13/P14 no Astra médio é a próxima verificação adicional.
+5. P15: PDF final do professor revisado localmente (7 páginas), atualizar após a publicação. Drive segue com bloqueio de escrita 403; não anunciar upload.
+6. P18/P19/P20: lote de 2 documentos/6 trechos indexado. Filtro de fontes passou em tipos/lint/9 unitários/build/conteúdo, mas teste com IA real e feedback de redação pendentes. IA off. Último orçamento Cloudflare: 7200/8500 neurônios reservados em 23/09 UTC.
+7. P16/P17/P18 e P22–P24: currículo/curadoria/OCR, questões, simulado e relatório conforme critérios abaixo. Pode haver versão estável com IA desligada antes de concluir todo o backlog.
 
 Concluído também: P07a, P08a, contador dos dois dias ENEM. Extração de 185 PDFs/1868 páginas/2296 trechos feita; 323 páginas ainda exigem revisão/OCR. Não confundir extração com acervo pronto para o tutor.
 
@@ -64,8 +65,8 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 - [x] **P10 · P0 · CI e proteção de branch.** Workflow cobre lint/tipos/conteúdo/testes TS e Python/audit/build/E2E. `main` exige o check `quality` atualizado, inclusive para admin, e bloqueia force push/exclusão; preview não promove produção. CI remota passou nos commits a8278cc e eae78c2.
 - [x] **P11 · P0 · Ativação e recuperação.** Código individual expira e é de uso único, senha pessoal e recuperação validadas, rate limit confirmado, respostas não enumeram matrículas e corrida concorrente deixa apenas uma ativação válida. E2E real passou em 35,8 s; limpeza confirmou zero fixtures sintéticas.
 - [x] **P12 · P1 · Painel admin.** E2E real validou lista completa da 3A DS com nome, contagem/estado ativado, busca, pedido de recuperação e emissão/ocultação de código. Aluno e público recebem 403; conta admin não acessa progresso de aluno. Zero fixtures após o teste.
-- [ ] **P13 · P1 · Perfil e persistência.** Aceite: progresso/anotações sincronizados sem sobrescrever conflito, apelido/avatar, logout, migração ligada à mesma conta.
-- [ ] **P14 · P1 · Redações privadas.** Aceite: versões em banco, compartilhamento autenticado/revogável, exportação/exclusão; teste entre duas contas.
+- [x] **P13 · P1 · Perfil e persistência.** E2E real validou sincronização e isolamento entre contas, preservação da cópia local em conflito, apelido/avatar após reload, logout e importação explícita do único conjunto legado do navegador. Originais preservados, limite de 200 KB e marca contra repetição; regressão: 11 passaram e IA real pulada por estar desligada.
+- [x] **P14 · P1 · Redações privadas.** E2E real validou versão no banco, exportação JSON e conteúdo do arquivo, isolamento, compartilhamento e revogação entre duas contas. Destinatário recebe 404 ao tentar excluir; dono exclui e revoga compartilhamentos. Build/tipos/lint verdes e regressão com 11 E2E aprovados.
 - [ ] **P15 · P1 · Guia do professor.** Aceite: documento amigável com link correto, demonstração e limitações reais; revisado visualmente.
 
 ## Backlog de produto — conhecimento e IA

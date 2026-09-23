@@ -1,7 +1,15 @@
 # P.E.M — entrada para Codex ou Claude
+## Marco de 23/09/2026 — P14 concluída
+- Redações privadas passaram no Supabase real: versão persistida, download JSON com conteúdo inspecionado, isolamento, compartilhamento/revogação entre duas contas, destinatário impedido de excluir e exclusão pelo dono. A API agora responde 404 quando o usuário não possui o texto solicitado.
+- Build, tipos e lint verdes; regressão completa: 11 E2E passaram em 1,1 min e somente IA real foi pulada por estar desligada. Kanban: 9/26 concluídas, 17 abertas. Próximo passo é revisão conjunta P13/P14 no GPT-6 Astra médio; depois P04/P05/P06/P08.
+
+## Marco de 23/09/2026 — P13 concluída
+- Perfil e persistência passaram no Supabase real: sincronização e isolamento entre contas, conflito sem sobrescrever a cópia local, apelido/avatar após reload, logout e importação explícita do único conjunto legado detectado no navegador. A importação preserva os originais, limita o payload a 200 KB e grava marca contra repetição.
+- Build, tipos e lint verdes; regressão completa: 11 E2E passaram em 1,1 min e somente IA real foi pulada por permanecer desligada. Kanban principal: 8/26 concluídas, 18 abertas. Próximo foco P14 no GPT-6 Sol médio; depois, revisão conjunta P13/P14 no Astra médio.
+
 ## Marco de 23/09/2026 — P12 concluída
 - Painel admin passou no Supabase real: durante o E2E exibiu 41 alunos provisionados + 2 fixtures, todas as 43 linhas com nome e turma 3A DS; contagem de ativadas, busca, recuperação e código funcionaram. Aluno/público bloqueados, admin separado de progresso e zero fixtures ao final. Typecheck/lint verdes. A ativação pessoal dos dois responsáveis permanece como operação do titular.
-- Kanban principal: 7/26 concluídas, 19 abertas. Próximo foco P13 (perfil, persistência e conflito entre sessões), recomendado GPT-6 Sol médio.
+- Kanban naquele marco: 7/26 concluídas, 19 abertas. O estado atual está no marco P13 acima.
 
 ## Marco de 23/09/2026 — P11 concluída e modelos por missão
 - P11 concluída após E2E real (35,8 s): ativação concorrente/expirada/inválida, uso único, não enumeração, rate limit, recuperação, troca de senha, recusa da senha anterior e do código reutilizado. `playwright.config.ts` ganhou limites por ação/navegação/expectativa; o teardown reserva tempo e não deixa fixtures. Supabase confirmado com zero usuários sintéticos após o teste.

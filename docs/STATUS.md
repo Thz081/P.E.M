@@ -1,4 +1,10 @@
 # Estado atual — 23/09/2026
+## P14 concluída
+Redações privadas validadas no Supabase real: versão no banco, download JSON com conteúdo conferido, isolamento, compartilhamento e revogação entre duas contas, bloqueio de exclusão pelo destinatário e exclusão pelo dono. A API retorna 404 quando o texto não pertence ao solicitante. Build, tipos e lint passaram; regressão completa teve 11 E2E aprovados em 1,1 min e somente IA real pulada. Kanban: 9/26 concluídas, 17 abertas. Revisão conjunta P13/P14 no Astra médio vem antes de P04/P05/P06/P08.
+
+## P13 concluída
+Perfil e persistência validados em E2E real: sincronização e isolamento entre contas, conflito sem sobrescrita da cópia local, apelido/avatar após reload, logout e importação explícita do único conjunto legado detectado no navegador. Os dados antigos são preservados; a importação tem limite de 200 KB e marca contra repetição. Build, tipos e lint passaram; regressão completa teve 11 E2E aprovados em 1,1 min e somente IA real pulada por estar desligada. Kanban: 8/26 concluídas, 18 abertas.
+
 ## P12 concluída
 Painel administrativo validado em E2E real: lista completa da 3A DS (41 registros reais + 2 fixtures durante o teste), nomes/turma, estado e contagem de ativação, busca, pedido de recuperação, geração e ocultação de código. Aluno/público recebem 403 e admin não usa progresso de aluno. Teste passou em 35,4 s; zero fixtures ao final; tipos e lint passaram. Kanban: 7/26 concluídas, 19 abertas.
 

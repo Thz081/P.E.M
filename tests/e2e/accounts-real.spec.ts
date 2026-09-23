@@ -1,6 +1,7 @@
 import {test,expect} from '@playwright/test';
 import {createClient} from '@supabase/supabase-js';
 import {createHmac,randomBytes,randomInt,randomUUID} from 'node:crypto';
+import {readFile} from 'node:fs/promises';
 
 // Explicit opt-in: uses the dedicated PEM service, real Auth and RLS, synthetic users only.
 test('real accounts: activation race, expiry, login, admin, isolation and revocation',async({browser,request,baseURL},testInfo)=>{
@@ -54,6 +55,16 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
   }
   await expect(pa.getByRole('link',{name:'Administração',exact:true})).toHaveCount(0);
   expect((await ca.request.get('/api/admin')).status()).toBe(403);
+  const legacyKey=`legacy-${randomUUID()}`,legacyLesson={id:'aula-1'},legacyMaterial={id:'136jGqeEUPXWgcTInuOilTnyc1MctfuDC'};
+  await pb.evaluate(({key,lessonId,materialId})=>{
+   localStorage.setItem(`pem-progress-${key}`,JSON.stringify({[`read-${lessonId}`]:true,[materialId]:true}));
+   localStorage.setItem(`pem-note-${key}-${lessonId}`,'Nota antiga preservada e vinculada pelo aluno.');
+  },{key:legacyKey,lessonId:legacyLesson.id,materialId:legacyMaterial.id});
+  await pb.reload();
+  await pb.getByRole('button',{name:'Importar dados locais deste acesso antigo'}).click();
+  await expect(pb.getByRole('status')).toContainText('Dados deste acesso importados');
+  await expect.poll(async()=>await (await cb.request.get('/api/progress')).json()).toMatchObject({progress:{read:{[legacyLesson.id]:true},notes:{[legacyLesson.id]:'Nota antiga preservada e vinculada pelo aluno.'},materials:{[legacyMaterial.id]:true}}});
+  expect(await pb.evaluate(({key,lessonId,userId})=>({progress:localStorage.getItem(`pem-progress-${key}`),note:localStorage.getItem(`pem-note-${key}-${lessonId}`),marker:localStorage.getItem(`pem-legacy-imported-${userId}-${key}`)}),{key:legacyKey,lessonId:legacyLesson.id,userId:b.id})).toEqual({progress:expect.any(String),note:'Nota antiga preservada e vinculada pelo aluno.',marker:'1'});
   await pc.goto('/');await pc.getByRole('button',{name:'Administração',exact:true}).click();
   await pc.getByLabel('Matrícula',{exact:true}).fill(a.matricula);await pc.getByLabel('Senha',{exact:true}).fill(password);
   await pc.getByRole('button',{name:'Entrar na administração'}).click();await expect(pc).toHaveURL(/\/admin$/);
@@ -81,10 +92,23 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
   const save=await ca.request.put('/api/progress',{headers,data:{progress,revision:0}});expect(save.status()).toBe(200);
   expect((await ca.request.put('/api/progress',{headers,data:{progress,revision:0}})).status()).toBe(409);
   expect((await (await ca.request.get('/api/progress')).json()).progress).toEqual(progress);
-  expect((await (await cb.request.get('/api/progress')).json()).progress).toBeNull();
+  expect((await (await cb.request.get('/api/progress')).json()).progress).toMatchObject({read:{[legacyLesson.id]:true},notes:{[legacyLesson.id]:'Nota antiga preservada e vinculada pelo aluno.'},materials:{[legacyMaterial.id]:true}});
+  expect((await (await cb.request.get('/api/progress')).json()).progress).not.toEqual(progress);
+  const cd=await browser.newContext({baseURL});contexts.push(cd);const pd=await cd.newPage();
+  await pd.goto('/');await pd.getByLabel('Matrícula',{exact:true}).fill(a.matricula);
+  await pd.getByLabel('Senha',{exact:true}).fill(password);await pd.getByRole('button',{name:'Entrar para estudar'}).click();
+  await expect(pd).toHaveURL(/\/estudar$/);await expect(pd.locator('main')).toHaveAttribute('aria-busy','false');
+  const conflictLocal={read:{local:true},notes:{local:'Cópia local preservada'},answers:{},materials:{}};
+  await pd.evaluate(({key,value})=>localStorage.setItem(key,JSON.stringify({progress:value,revision:0,pending:true})),{key:`pem-v2-progress-${a.id}`,value:conflictLocal});
+  await pd.reload();await expect(pd.getByRole('status')).toContainText('Conflito entre cópias');
+  const preserved=await pd.evaluate(key=>JSON.parse(localStorage.getItem(key)!),`pem-v2-progress-${a.id}`);
+  expect(preserved).toEqual({progress:conflictLocal,revision:0,pending:true});
   await pa.goto('/estudar/redacao');await pa.getByRole('button',{name:'Escrever e revisar',exact:true}).click();
   await pa.getByLabel('Tema da redação').fill('Tema sintético');await pa.getByLabel('Seu texto',{exact:true}).fill('Texto privado para testar isolamento.');
   await pa.getByRole('button',{name:'Salvar versão',exact:true}).click();await expect(pa.getByText('Versão salva na sua conta.',{exact:true})).toBeVisible();
+  const downloadPromise=pa.waitForEvent('download');await pa.getByRole('button',{name:'Exportar texto',exact:true}).click();const download=await downloadPromise;
+  expect(download.suggestedFilename()).toBe('minhas-redacoes-pem.json');const exportPath=await download.path();expect(exportPath).toBeTruthy();
+  expect(JSON.parse(await readFile(exportPath!,'utf8'))).toMatchObject({theme:'Tema sintético',text:'Texto privado para testar isolamento.',versions:[{theme:'Tema sintético',text:'Texto privado para testar isolamento.'}]});
   await pa.reload();await pa.getByRole('button',{name:'Minhas versões',exact:true}).click();await expect(pa.getByRole('heading',{name:'Tema sintético',exact:true})).toBeVisible();
   const essayId=(await (await ca.request.get('/api/essays')).json()).essays[0].id;
   expect((await (await cb.request.get('/api/essays')).json()).essays).toHaveLength(0);
@@ -94,7 +118,7 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
   await pb.goto('/estudar/redacao');await pb.getByRole('button',{name:'Minhas versões',exact:true}).click();await expect(pb.getByText('Compartilhada com você')).toBeVisible();
   await expect(pb.getByRole('button',{name:'Excluir',exact:true})).toHaveCount(0);
   // A recipient cannot delete the owner's essay.
-  await cb.request.delete(`/api/essays?id=${essayId}`,{headers});
+  expect((await cb.request.delete(`/api/essays?id=${essayId}`,{headers})).status()).toBe(404);
   expect((await (await ca.request.get('/api/essays')).json()).essays).toHaveLength(1);
   await pa.getByRole('button',{name:'Compartilhar ou revogar'}).click();await pa.getByLabel('Matrícula do destinatário').fill(b.matricula);
   await pa.getByRole('button',{name:'Revogar acesso',exact:true}).click();await expect(pa.getByText('Compartilhamento revogado.')).toBeVisible();

@@ -1,5 +1,11 @@
 # Retomada exata — 23/09/2026
-## Último marco — P12 fechada
+## Último marco — P14 fechada
+P14 passou no Supabase real: versão persistida, download JSON inspecionado, isolamento, compartilhamento autenticado e revogável entre duas contas, destinatário impedido de excluir e exclusão pelo dono. A API retorna 404 quando o texto não pertence ao solicitante. Build, tipos e lint verdes; regressão completa com 11 E2E aprovados em 1,1 min e IA real pulada. Kanban 9/26, 17 abertas. Próximo passo: revisão conjunta P13/P14 no GPT-6 Astra médio; depois P04/P05/P06/P08.
+
+## Marco anterior — P13 fechada
+P13 passou no Supabase real: sincronização e isolamento entre duas contas, conflito preservando a cópia local, perfil/avatar após reload, logout e importação explícita do único conjunto legado do navegador para a conta autenticada. Originais permanecem intactos, há limite de 200 KB e marca contra repetição. Build, tipos e lint verdes; regressão completa com 11 E2E aprovados em 1,1 min e IA real pulada por estar off. Kanban 8/26, 18 abertas. Próximo foco P14 no GPT-6 Sol médio; depois revisar P13/P14 no Astra médio.
+
+## Marco anterior — P12 fechada
 Painel admin passou em E2E real (35,4 s): lista 41 alunos reais + 2 fixtures temporárias, todas com nome/turma 3A DS, contagem e estado ativado, busca, recuperação e emissão/ocultação de código. Aluno/público bloqueados, admin sem progresso de aluno e zero fixtures restantes. Typecheck/lint verdes. Kanban 7/26 concluídas, 19 abertas. Próximo foco P13 com GPT-6 Sol médio; ativação pessoal dos dois responsáveis depende da senha escolhida por cada titular.
 
 ## Último marco — P11 fechada
