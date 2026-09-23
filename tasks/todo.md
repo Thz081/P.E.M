@@ -1,9 +1,9 @@
 # Quadro de trabalho — P.E.M
 ## Estado atual — 23/09/2026
 
-Contagem principal: 26 missões; 13 concluídas (P01, P02, P03, P04, P05, P06, P08, P09, P10, P11, P12, P13, P14), 13 abertas. P13/P14 foram reabertas na revisão e fechadas após correção e testes reais; detalhes em ../docs/REVISAO-P13-P14.md. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
+Contagem principal: 26 missões; **14 concluídas (P01–P14), 12 abertas (P15–P26)**. P13/P14 foram reabertas na revisão e fechadas após correção e testes reais; detalhes em ../docs/REVISAO-P13-P14.md. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
 
-Atualização: a revisão adicional de UI/comportamentos no GPT-6 Sol médio terminou com cinco E2E e 12 telas conferidas. P07 passou em testes SQL ampliados e E2E real, mas aguarda a auditoria final de autorização no GPT-6 Astra médio antes de marcar `[x]`. Evidências em `../docs/REVISAO-UI-P04-P08.md` e `../docs/REVISAO-P07.md`.
+Atualização: revisão adicional UI concluída; auditoria final P07 no Astra médio encontrou e corrigiu falta da lista admin ativada na política SQL. Migração aplicada, SQL red/green e E2E real com JWT (53,1 s) passaram. Próximo bloco P25/P26, preparação no Sol médio e decisão final no Astra alto. Evidências em `../docs/REVISAO-UI-P04-P08.md` e `../docs/REVISAO-P07.md`.
 
 ### Prioridade e modelo recomendado
 
@@ -15,7 +15,7 @@ Use o modelo mais leve que mantenha o critério de qualidade. `GPT-6 Luna` atend
 | 2 | P11, P12 | Ativação, recuperação e painel admin | **GPT-6 Sol médio**; subir para **Sol alto** apenas em concorrência, Auth ou falha difícil |
 | 3 | P13, P14 | Sincronização, perfil e redações privadas | **GPT-6 Sol médio**; **Astra médio** para revisar conflitos e isolamento antes de fechar |
 | 4 | P04, P05, P06, P08 | Regressão de frontend, demonstração e oficina de redação | **Concluídas em 23/09 com GPT-6 Luna médio**; usar **GPT-6 Sol médio** para revisão adicional de UI/comportamentos |
-| 5 | P07 | Schema, RLS e isolamento | **GPT-6 Sol alto** para implementação; **GPT-6 Astra médio** para auditoria final de autorização |
+| 5 | P07 | Schema, RLS e isolamento | **Concluída em 23/09**; correção e auditoria final com **GPT-6 Astra médio**, após verificações no Sol médio |
 | 6 | P25, P26 | Segurança, preview, rollback e publicação | **GPT-6 Astra alto** para decisão final; **GPT-6 Sol médio** para executar correções e testes definidos |
 | 7 | P15 | Atualizar, revisar e enviar guia/PDF | **GPT-6 Luna médio** para atualização mecânica; **GPT-6 Sol médio** para revisão editorial final |
 | 8 | P16, P17 | Mapa curricular, OCR e organização do acervo | **GPT-6 Luna médio/alto** para processamento em lote; **GPT-6 Sol médio** nos casos ambíguos |
@@ -29,7 +29,7 @@ Trocar modelo ou esforço somente ao chegar ao tipo de trabalho indicado. Para r
 1. P10 concluída: workflow executa lint, tipos, conteúdo, testes TS/Python, audit, build e E2E; proteção da main exige o check `quality` atualizado e vale para admin, sem force push/exclusão. CI de a8278cc e eae78c2 passaram; preview continua separado da produção. Detalhes em ../docs/CI.md.
 2. P11/P12 concluídas: E2E real passou para ativação/recuperação e painel. Admin listou 41 alunos reais + 2 fixtures temporárias, todas 3A DS com nome; estado, busca, pedido e código funcionaram. Aluno/público bloqueados e zero fixtures restantes. A ativação pessoal dos dois responsáveis continua operacional, pois cada titular deve escolher a senha. Quatro códigos privados iniciais expiram em 24/09 00h14 Brasília; outros 39 alunos ainda sem código.
 3. P13 corrigida: matrícula da conta autenticada é verificada no serviço legado; só a chave correspondente autoriza importação local. Teste real cobre chave errada/certa e persistência, com originais preservados. Produção permanece no baseline antigo.
-4. P04/P05/P06/P08 concluídas na regressão local e capturas desktop/mobile. Revisão adicional UI/comportamentos no Sol médio também concluída: login, professor, avatar e fonte ENEM corrigidos/testados. P07 já passou em SQL/E2E, mas a auditoria final Astra médio ainda falta.
+4. P04/P05/P06/P08 e revisão adicional UI concluídas. P07 também fechada após auditoria Astra médio, correção da lista admin na RLS e testes reais; detalhes no relatório P07. Nenhuma promoção de produção realizada.
 5. P15: PDF final do professor revisado localmente (7 páginas), atualizar após a publicação. Drive segue com bloqueio de escrita 403; não anunciar upload.
 6. P18/P19/P20: lote de 2 documentos/6 trechos indexado. Filtro de fontes passou em tipos/lint/9 unitários/build/conteúdo, mas teste com IA real e feedback de redação pendentes. IA off. Último orçamento Cloudflare: 7200/8500 neurônios reservados em 23/09 UTC.
 7. P16/P17/P18 e P22–P24: currículo/curadoria/OCR, questões, simulado e relatório conforme critérios abaixo. Pode haver versão estável com IA desligada antes de concluir todo o backlog.
@@ -55,7 +55,7 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 - [x] **P04 · P0 · Migração do frontend e conteúdo.** Conteúdo validado contra baseline integral, 25 links e questões ENEM com opções/origem; E2E funcional desktop/mobile e sem overflow.
 - [x] **P05 · P1 · Demonstração e professor.** Botão/login público leva à demonstração; guia testado; navegação, materiais e tentativa de acesso privado não vazam dados reais nem autorizam APIs.
 - [x] **P06 · P1 · Oficina de redação.** Oito lições, validação de campos, gravação/reload, reabertura, comparação, exportação e exclusão verificadas em 1280 e 390 px. Demo não exibe avaliação por IA nem nota.
-- [ ] **P07 · P0 · Schema e RLS.** Aceite: isolamento real entre duas contas, admin controlado, nenhuma tabela exposta indevidamente. SQL ampliado com rollback, E2E real, catálogo e advisors passaram; falta auditoria final de autorização Astra médio. Relatório em `../docs/REVISAO-P07.md`.
+- [x] **P07 · P0 · Schema e RLS.** Auditoria final corrigiu a lista admin ativada na função SQL. Isolamento real, escopo/revogação de admin, proibição de escalada e visibilidade de docs/busca passaram em SQL com rollback e E2E com JWT real. Catálogo e advisors conferidos; aviso de senhas registrado em P25. Migrações alinhadas ao histórico remoto; zero fixtures. Relatório em `../docs/REVISAO-P07.md`.
 
 ## Em andamento
 

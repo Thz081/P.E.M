@@ -178,7 +178,38 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
   expect((await request.post('/api/activate',{headers,data:{...resetData,code:wrongCode}})).status()).toBe(400);
   expect((await request.post('/api/activate',{headers,data:{...resetData,code:wrongCode}})).status()).toBe(429);
   expect((await ca.request.post('/api/chat',{headers,data:{question:'Teste'}})).status()).toBe(503);
+  // Exercise PostgREST with real user JWTs, without the application or service-role client.
+  const directAdmin=createClient(process.env.SUPABASE_URL!,process.env.SUPABASE_ANON_KEY!,{auth:{persistSession:false,autoRefreshToken:false}});
+  expect(!(await directAdmin.auth.signInWithPassword({email:`${operatorIdentifier}@admin.pem.invalid`,password})).error).toBe(true);
+  const fixtureIds=[a.id,b.id,operatorId!];
+  const visibleProfiles=async()=>{
+   const result=await directAdmin.from('profiles').select('id').in('id',fixtureIds);
+   expect(result.error).toBeNull();return result.data!.map(profile=>profile.id).sort();
+  };
+  expect(await visibleProfiles()).toEqual([...fixtureIds].sort());
+  expect((await directAdmin.from('admin_access').select('user_id')).error?.code).toBe('42501');
+  expect((await directAdmin.schema('private').rpc('is_admin')).error?.code).toBe('PGRST106');
+  for(const table of ['progress','essays']){
+   const result=await directAdmin.from(table).select('user_id').in('user_id',[a.id,b.id]);
+   expect(result.error).toBeNull();expect(result.data).toEqual([]);
+  }
+  expect(!(await db.from('admin_access').update({activated_at:null}).eq('user_id',operatorId!)).error).toBe(true);
+  expect(await visibleProfiles()).toEqual([operatorId]);
+  expect((await cc.request.get('/api/admin')).status()).toBe(403);
+  expect(!(await db.from('admin_access').update({activated_at:new Date().toISOString()}).eq('user_id',operatorId!)).error).toBe(true);
+  expect(await visibleProfiles()).toEqual([...fixtureIds].sort());
+  expect(!(await db.from('profiles').update({active:false}).eq('id',operatorId!)).error).toBe(true);
+  expect(await visibleProfiles()).toEqual([operatorId]);
+  expect((await cc.request.get('/api/admin')).status()).toBe(403);
+  const directStudent=createClient(process.env.SUPABASE_URL!,process.env.SUPABASE_ANON_KEY!,{auth:{persistSession:false,autoRefreshToken:false}});
+  expect(!(await directStudent.auth.signInWithPassword({email:`${b.identifier}@alunos.pem.invalid`,password:newPassword})).error).toBe(true);
+  expect(!(await directStudent.auth.updateUser({data:{role:'admin'}})).error).toBe(true);
+  const studentProfiles=await directStudent.from('profiles').select('id').in('id',fixtureIds);
+  expect(studentProfiles.error).toBeNull();expect(studentProfiles.data).toEqual([{id:b.id}]);
+  expect((await directStudent.from('profiles').update({role:'admin'}).eq('id',b.id)).error?.code).toBe('42501');
   await db.from('profiles').update({active:false}).eq('id',b.id);
+  const inactiveProgress=await directStudent.from('progress').select('user_id');
+  expect(inactiveProgress.error).toBeNull();expect(inactiveProgress.data).toEqual([]);
   expect((await cb.request.get('/api/progress')).status()).toBe(401);
   await pb.goto('/estudar');await expect(pb).toHaveURL(/\/$/);
   expect((await ca.request.post('/api/logout',{headers})).status()).toBe(200);

@@ -1,4 +1,7 @@
 # Estado atual — 23/09/2026
+## P07 concluída após correção de autorização
+RLS de admin agora exige lista ativada, como a API; revogação vale mesmo com token existente. Falha reproduzida, migração aplicada e SQL/E2E real ampliados passaram (53,1 s), assim como tipos/lint. Documentos/busca e metadados de aluno também verificados; zero fixtures, 41 alunos e dois admins preservados. Migrações locais alinhadas ao histórico remoto por hash. Relatório `REVISAO-P07.md`. Kanban **14/26, 12 abertas**; próximo P25/P26. Aviso de senhas vazadas desativado permanece em P25. Produção antiga intacta.
+
 ## Revisão adicional concluída; P07 em auditoria
 Login/professor/avatar/fonte ENEM corrigidos e verificados em desktop/mobile, cinco E2E focados, tipos/lint/build. P07: 12 tabelas públicas com RLS, nenhuma leitura anônima, isolamento SQL e E2E real passaram; falta auditoria final Astra médio. Advisor sinaliza proteção contra senhas vazadas desativada para P25. Commit `8da1700` enviado; CI remoto e status Vercel passaram, sem QA da prévia. Relatórios: `REVISAO-UI-P04-P08.md` e `REVISAO-P07.md`. Kanban 13/26; produção antiga preservada.
 

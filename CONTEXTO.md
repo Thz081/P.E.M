@@ -1,4 +1,7 @@
 # Retomada exata — 23/09/2026
+## Estado vigente — P07 concluída; próximo P25/P26
+Auditoria final Astra médio encontrou falta de consulta à lista ativada na função RLS de admin. Migração `20260923163411_require_activated_admin_allowlist.sql` aplicada e testada: sem lista/ativação, revogado ou desativado não lê os demais perfis, inclusive com o mesmo JWT. SQL red/green, E2E real ampliado em 53,1 s, tipos/lint passaram. Isolamento e visibilidade de documentos/busca cobertos. Zero fixtures; 41 alunos e dois admins preservados. Nomes das cinco migrações locais alinhados ao histórico remoto após hashes iguais. `docs/REVISAO-P07.md` contém escopo e limites. Kanban **14/26 completas, 12 abertas**. Preparação P25/P26 no Sol médio; Astra alto para decisão final. Aviso de senhas vazadas desativado continua em P25. Produção antiga e IA off; guia PDF só atualizar após publicação efetiva.
+
 ## Estado vigente — revisão UI concluída; P07 requer auditoria final
 GPT-6 Sol médio corrigiu ajuda do login, CTA público do professor, avatar no cabeçalho e fonte oficial do cronograma ENEM. Tipos/lint/build, cinco E2E focados e 12 capturas desktop/mobile passaram; relatório em `docs/REVISAO-UI-P04-P08.md`. P07 teve catálogo/advisors e SQL ampliado com rollback: 12 tabelas públicas com RLS, zero SELECT anônimo, admin não lê progresso/redação alheia; E2E real passou e não deixou fixtures. Relatório em `docs/REVISAO-P07.md`. Commit `8da1700` enviado; CI remoto e status Vercel verdes, sem QA da prévia. P07 continua aberta para auditoria final GPT-6 Astra médio. Kanban 13/26, 13 abertas. Produção antiga preservada; IA off; guia PDF aguarda versão publicada.
 
@@ -61,7 +64,7 @@ Todas as seis variáveis necessárias estão presentes em .env.local; conexões 
 - Piloto privado ../analise/acervo/review/pilot-reviewed.json: 2 PDFs, 6 páginas revisadas visualmente. scripts/index-reviewed.ts executado: 2 documentos, 6 embeddings bge-m3 de 1024 dimensões no Supabase. Cache privado ao lado do arquivo. Originais não publicados.
 - Cloudflare llama-3.1-8b-instruct para geração. Primeiro teste respondeu com fonte e idempotência correta; chamadas seguintes retornaram 503. Último log seguro: AI request failed: Error. Causa ainda NÃO identificada: instrumentar etapa sem registrar prompts/segredos. Não continuar repetindo chamadas sem diagnóstico.
 - Feedback de redação real ainda não passou. Nenhum benchmark de 30 perguntas concluído. Deixar AI_TUTOR_ENABLED e AI_ESSAY_ENABLED false.
-- Migração 20260922213507_ai_budget_ledger.sql aplicada via ferramenta; agrega reservas que sobrevivem à exclusão de fixtures. Limite local 8500 neurônios/dia; reserva 800 por chat/redação, 20 por embedding. Consultar saldo antes de novos testes; falhas não reembolsadas. Não contornar cotas ou ativar pagamento.
+- Migração 20260922213627_ai_budget_ledger.sql aplicada via ferramenta; agrega reservas que sobrevivem à exclusão de fixtures. Limite local 8500 neurônios/dia; reserva 800 por chat/redação, 20 por embedding. Consultar saldo antes de novos testes; falhas não reembolsadas. Não contornar cotas ou ativar pagamento.
 - Arquivos: ai-provider.ts, ai-validation.ts, server/generation.ts, APIs chat/review, tests/ai.test.ts, tests/e2e/ai-real.spec.ts. Teste real opt-in PEM_REAL_AI_TESTS=1; servidor precisa flags true somente para teste controlado.
 
 ## Guia solicitado pelo usuário
