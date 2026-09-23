@@ -15,7 +15,7 @@ export async function supabaseSession(){
 }
 export async function getIdentity():Promise<Identity|null>{
  if(configured()){
-  try {const db=await supabaseSession();const {data:{user}}=await db.auth.getUser();if(user){const {data:profile}=await db.from('profiles').select('active,role,display_name').eq('id',user.id).maybeSingle();if(!profile?.active)return null;return {id:user.id,kind:'student',label:profile.display_name,role:profile.role};}} catch {return null;}
+  try {const db=await supabaseSession();const {data:{user}}=await db.auth.getUser();if(user){const {data:profile}=await db.from('profiles').select('active,role,display_name,avatar').eq('id',user.id).maybeSingle();if(!profile?.active)return null;return {id:user.id,kind:'student',label:profile.display_name,role:profile.role,avatar:profile.avatar};}} catch {return null;}
  }
  const token=(await cookies()).get('pem_session')?.value;
  if(!token||process.env.LEGACY_AUTH_ENABLED==='false')return null;

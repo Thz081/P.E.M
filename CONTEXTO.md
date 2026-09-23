@@ -1,4 +1,7 @@
 # Retomada exata — 23/09/2026
+## Estado vigente — revisão UI concluída; P07 requer auditoria final
+GPT-6 Sol médio corrigiu ajuda do login, CTA público do professor, avatar no cabeçalho e fonte oficial do cronograma ENEM. Tipos/lint/build, cinco E2E focados e 12 capturas desktop/mobile passaram; relatório em `docs/REVISAO-UI-P04-P08.md`. P07 teve catálogo/advisors e SQL ampliado com rollback: 12 tabelas públicas com RLS, zero SELECT anônimo, admin não lê progresso/redação alheia; E2E real passou e não deixou fixtures. Relatório em `docs/REVISAO-P07.md`. P07 continua aberta para auditoria final GPT-6 Astra médio. Kanban 13/26, 13 abertas. Produção antiga preservada; IA off; guia PDF aguarda versão publicada.
+
 ## Estado vigente — QA P04/P05/P06/P08 concluído
 Conteúdo/baseline e 25 links passaram; 11 unitários; regressão E2E 11 passaram, IA real pulada. Demonstracão, guia, oficina de redação e P08a em desktop/mobile passaram em fluxos; capturas revisadas sem overflow/erro visível. Kanban 13/26 concluídas, 13 abertas. Próxima tarefa: revisão UI e comportamentos no GPT-6 Sol médio, solicitada pelo usuário; P07 requer depois Sol alto e Astra médio. Produção antiga mantida. Capturas locais em `%TEMP%\pem-qa-p04-p08`.
 

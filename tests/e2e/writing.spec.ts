@@ -66,4 +66,7 @@ test('public login and professor guide use the demo without private data',async(
  await page.getByRole('button',{name:'Sair da demonstração'}).click();
  await expect(page).toHaveURL(/\/$/);
  await page.goto('/estudar');await expect(page).toHaveURL(/\/$/);
+ await page.getByRole('link',{name:/Conheça a visita guiada/}).click();
+ await expect(page).toHaveURL(/\/demonstracao\/professor$/);
+ await expect(page.getByRole('link',{name:/Abrir registros da turma no Drive/})).toBeVisible();
 });

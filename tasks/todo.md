@@ -3,6 +3,8 @@
 
 Contagem principal: 26 missões; 13 concluídas (P01, P02, P03, P04, P05, P06, P08, P09, P10, P11, P12, P13, P14), 13 abertas. P13/P14 foram reabertas na revisão e fechadas após correção e testes reais; detalhes em ../docs/REVISAO-P13-P14.md. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
 
+Atualização: a revisão adicional de UI/comportamentos no GPT-6 Sol médio terminou com cinco E2E e 12 telas conferidas. P07 passou em testes SQL ampliados e E2E real, mas aguarda a auditoria final de autorização no GPT-6 Astra médio antes de marcar `[x]`. Evidências em `../docs/REVISAO-UI-P04-P08.md` e `../docs/REVISAO-P07.md`.
+
 ### Prioridade e modelo recomendado
 
 Use o modelo mais leve que mantenha o critério de qualidade. `GPT-6 Luna` atende tarefas frequentes e bem delimitadas; `GPT-6 Sol` é o modelo principal para código e decisões do dia a dia; `GPT-6 Astra` fica reservado para análise profunda, arquitetura e aprovação de mudanças críticas. A recomendação segue o guia oficial de seleção da OpenAI e o catálogo vigente em 23/09/2026. Na API, GPT-6 Luna custa US$0,10/US$0,50 e GPT-6 Sol US$2/US$10 por milhão de tokens de entrada/saída; GPT-5.6 Sol custa US$4/US$20. O consumo percentual da cota do Codex pode usar outra métrica e não deve ser inferido diretamente do preço da API.
@@ -27,7 +29,7 @@ Trocar modelo ou esforço somente ao chegar ao tipo de trabalho indicado. Para r
 1. P10 concluída: workflow executa lint, tipos, conteúdo, testes TS/Python, audit, build e E2E; proteção da main exige o check `quality` atualizado e vale para admin, sem force push/exclusão. CI de a8278cc e eae78c2 passaram; preview continua separado da produção. Detalhes em ../docs/CI.md.
 2. P11/P12 concluídas: E2E real passou para ativação/recuperação e painel. Admin listou 41 alunos reais + 2 fixtures temporárias, todas 3A DS com nome; estado, busca, pedido e código funcionaram. Aluno/público bloqueados e zero fixtures restantes. A ativação pessoal dos dois responsáveis continua operacional, pois cada titular deve escolher a senha. Quatro códigos privados iniciais expiram em 24/09 00h14 Brasília; outros 39 alunos ainda sem código.
 3. P13 corrigida: matrícula da conta autenticada é verificada no serviço legado; só a chave correspondente autoriza importação local. Teste real cobre chave errada/certa e persistência, com originais preservados. Produção permanece no baseline antigo.
-4. P04/P05/P06/P08 concluídas na regressão local e capturas desktop/mobile. Baseline/conteúdo, demo, professor, redação, persistência, exportação e sem overflow cobertos. Próximo: revisão adicional UI/comportamentos no Sol médio conforme pedido do usuário, depois P07 pede Sol alto e Astra médio.
+4. P04/P05/P06/P08 concluídas na regressão local e capturas desktop/mobile. Revisão adicional UI/comportamentos no Sol médio também concluída: login, professor, avatar e fonte ENEM corrigidos/testados. P07 já passou em SQL/E2E, mas a auditoria final Astra médio ainda falta.
 5. P15: PDF final do professor revisado localmente (7 páginas), atualizar após a publicação. Drive segue com bloqueio de escrita 403; não anunciar upload.
 6. P18/P19/P20: lote de 2 documentos/6 trechos indexado. Filtro de fontes passou em tipos/lint/9 unitários/build/conteúdo, mas teste com IA real e feedback de redação pendentes. IA off. Último orçamento Cloudflare: 7200/8500 neurônios reservados em 23/09 UTC.
 7. P16/P17/P18 e P22–P24: currículo/curadoria/OCR, questões, simulado e relatório conforme critérios abaixo. Pode haver versão estável com IA desligada antes de concluir todo o backlog.
@@ -53,7 +55,7 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 - [x] **P04 · P0 · Migração do frontend e conteúdo.** Conteúdo validado contra baseline integral, 25 links e questões ENEM com opções/origem; E2E funcional desktop/mobile e sem overflow.
 - [x] **P05 · P1 · Demonstração e professor.** Botão/login público leva à demonstração; guia testado; navegação, materiais e tentativa de acesso privado não vazam dados reais nem autorizam APIs.
 - [x] **P06 · P1 · Oficina de redação.** Oito lições, validação de campos, gravação/reload, reabertura, comparação, exportação e exclusão verificadas em 1280 e 390 px. Demo não exibe avaliação por IA nem nota.
-- [ ] **P07 · P0 · Schema e RLS.** Aceite: isolamento real entre duas contas, admin controlado, nenhuma tabela exposta indevidamente. Evidência parcial: migration aplicada; teste RLS/advisors pendentes.
+- [ ] **P07 · P0 · Schema e RLS.** Aceite: isolamento real entre duas contas, admin controlado, nenhuma tabela exposta indevidamente. SQL ampliado com rollback, E2E real, catálogo e advisors passaram; falta auditoria final de autorização Astra médio. Relatório em `../docs/REVISAO-P07.md`.
 
 ## Em andamento
 
@@ -83,7 +85,7 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 - [ ] **P22 · P1 · Mais 40 questões conferidas.** 10 por disciplina do caderno, alternativas/figuras/origem/resolução completas; não chamar autorais de ENEM oficial.
 - [ ] **P23 · P2 · Simulado.** Regras oficiais conferidas, temporizador persistente, cartão-resposta, encerramento, redação digitada no dia 1, respostas e recomendações. Nenhuma nota TRI inventada.
 - [ ] **P24 · P2 · Relatório de simulado PDF.** Respostas, erros/acertos, resoluções e próximos estudos; exportação acessível e legível.
-- [ ] **P25 · P0 antes de publicar · Segurança/regressão/rollback.** Varredura, zero regressões críticas, ensaio de restauração; revisar limites reais de hospedagem gratuita.
+- [ ] **P25 · P0 antes de publicar · Segurança/regressão/rollback.** Varredura, zero regressões críticas, ensaio de restauração; revisar limites reais de hospedagem gratuita e o aviso Supabase de proteção contra senhas vazadas desativada.
 - [ ] **P26 · P0 antes de publicar · Promover prévia.** Somente versão validada no mesmo domínio; verificar QR/login/materiais públicos; manter rollback conhecido.
 
 ## Definição de pronto

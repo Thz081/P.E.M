@@ -13,5 +13,5 @@ export const questions: Question[] = catalog.quiz.map((raw,i) => {
 export const enem = catalog.enemLearning;
 export const DRIVE = 'https://drive.google.com/drive/folders/1lrIJeIJOaIbDXy7e8u0zuWW3F34b07C6?usp=sharing';
 export const ORDER = 'https://drive.google.com/drive/folders/1lrFMfESd6D_F5FruSpGQcWEp9i5Pv8oF?usp=sharing';
-export const INEP = 'https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-faltam-60-dias-para-a-aplicacao-da-prova';
+export const INEP = 'https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/orientacoes/cronograma';
 export const subjectName=(s:string)=>s.charAt(0)+s.slice(1).toLocaleLowerCase('pt-BR');

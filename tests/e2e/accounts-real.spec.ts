@@ -96,7 +96,10 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
   await expect(pb.getByLabel('Apelido')).toBeEnabled();
   await pb.getByLabel('Apelido').fill('Estudante sintético');await pb.getByLabel('Avatar',{exact:true}).selectOption('phoenix');
   await pb.getByRole('button',{name:'Salvar perfil'}).click();await expect(pb.getByText('Perfil salvo na sua conta.')).toBeVisible();
+  await expect(pb.locator('.topbar .avatar')).toHaveText('🔥');
+  await expect(pb.locator('.topbar .avatar')).toHaveAttribute('aria-label','Avatar: Fênix');
   await pb.reload();await expect(pb.getByLabel('Apelido')).toHaveValue('Estudante sintético');await expect(pb.getByLabel('Avatar',{exact:true})).toHaveValue('phoenix');
+  await expect(pb.locator('.topbar .avatar')).toHaveText('🔥');
   expect((await cb.request.patch('/api/profile',{headers,data:{display_name:'Tentativa',avatar:'book',role:'admin'}})).status()).toBe(400);
   const progress={read:{synthetic:true},notes:{synthetic:'Nota privada A'},answers:{},materials:{}};
   const save=await ca.request.put('/api/progress',{headers,data:{progress,revision:0}});expect(save.status()).toBe(200);
