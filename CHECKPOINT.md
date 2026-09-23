@@ -1,4 +1,10 @@
 # P.E.M — entrada para Codex ou Claude
+## Estado verificado em 23/09/2026 — leia antes das notas históricas
+- Branch `codex/plataforma-estudos`: migração pública commitada e enviada em `1b8bd39`; PR draft #1 aberto. CI `PEM quality` passou no GitHub. Preview Vercel criado, mas a leitura da URL pelo conector foi negada; QA de preview ainda pendente. Produção `pem-monarcas.vercel.app` segue no baseline antigo `5e1982b`.
+- Turma 3A DS: 41 alunos importados com nome, turma e matrícula; dois administradores autorizados têm contas de aluno e admin separadas. Quatro códigos de ativação estão apenas no arquivo privado `../analise/codigos-acesso-inicial-20260923.json`, expiram 24/09 00h14 Brasília. Nenhuma conta ativada; outros 39 alunos ainda não receberam código.
+- Correção do redirecionamento aluno em `/admin` validada em E2E real (1/1). Filtro de fontes do tutor passou em tipos, lint, 9 testes unitários e build; **teste real do filtro e feedback de redação continuam pendentes**. IA permanece desligada.
+- Kanban principal: 4 de 26 missões fechadas por seus critérios completos; 22 ainda abertas, várias parcialmente implementadas. P07a/P08a são subetapas concluídas. Próxima etapa: publicar a correção de filtro na branch, repetir CI e testar preview com acesso antes de qualquer promoção.
+
 ## Atualização em andamento — 23/09/2026 (prevalece sobre 22/09 abaixo)
 - Marco posterior: teste real de contas separado passou (1/1, 33,6s) após corrigir redirect /admin. scripts/provision-admins.mjs aplicado para as duas pessoas indicadas; Supabase confirma 41 alunos, 2 perfis admin, 2 códigos admin e 2 códigos aluno pendentes. Códigos em ../analise/codigos-acesso-inicial-20260923.json (privado, não imprimir/commitar), expiram 24/09 00h14 Brasília. Nenhuma conta ativada ainda. O usuário deve entregar a Erick apenas os códigos dele.
 - Usuário autorizou avançar em mais funcionalidades antes de nova estabilização e publicação. Produção antiga permanece intacta; PDF final do Claude em C:/Users/Th7/Downloads/P.E.M - Guia para o Professor.pdf foi lido e revisado visualmente (7 páginas); atualizar só após o site mudar.

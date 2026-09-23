@@ -1,4 +1,7 @@
-# Estado atual — 22/09/2026
+# Estado atual — 23/09/2026
+## Verificação mais recente
+Branch `codex/plataforma-estudos` enviada em `1b8bd39`, PR draft #1; CI remota `PEM quality` passou. Preview Vercel pronto, porém o conector negou acesso à URL e o QA remoto está pendente. Produção antiga preservada. No Supabase há 41 contas de aluno de 3A DS e duas contas admin separadas; quatro códigos privados emitidos, nenhuma ativação. O E2E de redirecionamento admin/aluno passou 1/1. Filtro de fontes do tutor: tipos, lint, 9 unitários e build passaram; teste com modelo real ainda pendente, IA off. Guia PDF de 7 páginas revisado localmente, sem upload no Drive devido a 403.
+
 ## 23/09 — trabalho em andamento
 Marco posterior: E2E real de duas contas de aluno mais conta admin separada passou 1/1 após corrigir redirect. Admins definitivos2 e alunos41 no Supabase;4 códigos iniciais pendentes em arquivo privado fora do repo, expiram 24/09 00h14 Brasília. Ainda nenhum acesso real ativado. Testes completos não foram repetidos após só a correção de redirect; os outros10 E2E haviam passado na execução imediatamente anterior.
 Backup privado filtrado:41 estudantes 3A DS com nome/matrícula/turma importados; nenhuma senha ou código do backup reutilizado. Banco confirmou41 distintos/41 nomes/0 ativados. Acesso separado aluno/admin para dois responsáveis em implementação, migração aplicada; script dry-run passou, importação dos dois admins ainda pendente.

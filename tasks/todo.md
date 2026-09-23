@@ -1,4 +1,11 @@
 # Quadro de trabalho — P.E.M
+## Situação confirmada em 23/09 — prevalece sobre linhas históricas
+- [x] Branch de trabalho enviada em `1b8bd39`, PR draft #1 e CI `PEM quality` verde. Produção antiga preservada; preview gerado, acesso de QA ainda negado pelo conector Vercel.
+- [x] 41 alunos de 3A DS e duas contas admin separadas provisionados; quatro códigos privados emitidos para as duas pessoas indicadas. E2E da separação admin/aluno passou após correção do redirecionamento. Nenhuma ativação pessoal realizada.
+- [x] Correção local do filtro de fontes: tipos, lint, 9 unitários e build passaram. Falta teste real de recuperação/resposta e feedback de redação; IA desligada.
+- [ ] Concluir P10/P25/P26: enviar a correção, repetir CI, abrir e testar preview, validar ambientes, regressão e rollback antes de promover. Não atualizar PDF como versão publicada antes da publicação.
+- [ ] Ativação pessoal dos dois responsáveis e emissão dos códigos dos outros 39 alunos, com entrega privada coordenada.
+
 ## Atualização 23/09 — andamento atual
 - [x] P09: 41 contas de aluno importadas do backup filtrado 3A DS, nomes/matrículas/turma conferidos no banco; senhas do backup não usadas. Pendente para uso: emitir códigos individuais aos outros39 conforme responsável.
 - [x] P12 parcial de contas: dois admins definitivos separados das contas de aluno, quatro códigos de uso único pendentes; E2E sintético separado passou. Painel ainda não testado após ativação real das duas pessoas.
