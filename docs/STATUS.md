@@ -1,10 +1,11 @@
 # Estado atual — 23/09/2026
 ## P16 em andamento; prioridade de publicação movida para depois das funcionalidades
 Mapa privado de 22 capturas, 165 grupos e 183 PDFs: 146 vínculos diretos, 37 lacunas, ordem visível de estudo e 30 incidências diretas do gráfico do Assad (estimativas, não dados oficiais). Pré-requisitos são propostas para validação. Relatório `MAPA-CURRICULAR.md`. P25/P26 permanecem bloqueio obrigatório antes de promover produção; P15 final acompanha a versão publicada. Kanban 14/26.
-P17 tem fila privada e reproduzível de 323 páginas para revisão visual/OCR; 183 em Biologia. Nenhum OCR foi declarado concluído. Ver `TRIAGEM-P17.md`.
+P17 começou com fila privada e reproduzível de 323 páginas para revisão visual/OCR; 183 em Biologia. Ver `TRIAGEM-P17.md`.
+Piloto P17: 12 capas/divisórias conferidas visualmente e retiradas da fila; OCR seletivo aplicado em 25 páginas de Biologia, com 24 aguardando conferência e uma marcada para corrigir fórmulas. Fila atual 311, incluindo 286 sem tentativa. Trechos privados continuam `authorized: false`. Ver `TRIAGEM-P17.md`.
 
 ## P07 concluída após correção de autorização
-RLS de admin agora exige lista ativada, como a API; revogação vale mesmo com token existente. Falha reproduzida, migração aplicada e SQL/E2E real ampliados passaram (53,1 s), assim como tipos/lint. Documentos/busca e metadados de aluno também verificados; zero fixtures, 41 alunos e dois admins preservados. Migrações locais alinhadas ao histórico remoto por hash. Relatório `REVISAO-P07.md`. Kanban **14/26, 12 abertas**; próximo P25/P26. Aviso de senhas vazadas desativado permanece em P25. Produção antiga intacta.
+RLS de admin agora exige lista ativada, como a API; revogação vale mesmo com token existente. Falha reproduzida, migração aplicada e SQL/E2E real ampliados passaram (53,1 s), assim como tipos/lint. Documentos/busca e metadados de aluno também verificados; zero fixtures, 41 alunos e dois admins preservados. Migrações locais alinhadas ao histórico remoto por hash. Relatório `REVISAO-P07.md`. Kanban **14/26, 12 abertas**; P25/P26 seguem como porta antes da publicação. Aviso de senhas vazadas desativado permanece em P25. Produção antiga intacta.
 
 ## Revisão adicional concluída; P07 em auditoria
 Login/professor/avatar/fonte ENEM corrigidos e verificados em desktop/mobile, cinco E2E focados, tipos/lint/build. P07: 12 tabelas públicas com RLS, nenhuma leitura anônima, isolamento SQL e E2E real passaram; falta auditoria final Astra médio. Advisor sinaliza proteção contra senhas vazadas desativada para P25. Commit `8da1700` enviado; CI remoto e status Vercel passaram, sem QA da prévia. Relatórios: `REVISAO-UI-P04-P08.md` e `REVISAO-P07.md`. Kanban 13/26; produção antiga preservada.

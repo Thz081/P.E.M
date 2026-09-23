@@ -7,6 +7,7 @@ const extracted = resolve(root, '..', 'analise', 'acervo', 'extracted');
 const index = JSON.parse(readFileSync(resolve(extracted, 'index.json'), 'utf8'));
 const queue = [];
 const bySubject = {};
+const pendingReview = new Set(['check-image-or-ocr', 'ocr-pending-review', 'needs-visual-review', 'ocr-needs-correction']);
 
 for (const [source, record] of Object.entries(index.documents).sort(([a], [b]) => a.localeCompare(b))) {
   if (record.status !== 'extracted') throw Error(`Extraction incomplete: ${source}`);
@@ -14,9 +15,9 @@ for (const [source, record] of Object.entries(index.documents).sort(([a], [b]) =
   if (document.sha256 !== record.sha256 || document.source !== source) throw Error(`Index mismatch: ${source}`);
   let count = 0;
   for (const page of document.pages) {
-    if (page.review !== 'check-image-or-ocr') continue;
+    if (!pendingReview.has(page.review)) continue;
     queue.push({ source, sha256: record.sha256, page: page.page, subject: record.subject,
-      extractedCharacters: page.text.length, status: 'visual-review-needed' });
+      extractedCharacters: page.text.length, status: page.review });
     count++;
   }
   if (count !== record.pages_needing_visual_review) throw Error(`Page count mismatch: ${source}`);
