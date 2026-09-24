@@ -1,4 +1,12 @@
 # P.E.M — Monarcas
+## Nova versão em validação
+Esta branch migra para Next.js16/React19 e ainda NÃO foi publicada. Estado e retomada: CHECKPOINT.md e CONTEXTO.md. Guia completo: docs/GUIA-PROFESSOR.txt (upload Drive pendente de permissão).
+
+Node22: npm ci; npm run dev (4180); npm run build e npm start para produção local. Configurar .env.local conforme .env.example, sem publicar segredos. IA off até passar piloto. Não substituir login legado antes de validar transição e contas da turma.
+
+Validação: lint, typecheck, test, check:content, build e test:e2e. Contas reais: opt-in PEM_REAL_AUTH_TESTS=1 com fixtures removidas. IA real ainda não aprovada. Para publicar esta branch, usar Next.js e npm run build no projeto existente, com preview e rollback; a configuração Other abaixo pertence somente à versão antiga.
+
+## Referência histórica da produção antiga
 
 Portal de estudos do 3º A DS: https://pem-monarcas.vercel.app
 

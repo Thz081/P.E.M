@@ -1,0 +1,2767 @@
+{
+  "materials": [
+    {
+      "id": "136jGqeEUPXWgcTInuOilTnyc1MctfuDC",
+      "title": "MODERNISMO 1° FASE",
+      "subject": "PORTUGUÊS",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/136jGqeEUPXWgcTInuOilTnyc1MctfuDC/view?usp=drivesdk",
+      "original": "MODERNISMO 1° FASE.ogg",
+      "symbol": "Pena da ruptura",
+      "icon": 1
+    },
+    {
+      "id": "1ixZ_5iKgNN4xOK0sNzdytI9X8eos3aaT",
+      "title": "MODERNISMO 2° FASE",
+      "subject": "PORTUGUÊS",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/1ixZ_5iKgNN4xOK0sNzdytI9X8eos3aaT/view?usp=drivesdk",
+      "original": "MODERNISMO 2° FASE.ogg",
+      "symbol": "Livro das vozes",
+      "icon": 2
+    },
+    {
+      "id": "1c54x2_rxjNpy9ZmoRmMQjMRvs0EUq-1I",
+      "title": "MODERNISMO 3° FASE",
+      "subject": "PORTUGUÊS",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/1c54x2_rxjNpy9ZmoRmMQjMRvs0EUq-1I/view?usp=drivesdk",
+      "original": "MODERNISMO 3° FASE.ogg",
+      "symbol": "Espelho da linguagem",
+      "icon": 3
+    },
+    {
+      "id": "17f_goQen3DWs2YV4bTKFYzG_9rRi0YX-",
+      "title": "REGÊNCIA E ORAÇÕES",
+      "subject": "PORTUGUÊS",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/17f_goQen3DWs2YV4bTKFYzG_9rRi0YX-/view?usp=drivesdk",
+      "original": "REGÊNCIA E ORAÇÕES.ogg",
+      "symbol": "Pergaminho das relações",
+      "icon": 4
+    },
+    {
+      "id": "1BUcFSowc3fAe1-LJ1379zqzGjKlVSyCi",
+      "title": "MUTAÇÕES",
+      "subject": "BIOLOGIA",
+      "type": "Resumo visual",
+      "url": "https://drive.google.com/file/d/1BUcFSowc3fAe1-LJ1379zqzGjKlVSyCi/view?usp=drivesdk",
+      "original": "MUTAÇÕES",
+      "symbol": "Semente da herança",
+      "icon": 5
+    },
+    {
+      "id": "1m2oz5zaihiXCXX_OCEeT7lkNOhD-5egm",
+      "title": "MUTAÇÕES - CAUSAS",
+      "subject": "BIOLOGIA",
+      "type": "Resumo visual",
+      "url": "https://drive.google.com/file/d/1m2oz5zaihiXCXX_OCEeT7lkNOhD-5egm/view?usp=drivesdk",
+      "original": "MUTAÇÕES - CAUSAS",
+      "symbol": "Código da vida",
+      "icon": 6
+    },
+    {
+      "id": "1rs3Cq7XL2WF9oEwPhryLDbw2n0FdJ9C4",
+      "title": "2° LEI DE MENDEL",
+      "subject": "BIOLOGIA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/1rs3Cq7XL2WF9oEwPhryLDbw2n0FdJ9C4/view?usp=drivesdk",
+      "original": "2° LEI DE MENDEL E GALO DE SARA.ogg",
+      "symbol": "Árvore dos vínculos",
+      "icon": 7
+    },
+    {
+      "id": "1SbBVPBcAh0TU6_uQkXH0nlVqLus4mBF5",
+      "title": "ECOLOGIA",
+      "subject": "BIOLOGIA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/1SbBVPBcAh0TU6_uQkXH0nlVqLus4mBF5/view?usp=drivesdk",
+      "original": "ECOLOGIA  E GALO DE SARA.ogg",
+      "symbol": "Bússola dos territórios",
+      "icon": 8
+    },
+    {
+      "id": "1v_BmT1jjD3AAAADge1lth8S9SLgtjcXE",
+      "title": "MUTAÇÕES",
+      "subject": "BIOLOGIA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/1v_BmT1jjD3AAAADge1lth8S9SLgtjcXE/view?usp=drivesdk",
+      "original": "MUTAÇÕES  E GALO DE SARA.ogg",
+      "symbol": "Ampulheta dos blocos",
+      "icon": 9
+    },
+    {
+      "id": "1N19y8FnrAxHIhrJIFGzeuBBxMtwbN7Al",
+      "title": "GUERRA FRIA",
+      "subject": "GEOGRAFIA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/1N19y8FnrAxHIhrJIFGzeuBBxMtwbN7Al/view?usp=drivesdk",
+      "original": "GUERRA FRIA.ogg",
+      "symbol": "Globo das disputas",
+      "icon": 10
+    },
+    {
+      "id": "13BL5xOIcWz0hV5B2g9Sik-Yi1pxJg5nX",
+      "title": "GUERRA FRIA 2",
+      "subject": "GEOGRAFIA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/13BL5xOIcWz0hV5B2g9Sik-Yi1pxJg5nX/view?usp=drivesdk",
+      "original": "GUERRA FRIA 2.ogg",
+      "symbol": "Essência da energia",
+      "icon": 11
+    },
+    {
+      "id": "1CTpgMtCKLBOLvbf70FjNfrcJl5lxhdxh",
+      "title": "ISRAEL X PALESTINA",
+      "subject": "GEOGRAFIA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/1CTpgMtCKLBOLvbf70FjNfrcJl5lxhdxh/view?usp=drivesdk",
+      "original": "ISRAEL X PALESTINA.ogg",
+      "symbol": "Pilha alquímica",
+      "icon": 12
+    },
+    {
+      "id": "1JreIhIFIHN45FGkZhwm0BoqmXaq9S_Jc",
+      "title": "PETRÓLEO",
+      "subject": "GEOGRAFIA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/1JreIhIFIHN45FGkZhwm0BoqmXaq9S_Jc/view?usp=drivesdk",
+      "original": "PETRÓLEO.ogg",
+      "symbol": "Caldeirão elétrico",
+      "icon": 13
+    },
+    {
+      "id": "1aww5shJsAt-iMuXE9EjpMnWVUQCWTJJM",
+      "title": "ELETRÓLISE ÍGNEA",
+      "subject": "QUÍMICA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/1aww5shJsAt-iMuXE9EjpMnWVUQCWTJJM/view?usp=drivesdk",
+      "original": "ELETRÓLISE ÍGNEA.ogg",
+      "symbol": "Balança da história",
+      "icon": 14
+    },
+    {
+      "id": "1J8aLJioD_e_3OIvxKpyJB3rXxnc13VFm",
+      "title": "PILHAS",
+      "subject": "QUÍMICA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/1J8aLJioD_e_3OIvxKpyJB3rXxnc13VFm/view?usp=drivesdk",
+      "original": "PILHAS.ogg",
+      "symbol": "Espelho da razão",
+      "icon": 15
+    },
+    {
+      "id": "1MDyaSBMi-yxbcKfwr_7r2R2rMsZXP4CD",
+      "title": "REVOLUÇÃO RUSSA",
+      "subject": "HISTÓRIA",
+      "type": "Resumo visual",
+      "url": "https://drive.google.com/file/d/1MDyaSBMi-yxbcKfwr_7r2R2rMsZXP4CD/view?usp=drivesdk",
+      "original": "REVOLUÇÃO RUSSA",
+      "symbol": "Cristal da experiência",
+      "icon": 16
+    },
+    {
+      "id": "1YJuQP3ltln67SUDD8tPrEfL0WrgaZWT_",
+      "title": "CRISE DE 29",
+      "subject": "HISTÓRIA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/1YJuQP3ltln67SUDD8tPrEfL0WrgaZWT_/view?usp=drivesdk",
+      "original": "CRISE DE 29.ogg",
+      "symbol": "Luz das ideias",
+      "icon": 17
+    },
+    {
+      "id": "1XQn_kFgJeApHYwerOoMB4jDtZ20gqNR6",
+      "title": "PAZ ARMADA E PRIMEIRA GUERRA MUNDIAL",
+      "subject": "HISTÓRIA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/1XQn_kFgJeApHYwerOoMB4jDtZ20gqNR6/view?usp=drivesdk",
+      "original": "PAZ ARMADA  E PRIMEIRA GUERRA MUNDIAL.ogg",
+      "symbol": "Torre da sociedade",
+      "icon": 18
+    },
+    {
+      "id": "1dIPKLgeFNU-UpW4aOEjQQ6-qNVVuyjep",
+      "title": "DEUS PARA DESCARTES E HUME",
+      "subject": "FILOSOFIA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/1dIPKLgeFNU-UpW4aOEjQQ6-qNVVuyjep/view?usp=drivesdk",
+      "original": "DEUS PARA DESCARTES E HUME.ogg",
+      "symbol": "Relógio dos movimentos",
+      "icon": 19
+    },
+    {
+      "id": "15fMWvta3PBTdCO0Q3B7HK-qywkX6enfZ",
+      "title": "ESTOICISMO, EPICURISMO, CETICISMO, CINISMO",
+      "subject": "FILOSOFIA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/15fMWvta3PBTdCO0Q3B7HK-qywkX6enfZ/view?usp=drivesdk",
+      "original": "ESTOICISMO, EPICURISMO, CETICISMO, CINISMO.ogg",
+      "symbol": "Rádio da memória",
+      "icon": 20
+    },
+    {
+      "id": "11bJ8WXHOxM7ejoKZ-7OL0V9Zzy3DkRWe",
+      "title": "MODERNIDADE - HUME X DESCARTES",
+      "subject": "FILOSOFIA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/11bJ8WXHOxM7ejoKZ-7OL0V9Zzy3DkRWe/view?usp=drivesdk",
+      "original": "MODERNIDADE - HUME X DESCARTES.ogg",
+      "symbol": "Pena da ruptura",
+      "icon": 1
+    },
+    {
+      "id": "1pyKtSeClJ7SsX8uAiB3Fn1N1xQTM0zWZ",
+      "title": "ESTRATIFICAÇÃO E DESIGUALDADE",
+      "subject": "SOCIOLOGIA",
+      "type": "Áudio",
+      "url": "https://drive.google.com/file/d/1pyKtSeClJ7SsX8uAiB3Fn1N1xQTM0zWZ/view?usp=drivesdk",
+      "original": "EXTRATIFICAÇÃO E DESIGUALDADE.ogg",
+      "symbol": "Livro das vozes",
+      "icon": 2
+    },
+    {
+      "id": "1mjKlBlc2lYyZ_D9VM9fZg_qr_-zs_kow",
+      "title": "AULA ONLINE - FISICA",
+      "subject": "FÍSICA",
+      "type": "Aula em vídeo",
+      "url": "https://drive.google.com/file/d/1mjKlBlc2lYyZ_D9VM9fZg_qr_-zs_kow/view?usp=drivesdk",
+      "original": "AULA ONLINE - FISICA.mp4",
+      "symbol": "Espelho da linguagem",
+      "icon": 3
+    },
+    {
+      "id": "1EcIPUAYROu3yH5-3oOuu6M1nT3WfVpiH",
+      "title": "DIRECT SPEECH",
+      "subject": "INGLÊS",
+      "type": "Resumo visual",
+      "url": "https://drive.google.com/file/d/1EcIPUAYROu3yH5-3oOuu6M1nT3WfVpiH/view?usp=drivesdk",
+      "original": "DIRECT SPEECH",
+      "symbol": "Pergaminho das relações",
+      "icon": 4
+    },
+    {
+      "id": "1KbCAQdLcbyzhiKiHtjLI1KEgYSfgR1yu",
+      "title": "REPORTED SPEECH",
+      "subject": "INGLÊS",
+      "type": "Resumo visual",
+      "url": "https://drive.google.com/file/d/1KbCAQdLcbyzhiKiHtjLI1KEgYSfgR1yu/view?usp=drivesdk",
+      "original": "REPORTED SPEECH",
+      "symbol": "Semente da herança",
+      "icon": 5
+    }
+  ],
+  "context": {
+    "class": "3º A DS",
+    "year": "2026",
+    "house": "Monarcas",
+    "term": "II trimestre",
+    "monitors": {
+      "BIOLOGIA": "Sara",
+      "QUÍMICA": "Cesar",
+      "FÍSICA": "Lucas Ferreira",
+      "PORTUGUÊS": "Lucas Ferreira",
+      "HISTÓRIA": "Lucas Ferreira",
+      "GEOGRAFIA": "Lucas Kauan",
+      "FILOSOFIA": "Neemias",
+      "SOCIOLOGIA": "Neemias"
+    },
+    "syllabus": {
+      "HISTÓRIA": [
+        "Primeira Guerra Mundial",
+        "Revolução Russa de 1917",
+        "Crise de 1929",
+        "Regimes totalitários"
+      ],
+      "GEOGRAFIA": [
+        "Guerra Fria",
+        "Geopolítica do petróleo",
+        "Israel e Palestina"
+      ],
+      "PORTUGUÊS": [
+        "Modernismo",
+        "Orações subordinadas",
+        "Regência verbal",
+        "Regência nominal",
+        "Transitividade"
+      ],
+      "FILOSOFIA": [
+        "Revisão integral do trimestre; no acervo: escolas helenísticas, Hume e Descartes"
+      ],
+      "SOCIOLOGIA": [
+        "Revisão integral do trimestre; no acervo: estratificação e desigualdade"
+      ],
+      "INGLÊS": [
+        "Interpretação",
+        "Reported speech",
+        "Direct speech"
+      ],
+      "ARTES": [
+        "Clarice: interioridade, tempo e epifania",
+        "Macabéa e a dimensão social da literatura",
+        "Literatura e artes visuais",
+        "Linguagem teatral: corpo, luz, espaço e som",
+        "Augusto Boal e o Teatro do Oprimido"
+      ],
+      "EDUCAÇÃO FÍSICA": [
+        "Futebol, cultura e identidade",
+        "Mulheres no futebol e barreiras de acesso",
+        "Estádios, mercado e futebol de várzea",
+        "Racismo e disputas no esporte"
+      ],
+      "MATEMÁTICA": [
+        "Funções circulares",
+        "Funções periódicas",
+        "Estatística, variância e desvio padrão",
+        "Geometria espacial"
+      ],
+      "QUÍMICA": [
+        "Pilhas",
+        "Eletroquímica"
+      ],
+      "FÍSICA": [
+        "Corrente elétrica",
+        "Resistência elétrica: 1ª e 2ª leis de Ohm",
+        "Associação de resistores",
+        "Circuitos simples"
+      ],
+      "BIOLOGIA": [
+        "2ª lei de Mendel",
+        "Mutações",
+        "Ecologia"
+      ]
+    }
+  },
+  "lessons": [
+    {
+      "id": "aula-1",
+      "subject": "HISTÓRIA",
+      "title": "Primeira Guerra Mundial",
+      "text": [
+        "A guerra de 1914–1918 teve causas de longa duração: disputas imperialistas, nacionalismos, corrida armamentista e alianças militares. O assassinato do arquiduque Francisco Ferdinando, em Sarajevo, foi o estopim; não explica sozinho por que uma crise regional virou uma guerra de grandes potências.",
+        "Na frente ocidental, as trincheiras dificultavam os avanços e expunham soldados a artilharia, doenças e condições precárias. A mobilização de indústrias, trabalhadores e recursos civis permite falar em guerra total. Em 1917, a entrada dos Estados Unidos e as revoluções russas alteraram o conflito. O armistício veio em 1918; o Tratado de Versalhes, em 1919."
+      ],
+      "example": "Para explicar a guerra, separe causa estrutural, estopim e consequência: rivalidade imperialista → atentado de Sarajevo → mobilização das alianças → guerra → novos acordos e fronteiras.",
+      "trap": "Não confunda o fim dos combates, em 1918, com a assinatura de Versalhes, em 1919.",
+      "question": "Por que o atentado de Sarajevo é chamado de estopim?",
+      "options": [
+        "Porque iniciou uma crise em um cenário de tensões anteriores",
+        "Porque criou sozinho todas as rivalidades europeias",
+        "Porque encerrou o sistema de alianças"
+      ],
+      "answer": 0,
+      "feedback": "O atentado precipitou a crise; imperialismo, alianças e nacionalismos já existiam."
+    },
+    {
+      "id": "aula-2",
+      "subject": "HISTÓRIA",
+      "title": "Revolução Russa de 1917",
+      "text": [
+        "A Rússia combinava autocracia czarista, concentração de terras e industrialização desigual. A participação na Primeira Guerra agravou escassez, perdas militares e insatisfação. Na Revolução de Fevereiro, pelo calendário então usado na Rússia, o czar abdicou.",
+        "O Governo Provisório dividiu influência com os sovietes, conselhos de trabalhadores e soldados. Sua manutenção na guerra aprofundou tensões. Em Outubro, os bolcheviques liderados por Lenin tomaram o poder. A saída da guerra foi formalizada em 1918, e uma guerra civil se seguiu. A União Soviética foi criada em 1922."
+      ],
+      "example": "Compare os dois momentos: Fevereiro derruba o czar; Outubro leva os bolcheviques ao poder. São transformações distintas dentro de um mesmo processo revolucionário.",
+      "trap": "A queda do czar não significou a formação imediata da URSS.",
+      "question": "Qual associação está correta?",
+      "options": [
+        "Fevereiro: criação da URSS",
+        "Outubro: tomada do poder pelos bolcheviques",
+        "Fevereiro: vitória de Stalin na Segunda Guerra"
+      ],
+      "answer": 1,
+      "feedback": "A URSS surgiu em 1922. Em Outubro de 1917, os bolcheviques derrubaram o Governo Provisório."
+    },
+    {
+      "id": "aula-3",
+      "subject": "HISTÓRIA",
+      "title": "Crise de 1929",
+      "text": [
+        "Durante os anos 1920, a expansão do crédito e a especulação contribuíram para elevar os preços das ações nos Estados Unidos. Ao mesmo tempo, a capacidade de produzir crescia sem distribuição equivalente do poder de compra. A quebra da Bolsa, em outubro de 1929, foi um marco da crise, não sua única causa.",
+        "Falências, retração do crédito, queda da produção e desemprego se reforçaram. Como a economia internacional dependia de empréstimos e comércio com os EUA, a crise se espalhou. No Brasil, a queda da demanda e dos preços do café atingiu a economia exportadora. A partir de 1933, o New Deal ampliou a intervenção estatal em diferentes frentes."
+      ],
+      "example": "Uma fábrica vende menos → reduz produção e empregos → famílias gastam menos → outras empresas vendem menos. Esse encadeamento ajuda a entender a depressão.",
+      "trap": "New Deal não significou substituir a economia capitalista por uma economia socialista.",
+      "question": "Como o desemprego podia agravar a crise?",
+      "options": [
+        "Aumentando automaticamente o consumo",
+        "Reduzindo a renda e a demanda por produtos",
+        "Eliminando as falências bancárias"
+      ],
+      "answer": 1,
+      "feedback": "Sem renda, as famílias consumiam menos, o que pressionava ainda mais a produção e o emprego."
+    },
+    {
+      "id": "aula-4",
+      "subject": "HISTÓRIA",
+      "title": "Regimes totalitários",
+      "text": [
+        "O conceito de totalitarismo é usado para analisar regimes que procuram subordinar amplamente a vida social ao poder político: partido único, repressão, propaganda, culto ao líder e controle de organizações. O termo exige atenção às diferenças históricas entre cada caso.",
+        "O fascismo italiano e o nazismo alemão foram movimentos ultranacionalistas e antidemocráticos. No nazismo, o racismo biológico e o antissemitismo foram centrais e culminaram em perseguição e genocídio. O stalinismo, em outro contexto ideológico e econômico, empregou repressão, expurgos e culto à personalidade. Comparar mecanismos não torna os regimes idênticos."
+      ],
+      "example": "Ao analisar um cartaz de propaganda, pergunte: como o líder é representado? Quem aparece como inimigo? Há incentivo à obediência e à mobilização coletiva?",
+      "trap": "Nem toda ditadura é automaticamente classificada como totalitária; explique os critérios usados.",
+      "question": "Qual prática se associa ao controle totalitário?",
+      "options": [
+        "Pluralidade partidária e oposição livre",
+        "Censura, partido único e perseguição de opositores",
+        "Alternância de poder por eleições competitivas"
+      ],
+      "answer": 1,
+      "feedback": "Esses mecanismos reduzem a autonomia política e procuram controlar a sociedade."
+    },
+    {
+      "id": "aula-5",
+      "subject": "GEOGRAFIA",
+      "title": "Guerra Fria",
+      "text": [
+        "A Guerra Fria foi a rivalidade entre Estados Unidos e União Soviética e seus aliados após a Segunda Guerra. Ela envolveu modelos econômicos e políticos, influência territorial, propaganda, espionagem e corrida nuclear e espacial. A bipolaridade não eliminou os interesses próprios dos demais países.",
+        "Não houve guerra direta de grande escala entre as duas superpotências, mas ocorreram guerras intensas como as da Coreia e do Vietnã. Alianças militares, como OTAN e Pacto de Varsóvia, organizaram os blocos. A queda do Muro de Berlim, em 1989, e a dissolução da URSS, em 1991, marcam o encerramento desse período."
+      ],
+      "example": "Uma disputa local pode adquirir dimensão mundial quando recebe armas, financiamento ou apoio diplomático dos blocos. Isso não significa que seus participantes locais não tenham objetivos próprios.",
+      "trap": "“Fria” não significa ausência de guerras ou de mortes.",
+      "question": "O que torna inadequado dizer que a Guerra Fria foi pacífica?",
+      "options": [
+        "A existência de conflitos armados como Coreia e Vietnã",
+        "A ausência de propaganda",
+        "O fim de todas as alianças"
+      ],
+      "answer": 0,
+      "feedback": "A rivalidade evitou uma guerra direta entre as superpotências, mas envolveu guerras em outros territórios."
+    },
+    {
+      "id": "aula-6",
+      "subject": "GEOGRAFIA",
+      "title": "Geopolítica do petróleo",
+      "text": [
+        "O petróleo é matéria-prima e fonte de energia: participa dos transportes, da indústria e da produção de plásticos e outros derivados. Reservas, capacidade de extração, refino e consumo não se distribuem da mesma forma pelo território. Um país pode extrair petróleo e ainda importar certos combustíveis.",
+        "Por isso, rotas marítimas, oleodutos e pontos de passagem têm valor estratégico. A oferta é influenciada por investimentos, conflitos, decisões de produtores e demanda mundial. A OPEP reúne países exportadores; ela influencia o mercado, mas não controla sozinha todos os preços. A transição energética também modifica essas relações."
+      ],
+      "example": "Se uma rota de transporte é interrompida, o custo de frete e o risco de abastecimento podem aumentar, mesmo sem mudança imediata nas reservas geológicas.",
+      "trap": "Ter grandes reservas não garante capacidade de refino nem distribuição de renda.",
+      "question": "Por que um estreito marítimo pode ser estratégico?",
+      "options": [
+        "Porque toda reserva está dentro dele",
+        "Porque concentra rotas de transporte de energia",
+        "Porque elimina a dependência de importações"
+      ],
+      "answer": 1,
+      "feedback": "A concentração de fluxos torna a passagem relevante para abastecimento, custos e segurança."
+    },
+    {
+      "id": "aula-7",
+      "subject": "GEOGRAFIA",
+      "title": "Israel e Palestina: base histórica",
+      "text": [
+        "O conflito envolve território, autodeterminação, segurança, deslocamentos e projetos nacionais. Para estudá-lo, diferencie povos, governos e grupos políticos; não atribua a toda uma população as ações de um governo ou organização. A dimensão religiosa existe, mas não explica sozinha o conflito.",
+        "Em 1947, a ONU recomendou a partilha da Palestina sob mandato britânico em dois Estados. Em 1948, a criação de Israel e a guerra foram acompanhadas pelo deslocamento em massa de palestinos, conhecido como Nakba. A guerra de 1967 ampliou o controle israelense sobre territórios. Fronteiras, assentamentos, Jerusalém, refugiados e segurança permanecem eixos históricos das negociações."
+      ],
+      "example": "Ao ler um mapa, confira a data e a legenda: proposta de partilha, fronteira e área ocupada não são a mesma coisa. Um mapa de 1947 não representa automaticamente o território em outra década.",
+      "trap": "Este panorama histórico não é um boletim sobre os acontecimentos atuais. Evite reduzir o conflito a uma disputa religiosa milenar.",
+      "question": "Qual cuidado melhora a leitura de um mapa do conflito?",
+      "options": [
+        "Ignorar o ano para comparar tudo como igual",
+        "Distinguir proposta, fronteira e área ocupada",
+        "Tratar povos e governos como sinônimos"
+      ],
+      "answer": 1,
+      "feedback": "A data e o tipo de delimitação são indispensáveis para interpretar o mapa.",
+      "sources": [
+        [
+          "ONU — Histórico da questão da Palestina",
+          "https://www.un.org/unispal/history/"
+        ]
+      ]
+    },
+    {
+      "id": "aula-8",
+      "subject": "PORTUGUÊS",
+      "title": "Modernismo brasileiro",
+      "text": [
+        "A primeira fase do Modernismo brasileiro, convencionalmente situada entre 1922 e 1930, questionou modelos acadêmicos e buscou experimentar a linguagem. Verso livre, humor, oralidade e revisão crítica da identidade nacional aparecem em diferentes autores. A Semana de Arte Moderna de 1922 foi um marco, mas não o início absoluto de toda inovação artística no país.",
+        "A segunda fase, de 1930 a 1945, inclui a poesia de Carlos Drummond de Andrade e o romance social de autores como Graciliano Ramos. Na produção posterior a 1945, convivem projetos distintos, como o rigor formal de João Cabral de Melo Neto e as experiências narrativas de Clarice Lispector e Guimarães Rosa."
+      ],
+      "example": "Em um texto com fala cotidiana e humor, procure o efeito desses recursos: aproximar a literatura da experiência brasileira, criticar convenções ou produzir estranhamento. Não basta listar características.",
+      "trap": "Modernismo não significa ausência de técnica: romper uma regra pode ser uma escolha estética trabalhada.",
+      "question": "O uso de linguagem coloquial na primeira fase pode expressar:",
+      "options": [
+        "A valorização de formas brasileiras de falar",
+        "A obrigação de abandonar qualquer crítica social",
+        "A manutenção rígida de padrões acadêmicos"
+      ],
+      "answer": 0,
+      "feedback": "A oralidade participa da busca de novas formas de expressão e da discussão da identidade brasileira."
+    },
+    {
+      "id": "aula-9",
+      "subject": "PORTUGUÊS",
+      "title": "Orações subordinadas substantivas",
+      "text": [
+        "Uma oração subordinada depende sintaticamente de outra. As substantivas desempenham funções que um substantivo poderia exercer: sujeito, objeto direto, objeto indireto, complemento nominal, predicativo ou aposto. A troca por “isso” ajuda a reconhecer o grupo, mas a classificação depende da função.",
+        "“É necessário que você revise”: que você revise funciona como sujeito, portanto é subjetiva. “Espero que você venha”: a oração completa o verbo sem preposição, portanto é objetiva direta. “Tenho certeza de que ele virá”: completa o nome certeza e é completiva nominal. Há ainda objetiva indireta, predicativa e apositiva."
+      ],
+      "example": "“Lembro-me de que estudamos isso.” → “Lembro-me disso.” A oração completa o verbo pronominal lembrar-se, com preposição: objetiva indireta. “Meu desejo é que você venha” é predicativa; “Só peço isto: que revise” é apositiva.",
+      "trap": "Não classifique apenas pela presença de “de que”: veja se o termo completado é verbo ou nome.",
+      "question": "Em “É importante que todos participem”, a oração destacada funciona como:",
+      "options": [
+        "Objeto direto",
+        "Sujeito",
+        "Adjunto adnominal"
+      ],
+      "answer": 1,
+      "feedback": "Aquilo que é importante é “que todos participem”. A oração exerce a função de sujeito."
+    },
+    {
+      "id": "aula-10",
+      "subject": "PORTUGUÊS",
+      "title": "Orações subordinadas adjetivas",
+      "text": [
+        "Orações adjetivas caracterizam um substantivo ou pronome antecedente e costumam ser introduzidas por pronome relativo: que, quem, cujo, onde, o qual. As restritivas delimitam um grupo; as explicativas acrescentam uma informação e são isoladas por vírgulas.",
+        "“Os alunos que revisaram acertaram a questão” seleciona os alunos que revisaram. “Os alunos, que revisaram, acertaram a questão” apresenta a revisão como informação sobre o conjunto mencionado. A pontuação muda o sentido, não é apenas uma pausa para respirar."
+      ],
+      "example": "Em “O livro que li é interessante”, que retoma livro. Compare com “Espero que você leia”: nesse segundo caso, que não retoma um antecedente; introduz uma oração substantiva.",
+      "trap": "Nem todo “que” é pronome relativo. Busque o antecedente e a função da oração.",
+      "question": "Em “Os arquivos que estão completos foram enviados”, a oração adjetiva é:",
+      "options": [
+        "Restritiva",
+        "Explicativa",
+        "Subjetiva"
+      ],
+      "answer": 0,
+      "feedback": "Sem vírgulas, ela restringe os arquivos aos que estão completos."
+    },
+    {
+      "id": "aula-11",
+      "subject": "PORTUGUÊS",
+      "title": "Orações subordinadas adverbiais",
+      "text": [
+        "As adverbiais expressam circunstâncias em relação à oração principal: causa, consequência, condição, concessão, comparação, conformidade, finalidade, proporção ou tempo. Classifique pela relação de sentido, observando também a conjunção.",
+        "“Estudei porque tinha dúvida” indica causa; “estudei tanto que aprendi” indica consequência. “Se chover, fico” é condição; “embora chova, saio” é concessão. “Estudo para que eu compreenda” indica finalidade. “Quando chegar, aviso” marca tempo; “conforme combinamos” marca conformidade; “à medida que treino” marca proporção; “como o colega faz” pode marcar comparação."
+      ],
+      "example": "Troque a conjunção e observe o sentido: “Se estiver cansado, paro” estabelece condição. “Embora esteja cansado, continuo” apresenta um obstáculo que não impede a ação.",
+      "trap": "“Como” pode indicar causa, comparação ou conformidade, dependendo do contexto.",
+      "question": "Em “Embora estivesse cansada, Sara revisou”, há relação de:",
+      "options": [
+        "Concessão",
+        "Finalidade",
+        "Consequência"
+      ],
+      "answer": 0,
+      "feedback": "O cansaço poderia impedir a revisão, mas não a impede: essa oposição caracteriza concessão."
+    },
+    {
+      "id": "aula-12",
+      "subject": "PORTUGUÊS",
+      "title": "Orações reduzidas",
+      "text": [
+        "Uma oração reduzida tem verbo no infinitivo, gerúndio ou particípio, geralmente sem conjunção ou pronome relativo introdutório. Ela pode desempenhar funções substantivas, adjetivas ou adverbiais. Para classificar, desenvolva a oração e compare a relação de sentido.",
+        "“Ao chegar, avise” pode ser desenvolvido como “Quando chegar, avise”: adverbial temporal reduzida de infinitivo. “Terminada a prova, saímos” também expressa tempo. “É importante estudar” tem uma oração reduzida de infinitivo que funciona como sujeito."
+      ],
+      "example": "“Os alunos estudando na sala fizeram silêncio” → “Os alunos que estavam estudando na sala fizeram silêncio”. A oração reduzida caracteriza alunos: valor adjetivo.",
+      "trap": "A forma verbal sozinha não determina a função sintática; leia a frase inteira.",
+      "question": "“Ao terminar a atividade, revise” apresenta valor:",
+      "options": [
+        "Temporal",
+        "Apositivo",
+        "Predicativo"
+      ],
+      "answer": 0,
+      "feedback": "“Ao terminar” equivale a “quando terminar”: localiza a ação no tempo."
+    },
+    {
+      "id": "aula-13",
+      "subject": "PORTUGUÊS",
+      "title": "Regência verbal e transitividade",
+      "text": [
+        "Transitividade descreve a relação do verbo com seus complementos em um uso concreto. Um verbo pode ser intransitivo, transitivo direto, transitivo indireto ou transitivo direto e indireto. “Entreguei o livro ao colega”: o livro é objeto direto; ao colega é objeto indireto.",
+        "Regência verbal trata dessa relação, incluindo as preposições exigidas. Na norma-padrão, assistir no sentido de ver pede a: “assisti ao filme”. Preferir constrói-se com “preferir uma coisa a outra”. O sentido pode alterar a regência: aspirar o ar é diferente de aspirar ao cargo."
+      ],
+      "example": "“Ela leu o texto”: leu é transitivo direto. “Ela gosta de música”: gosta é transitivo indireto. Em “Ela dormiu cedo”, cedo indica tempo, não é objeto do verbo.",
+      "trap": "Não use a pergunta “o quê?” mecanicamente para qualquer verbo; confira sentido, preposição e função do termo.",
+      "question": "Em “Enviei uma mensagem ao monitor”, o verbo é:",
+      "options": [
+        "Intransitivo",
+        "Transitivo direto e indireto",
+        "Apenas transitivo indireto"
+      ],
+      "answer": 1,
+      "feedback": "Uma mensagem é objeto direto; ao monitor é objeto indireto."
+    },
+    {
+      "id": "aula-14",
+      "subject": "PORTUGUÊS",
+      "title": "Regência nominal",
+      "text": [
+        "Regência nominal é a relação entre um nome — substantivo, adjetivo ou advérbio — e seu complemento, frequentemente introduzido por preposição. Exemplos: necessidade de ajuda, favorável à proposta, compatível com o sistema. A escolha depende do nome e do sentido.",
+        "A crase pode aparecer quando a preposição a exigida pelo nome encontra o artigo feminino a: “sou favorável à revisão”. Em “tenho necessidade de revisão”, a preposição é de e não há essa fusão. Nem todo termo preposicionado é complemento nominal: a função precisa ser examinada no contexto."
+      ],
+      "example": "“O material é adequado à turma”: adequado pede a e turma admite artigo a. Já “adequado a estudantes iniciantes” não apresenta artigo feminino singular a.",
+      "trap": "Crase não é um sinal colocado antes de toda palavra feminina.",
+      "question": "Qual construção apresenta regência nominal?",
+      "options": [
+        "Necessidade de estudo",
+        "Estudou ontem",
+        "Leu o livro"
+      ],
+      "answer": 0,
+      "feedback": "De estudo completa o sentido do substantivo necessidade."
+    },
+    {
+      "id": "aula-15",
+      "subject": "MATEMÁTICA",
+      "title": "Funções circulares: seno e cosseno",
+      "text": [
+        "Na circunferência trigonométrica, de raio 1, o ponto associado ao ângulo x tem coordenadas (cos x, sen x). O cosseno corresponde à coordenada horizontal e o seno à vertical. Assim, ambos variam entre −1 e 1. Uma volta completa equivale a 360° ou 2π radianos.",
+        "Os sinais dependem do quadrante. No primeiro, seno e cosseno são positivos; no segundo, seno positivo e cosseno negativo; no terceiro, ambos negativos; no quarto, seno negativo e cosseno positivo. A identidade sen²x + cos²x = 1 vem da relação pitagórica no círculo."
+      ],
+      "example": "Para converter 60° em radianos: 60 × π/180 = π/3. Nesse ângulo, cos(π/3)=1/2 e sen(π/3)=√3/2. Verifique: 1/4 + 3/4 = 1.",
+      "trap": "Confira se o ângulo está em graus ou radianos antes de usar a calculadora.",
+      "question": "Qual é o valor de sen(π/2)?",
+      "options": [
+        "0",
+        "1",
+        "−1"
+      ],
+      "answer": 1,
+      "feedback": "π/2 corresponde a 90°. O ponto no círculo é (0,1), então o seno vale 1."
+    },
+    {
+      "id": "aula-16",
+      "subject": "MATEMÁTICA",
+      "title": "Funções periódicas",
+      "text": [
+        "Uma função é periódica quando seus valores se repetem após um intervalo T: f(x+T)=f(x). Para seno e cosseno básicos, o menor período positivo é 2π. Para a tangente, é π. No modelo y=a+b·sen(cx+d), com b e c não nulos, a amplitude é |b| e o período é 2π/|c|.",
+        "O parâmetro a desloca a linha média; b muda a amplitude e pode refletir o gráfico; c altera a frequência das oscilações; d produz deslocamento horizontal em conjunto com c. O máximo é a+|b| e o mínimo é a−|b|. O período não é a altura da curva."
+      ],
+      "example": "Em y=3+2·sen(2x), a linha média é 3, a amplitude é 2, o máximo é 5, o mínimo é 1 e o período é π.",
+      "trap": "Amplitude é metade da distância entre máximo e mínimo.",
+      "question": "Em y=4+3·cos(2x), qual é o período?",
+      "options": [
+        "2π",
+        "π",
+        "3"
+      ],
+      "answer": 1,
+      "feedback": "T=2π/|2|=π. O número 3 determina a amplitude."
+    },
+    {
+      "id": "aula-17",
+      "subject": "MATEMÁTICA",
+      "title": "Estatística: média, mediana e dispersão",
+      "text": [
+        "A média aritmética é a soma dos valores dividida pela quantidade. A mediana ocupa a posição central depois de ordenar os dados; com quantidade par, é a média dos dois centrais. A moda é o valor mais frequente e pode não ser única. Essas medidas resumem os dados, mas não mostram toda a distribuição.",
+        "A variância populacional é a média dos quadrados dos desvios em relação à média: σ²=Σ(x−μ)²/N. O desvio padrão é a raiz da variância e tem a mesma unidade dos dados. Para estimar a variância populacional a partir de uma amostra, é comum usar o divisor n−1; confira o que a questão pede."
+      ],
+      "example": "Para 2, 4 e 6: média=4; desvios=−2,0,2; quadrados=4,0,4. Variância populacional=8/3 e desvio padrão=√(8/3)≈1,63. Para a variância amostral, o resultado seria 8/2=4.",
+      "trap": "Não some os desvios sem elevar ao quadrado: em torno da média, essa soma se anula.",
+      "question": "Qual conjunto tem menor desvio padrão?",
+      "options": [
+        "4, 4, 4",
+        "2, 4, 6",
+        "0, 4, 8"
+      ],
+      "answer": 0,
+      "feedback": "Todos os valores iguais à média têm desvio zero, então o desvio padrão é zero."
+    },
+    {
+      "id": "aula-18",
+      "subject": "MATEMÁTICA",
+      "title": "Geometria espacial",
+      "text": [
+        "Volume mede o espaço ocupado e usa unidades cúbicas; área mede superfícies e usa unidades quadradas. Para prismas e cilindros, V=Ab·h. Para pirâmides e cones, V=Ab·h/3. Na esfera, V=4πr³/3 e a área é 4πr². A altura deve ser perpendicular à base.",
+        "No cilindro, a área da base é πr² e a área lateral é 2πrh. A área total soma as duas bases e a lateral. No cone reto, a geratriz g satisfaz g²=r²+h² e a área lateral é πrg. Antes de calcular, faça um desenho e identifique se a questão pede área, volume, raio ou diâmetro."
+      ],
+      "example": "Um cilindro de raio 3 cm e altura 5 cm tem volume π·3²·5=45π cm³. Sua área total é 2π·3²+2π·3·5=48π cm².",
+      "trap": "Diâmetro é o dobro do raio. Usar o diâmetro como raio aumenta muito o resultado.",
+      "question": "Uma pirâmide com área da base 18 cm² e altura 5 cm tem volume:",
+      "options": [
+        "90 cm³",
+        "30 cm³",
+        "23 cm³"
+      ],
+      "answer": 1,
+      "feedback": "V=18·5/3=30 cm³."
+    },
+    {
+      "id": "aula-19",
+      "subject": "FÍSICA",
+      "title": "Corrente elétrica",
+      "text": [
+        "Corrente elétrica é a taxa de passagem de carga por uma seção do condutor: i=ΔQ/Δt. No SI, a carga é medida em coulombs, o tempo em segundos e a corrente em ampères. Um ampère equivale a um coulomb por segundo.",
+        "O sentido convencional da corrente acompanha o movimento que cargas positivas teriam. Em um metal, os elétrons se deslocam no sentido oposto. Para manter corrente em um circuito resistivo simples, é preciso diferença de potencial e caminho fechado. A corrente não é “gasta” ao passar por uma lâmpada: há transformação de energia."
+      ],
+      "example": "Se passam 12 C por uma seção em 3 s, i=12/3=4 A. Se o tempo vier em minutos, converta para segundos antes de calcular.",
+      "trap": "Corrente e tensão são grandezas diferentes: ampère não é volt.",
+      "question": "Uma carga de 30 C atravessa uma seção em 5 s. A corrente média vale:",
+      "options": [
+        "6 A",
+        "150 A",
+        "0,17 A"
+      ],
+      "answer": 0,
+      "feedback": "i=ΔQ/Δt=30/5=6 A."
+    },
+    {
+      "id": "aula-20",
+      "subject": "FÍSICA",
+      "title": "Resistência: primeira e segunda leis de Ohm",
+      "text": [
+        "Para um resistor ôhmico em condições físicas constantes, a tensão e a corrente são proporcionais: U=R·i. A resistência é medida em ohms. O gráfico de U em função de i é uma reta cuja inclinação vale R. Nem todo componente mantém resistência constante.",
+        "A resistência de um fio homogêneo pode ser descrita por R=ρL/A, em que ρ é a resistividade do material, L o comprimento e A a área da seção. Um fio mais longo oferece maior resistência; uma seção maior a reduz. Temperatura e material também importam."
+      ],
+      "example": "Um resistor de 6 Ω sob 12 V conduz i=12/6=2 A. Para um fio do mesmo material e temperatura, dobrar L sem mudar A dobra R.",
+      "trap": "Na segunda lei, A é área da seção, não raio. Dobrar o raio quadruplica a área.",
+      "question": "Um fio tem comprimento dobrado e a mesma seção e material. Sua resistência:",
+      "options": [
+        "Cai à metade",
+        "Dobra",
+        "Fica igual"
+      ],
+      "answer": 1,
+      "feedback": "Em R=ρL/A, a resistência é diretamente proporcional ao comprimento."
+    },
+    {
+      "id": "aula-21",
+      "subject": "FÍSICA",
+      "title": "Associação de resistores",
+      "text": [
+        "Em série, a corrente é a mesma em todos os resistores, a tensão se divide e Req=R1+R2+…. Em paralelo, os resistores ligam os mesmos dois nós: a tensão é a mesma, as correntes se dividem e 1/Req=1/R1+1/R2+….",
+        "Para dois resistores em paralelo, Req=R1R2/(R1+R2). A resistência equivalente fica menor que a menor resistência do conjunto. Em circuitos mistos, reduza uma associação por vez e depois retorne ao circuito original para encontrar tensões e correntes."
+      ],
+      "example": "Dois resistores de 6 Ω e 3 Ω em paralelo têm Req=18/9=2 Ω. Sob 12 V, conduzem 2 A e 4 A; a corrente total é 6 A.",
+      "trap": "Resistores desenhados lado a lado não são necessariamente paralelos: confira os nós.",
+      "question": "Dois resistores de 4 Ω ligados em série resultam em:",
+      "options": [
+        "2 Ω",
+        "4 Ω",
+        "8 Ω"
+      ],
+      "answer": 2,
+      "feedback": "Em série, somamos as resistências: 4+4=8 Ω."
+    },
+    {
+      "id": "aula-22",
+      "subject": "FÍSICA",
+      "title": "Circuitos simples e potência",
+      "text": [
+        "Em um circuito ideal com fonte e resistor, calcule a corrente por i=U/R. Em um nó, a soma das correntes que chegam é igual à soma das que saem: isso expressa conservação de carga. Em uma malha, as variações de potencial somam zero.",
+        "A potência elétrica é P=U·i. Para resistores, também vale P=Ri²=U²/R. Energia é potência vezes tempo: E=P·Δt. Quando a potência está em kW e o tempo em horas, a energia resulta em kWh. Um amperímetro ideal entra em série; um voltímetro ideal, em paralelo ao componente."
+      ],
+      "example": "Um aparelho de 100 W usado por 5 h consome 500 Wh=0,5 kWh. Potência é a rapidez de consumo; energia é o total consumido no intervalo.",
+      "trap": "kWh é unidade de energia, não de potência.",
+      "question": "Um resistor sob 12 V conduz 2 A. Sua potência é:",
+      "options": [
+        "6 W",
+        "24 W",
+        "14 W"
+      ],
+      "answer": 1,
+      "feedback": "P=U·i=12·2=24 W."
+    },
+    {
+      "id": "aula-23",
+      "subject": "QUÍMICA",
+      "title": "Pilhas e oxirredução",
+      "text": [
+        "Oxidação é perda de elétrons; redução é ganho. Os processos ocorrem juntos: a espécie que perde elétrons permite que outra os receba. O agente redutor sofre oxidação, enquanto o agente oxidante sofre redução. O número de oxidação ajuda a acompanhar essa transferência.",
+        "Uma pilha converte energia de uma reação espontânea em energia elétrica. No ânodo ocorre oxidação e no cátodo ocorre redução. Em uma pilha galvânica, o ânodo é negativo e o cátodo é positivo. Os elétrons percorrem o circuito externo; no eletrólito e na ponte salina, íons mantêm o transporte de carga e a neutralidade."
+      ],
+      "example": "Na pilha de Zn/Cu: Zn → Zn²⁺+2e⁻; Cu²⁺+2e⁻ → Cu. O zinco é oxidado e fornece elétrons para a redução dos íons cobre. A reação global é Zn+Cu²⁺ → Zn²⁺+Cu.",
+      "trap": "A ponte salina transporta íons; não é o caminho dos elétrons entre os eletrodos.",
+      "question": "Na reação Zn+Cu²⁺ → Zn²⁺+Cu, o agente redutor é:",
+      "options": [
+        "Zn",
+        "Cu²⁺",
+        "Zn²⁺"
+      ],
+      "answer": 0,
+      "feedback": "O Zn perde elétrons e se oxida. A espécie que se oxida é o agente redutor."
+    },
+    {
+      "id": "aula-24",
+      "subject": "QUÍMICA",
+      "title": "Potencial de uma pilha",
+      "text": [
+        "Tabelas de potenciais padrão apresentam, em geral, semirreações de redução. Quanto maior o potencial de redução, maior a tendência de a espécie se reduzir nas condições padrão. Para uma pilha nessas condições, E°pilha=E°cátodo−E°ânodo, usando ambos os valores como potenciais de redução.",
+        "Um valor positivo indica espontaneidade da reação global no sentido considerado, nas condições padrão. Ao balancear elétrons, você pode multiplicar coeficientes das semirreações, mas não multiplica o potencial pelo coeficiente: potencial não é uma grandeza extensiva."
+      ],
+      "example": "Dados E°(Cu²⁺/Cu)=+0,34 V e E°(Zn²⁺/Zn)=−0,76 V: E°pilha=0,34−(−0,76)=1,10 V.",
+      "trap": "Cuidado ao subtrair um número negativo. Não some dois potenciais de redução sem analisar o sentido.",
+      "question": "Com E°cátodo=0,80 V e E°ânodo=−0,40 V, a pilha tem:",
+      "options": [
+        "0,40 V",
+        "1,20 V",
+        "−1,20 V"
+      ],
+      "answer": 1,
+      "feedback": "E°=0,80−(−0,40)=1,20 V."
+    },
+    {
+      "id": "aula-25",
+      "subject": "QUÍMICA",
+      "title": "Eletrólise",
+      "text": [
+        "Na eletrólise, uma fonte externa fornece energia para conduzir uma reação não espontânea. Oxidação continua ocorrendo no ânodo e redução no cátodo, mas os sinais dos eletrodos se invertem em relação à pilha: o ânodo é positivo e o cátodo, negativo.",
+        "Na eletrólise ígnea, o composto está fundido. Na aquosa, a água também pode participar, e os produtos dependem das espécies presentes e das condições. A carga total é Q=i·t; a quantidade de elétrons em mol é Q/F, com F aproximadamente 96.485 C/mol. A estequiometria conecta elétrons e substância produzida."
+      ],
+      "example": "Para depositar 1 mol de Cu a partir de Cu²⁺, são necessários 2 mol de elétrons: Cu²⁺+2e⁻ → Cu. Portanto, a carga ideal é 2F, considerando eficiência de 100%.",
+      "trap": "Não determine os produtos de toda eletrólise aquosa como se a água não estivesse presente.",
+      "question": "Na eletrólise, a redução ocorre:",
+      "options": [
+        "No ânodo",
+        "No cátodo",
+        "Apenas na fonte elétrica"
+      ],
+      "answer": 1,
+      "feedback": "Cátodo é sempre o eletrodo da redução, tanto em pilhas quanto em eletrólise."
+    },
+    {
+      "id": "aula-26",
+      "subject": "BIOLOGIA",
+      "title": "Segunda lei de Mendel",
+      "text": [
+        "A segunda lei descreve a segregação independente de pares de alelos quando não há ligação que altere essa distribuição. Ela se aplica diretamente, por exemplo, a genes em cromossomos distintos. Na formação dos gametas, cada um recebe um alelo de cada par.",
+        "Um indivíduo AaBb pode produzir AB, Ab, aB e ab, com frequências iguais no modelo independente. No cruzamento AaBb×AaBb, com dominância completa em ambos os loci e sem interações gênicas, a proporção fenotípica esperada é 9:3:3:1. Genes ligados podem apresentar proporções diferentes."
+      ],
+      "example": "No cruzamento AaBb×AaBb, P(aa)=1/4 e P(bb)=1/4. Com independência, P(aabb)=1/4×1/4=1/16.",
+      "trap": "A proporção 9:3:3:1 não vale para qualquer cruzamento com dois genes; verifique as hipóteses.",
+      "question": "Em AaBb×AaBb com segregação independente, a chance de aabb é:",
+      "options": [
+        "1/4",
+        "1/16",
+        "1/2"
+      ],
+      "answer": 1,
+      "feedback": "Multiplicamos as probabilidades independentes: 1/4 para aa e 1/4 para bb.",
+      "sources": [
+        [
+          "OpenStax — Laws of Inheritance",
+          "https://openstax.org/books/biology-2e/pages/12-3-laws-of-inheritance"
+        ]
+      ]
+    },
+    {
+      "id": "aula-27",
+      "subject": "BIOLOGIA",
+      "title": "Mutações",
+      "text": [
+        "Mutações são alterações no material genético. Podem envolver uma base, segmentos de cromossomos ou seu número. Substituições podem ser silenciosas, mudar um aminoácido ou gerar um sinal de parada; inserções e deleções podem alterar o quadro de leitura quando não envolvem múltiplos de três bases em uma região codificante.",
+        "Os efeitos dependem do local e do contexto: uma mutação pode ser neutra, prejudicial ou vantajosa em determinada condição. Mutações originam variação; seleção natural altera a frequência de variantes ao longo das gerações. Em organismos com reprodução sexuada, mutações na linhagem germinativa podem ser transmitidas aos descendentes."
+      ],
+      "example": "Uma alteração de DNA pode não mudar a proteína porque diferentes códons podem indicar o mesmo aminoácido. Logo, mudança no DNA não implica necessariamente mudança observável no organismo.",
+      "trap": "Mutações não surgem porque o organismo “precisa” delas. Seleção e surgimento de variantes são processos diferentes.",
+      "question": "Uma mutação silenciosa pode:",
+      "options": [
+        "Alterar o DNA sem alterar o aminoácido codificado",
+        "Sempre causar doença grave",
+        "Surgir apenas em células reprodutivas"
+      ],
+      "answer": 0,
+      "feedback": "A redundância do código genético permite que uma troca de base preserve o aminoácido."
+    },
+    {
+      "id": "aula-28",
+      "subject": "BIOLOGIA",
+      "title": "Ecologia: relações e níveis de organização",
+      "text": [
+        "População reúne indivíduos da mesma espécie em uma área e período; comunidade reúne populações de diferentes espécies. Ecossistema inclui os seres vivos e os fatores abióticos, como água, luz e temperatura. Habitat é o local de vida; nicho descreve relações, recursos e condições ligados ao modo de vida.",
+        "Relações ecológicas podem ocorrer dentro da mesma espécie ou entre espécies. Competição envolve disputa por recursos; predação beneficia o predador e prejudica a presa; mutualismo beneficia os participantes. O efeito de uma interação depende do contexto e não deve ser confundido com uma intenção consciente dos organismos."
+      ],
+      "example": "Em uma lagoa, uma população de uma espécie de peixe é apenas parte da comunidade. A lagoa como ecossistema inclui também água, sedimentos, temperatura e luz.",
+      "trap": "Nicho não é apenas um endereço; descreve como a espécie vive e interage.",
+      "question": "Peixes, algas e bactérias de uma lagoa, considerados apenas como seres vivos, formam:",
+      "options": [
+        "Uma população",
+        "Uma comunidade",
+        "Um fator abiótico"
+      ],
+      "answer": 1,
+      "feedback": "São populações de espécies diferentes, portanto compõem uma comunidade."
+    },
+    {
+      "id": "aula-29",
+      "subject": "BIOLOGIA",
+      "title": "Ecologia: energia, ciclos e impactos",
+      "text": [
+        "Cadeias alimentares representam transferências entre produtores, consumidores e decompositores; teias mostram várias conexões. A energia disponível tende a diminuir entre níveis tróficos porque parte é dissipada como calor e usada no metabolismo. A matéria, por sua vez, participa de ciclos biogeoquímicos.",
+        "Na eutrofização, o excesso de nutrientes pode favorecer proliferação de algas; sua decomposição aumenta o consumo de oxigênio, prejudicando organismos aquáticos. Bioacumulação é o acúmulo de uma substância no organismo; biomagnificação é seu aumento de concentração ao longo de níveis tróficos para determinadas substâncias persistentes."
+      ],
+      "example": "Capim → gafanhoto → sapo → cobra: o capim é produtor. Se a questão adotar transferência de 10%, 1.000 unidades de energia nos produtores resultariam em 100 no primeiro nível consumidor e 10 no segundo. Esse percentual é uma simplificação, não uma constante universal.",
+      "trap": "Energia flui e se dissipa; ela não é reciclada como a matéria.",
+      "question": "Uma causa possível de queda do oxigênio após uma floração de algas é:",
+      "options": [
+        "A decomposição da matéria orgânica",
+        "A eliminação de todos os decompositores",
+        "A ausência de nutrientes"
+      ],
+      "answer": 0,
+      "feedback": "A atividade de decompositores consome oxigênio e pode provocar hipóxia."
+    },
+    {
+      "id": "aula-30",
+      "subject": "INGLÊS",
+      "title": "Interpretação de textos",
+      "text": [
+        "Comece identificando gênero, tema e objetivo do texto. Skimming é a leitura para captar a ideia geral; scanning é a busca de uma informação específica. Depois, volte ao trecho que sustenta sua resposta. Não é necessário traduzir cada palavra para compreender um argumento.",
+        "Observe conectores: but e however marcam contraste; because introduz causa; therefore aponta consequência. Pronomes retomam termos anteriores, e palavras semelhantes ao português podem ser falsos cognatos: actually costuma significar “na verdade”, não “atualmente”. Inferências precisam de apoio no texto."
+      ],
+      "example": "“The test was difficult. However, most students passed.” O contraste indica que, apesar da dificuldade, a maioria passou. Não permite concluir que todos tiraram nota máxima.",
+      "trap": "Não transforme uma informação possível em uma informação afirmada pelo texto.",
+      "question": "Em “It rained; therefore, the match was canceled”, therefore indica:",
+      "options": [
+        "Consequência",
+        "Contraste",
+        "Exemplo"
+      ],
+      "answer": 0,
+      "feedback": "O cancelamento é apresentado como consequência da chuva."
+    },
+    {
+      "id": "aula-31",
+      "subject": "INGLÊS",
+      "title": "Direct speech e reported speech",
+      "text": [
+        "Direct speech reproduz a fala com suas palavras exatas: Ana said, “I am tired.” Reported speech relata o conteúdo: Ana said that she was tired. Pronomes e referências de tempo e lugar precisam acompanhar quem relata e em qual situação.",
+        "Quando o verbo de relato está no passado, é comum o backshift: am/is → was, are → were, will → would, can → could, present perfect → past perfect. A mudança não é automática em todo contexto: fatos ainda válidos podem manter o tempo. Say não exige um destinatário; tell geralmente exige: she told me that…."
+      ],
+      "example": "“I will study tomorrow”, he said. Relatando em outro dia: He said that he would study the next day. I vira he; will vira would; tomorrow vira the next day conforme o contexto.",
+      "trap": "A referência temporal depende da situação; não substitua tomorrow se o relato ainda aponta para o mesmo “amanhã” sem avaliar o contexto.",
+      "question": "Relatando depois, “I am busy”, she said, pode ficar:",
+      "options": [
+        "She said that she was busy.",
+        "She told that I busy.",
+        "She said that she were busy."
+      ],
+      "answer": 0,
+      "feedback": "She substitui I e was é o passado de am para terceira pessoa do singular."
+    },
+    {
+      "id": "aula-32",
+      "subject": "INGLÊS",
+      "title": "Perguntas e ordens no discurso indireto",
+      "text": [
+        "Perguntas indiretas usam ordem afirmativa: sujeito antes do verbo. “Where do you live?” pode virar “He asked where I lived”. Em perguntas de sim ou não, use if ou whether: “Are you ready?” → “She asked if I was ready”. Não mantenha o auxiliar do da pergunta original.",
+        "Ordens e pedidos podem ser relatados com verbo + destinatário + to + verbo: “Open the book” → “The teacher told us to open the book”. Na negativa, use not to: “Do not run” → “She told us not to run”. O verbo introdutório pode variar conforme o sentido: asked, told, advised."
+      ],
+      "example": "“Did you finish?” → “He asked whether I had finished.” A estrutura indireta não fica “whether had I finished”.",
+      "trap": "O ponto de interrogação da pergunta original não obriga a frase de relato a ser uma pergunta.",
+      "question": "Qual frase relata corretamente “Do not leave”, she said to me?",
+      "options": [
+        "She told me not to leave.",
+        "She told me do not left.",
+        "She said me not leave."
+      ],
+      "answer": 0,
+      "feedback": "O padrão é told + pessoa + not to + infinitivo."
+    },
+    {
+      "id": "aula-33",
+      "subject": "FILOSOFIA",
+      "title": "Escolas helenísticas",
+      "text": [
+        "As escolas helenísticas discutem como viver diante de inseguranças e desejos. Para os estoicos, a virtude e o uso racional dos juízos orientam a vida; distinguir o que depende de nós do que não depende ajuda a agir sem tentar controlar tudo. Isso não significa abandonar responsabilidades.",
+        "No epicurismo, prazer se relaciona à ausência de sofrimento e à tranquilidade, com prudência na escolha dos desejos e valorização da amizade. O ceticismo problematiza a certeza e pode defender a suspensão do juízo diante de razões em conflito. Essas tradições têm diferenças internas e não cabem em slogans motivacionais."
+      ],
+      "example": "Diante de uma prova, um estoico concentraria sua ação no preparo e em suas escolhas, reconhecendo que não controla todas as circunstâncias. O exemplo ilustra a distinção; não resume toda a escola.",
+      "trap": "Epicurismo não é a defesa de consumir todos os prazeres sem avaliar consequências.",
+      "question": "A escolha prudente dos desejos e a busca de tranquilidade se associam ao:",
+      "options": [
+        "Epicurismo",
+        "Determinismo tecnológico",
+        "Mercantilismo"
+      ],
+      "answer": 0,
+      "feedback": "Epicuro relaciona a vida prazerosa à prudência e à redução de perturbações."
+    },
+    {
+      "id": "aula-34",
+      "subject": "FILOSOFIA",
+      "title": "Descartes e a dúvida metódica",
+      "text": [
+        "Descartes procura um fundamento seguro para o conhecimento. A dúvida metódica consiste em suspender provisoriamente crenças que possam ser postas em dúvida, inclusive informações dos sentidos. Não é uma defesa de duvidar de tudo para sempre, mas um procedimento de investigação.",
+        "Ao duvidar, o sujeito pensa; e, enquanto pensa, não pode negar sua existência como ser pensante. Esse é o núcleo do cogito, conhecido pela formulação “penso, logo existo”. O racionalismo cartesiano atribui papel decisivo à razão na fundamentação do conhecimento."
+      ],
+      "example": "Se uma percepção pode ser um sonho, ela não oferece sozinha a certeza buscada. Mas o próprio ato de questioná-la já pressupõe atividade de pensamento.",
+      "trap": "O cogito não afirma que pensar cria fisicamente o corpo ou o mundo.",
+      "question": "Qual é a função da dúvida metódica?",
+      "options": [
+        "Buscar um fundamento seguro para conhecer",
+        "Provar que qualquer opinião é igualmente verdadeira",
+        "Impedir toda investigação"
+      ],
+      "answer": 0,
+      "feedback": "A dúvida funciona como método para encontrar aquilo que resiste ao questionamento."
+    },
+    {
+      "id": "aula-35",
+      "subject": "FILOSOFIA",
+      "title": "Hume: experiência e causalidade",
+      "text": [
+        "Hume distingue impressões, percepções mais vivas, de ideias, representações menos intensas relacionadas à experiência. Sua abordagem empirista questiona o que podemos justificar a partir do que efetivamente percebemos.",
+        "Ao observar dois eventos repetidamente associados, formamos a expectativa de que um seguirá o outro. Porém, a observação de casos passados não demonstra logicamente que o futuro repetirá o padrão. Esse problema da indução ajuda a compreender sua análise da causalidade: não percebemos diretamente uma conexão necessária entre os eventos."
+      ],
+      "example": "Ver o Sol nascer todos os dias sustenta uma expectativa muito forte, mas não constitui uma prova lógica baseada apenas na repetição de que ele necessariamente nascerá amanhã.",
+      "trap": "Hume não diz que nunca fazemos previsões; pergunta qual é a justificativa de sua necessidade.",
+      "question": "Segundo a crítica de Hume, a repetição de eventos:",
+      "options": [
+        "Demonstra logicamente qualquer acontecimento futuro",
+        "Produz expectativas, sem provar uma conexão necessária",
+        "Elimina o papel da experiência"
+      ],
+      "answer": 1,
+      "feedback": "O hábito sustenta a expectativa, mas não fornece uma demonstração lógica da necessidade causal."
+    },
+    {
+      "id": "aula-36",
+      "subject": "SOCIOLOGIA",
+      "title": "Estratificação social",
+      "text": [
+        "Estratificação é a organização da sociedade em posições desiguais de acesso a recursos, poder e prestígio. Sistemas de castas, estamentos e classes expressam formas históricas distintas dessa organização. Nas sociedades de classes, a mobilidade é possível, mas oportunidades não se distribuem igualmente.",
+        "Para Marx, a posição nas relações de produção é central para analisar classes. Weber amplia a análise ao distinguir dimensões de classe, status e poder político. Ter renda, prestígio e influência não significa necessariamente ocupar a mesma posição em todas essas dimensões."
+      ],
+      "example": "Um profissional pode ter prestígio cultural elevado e renda relativamente baixa. O exemplo ajuda a perceber que prestígio e riqueza não são medidas idênticas.",
+      "trap": "Estratificação não é uma classificação natural ou biológica das pessoas.",
+      "question": "Qual exemplo distingue renda e prestígio?",
+      "options": [
+        "Uma ocupação respeitada pode ter remuneração baixa",
+        "Toda renda alta garante prestígio igual em qualquer grupo",
+        "Prestígio é sempre medido em reais"
+      ],
+      "answer": 0,
+      "feedback": "A posição econômica e o reconhecimento social podem divergir."
+    },
+    {
+      "id": "aula-37",
+      "subject": "SOCIOLOGIA",
+      "title": "Desigualdade e mobilidade social",
+      "text": [
+        "Desigualdade social envolve diferenças persistentes no acesso a renda, educação, moradia, saúde, participação e proteção. Discriminação, heranças históricas, distribuição patrimonial e organização do trabalho ajudam a explicar por que as condições de partida são distintas.",
+        "Mobilidade vertical altera a posição social para cima ou para baixo; mobilidade horizontal muda a ocupação ou situação sem alteração equivalente de posição. Mobilidade intergeracional compara pais e filhos; intrageracional observa a trajetória de uma mesma pessoa. Um caso de ascensão individual não demonstra, sozinho, igualdade de oportunidades para todos."
+      ],
+      "example": "Se filhos alcançam escolaridade maior que a de seus pais, há mudança educacional intergeracional. Para avaliar mobilidade econômica, também é preciso observar renda, ocupação e contexto.",
+      "trap": "Não confunda explicar fatores estruturais com negar toda ação individual. As duas dimensões podem ser analisadas juntas.",
+      "question": "Comparar a posição social dos filhos à dos pais estuda mobilidade:",
+      "options": [
+        "Intergeracional",
+        "Apenas horizontal",
+        "Biológica"
+      ],
+      "answer": 0,
+      "feedback": "O termo se refere à comparação entre gerações."
+    },
+    {
+      "id": "aula-38",
+      "subject": "ARTES",
+      "title": "Clarice: interioridade, tempo e epifania",
+      "text": [
+        "Na escrita intimista de Clarice Lispector, o acontecimento externo frequentemente abre espaço para conflitos interiores. O tempo psicológico acompanha lembranças, associações e emoções; alguns instantes podem ocupar muitas páginas. Isso não elimina o mundo social, mas muda o foco narrativo.",
+        "O fluxo de consciência procura representar o movimento do pensamento por associações, interrupções e sobreposições. É uma construção literária, não uma transcrição exata da mente. Epifania é uma revelação que altera a percepção da personagem, muitas vezes provocada por uma situação cotidiana. Ela pode trazer desconforto, sem resolver o conflito."
+      ],
+      "example": "Uma personagem vê algo banal durante uma viagem e passa a questionar a rotina que considerava segura. O fato externo importa pelo deslocamento interior que provoca. No conto Amor, Ana é afetada pela visão de um cego mascando chiclete.",
+      "trap": "Epifania não é obrigatoriamente uma solução feliz nem um acontecimento sobrenatural.",
+      "question": "Qual situação exemplifica tempo psicológico?",
+      "options": [
+        "Um minuto narrado por meio de muitas lembranças e emoções",
+        "Uma lista de horários sem reflexão",
+        "A contagem objetiva dos dias de viagem"
+      ],
+      "answer": 0,
+      "feedback": "O foco está na experiência subjetiva do tempo, e não apenas no relógio.",
+      "reference": "Base da disciplina: Clarice Lispector e a Mágica do Teatro.pdf. Explicação de revisão elaborada para o portal."
+    },
+    {
+      "id": "aula-39",
+      "subject": "ARTES",
+      "title": "Macabéa e a dimensão social da literatura",
+      "text": [
+        "Em A hora da estrela, Macabéa é uma jovem alagoana que vive no Rio de Janeiro e trabalha como datilógrafa. Sua vulnerabilidade permite discutir pobreza, invisibilidade e desigualdade. A narrativa é mediada por Rodrigo S. M., narrador que também problematiza o próprio ato de contar sua história.",
+        "A leitura não deve reduzir Macabéa a um exemplo abstrato de miséria: observe a relação entre personagem, narrador e leitor. Em A paixão segundo G.H., a crise de uma mulher diante de uma barata assume outro contexto social. Comparar as obras ajuda a perceber diferentes formas de questionar identidade, cotidiano e percepção."
+      ],
+      "example": "Uma questão pode pedir a função social da literatura: explique como a narrativa torna perceptível uma experiência ignorada e desafia a indiferença do leitor, apoiando-se no trecho apresentado.",
+      "trap": "Macabéa vive no Rio de Janeiro no romance. Diferencie o cenário da obra literária daquele de adaptações.",
+      "question": "Qual aspecto permite discutir exclusão em A hora da estrela?",
+      "options": [
+        "A invisibilidade social de Macabéa",
+        "A ausência de narrador",
+        "A descrição de uma sociedade sem desigualdade"
+      ],
+      "answer": 0,
+      "feedback": "A vulnerabilidade da personagem é central para a discussão da exclusão social.",
+      "reference": "Base da disciplina: Clarice Lispector e a Mágica do Teatro.pdf. Explicação de revisão elaborada para o portal."
+    },
+    {
+      "id": "aula-40",
+      "subject": "ARTES",
+      "title": "Literatura e artes visuais",
+      "text": [
+        "Uma obra pode produzir sentidos sem reproduzir literalmente um objeto. Na pintura, cor, textura, forma e composição participam da experiência; na literatura, ritmo, imagens, escolhas de palavras e organização da narrativa também produzem efeitos. A aproximação entre linguagens não significa que funcionem do mesmo modo.",
+        "O material da disciplina aproxima a escrita de Clarice da experimentação visual. A comparação ajuda a pensar como sensações e estados interiores podem orientar a forma. Uma interpretação continua precisando de indícios: leitura sensível e análise cuidadosa se complementam."
+      ],
+      "example": "Ao comparar um texto fragmentado com uma pintura não figurativa, explique quais elementos geram tensão ou movimento. Não basta afirmar que ambos são “abstratos”.",
+      "trap": "Arte abstrata não significa ausência de trabalho formal nem permite qualquer interpretação sem justificativa.",
+      "question": "Uma comparação entre literatura e pintura deve observar:",
+      "options": [
+        "Apenas se mostram o mesmo objeto",
+        "Como os recursos de cada linguagem produzem efeitos",
+        "Se usam obrigatoriamente as mesmas técnicas"
+      ],
+      "answer": 1,
+      "feedback": "Palavra, cor, ritmo e composição são recursos diferentes que podem produzir efeitos comparáveis.",
+      "reference": "Base da disciplina: Clarice Lispector e a Mágica do Teatro.pdf. Explicação de revisão elaborada para o portal."
+    },
+    {
+      "id": "aula-41",
+      "subject": "ARTES",
+      "title": "Linguagem teatral: corpo, luz, espaço e som",
+      "text": [
+        "O teatro articula atuação, espaço, luz, som, objetos e relação com o público. A direção organiza uma proposta de encenação, em diálogo com o trabalho dos demais artistas. Atuar envolve corpo, voz, escuta e ação; decorar o texto é apenas uma parte do processo.",
+        "A iluminação pode destacar uma pessoa, sugerir horário ou construir uma atmosfera. Cenografia e figurino participam dos sentidos da cena, assim como silêncios e sonoplastia. Subtexto é aquilo que uma fala sugere ou encobre: as palavras podem dizer algo enquanto o gesto aponta outra intenção."
+      ],
+      "example": "A frase “está tudo bem” dita com voz firme e olhar aberto pode produzir um efeito; dita com hesitação, corpo retraído e silêncio, pode sugerir conflito. A análise deve considerar a cena inteira.",
+      "trap": "Luz e cenário não são apenas decoração: podem orientar a leitura do público.",
+      "question": "A mudança de foco de luz para uma personagem pode:",
+      "options": [
+        "Direcionar a atenção e construir sentido",
+        "Substituir necessariamente todos os atores",
+        "Ter apenas função de economizar energia"
+      ],
+      "answer": 0,
+      "feedback": "A iluminação participa da narrativa e da composição da cena.",
+      "reference": "Base da disciplina: Clarice Lispector e a Mágica do Teatro.pdf. Explicação de revisão elaborada para o portal."
+    },
+    {
+      "id": "aula-42",
+      "subject": "ARTES",
+      "title": "Augusto Boal e o Teatro do Oprimido",
+      "text": [
+        "O Teatro do Oprimido reúne práticas que usam a linguagem teatral para discutir relações de opressão e possibilidades de ação. A participação do público é central em diferentes técnicas. A proposta de espect-ator questiona a separação rígida entre quem observa e quem age.",
+        "No Teatro-Fórum, uma situação de opressão é encenada e o público pode propor e experimentar intervenções, com mediação. O objetivo não é impor uma resposta pronta, mas examinar possibilidades e limites. Nem toda técnica do Teatro do Oprimido funciona exatamente como o Fórum."
+      ],
+      "example": "Uma cena apresenta exclusão de um estudante. Uma intervenção pode testar outra ação da personagem e observar a resposta dos demais, seguida de discussão sobre seus efeitos e limites.",
+      "trap": "Uma intervenção teatral não garante que um problema social esteja resolvido; ela abre espaço de análise e experimentação.",
+      "question": "O termo espect-ator destaca:",
+      "options": [
+        "A participação ativa de quem antes apenas assistia",
+        "A obrigação de permanecer em silêncio",
+        "A eliminação de conflitos sociais pela decoração"
+      ],
+      "answer": 0,
+      "feedback": "O público pode participar da construção e discussão das ações.",
+      "reference": "Base da disciplina: Clarice Lispector e a Mágica do Teatro.pdf. Explicação de revisão elaborada para o portal."
+    },
+    {
+      "id": "aula-43",
+      "subject": "EDUCAÇÃO FÍSICA",
+      "title": "Futebol, cultura e identidade",
+      "text": [
+        "O futebol é uma prática corporal e também um fenômeno cultural. Regras, modos de torcer, memórias, linguagem e espaços urbanos participam de seus significados. No Brasil, sua difusão envolveu instituições de elite, trabalhadores e diferentes comunidades, em processos de apropriação e disputa.",
+        "O texto da disciplina discute o improviso e a ginga como elementos de uma interpretação da identidade nacional. Essa leitura é histórica e cultural: não significa que grupos tenham habilidades inatas por origem racial, nem que todo futebol europeu ou brasileiro seja uniforme."
+      ],
+      "example": "Expressões como “pisar na bola” e “vestir a camisa” mostram como o vocabulário do jogo circula fora do campo. Torcidas e estádios também podem expressar pertencimentos locais, como os vínculos com clubes de Pernambuco.",
+      "trap": "Popularização não significa que racismo e desigualdade tenham desaparecido.",
+      "question": "Dizer que o futebol é cultura significa reconhecer:",
+      "options": [
+        "Seus sentidos históricos e sociais, além da técnica esportiva",
+        "Que ele não tem regras",
+        "Que todos os torcedores vivem a mesma experiência"
+      ],
+      "answer": 0,
+      "feedback": "A prática se relaciona com memória, identidade, linguagem e relações sociais.",
+      "reference": "Base da disciplina: TEXTO DIDÁTICO FUTEBOL 2026.pdf. Explicação de revisão elaborada para o portal."
+    },
+    {
+      "id": "aula-44",
+      "subject": "EDUCAÇÃO FÍSICA",
+      "title": "Mulheres no futebol e barreiras de acesso",
+      "text": [
+        "O acesso ao esporte foi condicionado por ideias sobre gênero. No Brasil, a norma de 1941 restringiu às mulheres esportes considerados incompatíveis com uma suposta natureza feminina. Regulamentações posteriores incluíram expressamente o futebol entre as modalidades vedadas; a proibição foi revogada em 1979.",
+        "Essas barreiras tiveram efeitos sobre formação de equipes, competições e reconhecimento. Revogar uma restrição não elimina imediatamente desigualdades de investimento e visibilidade. O tema permite analisar como práticas corporais são atravessadas por relações de poder, e não por uma divisão natural imutável."
+      ],
+      "example": "Se uma modalidade ficou décadas sem estrutura regular para mulheres, comparar apenas os resultados presentes ignora condições históricas de participação e treinamento.",
+      "trap": "O texto de 1941 usava uma formulação geral; não apresente a lista posterior de modalidades como se fosse sua redação literal.",
+      "question": "Por que a revogação de uma proibição não garante igualdade imediata?",
+      "options": [
+        "Porque estruturas e oportunidades podem continuar desiguais",
+        "Porque toda mudança legal elimina seus efeitos anteriores",
+        "Porque participação esportiva depende apenas de vontade"
+      ],
+      "answer": 0,
+      "feedback": "Décadas de exclusão afetam infraestrutura, formação, financiamento e reconhecimento.",
+      "reference": "Base da disciplina: TEXTO DIDÁTICO FUTEBOL 2026.pdf. Explicação de revisão elaborada para o portal."
+    },
+    {
+      "id": "aula-45",
+      "subject": "EDUCAÇÃO FÍSICA",
+      "title": "Estádios, mercado e futebol de várzea",
+      "text": [
+        "A transformação de estádios em arenas e mudanças na organização dos clubes podem alterar conforto, receitas e perfil do público. Quando ingressos e serviços encarecem, parte dos torcedores pode perder acesso. O texto propõe discutir a tensão entre espetáculo comercial e patrimônio cultural comunitário.",
+        "O futebol de várzea e as peladas são espaços de lazer, encontro e criação de vínculos. Não representam apenas uma versão incompleta do esporte profissional: têm formas próprias de organização e importância social. Mercado e comunidade podem se relacionar de maneiras variadas; observe os efeitos concretos de cada mudança."
+      ],
+      "example": "Para avaliar uma reforma de estádio, compare acessibilidade, preço, transporte e participação dos torcedores, além da aparência e da capacidade de gerar receita.",
+      "trap": "Uma mudança de modelo de gestão não produz automaticamente o mesmo resultado em todos os clubes.",
+      "question": "A elevação dos preços pode gerar qual tensão?",
+      "options": [
+        "Maior receita e menor acesso de parte da torcida",
+        "Fim de qualquer interesse comercial",
+        "Igualdade automática entre todos os torcedores"
+      ],
+      "answer": 0,
+      "feedback": "Uma transformação pode trazer receitas e conforto e, ao mesmo tempo, excluir quem não consegue pagar.",
+      "reference": "Base da disciplina: TEXTO DIDÁTICO FUTEBOL 2026.pdf. Explicação de revisão elaborada para o portal."
+    },
+    {
+      "id": "aula-46",
+      "subject": "EDUCAÇÃO FÍSICA",
+      "title": "Racismo e disputas no esporte",
+      "text": [
+        "O esporte pode reproduzir discriminações da sociedade e também se tornar espaço de contestação. Reconhecimento esportivo não impede que atletas sofram racismo. Denúncias, organização coletiva e respostas institucionais fazem parte da disputa por participação e respeito.",
+        "A noção de campo de disputas ajuda a observar quem tem poder para definir regras, narrativas e oportunidades. Ao analisar um caso, diferencie o episódio, as condições que o tornam recorrente e as ações propostas. Uma torcida reunir pessoas diferentes não prova, por si só, ausência de desigualdade."
+      ],
+      "example": "Em uma questão sobre uma manifestação antirracista, explique como o atleta utiliza sua visibilidade para tornar público um problema e cobrar respostas. Evite reduzir tudo a uma rivalidade entre equipes.",
+      "trap": "Racismo não é apenas um problema de desempenho ou uma provocação neutra do jogo.",
+      "question": "O sucesso de um atleta negro prova que não existe racismo no esporte?",
+      "options": [
+        "Sim, uma trajetória elimina qualquer desigualdade",
+        "Não, reconhecimento e discriminação podem coexistir",
+        "Sim, desde que ele jogue em um grande clube"
+      ],
+      "answer": 1,
+      "feedback": "Uma conquista individual não elimina práticas discriminatórias nem desigualdades estruturais.",
+      "reference": "Base da disciplina: TEXTO DIDÁTICO FUTEBOL 2026.pdf. Explicação de revisão elaborada para o portal."
+    }
+  ],
+  "quiz": [
+    [
+      "BIOLOGIA",
+      "Em genes com segregação independente, AaBb produz quais gametas?",
+      [
+        "AB, Ab, aB e ab",
+        "Somente AB e ab",
+        "Somente AA e BB"
+      ],
+      0,
+      "Cada gameta recebe um alelo de cada par."
+    ],
+    [
+      "QUÍMICA",
+      "Em uma pilha, a redução ocorre no:",
+      [
+        "Ânodo",
+        "Cátodo",
+        "Eletrólito apenas"
+      ],
+      1,
+      "O cátodo é o eletrodo de redução."
+    ],
+    [
+      "PORTUGUÊS",
+      "A primeira fase do Modernismo brasileiro ficou marcada por:",
+      [
+        "Reprodução rígida de modelos clássicos",
+        "Experimentação e ruptura estética",
+        "Fim da linguagem coloquial"
+      ],
+      1,
+      "A experimentação formal e a valorização da linguagem brasileira são características centrais."
+    ],
+    [
+      "FILOSOFIA",
+      "Qual corrente destaca a experiência como origem do conhecimento?",
+      [
+        "Empirismo",
+        "Racionalismo",
+        "Dogmatismo"
+      ],
+      0,
+      "Hume é uma referência da tradição empirista."
+    ],
+    [
+      "SOCIOLOGIA",
+      "Estratificação social descreve:",
+      [
+        "Apenas diferenças biológicas",
+        "Posições sociais desiguais",
+        "Somente variações de clima"
+      ],
+      1,
+      "Ela envolve distribuição desigual de recursos, poder e prestígio."
+    ],
+    [
+      "INGLÊS",
+      "Qual frase usa reported speech?",
+      [
+        "He said, “I am tired.”",
+        "He said that he was tired.",
+        "“I am tired,” he said."
+      ],
+      1,
+      "A segunda frase relata a fala sem reproduzi-la como citação direta."
+    ],
+    [
+      "HISTÓRIA",
+      "Por que o atentado de Sarajevo é chamado de estopim?",
+      [
+        "Porque iniciou uma crise em um cenário de tensões anteriores",
+        "Porque criou sozinho todas as rivalidades europeias",
+        "Porque encerrou o sistema de alianças"
+      ],
+      0,
+      "O atentado precipitou a crise; imperialismo, alianças e nacionalismos já existiam.",
+      "aula-1",
+      "Primeira Guerra Mundial"
+    ],
+    [
+      "HISTÓRIA",
+      "Qual associação está correta?",
+      [
+        "Fevereiro: criação da URSS",
+        "Outubro: tomada do poder pelos bolcheviques",
+        "Fevereiro: vitória de Stalin na Segunda Guerra"
+      ],
+      1,
+      "A URSS surgiu em 1922. Em Outubro de 1917, os bolcheviques derrubaram o Governo Provisório.",
+      "aula-2",
+      "Revolução Russa de 1917"
+    ],
+    [
+      "HISTÓRIA",
+      "Como o desemprego podia agravar a crise?",
+      [
+        "Aumentando automaticamente o consumo",
+        "Reduzindo a renda e a demanda por produtos",
+        "Eliminando as falências bancárias"
+      ],
+      1,
+      "Sem renda, as famílias consumiam menos, o que pressionava ainda mais a produção e o emprego.",
+      "aula-3",
+      "Crise de 1929"
+    ],
+    [
+      "HISTÓRIA",
+      "Qual prática se associa ao controle totalitário?",
+      [
+        "Pluralidade partidária e oposição livre",
+        "Censura, partido único e perseguição de opositores",
+        "Alternância de poder por eleições competitivas"
+      ],
+      1,
+      "Esses mecanismos reduzem a autonomia política e procuram controlar a sociedade.",
+      "aula-4",
+      "Regimes totalitários"
+    ],
+    [
+      "GEOGRAFIA",
+      "O que torna inadequado dizer que a Guerra Fria foi pacífica?",
+      [
+        "A existência de conflitos armados como Coreia e Vietnã",
+        "A ausência de propaganda",
+        "O fim de todas as alianças"
+      ],
+      0,
+      "A rivalidade evitou uma guerra direta entre as superpotências, mas envolveu guerras em outros territórios.",
+      "aula-5",
+      "Guerra Fria"
+    ],
+    [
+      "GEOGRAFIA",
+      "Por que um estreito marítimo pode ser estratégico?",
+      [
+        "Porque toda reserva está dentro dele",
+        "Porque concentra rotas de transporte de energia",
+        "Porque elimina a dependência de importações"
+      ],
+      1,
+      "A concentração de fluxos torna a passagem relevante para abastecimento, custos e segurança.",
+      "aula-6",
+      "Geopolítica do petróleo"
+    ],
+    [
+      "GEOGRAFIA",
+      "Qual cuidado melhora a leitura de um mapa do conflito?",
+      [
+        "Ignorar o ano para comparar tudo como igual",
+        "Distinguir proposta, fronteira e área ocupada",
+        "Tratar povos e governos como sinônimos"
+      ],
+      1,
+      "A data e o tipo de delimitação são indispensáveis para interpretar o mapa.",
+      "aula-7",
+      "Israel e Palestina: base histórica"
+    ],
+    [
+      "PORTUGUÊS",
+      "O uso de linguagem coloquial na primeira fase pode expressar:",
+      [
+        "A valorização de formas brasileiras de falar",
+        "A obrigação de abandonar qualquer crítica social",
+        "A manutenção rígida de padrões acadêmicos"
+      ],
+      0,
+      "A oralidade participa da busca de novas formas de expressão e da discussão da identidade brasileira.",
+      "aula-8",
+      "Modernismo brasileiro"
+    ],
+    [
+      "PORTUGUÊS",
+      "Em “É importante que todos participem”, a oração destacada funciona como:",
+      [
+        "Objeto direto",
+        "Sujeito",
+        "Adjunto adnominal"
+      ],
+      1,
+      "Aquilo que é importante é “que todos participem”. A oração exerce a função de sujeito.",
+      "aula-9",
+      "Orações subordinadas substantivas"
+    ],
+    [
+      "PORTUGUÊS",
+      "Em “Os arquivos que estão completos foram enviados”, a oração adjetiva é:",
+      [
+        "Restritiva",
+        "Explicativa",
+        "Subjetiva"
+      ],
+      0,
+      "Sem vírgulas, ela restringe os arquivos aos que estão completos.",
+      "aula-10",
+      "Orações subordinadas adjetivas"
+    ],
+    [
+      "PORTUGUÊS",
+      "Em “Embora estivesse cansada, Sara revisou”, há relação de:",
+      [
+        "Concessão",
+        "Finalidade",
+        "Consequência"
+      ],
+      0,
+      "O cansaço poderia impedir a revisão, mas não a impede: essa oposição caracteriza concessão.",
+      "aula-11",
+      "Orações subordinadas adverbiais"
+    ],
+    [
+      "PORTUGUÊS",
+      "“Ao terminar a atividade, revise” apresenta valor:",
+      [
+        "Temporal",
+        "Apositivo",
+        "Predicativo"
+      ],
+      0,
+      "“Ao terminar” equivale a “quando terminar”: localiza a ação no tempo.",
+      "aula-12",
+      "Orações reduzidas"
+    ],
+    [
+      "PORTUGUÊS",
+      "Em “Enviei uma mensagem ao monitor”, o verbo é:",
+      [
+        "Intransitivo",
+        "Transitivo direto e indireto",
+        "Apenas transitivo indireto"
+      ],
+      1,
+      "Uma mensagem é objeto direto; ao monitor é objeto indireto.",
+      "aula-13",
+      "Regência verbal e transitividade"
+    ],
+    [
+      "PORTUGUÊS",
+      "Qual construção apresenta regência nominal?",
+      [
+        "Necessidade de estudo",
+        "Estudou ontem",
+        "Leu o livro"
+      ],
+      0,
+      "De estudo completa o sentido do substantivo necessidade.",
+      "aula-14",
+      "Regência nominal"
+    ],
+    [
+      "MATEMÁTICA",
+      "Qual é o valor de sen(π/2)?",
+      [
+        "0",
+        "1",
+        "−1"
+      ],
+      1,
+      "π/2 corresponde a 90°. O ponto no círculo é (0,1), então o seno vale 1.",
+      "aula-15",
+      "Funções circulares: seno e cosseno"
+    ],
+    [
+      "MATEMÁTICA",
+      "Em y=4+3·cos(2x), qual é o período?",
+      [
+        "2π",
+        "π",
+        "3"
+      ],
+      1,
+      "T=2π/|2|=π. O número 3 determina a amplitude.",
+      "aula-16",
+      "Funções periódicas"
+    ],
+    [
+      "MATEMÁTICA",
+      "Qual conjunto tem menor desvio padrão?",
+      [
+        "4, 4, 4",
+        "2, 4, 6",
+        "0, 4, 8"
+      ],
+      0,
+      "Todos os valores iguais à média têm desvio zero, então o desvio padrão é zero.",
+      "aula-17",
+      "Estatística: média, mediana e dispersão"
+    ],
+    [
+      "MATEMÁTICA",
+      "Uma pirâmide com área da base 18 cm² e altura 5 cm tem volume:",
+      [
+        "90 cm³",
+        "30 cm³",
+        "23 cm³"
+      ],
+      1,
+      "V=18·5/3=30 cm³.",
+      "aula-18",
+      "Geometria espacial"
+    ],
+    [
+      "FÍSICA",
+      "Uma carga de 30 C atravessa uma seção em 5 s. A corrente média vale:",
+      [
+        "6 A",
+        "150 A",
+        "0,17 A"
+      ],
+      0,
+      "i=ΔQ/Δt=30/5=6 A.",
+      "aula-19",
+      "Corrente elétrica"
+    ],
+    [
+      "FÍSICA",
+      "Um fio tem comprimento dobrado e a mesma seção e material. Sua resistência:",
+      [
+        "Cai à metade",
+        "Dobra",
+        "Fica igual"
+      ],
+      1,
+      "Em R=ρL/A, a resistência é diretamente proporcional ao comprimento.",
+      "aula-20",
+      "Resistência: primeira e segunda leis de Ohm"
+    ],
+    [
+      "FÍSICA",
+      "Dois resistores de 4 Ω ligados em série resultam em:",
+      [
+        "2 Ω",
+        "4 Ω",
+        "8 Ω"
+      ],
+      2,
+      "Em série, somamos as resistências: 4+4=8 Ω.",
+      "aula-21",
+      "Associação de resistores"
+    ],
+    [
+      "FÍSICA",
+      "Um resistor sob 12 V conduz 2 A. Sua potência é:",
+      [
+        "6 W",
+        "24 W",
+        "14 W"
+      ],
+      1,
+      "P=U·i=12·2=24 W.",
+      "aula-22",
+      "Circuitos simples e potência"
+    ],
+    [
+      "QUÍMICA",
+      "Na reação Zn+Cu²⁺ → Zn²⁺+Cu, o agente redutor é:",
+      [
+        "Zn",
+        "Cu²⁺",
+        "Zn²⁺"
+      ],
+      0,
+      "O Zn perde elétrons e se oxida. A espécie que se oxida é o agente redutor.",
+      "aula-23",
+      "Pilhas e oxirredução"
+    ],
+    [
+      "QUÍMICA",
+      "Com E°cátodo=0,80 V e E°ânodo=−0,40 V, a pilha tem:",
+      [
+        "0,40 V",
+        "1,20 V",
+        "−1,20 V"
+      ],
+      1,
+      "E°=0,80−(−0,40)=1,20 V.",
+      "aula-24",
+      "Potencial de uma pilha"
+    ],
+    [
+      "QUÍMICA",
+      "Na eletrólise, a redução ocorre:",
+      [
+        "No ânodo",
+        "No cátodo",
+        "Apenas na fonte elétrica"
+      ],
+      1,
+      "Cátodo é sempre o eletrodo da redução, tanto em pilhas quanto em eletrólise.",
+      "aula-25",
+      "Eletrólise"
+    ],
+    [
+      "BIOLOGIA",
+      "Em AaBb×AaBb com segregação independente, a chance de aabb é:",
+      [
+        "1/4",
+        "1/16",
+        "1/2"
+      ],
+      1,
+      "Multiplicamos as probabilidades independentes: 1/4 para aa e 1/4 para bb.",
+      "aula-26",
+      "Segunda lei de Mendel"
+    ],
+    [
+      "BIOLOGIA",
+      "Uma mutação silenciosa pode:",
+      [
+        "Alterar o DNA sem alterar o aminoácido codificado",
+        "Sempre causar doença grave",
+        "Surgir apenas em células reprodutivas"
+      ],
+      0,
+      "A redundância do código genético permite que uma troca de base preserve o aminoácido.",
+      "aula-27",
+      "Mutações"
+    ],
+    [
+      "BIOLOGIA",
+      "Peixes, algas e bactérias de uma lagoa, considerados apenas como seres vivos, formam:",
+      [
+        "Uma população",
+        "Uma comunidade",
+        "Um fator abiótico"
+      ],
+      1,
+      "São populações de espécies diferentes, portanto compõem uma comunidade.",
+      "aula-28",
+      "Ecologia: relações e níveis de organização"
+    ],
+    [
+      "BIOLOGIA",
+      "Uma causa possível de queda do oxigênio após uma floração de algas é:",
+      [
+        "A decomposição da matéria orgânica",
+        "A eliminação de todos os decompositores",
+        "A ausência de nutrientes"
+      ],
+      0,
+      "A atividade de decompositores consome oxigênio e pode provocar hipóxia.",
+      "aula-29",
+      "Ecologia: energia, ciclos e impactos"
+    ],
+    [
+      "INGLÊS",
+      "Em “It rained; therefore, the match was canceled”, therefore indica:",
+      [
+        "Consequência",
+        "Contraste",
+        "Exemplo"
+      ],
+      0,
+      "O cancelamento é apresentado como consequência da chuva.",
+      "aula-30",
+      "Interpretação de textos"
+    ],
+    [
+      "INGLÊS",
+      "Relatando depois, “I am busy”, she said, pode ficar:",
+      [
+        "She said that she was busy.",
+        "She told that I busy.",
+        "She said that she were busy."
+      ],
+      0,
+      "She substitui I e was é o passado de am para terceira pessoa do singular.",
+      "aula-31",
+      "Direct speech e reported speech"
+    ],
+    [
+      "INGLÊS",
+      "Qual frase relata corretamente “Do not leave”, she said to me?",
+      [
+        "She told me not to leave.",
+        "She told me do not left.",
+        "She said me not leave."
+      ],
+      0,
+      "O padrão é told + pessoa + not to + infinitivo.",
+      "aula-32",
+      "Perguntas e ordens no discurso indireto"
+    ],
+    [
+      "FILOSOFIA",
+      "A escolha prudente dos desejos e a busca de tranquilidade se associam ao:",
+      [
+        "Epicurismo",
+        "Determinismo tecnológico",
+        "Mercantilismo"
+      ],
+      0,
+      "Epicuro relaciona a vida prazerosa à prudência e à redução de perturbações.",
+      "aula-33",
+      "Escolas helenísticas"
+    ],
+    [
+      "FILOSOFIA",
+      "Qual é a função da dúvida metódica?",
+      [
+        "Buscar um fundamento seguro para conhecer",
+        "Provar que qualquer opinião é igualmente verdadeira",
+        "Impedir toda investigação"
+      ],
+      0,
+      "A dúvida funciona como método para encontrar aquilo que resiste ao questionamento.",
+      "aula-34",
+      "Descartes e a dúvida metódica"
+    ],
+    [
+      "FILOSOFIA",
+      "Segundo a crítica de Hume, a repetição de eventos:",
+      [
+        "Demonstra logicamente qualquer acontecimento futuro",
+        "Produz expectativas, sem provar uma conexão necessária",
+        "Elimina o papel da experiência"
+      ],
+      1,
+      "O hábito sustenta a expectativa, mas não fornece uma demonstração lógica da necessidade causal.",
+      "aula-35",
+      "Hume: experiência e causalidade"
+    ],
+    [
+      "SOCIOLOGIA",
+      "Qual exemplo distingue renda e prestígio?",
+      [
+        "Uma ocupação respeitada pode ter remuneração baixa",
+        "Toda renda alta garante prestígio igual em qualquer grupo",
+        "Prestígio é sempre medido em reais"
+      ],
+      0,
+      "A posição econômica e o reconhecimento social podem divergir.",
+      "aula-36",
+      "Estratificação social"
+    ],
+    [
+      "SOCIOLOGIA",
+      "Comparar a posição social dos filhos à dos pais estuda mobilidade:",
+      [
+        "Intergeracional",
+        "Apenas horizontal",
+        "Biológica"
+      ],
+      0,
+      "O termo se refere à comparação entre gerações.",
+      "aula-37",
+      "Desigualdade e mobilidade social"
+    ],
+    [
+      "ARTES",
+      "Qual situação exemplifica tempo psicológico?",
+      [
+        "Um minuto narrado por meio de muitas lembranças e emoções",
+        "Uma lista de horários sem reflexão",
+        "A contagem objetiva dos dias de viagem"
+      ],
+      0,
+      "O foco está na experiência subjetiva do tempo, e não apenas no relógio.",
+      "aula-38",
+      "Clarice: interioridade, tempo e epifania"
+    ],
+    [
+      "ARTES",
+      "Qual aspecto permite discutir exclusão em A hora da estrela?",
+      [
+        "A invisibilidade social de Macabéa",
+        "A ausência de narrador",
+        "A descrição de uma sociedade sem desigualdade"
+      ],
+      0,
+      "A vulnerabilidade da personagem é central para a discussão da exclusão social.",
+      "aula-39",
+      "Macabéa e a dimensão social da literatura"
+    ],
+    [
+      "ARTES",
+      "Uma comparação entre literatura e pintura deve observar:",
+      [
+        "Apenas se mostram o mesmo objeto",
+        "Como os recursos de cada linguagem produzem efeitos",
+        "Se usam obrigatoriamente as mesmas técnicas"
+      ],
+      1,
+      "Palavra, cor, ritmo e composição são recursos diferentes que podem produzir efeitos comparáveis.",
+      "aula-40",
+      "Literatura e artes visuais"
+    ],
+    [
+      "ARTES",
+      "A mudança de foco de luz para uma personagem pode:",
+      [
+        "Direcionar a atenção e construir sentido",
+        "Substituir necessariamente todos os atores",
+        "Ter apenas função de economizar energia"
+      ],
+      0,
+      "A iluminação participa da narrativa e da composição da cena.",
+      "aula-41",
+      "Linguagem teatral: corpo, luz, espaço e som"
+    ],
+    [
+      "ARTES",
+      "O termo espect-ator destaca:",
+      [
+        "A participação ativa de quem antes apenas assistia",
+        "A obrigação de permanecer em silêncio",
+        "A eliminação de conflitos sociais pela decoração"
+      ],
+      0,
+      "O público pode participar da construção e discussão das ações.",
+      "aula-42",
+      "Augusto Boal e o Teatro do Oprimido"
+    ],
+    [
+      "EDUCAÇÃO FÍSICA",
+      "Dizer que o futebol é cultura significa reconhecer:",
+      [
+        "Seus sentidos históricos e sociais, além da técnica esportiva",
+        "Que ele não tem regras",
+        "Que todos os torcedores vivem a mesma experiência"
+      ],
+      0,
+      "A prática se relaciona com memória, identidade, linguagem e relações sociais.",
+      "aula-43",
+      "Futebol, cultura e identidade"
+    ],
+    [
+      "EDUCAÇÃO FÍSICA",
+      "Por que a revogação de uma proibição não garante igualdade imediata?",
+      [
+        "Porque estruturas e oportunidades podem continuar desiguais",
+        "Porque toda mudança legal elimina seus efeitos anteriores",
+        "Porque participação esportiva depende apenas de vontade"
+      ],
+      0,
+      "Décadas de exclusão afetam infraestrutura, formação, financiamento e reconhecimento.",
+      "aula-44",
+      "Mulheres no futebol e barreiras de acesso"
+    ],
+    [
+      "EDUCAÇÃO FÍSICA",
+      "A elevação dos preços pode gerar qual tensão?",
+      [
+        "Maior receita e menor acesso de parte da torcida",
+        "Fim de qualquer interesse comercial",
+        "Igualdade automática entre todos os torcedores"
+      ],
+      0,
+      "Uma transformação pode trazer receitas e conforto e, ao mesmo tempo, excluir quem não consegue pagar.",
+      "aula-45",
+      "Estádios, mercado e futebol de várzea"
+    ],
+    [
+      "EDUCAÇÃO FÍSICA",
+      "O sucesso de um atleta negro prova que não existe racismo no esporte?",
+      [
+        "Sim, uma trajetória elimina qualquer desigualdade",
+        "Não, reconhecimento e discriminação podem coexistir",
+        "Sim, desde que ele jogue em um grande clube"
+      ],
+      1,
+      "Uma conquista individual não elimina práticas discriminatórias nem desigualdades estruturais.",
+      "aula-46",
+      "Racismo e disputas no esporte"
+    ]
+  ],
+  "cards": [
+    [
+      "PORTUGUÊS",
+      "Qual a proposta central da primeira fase modernista?",
+      "Romper com modelos acadêmicos, experimentar a linguagem e discutir a identidade brasileira."
+    ],
+    [
+      "PORTUGUÊS",
+      "Regência verbal trata de quê?",
+      "Da relação entre o verbo e seus complementos, incluindo a exigência de preposição."
+    ],
+    [
+      "BIOLOGIA",
+      "O que é mutação?",
+      "Uma alteração no material genético; seus efeitos dependem do local e do contexto."
+    ],
+    [
+      "BIOLOGIA",
+      "Quando a 2ª lei de Mendel se aplica diretamente?",
+      "Quando os pares de genes se segregam independentemente, como em genes em cromossomos distintos."
+    ],
+    [
+      "BIOLOGIA",
+      "Qual a diferença entre população e comunidade?",
+      "População reúne indivíduos da mesma espécie; comunidade reúne populações de espécies diferentes."
+    ],
+    [
+      "QUÍMICA",
+      "Onde ocorre oxidação em uma pilha?",
+      "No ânodo. Oxidação é perda de elétrons; redução ocorre no cátodo."
+    ],
+    [
+      "QUÍMICA",
+      "O que caracteriza a eletrólise ígnea?",
+      "A decomposição de um composto fundido por uma corrente elétrica."
+    ],
+    [
+      "HISTÓRIA",
+      "O que foi a Paz Armada?",
+      "Período de tensões, alianças e corrida armamentista anterior à Primeira Guerra Mundial."
+    ],
+    [
+      "HISTÓRIA",
+      "A quebra da Bolsa explica sozinha a crise de 1929?",
+      "Não. Ela marcou a crise, associada também a desequilíbrios de produção, consumo, crédito e especulação."
+    ],
+    [
+      "FILOSOFIA",
+      "Qual a diferença básica entre racionalismo e empirismo?",
+      "O racionalismo destaca a razão; o empirismo destaca a experiência como fonte do conhecimento."
+    ],
+    [
+      "FILOSOFIA",
+      "Qual uma ideia central do estoicismo?",
+      "Distinguir o que depende de nós do que não depende e agir com virtude."
+    ],
+    [
+      "SOCIOLOGIA",
+      "O que é estratificação social?",
+      "A organização da sociedade em posições desiguais de acesso a recursos, poder e prestígio."
+    ],
+    [
+      "GEOGRAFIA",
+      "O que caracterizou a Guerra Fria?",
+      "A rivalidade entre os blocos liderados por Estados Unidos e União Soviética, com disputas políticas, militares e ideológicas."
+    ],
+    [
+      "GEOGRAFIA",
+      "Por que o petróleo é estratégico?",
+      "Porque abastece transportes e indústrias e participa de cadeias produtivas, comércio e disputas geopolíticas."
+    ],
+    [
+      "INGLÊS",
+      "Qual a diferença entre direct e reported speech?",
+      "Direct speech cita a fala; reported speech relata o que foi dito, com ajustes conforme o contexto."
+    ],
+    [
+      "HISTÓRIA",
+      "Por que o atentado de Sarajevo é chamado de estopim?",
+      "Porque iniciou uma crise em um cenário de tensões anteriores O atentado precipitou a crise; imperialismo, alianças e nacionalismos já existiam."
+    ],
+    [
+      "HISTÓRIA",
+      "Qual associação está correta?",
+      "Outubro: tomada do poder pelos bolcheviques A URSS surgiu em 1922. Em Outubro de 1917, os bolcheviques derrubaram o Governo Provisório."
+    ],
+    [
+      "HISTÓRIA",
+      "Como o desemprego podia agravar a crise?",
+      "Reduzindo a renda e a demanda por produtos Sem renda, as famílias consumiam menos, o que pressionava ainda mais a produção e o emprego."
+    ],
+    [
+      "HISTÓRIA",
+      "Qual prática se associa ao controle totalitário?",
+      "Censura, partido único e perseguição de opositores Esses mecanismos reduzem a autonomia política e procuram controlar a sociedade."
+    ],
+    [
+      "GEOGRAFIA",
+      "O que torna inadequado dizer que a Guerra Fria foi pacífica?",
+      "A existência de conflitos armados como Coreia e Vietnã A rivalidade evitou uma guerra direta entre as superpotências, mas envolveu guerras em outros territórios."
+    ],
+    [
+      "GEOGRAFIA",
+      "Por que um estreito marítimo pode ser estratégico?",
+      "Porque concentra rotas de transporte de energia A concentração de fluxos torna a passagem relevante para abastecimento, custos e segurança."
+    ],
+    [
+      "GEOGRAFIA",
+      "Qual cuidado melhora a leitura de um mapa do conflito?",
+      "Distinguir proposta, fronteira e área ocupada A data e o tipo de delimitação são indispensáveis para interpretar o mapa."
+    ],
+    [
+      "PORTUGUÊS",
+      "O uso de linguagem coloquial na primeira fase pode expressar:",
+      "A valorização de formas brasileiras de falar A oralidade participa da busca de novas formas de expressão e da discussão da identidade brasileira."
+    ],
+    [
+      "PORTUGUÊS",
+      "Em “É importante que todos participem”, a oração destacada funciona como:",
+      "Sujeito Aquilo que é importante é “que todos participem”. A oração exerce a função de sujeito."
+    ],
+    [
+      "PORTUGUÊS",
+      "Em “Os arquivos que estão completos foram enviados”, a oração adjetiva é:",
+      "Restritiva Sem vírgulas, ela restringe os arquivos aos que estão completos."
+    ],
+    [
+      "PORTUGUÊS",
+      "Em “Embora estivesse cansada, Sara revisou”, há relação de:",
+      "Concessão O cansaço poderia impedir a revisão, mas não a impede: essa oposição caracteriza concessão."
+    ],
+    [
+      "PORTUGUÊS",
+      "“Ao terminar a atividade, revise” apresenta valor:",
+      "Temporal “Ao terminar” equivale a “quando terminar”: localiza a ação no tempo."
+    ],
+    [
+      "PORTUGUÊS",
+      "Em “Enviei uma mensagem ao monitor”, o verbo é:",
+      "Transitivo direto e indireto Uma mensagem é objeto direto; ao monitor é objeto indireto."
+    ],
+    [
+      "PORTUGUÊS",
+      "Qual construção apresenta regência nominal?",
+      "Necessidade de estudo De estudo completa o sentido do substantivo necessidade."
+    ],
+    [
+      "MATEMÁTICA",
+      "Qual é o valor de sen(π/2)?",
+      "1 π/2 corresponde a 90°. O ponto no círculo é (0,1), então o seno vale 1."
+    ],
+    [
+      "MATEMÁTICA",
+      "Em y=4+3·cos(2x), qual é o período?",
+      "π T=2π/|2|=π. O número 3 determina a amplitude."
+    ],
+    [
+      "MATEMÁTICA",
+      "Qual conjunto tem menor desvio padrão?",
+      "4, 4, 4 Todos os valores iguais à média têm desvio zero, então o desvio padrão é zero."
+    ],
+    [
+      "MATEMÁTICA",
+      "Uma pirâmide com área da base 18 cm² e altura 5 cm tem volume:",
+      "30 cm³ V=18·5/3=30 cm³."
+    ],
+    [
+      "FÍSICA",
+      "Uma carga de 30 C atravessa uma seção em 5 s. A corrente média vale:",
+      "6 A i=ΔQ/Δt=30/5=6 A."
+    ],
+    [
+      "FÍSICA",
+      "Um fio tem comprimento dobrado e a mesma seção e material. Sua resistência:",
+      "Dobra Em R=ρL/A, a resistência é diretamente proporcional ao comprimento."
+    ],
+    [
+      "FÍSICA",
+      "Dois resistores de 4 Ω ligados em série resultam em:",
+      "8 Ω Em série, somamos as resistências: 4+4=8 Ω."
+    ],
+    [
+      "FÍSICA",
+      "Um resistor sob 12 V conduz 2 A. Sua potência é:",
+      "24 W P=U·i=12·2=24 W."
+    ],
+    [
+      "QUÍMICA",
+      "Na reação Zn+Cu²⁺ → Zn²⁺+Cu, o agente redutor é:",
+      "Zn O Zn perde elétrons e se oxida. A espécie que se oxida é o agente redutor."
+    ],
+    [
+      "QUÍMICA",
+      "Com E°cátodo=0,80 V e E°ânodo=−0,40 V, a pilha tem:",
+      "1,20 V E°=0,80−(−0,40)=1,20 V."
+    ],
+    [
+      "QUÍMICA",
+      "Na eletrólise, a redução ocorre:",
+      "No cátodo Cátodo é sempre o eletrodo da redução, tanto em pilhas quanto em eletrólise."
+    ],
+    [
+      "BIOLOGIA",
+      "Em AaBb×AaBb com segregação independente, a chance de aabb é:",
+      "1/16 Multiplicamos as probabilidades independentes: 1/4 para aa e 1/4 para bb."
+    ],
+    [
+      "BIOLOGIA",
+      "Uma mutação silenciosa pode:",
+      "Alterar o DNA sem alterar o aminoácido codificado A redundância do código genético permite que uma troca de base preserve o aminoácido."
+    ],
+    [
+      "BIOLOGIA",
+      "Peixes, algas e bactérias de uma lagoa, considerados apenas como seres vivos, formam:",
+      "Uma comunidade São populações de espécies diferentes, portanto compõem uma comunidade."
+    ],
+    [
+      "BIOLOGIA",
+      "Uma causa possível de queda do oxigênio após uma floração de algas é:",
+      "A decomposição da matéria orgânica A atividade de decompositores consome oxigênio e pode provocar hipóxia."
+    ],
+    [
+      "INGLÊS",
+      "Em “It rained; therefore, the match was canceled”, therefore indica:",
+      "Consequência O cancelamento é apresentado como consequência da chuva."
+    ],
+    [
+      "INGLÊS",
+      "Relatando depois, “I am busy”, she said, pode ficar:",
+      "She said that she was busy. She substitui I e was é o passado de am para terceira pessoa do singular."
+    ],
+    [
+      "INGLÊS",
+      "Qual frase relata corretamente “Do not leave”, she said to me?",
+      "She told me not to leave. O padrão é told + pessoa + not to + infinitivo."
+    ],
+    [
+      "FILOSOFIA",
+      "A escolha prudente dos desejos e a busca de tranquilidade se associam ao:",
+      "Epicurismo Epicuro relaciona a vida prazerosa à prudência e à redução de perturbações."
+    ],
+    [
+      "FILOSOFIA",
+      "Qual é a função da dúvida metódica?",
+      "Buscar um fundamento seguro para conhecer A dúvida funciona como método para encontrar aquilo que resiste ao questionamento."
+    ],
+    [
+      "FILOSOFIA",
+      "Segundo a crítica de Hume, a repetição de eventos:",
+      "Produz expectativas, sem provar uma conexão necessária O hábito sustenta a expectativa, mas não fornece uma demonstração lógica da necessidade causal."
+    ],
+    [
+      "SOCIOLOGIA",
+      "Qual exemplo distingue renda e prestígio?",
+      "Uma ocupação respeitada pode ter remuneração baixa A posição econômica e o reconhecimento social podem divergir."
+    ],
+    [
+      "SOCIOLOGIA",
+      "Comparar a posição social dos filhos à dos pais estuda mobilidade:",
+      "Intergeracional O termo se refere à comparação entre gerações."
+    ],
+    [
+      "ARTES",
+      "Qual situação exemplifica tempo psicológico?",
+      "Um minuto narrado por meio de muitas lembranças e emoções O foco está na experiência subjetiva do tempo, e não apenas no relógio."
+    ],
+    [
+      "ARTES",
+      "Qual aspecto permite discutir exclusão em A hora da estrela?",
+      "A invisibilidade social de Macabéa A vulnerabilidade da personagem é central para a discussão da exclusão social."
+    ],
+    [
+      "ARTES",
+      "Uma comparação entre literatura e pintura deve observar:",
+      "Como os recursos de cada linguagem produzem efeitos Palavra, cor, ritmo e composição são recursos diferentes que podem produzir efeitos comparáveis."
+    ],
+    [
+      "ARTES",
+      "A mudança de foco de luz para uma personagem pode:",
+      "Direcionar a atenção e construir sentido A iluminação participa da narrativa e da composição da cena."
+    ],
+    [
+      "ARTES",
+      "O termo espect-ator destaca:",
+      "A participação ativa de quem antes apenas assistia O público pode participar da construção e discussão das ações."
+    ],
+    [
+      "EDUCAÇÃO FÍSICA",
+      "Dizer que o futebol é cultura significa reconhecer:",
+      "Seus sentidos históricos e sociais, além da técnica esportiva A prática se relaciona com memória, identidade, linguagem e relações sociais."
+    ],
+    [
+      "EDUCAÇÃO FÍSICA",
+      "Por que a revogação de uma proibição não garante igualdade imediata?",
+      "Porque estruturas e oportunidades podem continuar desiguais Décadas de exclusão afetam infraestrutura, formação, financiamento e reconhecimento."
+    ],
+    [
+      "EDUCAÇÃO FÍSICA",
+      "A elevação dos preços pode gerar qual tensão?",
+      "Maior receita e menor acesso de parte da torcida Uma transformação pode trazer receitas e conforto e, ao mesmo tempo, excluir quem não consegue pagar."
+    ],
+    [
+      "EDUCAÇÃO FÍSICA",
+      "O sucesso de um atleta negro prova que não existe racismo no esporte?",
+      "Não, reconhecimento e discriminação podem coexistir Uma conquista individual não elimina práticas discriminatórias nem desigualdades estruturais."
+    ]
+  ],
+  "enemLearning": {
+    "units": [
+      {
+        "title": "Frações, proporção e porcentagem",
+        "area": "MATEMÁTICA",
+        "body": "Uma fração representa uma divisão. Para somar frações, iguale os denominadores; para multiplicar, multiplique numeradores e denominadores. Razão compara grandezas. Em relações diretamente proporcionais, multiplicar uma delas por um fator multiplica a outra pelo mesmo fator; em relações inversas, o produto se mantém constante.",
+        "example": "Se 3 cadernos custam R$ 24, cada um custa R$ 8 e 5 custam R$ 40. Um desconto de 20% em R$ 150 é 0,20×150=30; o preço final é R$ 120. Um aumento de 20% seguido de desconto de 20% dá 1,20×0,80=0,96: perda de 4%, não retorno ao valor inicial.",
+        "task": "Resolva as quatro questões de Matemática da seleção e registre quando usou razão, taxa ou proporcionalidade.",
+        "targets": [
+          "Razão e proporção",
+          "Porcentagem",
+          "Frações"
+        ]
+      },
+      {
+        "title": "Unidades, escalas e geometria",
+        "area": "MATEMÁTICA",
+        "body": "Uma escala 1:n compara medidas lineares na mesma unidade. Na conversão de áreas, o fator é elevado ao quadrado; em volumes, ao cubo. Diferencie perímetro, área e volume antes de escolher uma fórmula. Vazão relaciona volume e tempo: Q=V/t.",
+        "example": "Na escala 1:50.000, 2 cm no mapa representam 100.000 cm=1 km. Como 1 m=100 cm, 1 m²=10.000 cm². Uma caixa de 0,2 m³ comporta 200 L, pois 1 m³=1.000 L.",
+        "task": "Desenhe uma caixa, escolha medidas e calcule área e volume. Depois confira a aula de geometria espacial.",
+        "targets": [
+          "Geometria espacial",
+          "Funções circulares: seno e cosseno"
+        ]
+      },
+      {
+        "title": "Gráficos, estatística e funções",
+        "area": "MATEMÁTICA",
+        "body": "Leia título, unidade, legenda e escala dos eixos. Em uma função afim f(x)=ax+b, a representa a taxa de variação e b o valor inicial. Média resume um conjunto, mas valores extremos podem deslocá-la; por isso, compare com mediana e dispersão.",
+        "example": "Um serviço cobra R$ 10 fixos e R$ 3 por quilômetro: C(x)=10+3x. Para 8 km, C=34. Já uma média de notas não permite concluir que todos os alunos tiveram o mesmo desempenho.",
+        "task": "Compare dois gráficos e escreva o que cada eixo mede antes de fazer qualquer conta.",
+        "targets": [
+          "Estatística: média, mediana e dispersão",
+          "Funções periódicas"
+        ]
+      },
+      {
+        "title": "Ecologia, células e genética",
+        "area": "BIOLOGIA",
+        "body": "Relacione fenômenos em diferentes escalas: células formam organismos, que participam de populações e ecossistemas. DNA armazena informação; proteínas desempenham funções celulares. A fotossíntese incorpora carbono e a alimentação transfere matéria entre organismos. A energia se dissipa ao longo dos níveis tróficos.",
+        "example": "O aumento de nutrientes em um lago pode gerar proliferação de algas e, depois, maior consumo de oxigênio durante a decomposição. A questão exige conectar causa, processo e consequência, não apenas reconhecer a palavra eutrofização.",
+        "task": "Faça as questões de Biologia e explique por que as alternativas erradas não descrevem o processo pedido.",
+        "targets": [
+          "Ecologia: energia, ciclos e impactos",
+          "Segunda lei de Mendel",
+          "Mutações"
+        ]
+      },
+      {
+        "title": "Eletricidade, calor e ondas",
+        "area": "FÍSICA",
+        "body": "Comece identificando grandezas e unidades. Em eletricidade, P=U·i e E=P·t. Calor é energia transferida por diferença de temperatura; temperatura não é quantidade de calor. Para aquecimento sem mudança de fase, Q=m·c·ΔT. Em ondas, v=λ·f e T=1/f; frequência é medida em hertz.",
+        "example": "Uma onda com comprimento de 2 m e frequência de 5 Hz se propaga a 10 m/s. Um aparelho de 2 kW usado por meia hora consome 1 kWh. São problemas diferentes: escolha a relação que corresponde às grandezas do enunciado.",
+        "task": "Resolva a questão das lâmpadas comparando primeiro a energia útil e depois o calor dissipado.",
+        "targets": [
+          "Corrente elétrica",
+          "Circuitos simples e potência",
+          "Associação de resistores"
+        ]
+      },
+      {
+        "title": "Matéria, separação e transformações",
+        "area": "QUÍMICA",
+        "body": "Mudanças físicas alteram estado ou organização sem necessariamente formar novas substâncias; mudanças químicas alteram a composição. Filtração separa partículas retidas em uma barreira; decantação usa diferenças de densidade em um sistema adequado; destilação explora diferenças de volatilidade. Na oxirredução, acompanhe quem perde e quem ganha elétrons.",
+        "example": "Coar uma mistura é um processo físico. Fermentar açúcares produz novas substâncias e é um processo químico. Em uma pilha, a reação espontânea fornece energia elétrica; na eletrólise, uma fonte fornece energia para a transformação.",
+        "task": "Faça as questões de Química e identifique a propriedade ou transformação antes de ler as alternativas.",
+        "targets": [
+          "Pilhas e oxirredução",
+          "Eletrólise"
+        ]
+      },
+      {
+        "title": "Linguagens: interpretação e repertório",
+        "area": "PORTUGUÊS",
+        "body": "Identifique o gênero, a finalidade e o interlocutor do texto. Uma propaganda procura produzir uma ação; uma notícia informa segundo uma seleção de fatos; uma crônica pode refletir sobre o cotidiano. A função de um recurso — ironia, imagem, repetição, variação linguística — deve ser explicada no contexto.",
+        "example": "Uma frase pode elogiar literalmente e criticar pelo contexto: essa tensão ajuda a reconhecer ironia. Para justificar a leitura, indique qual parte do texto contradiz o elogio aparente.",
+        "task": "Leia um texto curto e escreva: tema, objetivo, tese quando houver e duas evidências.",
+        "targets": [
+          "Modernismo brasileiro",
+          "Interpretação de textos",
+          "Clarice: interioridade, tempo e epifania"
+        ]
+      },
+      {
+        "title": "Humanas: contexto e comparação",
+        "area": "HISTÓRIA",
+        "body": "Localize o documento no tempo, identifique quem fala e para quem. Diferencie causa, consequência e justificativa apresentada por um agente histórico. Em Geografia, relacione território, fluxos, recursos e poder. Em Filosofia e Sociologia, procure o conceito que explica a situação, sem reduzir autores a palavras-chave.",
+        "example": "Uma propaganda política é fonte para compreender objetivos e valores de quem a produziu; não é uma descrição neutra de toda a sociedade. Compare a mensagem com o contexto e com outras evidências.",
+        "task": "Compare Primeira Guerra, crise de 1929 e totalitarismos: estabeleça relações sem tratar um evento como causa única do seguinte.",
+        "targets": [
+          "Regimes totalitários",
+          "Geopolítica do petróleo",
+          "Estratificação social"
+        ]
+      },
+      {
+        "title": "Redação: tese e desenvolvimento",
+        "area": "PORTUGUÊS",
+        "body": "Delimite o problema proposto e formule uma tese que você consiga defender. Cada parágrafo de desenvolvimento precisa de uma ideia central, explicação e conexão com o tema. Repertório ajuda quando sustenta o raciocínio; uma citação solta não substitui argumento. Na conclusão, articule uma proposta de intervenção coerente com o problema discutido e respeitosa aos direitos humanos.",
+        "example": "Em um tema sobre acesso a espaços de lazer, uma linha argumentativa pode discutir desigualdade territorial. Desenvolva o mecanismo: distância e transporte limitam o acesso; isso afeta grupos de forma desigual. Uma proposta pode indicar responsável, ação, meio, finalidade e detalhamento, conectados ao diagnóstico.",
+        "task": "Escreva uma introdução e um parágrafo de desenvolvimento. Revise se a tese aparece e se cada frase ajuda a sustentá-la. Consulte a cartilha oficial vigente para os critérios completos.",
+        "targets": [
+          "Desigualdade e mobilidade social"
+        ]
+      }
+    ],
+    "priorities": [
+      [
+        "Matemática",
+        "Comece por operações, proporção e porcentagem; avance para geometria, estatística, funções e probabilidade."
+      ],
+      [
+        "Biologia",
+        "Relacione ecologia, genética, citologia, evolução e fisiologia."
+      ],
+      [
+        "Física",
+        "Priorize a base de unidades, eletricidade, energia, calor, ondas e mecânica."
+      ],
+      [
+        "Química",
+        "Retome matéria, separação, ligações, estequiometria, soluções e eletroquímica."
+      ],
+      [
+        "Linguagens",
+        "Treine interpretação, gêneros, funções da linguagem, variação e leitura de obras artísticas."
+      ],
+      [
+        "Humanas",
+        "Combine leitura de fontes com história, geopolítica, cidadania, trabalho e pensamento filosófico."
+      ]
+    ],
+    "questions": [
+      {
+        "subject": "MATEMÁTICA",
+        "number": 5,
+        "exam": "ENEM 2010 PPL",
+        "page": 4,
+        "question": "FONTES ALTERNATIVAS Há um novo impulso para produzir combustível a partir de gordura animal. Em abril, a High Plains Bioenergy inaugurou uma biorrefinaria próxima a uma fábrica de processamento de carne suína em Guymon, Oklahoma. A refinaria converte a gordura do porco, juntamente com o óleo vegetal, em biodiesel. A expectativa da fábrica é transformar 14 milhões de quilogramas de banha em 112 milhões de litros de biodiesel. Revista Scientific American. Brasil, ago. 2009 (adaptado). Considere que haja uma proporção direta entre a massa de banha transformada e o volume de biodiesel produzido. Para produzir 48 milhões de litros de biodiesel, a massa de banha necessária, em quilogramas, será de, aproximadamente:",
+        "options": [
+          "6 milhões.",
+          "33 milhões.",
+          "78 milhões.",
+          "146 milhões.",
+          "384 milhões."
+        ],
+        "answer": 0,
+        "feedback": "A proporção é 14/112=1/8 kg por litro. Para 48 milhões de litros: 48/8=6 milhões de quilogramas."
+      },
+      {
+        "subject": "MATEMÁTICA",
+        "number": 7,
+        "exam": "ENEM 2017",
+        "page": 4,
+        "question": "A mensagem digitada no celular, enquanto você dirige, tira a sua atenção e, por isso, deve ser evitada. Pesquisas mostram que um motorista que dirige um carro a uma velocidade constante percorre “às cegas” (isto é, sem ter visão da pista) uma distância proporcional ao tempo gasto ao olhar para o celular durante a digitação da mensagem. Considere que isso de fato aconteça. Suponha que dois motoristas (X e Y) dirigem com a mesma velocidade constante e digitam a mesma mensagem em seus celulares. Suponha, ainda, que o tempo gasto pelo motorista X olhando para seu celular enquanto digita a mensagem corresponde a 25% do tempo gasto pelo motorista Y para executar a mesma tarefa. Disponível em: http://g1.globo.com. Acesso em: 21 jul. 2012 (adaptado). A razão entre as distâncias percorridas às cegas por X e Y, nessa ordem, é igual a",
+        "options": [
+          "5/4",
+          "1/4",
+          "4/3",
+          "4/1",
+          "3/4"
+        ],
+        "answer": 1,
+        "feedback": "Com a mesma velocidade, d=v·t. Assim, dX/dY=tX/tY=25/100=1/4."
+      },
+      {
+        "subject": "MATEMÁTICA",
+        "number": 8,
+        "exam": "ENEM PPL 2013",
+        "page": 4,
+        "question": "Médicos alertam sobre a importância de educar as crianças para terem hábitos alimentares saudáveis. Por exemplo, analisando-se uma bolacha com recheio de chocolate (25 g) e um pé de alface (25 g), observam-se as seguintes quantidades de nutrientes, respectivamente: • carboidratos: 15 g e 0,5 g • proteínas: 1,9 g e 0,5 g. Disponível em: http://veja.abril.com.br. Acesso em: 27 abr. 2010 (adaptado). Considerando as informações apresentadas, qual deve ser o número de pés de alface consumidos para se obter a mesma quantidade de carboidratos de uma bolacha?",
+        "options": [
+          "50",
+          "30",
+          "14",
+          "8",
+          "7"
+        ],
+        "answer": 1,
+        "feedback": "Cada pé de alface fornece 0,5 g de carboidratos. Para obter 15 g: 15/0,5=30 pés nas condições informadas."
+      },
+      {
+        "subject": "MATEMÁTICA",
+        "number": 11,
+        "exam": "ENEM 2016",
+        "page": 5,
+        "question": "Diante da hipótese do comprometimento da qualidade da água retirada do volume morto de alguns sistemas hídricos, os técnicos de um laboratório decidiram testar cinco tipos de filtros de água. Dentre esses, os quatro com melhor desempenho serão escolhidos para futura comercialização. Nos testes, foram medidas as massas de agentes contaminantes, em miligrama, que não são capturados por cada filtro em diferentes períodos, em dia, como segue: • Filtro 1 (F1): 18 mg em 6 dias; • Filtro 2 (F2): 15 mg em 3 dias; • Filtro 3 (F3): 18 mg em 4 dias; • Filtro 4 (F4): 6 mg em 3 dias; • Filtro 5 (F5): 3 mg em 2 dias. Ao final, descarta-se o filtro com a maior razão entre a medida da massa de contaminantes não capturados e o número de dias, o que corresponde ao de pior desempenho. O filtro descartado é o",
+        "options": [
+          "F1.",
+          "F2.",
+          "F3.",
+          "F4.",
+          "F5."
+        ],
+        "answer": 1,
+        "feedback": "As taxas de contaminantes que passam são: F1=3; F2=5; F3=4,5; F4=2; F5=1,5 mg/dia. O pior é F2, com a maior taxa."
+      },
+      {
+        "subject": "BIOLOGIA",
+        "number": 6,
+        "exam": "ENEM 2015",
+        "page": 121,
+        "question": "O nitrogênio é essencial para a vida e o maior reservatório global desse elemento, na forma de N2, é a atmosfera. Os principais responsáveis por sua incorporação na matéria orgânica são microrganismos fixadores de N2, que ocorrem de forma livre ou simbiontes com plantas. ADUAN, R. E. et al. Os grandes ciclos biogeoquímicos do planeta. Planaltina: Embrapa, 2004 (adaptado). Animais garantem suas necessidades metabólicas desse elemento pela",
+        "options": [
+          "absorção do gás nitrogênio pela respiração.",
+          "Ingestão de moléculas de carboidratos vegetais.",
+          "incorporação de nitritos dissolvidos na água consumida.",
+          "transferência da matéria orgânica pelas cadeias tróficas.",
+          "protocooperação com microrganismos fixadores de nitrogênio."
+        ],
+        "answer": 3,
+        "feedback": "Animais obtêm nitrogênio em moléculas orgânicas pela alimentação. O N₂ atmosférico não é incorporado diretamente pela respiração."
+      },
+      {
+        "subject": "BIOLOGIA",
+        "number": 7,
+        "exam": "ENEM 2016",
+        "page": 121,
+        "question": "Ao percorrer o trajeto de uma cadeia alimentar, o carbono, elemento essencial e majoritário da matéria orgânica que compõe os indivíduos, ora se encontra em sua forma inorgânica, ora se encontra em sua forma orgânica. Em uma cadeia alimentar composta por fitoplâncton, zooplâncton, moluscos, crustáceos e peixes ocorre a transição desse elemento da forma inorgânica para a orgânica. Em qual grupo de organismos ocorre essa transição?",
+        "options": [
+          "Fitoplâncton.",
+          "Zooplâncton.",
+          "Moluscos.",
+          "Crustáceos.",
+          "Peixes."
+        ],
+        "answer": 0,
+        "feedback": "O fitoplâncton realiza fotossíntese e fixa carbono inorgânico na matéria orgânica. Os consumidores recebem esse carbono pela alimentação."
+      },
+      {
+        "subject": "BIOLOGIA",
+        "number": 9,
+        "exam": "ENEM PPL 2016",
+        "page": 121,
+        "question": "Em uma floresta existiam duas populações herbívoras que habitavam o mesmo ambiente. A população da espécie X mostrava um grande número de indivíduos, enquanto a população Z era pequena. Ambas tinham hábitos ecológicos semelhantes. Com a intervenção humana, ocorreu fragmentação da floresta em duas porções, o que separou as populações X e Z. Após algum tempo, observou-se que a população X manteve sua taxa populacional, enquanto a população Z aumentou a sua até que ambas passaram a ter, aproximadamente, a mesma quantidade de indivíduos. A relação ecológica entre as espécies X e Z, quando no mesmo ambiente, é de:",
+        "options": [
+          "Predação.",
+          "Parasitismo.",
+          "Competição.",
+          "Comensalismo.",
+          "Protocooperação."
+        ],
+        "answer": 2,
+        "feedback": "As populações usavam recursos semelhantes. A separação diminuiu a competição e permitiu o crescimento da população antes mais limitada."
+      },
+      {
+        "subject": "BIOLOGIA",
+        "number": 12,
+        "exam": "ENEM 2016 PPL",
+        "page": 122,
+        "question": "Um produtor rural registrou queda de produtividade numa das áreas de plantio de arroz de sua propriedade. Análises químicas revelaram concentrações elevadas do íon amônio (NH₄⁺) e baixas dos íons nitrito (NO₂⁻) e nitrato (NO₃⁻) no solo. Esses compostos nitrogenados são necessários para o crescimento dos vegetais e participam do ciclo biogeoquímico do nitrogênio. Em qual etapa desse ciclo biogeoquímico são formados os compostos que estão em baixa concentração nesse solo?",
+        "options": [
+          "Nitrificação.",
+          "Assimilação.",
+          "Amonização.",
+          "Desnitrificação.",
+          "Fixação de nitrogênio."
+        ],
+        "answer": 0,
+        "feedback": "Na nitrificação, microrganismos oxidam amônio a nitrito e depois a nitrato. São justamente as formas em baixa concentração no solo descrito."
+      },
+      {
+        "subject": "QUÍMICA",
+        "number": 3,
+        "exam": "ENEM 2017 PPL",
+        "page": 170,
+        "question": "A bauxita, composta por cerca de 50% de Al2O3, é o mais importante minério de alumínio. As seguintes etapas são necessárias para a obtenção de alumínio metálico: • 1. A dissolução do Al2O3 (s) é realizada em solução de NaOH (aq) a 175 °C, levando à formação da espécie solúvel NaAl(OH)4 (aq). • 2. Com o resfriamento da parte solúvel, ocorre a precipitação do Al(OH)3 (s). • 3. Quando o Al(OH)3 (s) é aquecido a 1 050 °C, ele se decompõe em Al2O3 (s) e H2O. • 4. Al2O3 (s) é transferido para uma cuba eletrolítica e fundido em alta temperatura com auxílio de um fundente. • 5. Através da passagem de corrente elétrica entre os eletrodos da cuba eletrolítica, obtém-se o alumínio reduzido no cátodo. As etapas 1, 3 e 5 referem-se, respectivamente, a fenômenos:",
+        "options": [
+          "Químico, físico e físico.",
+          "Físico, físico e químico.",
+          "Físico, químico e físico.",
+          "Químico, físico e químico.",
+          "Químico, químico e químico."
+        ],
+        "answer": 4,
+        "feedback": "Na etapa 1 forma-se uma nova espécie química; na 3 ocorre decomposição; na 5 ocorre redução eletrolítica. As três são transformações químicas."
+      },
+      {
+        "subject": "QUÍMICA",
+        "number": 4,
+        "exam": "ENEM 2017",
+        "page": 170,
+        "question": "Na Idade Média, para elaborar preparados a partir de plantas produtoras de óleos essenciais, as coletas das espécies eram realizadas ao raiar do dia. Naquela época, essa prática era fundamentada misticamente pelo efeito mágico dos raios lunares, que seria anulado pela emissão dos raios solares. Com a evolução da ciência, foi comprovado que a coleta de algumas espécies ao raiar do dia garante a obtenção de material com maiores quantidades de óleos essenciais. A explicação científica que justifica essa prática se baseia na",
+        "options": [
+          "volatilização das substâncias de interesse.",
+          "polimerização dos óleos catalisada pela radiação solar.",
+          "solubilização das substâncias de interesse pelo orvalho.",
+          "oxidação do óleo pelo oxigênio produzido na fotossíntese.",
+          "liberação das moléculas de óleo durante o processo de fotossíntese."
+        ],
+        "answer": 0,
+        "feedback": "Óleos essenciais têm componentes voláteis. Temperaturas mais elevadas favorecem sua perda para o ambiente; a coleta ao raiar do dia reduz esse efeito."
+      },
+      {
+        "subject": "QUÍMICA",
+        "number": 7,
+        "exam": "ENEM 2021 PPL",
+        "page": 171,
+        "question": "Para preparar o vinho de laranja, caldo de açúcar é misturado com suco de laranja, e a mistura é passada em panos para retenção das impurezas. O líquido resultante é armazenado em garrafões, que são tampados com rolhas de cortiça. Após oito dias de repouso, as rolhas são substituídas por cilindros de bambu e, finalmente, após dois meses em repouso ocorre novamente a troca dos cilindros de bambu pelas rolhas de cortiça. RESENDE, D. R.; CASTRO, R. A.; PINHEIRO, P. C. O saber popular nas aulas de química:relato de experiência envolvendo a produção do vinho de laranja e sua interpretação noensino médio. Química Nova na Escola, n. 3, ago. 2010 (adaptado). Os processos físico e químico que ocorrem na fabricação dessa bebida são, respectivamente,",
+        "options": [
+          "decantação e fervura.",
+          "filtração e decantação.",
+          "filtração e fermentação.",
+          "decantação e precipitação.",
+          "precipitação e fermentação."
+        ],
+        "answer": 2,
+        "feedback": "Os panos retêm partículas por filtração, um processo físico. A produção de álcool ocorre por fermentação, que transforma substâncias quimicamente."
+      },
+      {
+        "subject": "QUÍMICA",
+        "number": 8,
+        "exam": "ENEM PPL 2013",
+        "page": 171,
+        "question": "A palha de aço, um material de baixo custo e vida útil pequena, utilizada para lavar louças, é um emaranhado de fios leves e finos que servem para a remoção por atrito dos resíduos aderidos aos objetos. A propriedade do aço que justifica o aspecto físico descrito no texto é a:",
+        "options": [
+          "ductilidade.",
+          "maleabilidade.",
+          "densidade baixa.",
+          "condutividade elétrica.",
+          "condutividade térmica."
+        ],
+        "answer": 0,
+        "feedback": "Ductilidade é a capacidade de formar fios. Maleabilidade se refere à formação de lâminas."
+      },
+      {
+        "subject": "FÍSICA",
+        "number": 1,
+        "exam": "ENEM 2016 PPL",
+        "page": 227,
+        "question": "Todo ano, cresce a demanda mundial de energia com o aumento das populações e do consumo. É cada vez mais necessário buscar fontes alternativas que não degradem os recursos do planeta nem comprometam a sobrevivência das espécies. Ainda há muito o que se descobrir sobre o uso eficiente de recursos energéticos provenientes de fontes renováveis, mas elas estão mais próximas do que parece da adoção em larga escala. Os recursos energéticos do tipo citado são provenientes de",
+        "options": [
+          "pilhas e baterias.",
+          "usinas nucleares e hidrelétricas.",
+          "células solares e geradores eólicos.",
+          "centrais geotérmicas e termoelétricas.",
+          "usinas maremotrizes e combustíveis fósseis."
+        ],
+        "answer": 2,
+        "feedback": "Células solares e geradores eólicos aproveitam fontes renováveis. Pilhas armazenam energia; combustíveis fósseis não são renováveis na escala humana."
+      },
+      {
+        "subject": "FÍSICA",
+        "number": 2,
+        "exam": "ENEM 2017 PPL",
+        "page": 227,
+        "question": "As lâmpadas econômicas transformam 80% da energia elétrica consumida em luz e dissipam os 20% restantes em forma de calor. Já as incandescentes transformam 20% da energia elétrica consumida em luz e dissipam o restante em forma de calor. Assim, quando duas dessas lâmpadas possuem luminosidades equivalentes, a econômica apresenta uma potência igual a um quarto da potência da incandescente. Quando uma lâmpada incandescente de 60 W é substituída por uma econômica de mesma luminosidade, deixa-se de transferir para o ambiente, a cada segundo, uma quantidade de calor, em joule, igual a",
+        "options": [
+          "3.",
+          "12.",
+          "15.",
+          "45.",
+          "48."
+        ],
+        "answer": 3,
+        "feedback": "A incandescente dissipa 0,80×60=48 J/s. A econômica consome 15 W e dissipa 0,20×15=3 J/s. A redução de calor é 48−3=45 J por segundo."
+      },
+      {
+        "subject": "FÍSICA",
+        "number": 8,
+        "exam": "ENEM 2023 PPL",
+        "page": 228,
+        "question": "As baterias de lítio para carros elétricos são capazes de armazenar cerca de 700 Wh de energia em um volume de 1 L, enquanto a combustão de 1 L de etanol hidratado em um motor a combustão disponibiliza 6 300 Wh de energia. Os motores a combustão têm uma eficiência baixa, com apenas 30% da energia do combustível sendo transformada em movimento. Já os motores elétricos apresentam eficiência três vezes maior. Para estudar a viabilidade de se utilizar a mesma plataforma de um carro movido a álcool, com tanque de 40 L de combustível, para a produção de modelos elétricos, uma equipe de engenharia precisa estimar o volume da bateria de lítio que corresponda, no carro elétrico, à mesma quantidade energética desse carro a álcool. VASCONCELOS, Y. Mais energia. Pesquisa Fapesp, n. 261, nov. 2017 (adaptado). O volume aproximado, em litro, da bateria de lítio a ser utilizada é",
+        "options": [
+          "36.",
+          "120.",
+          "360.",
+          "400.",
+          "1 080."
+        ],
+        "answer": 1,
+        "feedback": "O carro a álcool fornece 40×6.300×0,30=75.600 Wh úteis. Cada litro de bateria fornece 700×0,90=630 Wh úteis. O volume é 75.600/630=120 L."
+      }
+    ],
+    "videos": [
+      {
+        "title": "TABUADA para MEDICINA e ENEM (método incrível)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=MSUdwco9bzo",
+        "subject": "MATEMÁTICA"
+      },
+      {
+        "title": "PORCENTAGEM para ENEM MEDICINA (vire uma máquina)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=cKjisDmnM4Q",
+        "subject": "MATEMÁTICA"
+      },
+      {
+        "title": "Fundamentos básicos da Matemática Financeira (aumentos e descontos, enem 2026)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=r9RFtuB_VQ0",
+        "subject": "MATEMÁTICA"
+      },
+      {
+        "title": "TUDO de SISTEMAS para o ENEM 2026 (Matemática, conteúdo OBRIGATÓRIO)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=0-A20W9YWIM",
+        "subject": "MATEMÁTICA"
+      },
+      {
+        "title": "Tudo de ESCALAS para o ENEM 2026 [melhor didática do Brasil]",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=cBYDah2TJNs",
+        "subject": "MATEMÁTICA"
+      },
+      {
+        "title": "TUDO de ANÁLISE COMBINATÓRIA em apenas 1 hora (ENEM 2026, didática lendária)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=vBhhE-Y6YYs",
+        "subject": "MATEMÁTICA"
+      },
+      {
+        "title": "TODA A MATEMÁTICA DO ENEM EM 12 HORAS",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=_EmywnyCOM0",
+        "subject": "MATEMÁTICA"
+      },
+      {
+        "title": "TUDO de Matemática do Ensino FUNDAMENTAL pro ENEM 2026 (pra quem tem MUITA DIFICULDADE)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=JQfJMJrV5Bk",
+        "subject": "MATEMÁTICA"
+      },
+      {
+        "title": "TUDO DE CITOLOGIA PARA O ENEM 2026 | DIDÁTICA MÁGICA",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=I6XycvmojEo",
+        "subject": "BIOLOGIA"
+      },
+      {
+        "title": "Construção da base de Sistema Digestório para o ENEM 2026 (extremamente didática)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=nnYw-_eCdNg",
+        "subject": "BIOLOGIA"
+      },
+      {
+        "title": "Introdução ao Sistema Endócrino (ENEM 2026 + didática mágica)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=gnBLTPd6avw",
+        "subject": "BIOLOGIA"
+      },
+      {
+        "title": "Conceitos fundamentais de Lamarckismo x Darwinismo ENEM 2026 (didática mágica do Professor Assaad)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=lyTTSvcF0is",
+        "subject": "BIOLOGIA"
+      },
+      {
+        "title": "Fermentação Alcoólica pro ENEM 2026 (didática mágica do professor Assaad)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=XtOkJ6ob34k",
+        "subject": "BIOLOGIA"
+      },
+      {
+        "title": "TUDO de BOTÂNICA para o ENEM 2026 (melhor didática do Brasil)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=0QoqAjdfsPM",
+        "subject": "BIOLOGIA"
+      },
+      {
+        "title": "TUDO de GENÉTICA para o ENEM 2026 (didática mágica)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=b7qqC1nv9n4",
+        "subject": "BIOLOGIA"
+      },
+      {
+        "title": "TUDO de HORMÔNIOS FEMININOS e CICLO MENSTRUAL pro ENEM 2026",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=8ZTMDDJ0pXE",
+        "subject": "BIOLOGIA"
+      },
+      {
+        "title": "LEIS DE NEWTON - porém irá mudar a sua vida.",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=b90GgXchJ28",
+        "subject": "FÍSICA"
+      },
+      {
+        "title": "Revisão de Termologia ENEM 2026 (muito didática)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=8zCPcNNjVbQ",
+        "subject": "FÍSICA"
+      },
+      {
+        "title": "Conceitos fundamentais do Movimento Uniforme (didática mágica, ENEM 2026)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=5xouvPAD8bQ",
+        "subject": "FÍSICA"
+      },
+      {
+        "title": "Fundamentos de ELETRODINÂMICA pro ENEM (conceitos obrigatórios + didática perfeita)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=C5496b0TJaY",
+        "subject": "FÍSICA"
+      },
+      {
+        "title": "Curso completo de CINEMÁTICA pro ENEM 2026 (didática MUITO superior)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=M3Bbg1bginM",
+        "subject": "FÍSICA"
+      },
+      {
+        "title": "Introdução à Termologia para o ENEM 2026 (didática mágica do professor Assaad)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=2p1-Tz6Un10",
+        "subject": "FÍSICA"
+      },
+      {
+        "title": "Eletrostática e eletrização por atrito para o ENEM 2026 (professor Assaad com sua didática mágica)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=M_Cnr1w7-xQ",
+        "subject": "FÍSICA"
+      },
+      {
+        "title": "Optica geométrica para o ENEM 2026",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=oRPwxS88kZE",
+        "subject": "FÍSICA"
+      },
+      {
+        "title": "REFRAÇÃO em nível avançado para o ENEM 2026",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=dEVXre6ZhTo",
+        "subject": "FÍSICA"
+      },
+      {
+        "title": "TUDO de ELETROMAGNETISMO para o ENEM 2026 (mas tu vai entender)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=aaGx54PbdvA",
+        "subject": "FÍSICA"
+      },
+      {
+        "title": "TODA A FÍSICA DO ENEM 2026 em 12 horas",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=M58XvuZ4Zy8",
+        "subject": "FÍSICA"
+      },
+      {
+        "title": "Você REALMENTE sabe o que é MOL???????????? (Obrigatório pra Estequiometria ENEM 2026)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=50ogm-FXbo8",
+        "subject": "QUÍMICA"
+      },
+      {
+        "title": "Tudo de Estequiometria para o ENEM 2026 (didática mágica + 100 questões)",
+        "author": "Pedro Assaad | ENEM 2026",
+        "url": "https://www.youtube.com/watch?v=x1tx_KZZW1M",
+        "subject": "QUÍMICA"
+      }
+    ],
+    "bank": {
+      "total": 1000,
+      "pages": 285,
+      "subjects": {
+        "MATEMÁTICA": 400,
+        "BIOLOGIA": 200,
+        "QUÍMICA": 200,
+        "FÍSICA": 200
+      }
+    },
+    "source": "1000 Questões.pdf — caderno fornecido pela turma. Ano e aplicação conforme identificação do caderno; resoluções elaboradas e conferidas para o portal."
+  }
+}

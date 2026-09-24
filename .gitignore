@@ -1,0 +1,14 @@
+node_modules/
+.next/
+.vercel/
+.env*
+!.env.example
+*.tsbuildinfo
+test-results/
+playwright-report/
+private/
+acervo/
+*.pdf
+__pycache__/
+*.pyc
+supabase/.temp/

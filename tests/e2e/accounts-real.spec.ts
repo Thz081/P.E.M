@@ -1,0 +1,240 @@
+import {test,expect} from '@playwright/test';
+import {createClient} from '@supabase/supabase-js';
+import {createHmac,randomBytes,randomInt,randomUUID} from 'node:crypto';
+import {readFile} from 'node:fs/promises';
+
+// Explicit opt-in: uses the dedicated PEM service, real Auth and RLS, synthetic users only.
+test('real accounts: activation race, expiry, login, admin, isolation and revocation',async({browser,request,baseURL},testInfo)=>{
+ test.skip(process.env.PEM_REAL_AUTH_TESTS!=='1','Requires explicit PEM_REAL_AUTH_TESTS=1 and server credentials.');
+ test.setTimeout(300000);
+ process.loadEnvFile('.env.local');
+ expect(process.env.SUPABASE_URL==='https://jfvfckkulpcqvhkjwgvy.supabase.co').toBe(true);
+ const db=createClient(process.env.SUPABASE_URL!,process.env.SUPABASE_SERVICE_ROLE_KEY!,{auth:{persistSession:false,autoRefreshToken:false}});
+ const hash=(value:string)=>createHmac('sha256',process.env.IDENTITY_HMAC_KEY!).update(value).digest('hex');
+ const fixture=randomUUID();const password=`Pem!${randomBytes(20).toString('hex')}`;
+ const absentMatricula=`98${randomInt(1000000000,9999999999)}`;
+ const users:{id:string;matricula:string;identifier:string;code:string}[]=[];
+ let operatorId:string|undefined;
+ const contexts=[];
+ const headers={origin:new URL(baseURL!).origin};
+ try{
+  for(let index=0;index<2;index++){
+   const matricula=`99${randomInt(1000000000,9999999999)}`;const identifier=hash(matricula);const code=randomBytes(12).toString('base64url');
+   const result=await db.auth.admin.createUser({email:`${identifier}@alunos.pem.invalid`,password:randomBytes(32).toString('base64url'),email_confirm:true,app_metadata:{pem_test_fixture:fixture}});
+   expect(!result.error&&!!result.data.user).toBe(true);
+   const id=result.data.user!.id;users.push({id,matricula,identifier,code});
+   const profile=await db.from('profiles').insert({id,role:'student'});expect(!profile.error).toBe(true);
+   const roster=await db.from('roster').insert({identifier,matricula,user_id:id,code_hash:hash(code),code_expires_at:new Date(Date.now()+3600000).toISOString()});expect(!roster.error).toBe(true);
+  }
+  const [a,b]=users;
+  const operatorIdentifier=hash(`admin:${a.matricula}`),operatorCode=randomBytes(18).toString('base64url');
+  const operator=await db.auth.admin.createUser({email:`${operatorIdentifier}@admin.pem.invalid`,password:randomBytes(32).toString('base64url'),email_confirm:true,app_metadata:{pem_test_fixture:fixture}});
+  expect(!operator.error&&!!operator.data.user).toBe(true);operatorId=operator.data.user!.id;
+  expect(!(await db.from('profiles').insert({id:operatorId,role:'admin'})).error).toBe(true);
+  expect(!(await db.from('admin_access').insert({identifier:operatorIdentifier,matricula:a.matricula,user_id:operatorId,code_hash:hash(operatorCode),code_expires_at:new Date(Date.now()+3600000).toISOString()})).error).toBe(true);
+  const activate=(user:typeof a)=>request.post('/api/activate',{headers,data:{matricula:user.matricula,code:user.code,senha:password}});
+  const weak=await request.post('/api/activate',{headers,data:{matricula:a.matricula,code:a.code,senha:'senhafraca123'}});
+  expect(weak.status()).toBe(400);
+  const concurrent=await Promise.all([activate(a),activate(a)]);
+  expect(concurrent.map(response=>response.status()).sort()).toEqual([200,400]);
+  expect((await activate(a)).status()).toBe(400);
+  const wrongCode=randomBytes(18).toString('base64url');
+  const invalid=await request.post('/api/activate',{headers,data:{matricula:a.matricula,code:wrongCode,senha:password}});
+  const absent=await request.post('/api/activate',{headers,data:{matricula:absentMatricula,code:wrongCode,senha:password}});
+  expect(absent.status()).toBe(invalid.status());expect(await absent.json()).toEqual(await invalid.json());
+  await db.from('roster').update({code_expires_at:new Date(Date.now()-1000).toISOString()}).eq('identifier',b.identifier);
+  expect((await activate(b)).status()).toBe(400);
+  await db.from('roster').update({code_expires_at:new Date(Date.now()+3600000).toISOString()}).eq('identifier',b.identifier);
+  expect((await activate(b)).status()).toBe(200);
+  expect((await request.post('/api/activate',{headers,data:{matricula:a.matricula,code:operatorCode,senha:password,area:'admin'}})).status()).toBe(200);
+  const ca=await browser.newContext({baseURL});contexts.push(ca);const pa=await ca.newPage();
+  const cb=await browser.newContext({baseURL});contexts.push(cb);const pb=await cb.newPage();
+  const cc=await browser.newContext({baseURL});contexts.push(cc);const pc=await cc.newPage();
+  for(const [page,user] of [[pa,a],[pb,b]] as const){
+   await page.goto('/');await page.getByLabel('Matrícula',{exact:true}).fill(user.matricula);
+   await page.getByLabel('Senha',{exact:true}).fill(password);await page.getByRole('button',{name:'Entrar para estudar'}).click();
+   await expect(page).toHaveURL(/\/estudar$/);await expect(page.locator('main')).toHaveAttribute('aria-busy','false');
+  }
+  await expect(pa.getByRole('link',{name:'Administração',exact:true})).toHaveCount(0);
+  expect((await ca.request.get('/api/admin')).status()).toBe(403);
+  const legacyKey=`legacy-${randomUUID()}`,legacyLesson={id:'aula-1'},legacyMaterial={id:'136jGqeEUPXWgcTInuOilTnyc1MctfuDC'};
+  await pb.evaluate(({key,lessonId,materialId})=>{
+   localStorage.setItem(`pem-progress-${key}`,JSON.stringify({[`read-${lessonId}`]:true,[materialId]:true}));
+   localStorage.setItem(`pem-note-${key}-${lessonId}`,'Nota antiga preservada e vinculada pelo aluno.');
+  },{key:legacyKey,lessonId:legacyLesson.id,materialId:legacyMaterial.id});
+  await pb.reload();
+  await expect(pb.locator('main')).toHaveAttribute('aria-busy','false');
+  await expect(pb.getByRole('button',{name:'Importar dados locais deste acesso antigo'})).toHaveCount(0);
+  expect((await cb.request.get('/api/legacy-key')).status()).toBe(200);
+  expect((await (await cb.request.get('/api/legacy-key')).json()).legacyKey).toBeNull();
+  expect((await (await cb.request.get('/api/progress')).json()).progress).toBeNull();
+  expect(await pb.evaluate(({key,lessonId,userId})=>({progress:localStorage.getItem(`pem-progress-${key}`),note:localStorage.getItem(`pem-note-${key}-${lessonId}`),marker:localStorage.getItem(`pem-legacy-imported-${userId}-${key}`)}),{key:legacyKey,lessonId:legacyLesson.id,userId:b.id})).toEqual({progress:expect.any(String),note:'Nota antiga preservada e vinculada pelo aluno.',marker:null});
+  await pb.route('**/api/legacy-key',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({legacyKey:'wrong-owner'})}));
+  await pb.reload();await expect(pb.getByRole('button',{name:'Importar dados locais deste acesso antigo'})).toHaveCount(0);
+  await pb.unroute('**/api/legacy-key');
+  await pb.route('**/api/legacy-key',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({legacyKey})}));
+  await pb.reload();await expect(pb.locator('main')).toHaveAttribute('aria-busy','false');await pb.getByRole('button',{name:'Importar dados locais deste acesso antigo'}).click();
+  await expect.poll(async()=>await (await cb.request.get('/api/progress')).json()).toMatchObject({progress:{read:{[legacyLesson.id]:true},notes:{[legacyLesson.id]:'Nota antiga preservada e vinculada pelo aluno.'},materials:{[legacyMaterial.id]:true}}});
+  await pb.unroute('**/api/legacy-key');
+  expect(await pb.evaluate(({key,lessonId,userId})=>({progress:localStorage.getItem(`pem-progress-${key}`),note:localStorage.getItem(`pem-note-${key}-${lessonId}`),marker:localStorage.getItem(`pem-legacy-imported-${userId}-${key}`)}),{key:legacyKey,lessonId:legacyLesson.id,userId:b.id})).toEqual({progress:expect.any(String),note:'Nota antiga preservada e vinculada pelo aluno.',marker:'1'});
+  await pc.goto('/');await pc.getByRole('button',{name:'Administração',exact:true}).click();
+  await pc.getByLabel('Matrícula',{exact:true}).fill(a.matricula);await pc.getByLabel('Senha',{exact:true}).fill(password);
+  await pc.getByRole('button',{name:'Entrar na administração'}).click();await expect(pc).toHaveURL(/\/admin$/);
+  await expect(pc.getByRole('heading',{name:'Acompanhar os acessos.'})).toBeVisible();
+  await expect(pc.getByRole('heading',{name:`Matrícula ${b.matricula}`,exact:true})).toBeVisible();
+  const adminResponse=await cc.request.get('/api/admin');expect(adminResponse.status()).toBe(200);
+  const adminData=await adminResponse.json();expect(adminData.roster).toHaveLength(43);
+  expect(adminData.roster.every((entry:{nome:string;turma:string})=>entry.nome.trim()&&entry.turma==='3A DS')).toBe(true);
+  expect(adminData.roster.filter((entry:{activated_at:string|null})=>entry.activated_at)).toHaveLength(2);
+  await expect(pc.getByText('43 matrículas · 2 ativadas · 0 pedidos de recuperação')).toBeVisible();
+  await pc.getByLabel('Buscar matrícula').fill(b.matricula);
+  await expect(pc.locator('.resource-list>div')).toHaveCount(1);
+  await expect(pc.locator('.resource-list>div')).toContainText('Conta ativada');
+  await pc.getByLabel('Buscar matrícula').fill('');
+  expect((await cc.request.get('/api/progress')).status()).toBe(401);
+  expect((await cb.request.get('/api/admin')).status()).toBe(403);
+  await pb.goto('/admin');await expect(pb).toHaveURL(/\/estudar$/);
+  await pb.getByRole('link',{name:'Meu perfil',exact:true}).click();
+  await expect(pb.getByLabel('Apelido')).toBeEnabled();
+  await pb.getByLabel('Apelido').fill('Estudante sintético');await pb.getByLabel('Avatar',{exact:true}).selectOption('phoenix');
+  await pb.getByRole('button',{name:'Salvar perfil'}).click();await expect(pb.getByText('Perfil salvo na sua conta.')).toBeVisible();
+  await expect(pb.locator('.topbar .avatar')).toHaveText('🔥');
+  await expect(pb.locator('.topbar .avatar')).toHaveAttribute('aria-label','Avatar: Fênix');
+  await pb.reload();await expect(pb.getByLabel('Apelido')).toHaveValue('Estudante sintético');await expect(pb.getByLabel('Avatar',{exact:true})).toHaveValue('phoenix');
+  await expect(pb.locator('.topbar .avatar')).toHaveText('🔥');
+  expect((await cb.request.patch('/api/profile',{headers,data:{display_name:'Tentativa',avatar:'book',role:'admin'}})).status()).toBe(400);
+  const progress={read:{synthetic:true},notes:{synthetic:'Nota privada A'},answers:{},materials:{}};
+  const save=await ca.request.put('/api/progress',{headers,data:{progress,revision:0}});expect(save.status()).toBe(200);
+  expect((await ca.request.put('/api/progress',{headers,data:{progress,revision:0}})).status()).toBe(409);
+  expect((await (await ca.request.get('/api/progress')).json()).progress).toEqual(progress);
+  expect((await (await cb.request.get('/api/progress')).json()).progress).toMatchObject({read:{[legacyLesson.id]:true},notes:{[legacyLesson.id]:'Nota antiga preservada e vinculada pelo aluno.'},materials:{[legacyMaterial.id]:true}});
+  const cd=await browser.newContext({baseURL});contexts.push(cd);const pd=await cd.newPage();
+  await pd.goto('/');await pd.getByLabel('Matrícula',{exact:true}).fill(a.matricula);
+  await pd.getByLabel('Senha',{exact:true}).fill(password);await pd.getByRole('button',{name:'Entrar para estudar'}).click();
+  await expect(pd).toHaveURL(/\/estudar$/);await expect(pd.locator('main')).toHaveAttribute('aria-busy','false');
+  const conflictLocal={read:{local:true},notes:{local:'Cópia local preservada'},answers:{},materials:{}};
+  await pd.evaluate(({key,value})=>localStorage.setItem(key,JSON.stringify({progress:value,revision:0,pending:true})),{key:`pem-v2-progress-${a.id}`,value:conflictLocal});
+  await pd.reload();await expect(pd.getByRole('status')).toContainText('Conflito entre cópias');
+  const preserved=await pd.evaluate(key=>JSON.parse(localStorage.getItem(key)!),`pem-v2-progress-${a.id}`);
+  expect(preserved).toEqual({progress:conflictLocal,revision:0,pending:true});
+  await pa.goto('/estudar/redacao');await pa.getByRole('button',{name:'Escrever e revisar',exact:true}).click();
+  await pa.getByLabel('Tema da redação').fill('Tema sintético');await pa.getByLabel('Seu texto',{exact:true}).fill('Texto privado para testar isolamento.');
+  await pa.getByRole('button',{name:'Salvar versão',exact:true}).click();await expect(pa.getByText('Versão salva na sua conta.',{exact:true})).toBeVisible();
+  const downloadPromise=pa.waitForEvent('download');await pa.getByRole('button',{name:'Exportar texto',exact:true}).click();const download=await downloadPromise;
+  expect(download.suggestedFilename()).toBe('minhas-redacoes-pem.json');const exportPath=await download.path();expect(exportPath).toBeTruthy();
+  expect(JSON.parse(await readFile(exportPath!,'utf8'))).toMatchObject({theme:'Tema sintético',text:'Texto privado para testar isolamento.',versions:[{theme:'Tema sintético',text:'Texto privado para testar isolamento.'}]});
+  await pa.reload();await pa.getByRole('button',{name:'Minhas versões',exact:true}).click();await expect(pa.getByRole('heading',{name:'Tema sintético',exact:true})).toBeVisible();
+  const essayId=(await (await ca.request.get('/api/essays')).json()).essays[0].id;
+  expect((await (await cb.request.get('/api/essays')).json()).essays).toHaveLength(0);
+  await pa.getByRole('button',{name:'Compartilhar ou revogar'}).click();await pa.getByLabel('Matrícula do destinatário').fill(b.matricula);
+  await pa.getByRole('button',{name:'Compartilhar versão',exact:true}).click();await expect(pa.getByText('Versão compartilhada com o destinatário.')).toBeVisible();
+  expect((await (await cb.request.get('/api/essays')).json()).essays).toHaveLength(1);
+  await pb.goto('/estudar/redacao');await pb.getByRole('button',{name:'Minhas versões',exact:true}).click();await expect(pb.getByText('Compartilhada com você')).toBeVisible();
+  await expect(pb.getByRole('button',{name:'Excluir',exact:true})).toHaveCount(0);
+  // A recipient cannot delete the owner's essay.
+  expect((await cb.request.delete(`/api/essays?id=${essayId}`,{headers})).status()).toBe(404);
+  expect((await (await ca.request.get('/api/essays')).json()).essays).toHaveLength(1);
+  await pa.getByRole('button',{name:'Compartilhar ou revogar'}).click();await pa.getByLabel('Matrícula do destinatário').fill(b.matricula);
+  await pa.getByRole('button',{name:'Revogar acesso',exact:true}).click();await expect(pa.getByText('Compartilhamento revogado.')).toBeVisible();
+  expect((await (await cb.request.get('/api/essays')).json()).essays).toHaveLength(0);
+  await pb.reload();await pb.getByRole('button',{name:'Minhas versões',exact:true}).click();await expect(pb.getByRole('heading',{name:'Tema sintético',exact:true})).toHaveCount(0);
+  pa.once('dialog',dialog=>dialog.accept());await pa.getByRole('button',{name:'Excluir',exact:true}).click();await expect(pa.getByText('Versão excluída da sua conta.')).toBeVisible();
+  const bulk=Array.from({length:201},(_,index)=>({user_id:a.id,theme:`Versão ${index+1}`,body:`Texto sintético ${index+1}`}));
+  expect(!(await db.from('essays').insert(bulk)).error).toBe(true);
+  const firstPage=await (await ca.request.get('/api/essays')).json();expect(firstPage.essays).toHaveLength(200);expect(firstPage.next).toBeTruthy();
+  const secondPage=await (await ca.request.get(`/api/essays?after=${firstPage.next}`)).json();expect(secondPage.essays).toHaveLength(1);expect(secondPage.next).toBeNull();
+  expect(new Set([...firstPage.essays,...secondPage.essays].map((entry:{id:string})=>entry.id)).size).toBe(201);
+  await pa.goto('/estudar/redacao');await pa.getByRole('button',{name:'Escrever e revisar',exact:true}).click();
+  const fullDownloadPromise=pa.waitForEvent('download');await pa.getByRole('button',{name:'Exportar texto',exact:true}).click();
+  const fullDownload=await fullDownloadPromise;expect(JSON.parse(await readFile((await fullDownload.path())!,'utf8')).versions).toHaveLength(201);
+  await pa.route('**/api/essays?after=*',route=>route.fulfill({status:503,body:JSON.stringify({error:'Página indisponível.'}),contentType:'application/json'}));
+  await pa.getByRole('button',{name:'Exportar texto',exact:true}).click();await expect(pa.locator('.essay-layout .status')).toContainText('Página indisponível.');
+  await pa.unroute('**/api/essays?after=*');
+  const recovery=()=>request.post('/api/recovery',{headers,data:{matricula:b.matricula}});
+  const firstRecovery=await recovery();expect(firstRecovery.status()).toBe(200);
+  const unknownRecovery=await request.post('/api/recovery',{headers,data:{matricula:absentMatricula}});
+  expect(unknownRecovery.status()).toBe(200);expect(await unknownRecovery.json()).toEqual(await firstRecovery.json());
+  expect((await recovery()).status()).toBe(200);
+  const beforeLimit=await db.from('reset_requests').select('requested_at').eq('identifier',b.identifier).single();
+  expect((await recovery()).status()).toBe(200);
+  const afterLimit=await db.from('reset_requests').select('requested_at').eq('identifier',b.identifier).single();
+  expect(afterLimit.data).toEqual(beforeLimit.data);
+  await pc.goto('/admin');
+  await pc.getByRole('button',{name:'Atualizar turma'}).click();
+  const row=pc.locator('.resource-list>div').filter({has:pc.getByRole('heading',{name:`Matrícula ${b.matricula}`,exact:true})});
+  await expect(row).toContainText('Recuperação solicitada');
+  const resetResponse=pc.waitForResponse(response=>response.url().endsWith('/api/admin')&&response.request().method()==='POST');
+  await row.getByRole('button',{name:'Gerar código de recuperação'}).click();
+  const resetCode=(await (await resetResponse).json()).code;
+  await expect(pc.getByRole('region',{name:'Código individual gerado'})).toBeVisible();
+  await pc.getByRole('button',{name:'Ocultar código'}).click();
+  await expect(pc.getByRole('region',{name:'Código individual gerado'})).toHaveCount(0);
+  const newPassword=`Nova!${randomBytes(20).toString('hex')}`;
+  const resetData={matricula:b.matricula,code:resetCode,senha:newPassword};
+  expect((await request.post('/api/activate',{headers,data:resetData})).status()).toBe(200);
+  expect((await request.post('/api/activate',{headers,data:resetData})).status()).toBe(400);
+  expect((await request.post('/api/login',{headers,data:{matricula:b.matricula,senha:password}})).status()).toBe(401);
+  expect((await request.post('/api/login',{headers,data:{matricula:b.matricula,senha:newPassword}})).status()).toBe(200);
+  const resolved=await db.from('reset_requests').select('resolved_at').eq('identifier',b.identifier).single();
+  expect(resolved.data?.resolved_at).toBeTruthy();
+  expect((await request.post('/api/activate',{headers,data:{...resetData,code:wrongCode}})).status()).toBe(400);
+  expect((await request.post('/api/activate',{headers,data:{...resetData,code:wrongCode}})).status()).toBe(429);
+  expect((await ca.request.post('/api/chat',{headers,data:{question:'Teste'}})).status()).toBe(503);
+  // Exercise PostgREST with real user JWTs, without the application or service-role client.
+  const directAdmin=createClient(process.env.SUPABASE_URL!,process.env.SUPABASE_ANON_KEY!,{auth:{persistSession:false,autoRefreshToken:false}});
+  expect(!(await directAdmin.auth.signInWithPassword({email:`${operatorIdentifier}@admin.pem.invalid`,password})).error).toBe(true);
+  const fixtureIds=[a.id,b.id,operatorId!];
+  const visibleProfiles=async()=>{
+   const result=await directAdmin.from('profiles').select('id').in('id',fixtureIds);
+   expect(result.error).toBeNull();return result.data!.map(profile=>profile.id).sort();
+  };
+  expect(await visibleProfiles()).toEqual([...fixtureIds].sort());
+  expect((await directAdmin.from('admin_access').select('user_id')).error?.code).toBe('42501');
+  expect((await directAdmin.schema('private').rpc('is_admin')).error?.code).toBe('PGRST106');
+  for(const table of ['progress','essays']){
+   const result=await directAdmin.from(table).select('user_id').in('user_id',[a.id,b.id]);
+   expect(result.error).toBeNull();expect(result.data).toEqual([]);
+  }
+  expect(!(await db.from('admin_access').update({activated_at:null}).eq('user_id',operatorId!)).error).toBe(true);
+  expect(await visibleProfiles()).toEqual([operatorId]);
+  expect((await cc.request.get('/api/admin')).status()).toBe(403);
+  expect(!(await db.from('admin_access').update({activated_at:new Date().toISOString()}).eq('user_id',operatorId!)).error).toBe(true);
+  expect(await visibleProfiles()).toEqual([...fixtureIds].sort());
+  expect(!(await db.from('profiles').update({active:false}).eq('id',operatorId!)).error).toBe(true);
+  expect(await visibleProfiles()).toEqual([operatorId]);
+  expect((await cc.request.get('/api/admin')).status()).toBe(403);
+  const directStudent=createClient(process.env.SUPABASE_URL!,process.env.SUPABASE_ANON_KEY!,{auth:{persistSession:false,autoRefreshToken:false}});
+  expect(!(await directStudent.auth.signInWithPassword({email:`${b.identifier}@alunos.pem.invalid`,password:newPassword})).error).toBe(true);
+  expect(!(await directStudent.auth.updateUser({data:{role:'admin'}})).error).toBe(true);
+  const studentProfiles=await directStudent.from('profiles').select('id').in('id',fixtureIds);
+  expect(studentProfiles.error).toBeNull();expect(studentProfiles.data).toEqual([{id:b.id}]);
+  expect((await directStudent.from('profiles').update({role:'admin'}).eq('id',b.id)).error?.code).toBe('42501');
+  await db.from('profiles').update({active:false}).eq('id',b.id);
+  const inactiveProgress=await directStudent.from('progress').select('user_id');
+  expect(inactiveProgress.error).toBeNull();expect(inactiveProgress.data).toEqual([]);
+  expect((await cb.request.get('/api/progress')).status()).toBe(401);
+  await pb.goto('/estudar');await expect(pb).toHaveURL(/\/$/);
+  await pa.goto('/estudar');await expect(pa.locator('main')).toHaveAttribute('aria-busy','false');
+  pa.once('dialog',dialog=>dialog.accept());await pa.getByRole('button',{name:'Sair',exact:true}).click();
+  await expect(pa).toHaveURL(/\/$/);
+  expect(await pa.evaluate(key=>localStorage.getItem(key),`pem-v2-progress-${a.id}`)).toBeNull();
+  expect((await ca.request.get('/api/progress')).status()).toBe(401);
+ }finally{
+  testInfo.setTimeout(testInfo.timeout+60000);
+  // Browser teardown must never prevent removal of synthetic database fixtures.
+  await Promise.allSettled(contexts.map(context=>context.close()));
+  if(operatorId){const current=await db.auth.admin.getUserById(operatorId);if(current.data.user?.app_metadata?.pem_test_fixture!==fixture)throw Error('Admin fixture ownership check failed.');await db.from('admin_access').delete().eq('user_id',operatorId);expect(!(await db.auth.admin.deleteUser(operatorId)).error).toBe(true);}
+  for(const user of users){
+   const current=await db.auth.admin.getUserById(user.id);
+   if(current.data.user?.app_metadata?.pem_test_fixture!==fixture)throw Error('Fixture ownership check failed; cleanup stopped.');
+   const resets=await db.from('reset_requests').delete().eq('identifier',user.identifier);expect(!resets.error).toBe(true);
+   const roster=await db.from('roster').delete().eq('user_id',user.id);expect(!roster.error).toBe(true);
+   const limits=await db.from('rate_limits').delete().in('key',['activation:student','recovery'].map(scope=>hash(`${scope}:${user.identifier}`)));expect(!limits.error).toBe(true);
+   const deleted=await db.auth.admin.deleteUser(user.id);expect(!deleted.error).toBe(true);
+  }
+  const extraLimits=await db.from('rate_limits').delete().in('key',[
+   hash(`activation:student:${hash(absentMatricula)}`),hash(`recovery:${hash(absentMatricula)}`),
+   ...users.slice(0,1).map(user=>hash(`activation:admin:${hash(`admin:${user.matricula}`)}`)),
+  ]);expect(!extraLimits.error).toBe(true);
+ }
+});
