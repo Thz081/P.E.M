@@ -11,7 +11,7 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
  expect(process.env.SUPABASE_URL==='https://jfvfckkulpcqvhkjwgvy.supabase.co').toBe(true);
  const db=createClient(process.env.SUPABASE_URL!,process.env.SUPABASE_SERVICE_ROLE_KEY!,{auth:{persistSession:false,autoRefreshToken:false}});
  const hash=(value:string)=>createHmac('sha256',process.env.IDENTITY_HMAC_KEY!).update(value).digest('hex');
- const fixture=randomUUID();const password=randomBytes(24).toString('base64url');
+ const fixture=randomUUID();const password=`Pem!${randomBytes(20).toString('hex')}`;
  const absentMatricula=`98${randomInt(1000000000,9999999999)}`;
  const users:{id:string;matricula:string;identifier:string;code:string}[]=[];
  let operatorId:string|undefined;
@@ -33,6 +33,8 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
   expect(!(await db.from('profiles').insert({id:operatorId,role:'admin'})).error).toBe(true);
   expect(!(await db.from('admin_access').insert({identifier:operatorIdentifier,matricula:a.matricula,user_id:operatorId,code_hash:hash(operatorCode),code_expires_at:new Date(Date.now()+3600000).toISOString()})).error).toBe(true);
   const activate=(user:typeof a)=>request.post('/api/activate',{headers,data:{matricula:user.matricula,code:user.code,senha:password}});
+  const weak=await request.post('/api/activate',{headers,data:{matricula:a.matricula,code:a.code,senha:'senhafraca123'}});
+  expect(weak.status()).toBe(400);
   const concurrent=await Promise.all([activate(a),activate(a)]);
   expect(concurrent.map(response=>response.status()).sort()).toEqual([200,400]);
   expect((await activate(a)).status()).toBe(400);
@@ -167,7 +169,7 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
   await expect(pc.getByRole('region',{name:'Código individual gerado'})).toBeVisible();
   await pc.getByRole('button',{name:'Ocultar código'}).click();
   await expect(pc.getByRole('region',{name:'Código individual gerado'})).toHaveCount(0);
-  const newPassword=randomBytes(24).toString('base64url');
+  const newPassword=`Nova!${randomBytes(20).toString('hex')}`;
   const resetData={matricula:b.matricula,code:resetCode,senha:newPassword};
   expect((await request.post('/api/activate',{headers,data:resetData})).status()).toBe(200);
   expect((await request.post('/api/activate',{headers,data:resetData})).status()).toBe(400);
@@ -212,7 +214,10 @@ test('real accounts: activation race, expiry, login, admin, isolation and revoca
   expect(inactiveProgress.error).toBeNull();expect(inactiveProgress.data).toEqual([]);
   expect((await cb.request.get('/api/progress')).status()).toBe(401);
   await pb.goto('/estudar');await expect(pb).toHaveURL(/\/$/);
-  expect((await ca.request.post('/api/logout',{headers})).status()).toBe(200);
+  await pa.goto('/estudar');await expect(pa.locator('main')).toHaveAttribute('aria-busy','false');
+  pa.once('dialog',dialog=>dialog.accept());await pa.getByRole('button',{name:'Sair',exact:true}).click();
+  await expect(pa).toHaveURL(/\/$/);
+  expect(await pa.evaluate(key=>localStorage.getItem(key),`pem-v2-progress-${a.id}`)).toBeNull();
   expect((await ca.request.get('/api/progress')).status()).toBe(401);
  }finally{
   testInfo.setTimeout(testInfo.timeout+60000);

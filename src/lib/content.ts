@@ -8,7 +8,7 @@ export const monitors: Record<string,string> = catalog.context.monitors;
 export const cards = catalog.cards as [string,string,string][];
 export const questions: Question[] = catalog.quiz.map((raw,i) => {
   const q=raw as [string,string,string[],number,string,string?,string?];
-  return {id:`trimestre-${i}`,subject:q[0],title:q[6]||q[0],question:q[1],options:q[2],answer:q[3],feedback:q[4],source:'Questão autoral · revisão do trimestre'};
+  return {id:`trimestre-${i}`,subject:q[0],title:q[6]||q[0],question:q[1],options:q[2],answer:q[3],feedback:q[4],source:'Questão autoral · revisão para o ENEM'};
 });
 export const enem = catalog.enemLearning;
 export const DRIVE = 'https://drive.google.com/drive/folders/1lrIJeIJOaIbDXy7e8u0zuWW3F34b07C6?usp=sharing';
