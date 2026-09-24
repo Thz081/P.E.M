@@ -1,11 +1,11 @@
 # Quadro de trabalho — P.E.M
 ## Estado atual — 23/09/2026
 
-Contagem principal: 26 missões; **14 concluídas (P01–P14), 12 abertas (P15–P26)**. P13/P14 foram reabertas na revisão e fechadas após correção e testes reais; detalhes em ../docs/REVISAO-P13-P14.md. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
+Contagem principal: 26 missões; **17 concluídas, 9 abertas**. P01–P15, P25 e P26 estão fechadas; P16–P24 permanecem abertas. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
 
-Atualização: revisão adicional UI concluída; auditoria final P07 no Astra médio encontrou e corrigiu falta da lista admin ativada na política SQL. Migração aplicada, SQL red/green e E2E real com JWT (53,1 s) passaram. Próximo bloco P25/P26, preparação no Sol médio e decisão final no Astra alto. Evidências em `../docs/REVISAO-UI-P04-P08.md` e `../docs/REVISAO-P07.md`.
+Atualização de entrega em 24/09: P25/P26 concluídas. A auditoria registrou cinco achados na candidata anterior; todos receberam correção ou controle explícito. Migrações de limite e índices foram aplicadas, CI `quality` passou, prévia Vercel READY foi conferida em desktop/mobile e o baseline `5e1982b` permaneceu disponível para rollback. P15 foi refeito como guia do professor da versão publicada e entregue na pasta compartilhada.
 
-Direção do usuário em 23/09: aproveitar a cota nas missões de produto antes da publicação. P25/P26 ficam como porta obrigatória da versão que for publicada; P15 recebe revisão final depois de fixar essa versão. Foco atual: P16/P17. P16 gerou mapa privado de 22 capturas, 165 grupos e 183 PDFs; 146 vínculos diretos, 37 pendentes, ordem visível de estudo, 30 incidências diretas e 11 tópicos suplementares do mapa de progresso do Assad. Há 29 referências suplementares a PDFs pendentes, das quais 26 propostas de Redação. É estudo para ENEM, não trimestre da turma. Relatório em `../docs/MAPA-CURRICULAR.md`. A contagem de missões fechadas não mudou.
+Próximo foco: P16/P17. P16 gerou mapa privado de 22 capturas, 165 grupos e 183 PDFs; 146 vínculos diretos, 37 pendentes, ordem visível de estudo, 30 incidências diretas e 11 tópicos suplementares do mapa de progresso do Assad. Há 29 referências suplementares a PDFs pendentes, das quais 26 propostas de Redação. É estudo para ENEM, não trimestre da turma. Relatório em `../docs/MAPA-CURRICULAR.md`.
 
 ### Prioridade e modelo recomendado
 
@@ -18,13 +18,13 @@ Use o modelo mais leve que mantenha o critério de qualidade. `GPT-6 Luna` atend
 | 3 | P13, P14 | Sincronização, perfil e redações privadas | **GPT-6 Sol médio**; **Astra médio** para revisar conflitos e isolamento antes de fechar |
 | 4 | P04, P05, P06, P08 | Regressão de frontend, demonstração e oficina de redação | **Concluídas em 23/09 com GPT-6 Luna médio**; usar **GPT-6 Sol médio** para revisão adicional de UI/comportamentos |
 | 5 | P07 | Schema, RLS e isolamento | **Concluída em 23/09**; correção e auditoria final com **GPT-6 Astra médio**, após verificações no Sol médio |
-| 6 | P16, P17 | Mapa curricular, OCR e organização do acervo | **GPT-6 Luna médio/alto** para processamento em lote; **GPT-6 Sol médio** nos casos ambíguos |
+| 6 | P16, P17 | Mapa curricular, OCR e organização do acervo — próximo bloco | **GPT-6 Luna médio/alto** para processamento em lote; **GPT-6 Sol médio** nos casos ambíguos |
 | 7 | P18 | Curadoria, índice e benchmark de busca | **GPT-6 Sol alto** para construir; **GPT-6 Astra alto** para avaliar o benchmark e riscos de fonte |
 | 8 | P19, P20, P21 | Tutor, feedback de redação e fallback | **GPT-6 Astra alto** para arquitetura, injeção e critérios; **GPT-6 Sol alto** para implementação e depuração |
 | 9 | P22 | Conferir e cadastrar 40 questões | **GPT-6 Luna médio** para cadastro e checagens repetitivas; **GPT-6 Sol médio** para revisão pedagógica/fontes |
 | 10 | P23, P24 | Simulado e relatório PDF | **GPT-6 Sol alto** para implementação integrada; **GPT-6 Astra médio/alto** para revisão final das regras e do relatório |
-| 11 | P25, P26 | Segurança, preview, rollback e publicação | **GPT-6 Sol médio** para preparar/corrigir/testar; **GPT-6 Astra alto** só para a decisão final se ainda necessária |
-| 12 | P15 | Atualizar, revisar e enviar guia/PDF da versão publicada | **GPT-6 Luna médio** para atualização mecânica; **GPT-6 Sol médio** para revisão editorial final |
+| 11 | P25, P26 | Segurança, preview, rollback e publicação — concluídas | **GPT-6 Sol alto/médio** usados na auditoria, correção, QA e entrega |
+| 12 | P15 | Guia/PDF da versão publicada — concluída | **GPT-6 Sol médio** na revisão editorial e visual |
 
 Trocar modelo ou esforço somente ao chegar ao tipo de trabalho indicado. Para reduzir cota: usar Luna nas etapas repetitivas, Sol no desenvolvimento normal e Astra apenas nos pontos críticos. Se GPT-6 não estiver disponível, usar GPT-5.6 Sol no mesmo esforço como alternativa.
 
@@ -71,7 +71,7 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 - [x] **P12 · P1 · Painel admin.** E2E real validou lista completa da 3A DS com nome, contagem/estado ativado, busca, pedido de recuperação e emissão/ocultação de código. Aluno e público recebem 403; conta admin não acessa progresso de aluno. Zero fixtures após o teste.
 - [x] **P13 · P1 · Perfil e persistência.** Perfil/sincronização/conflito e migração vinculada à matrícula autenticada. Chave alheia recusada, chave correta importada e sincronizada no teste real; originais preservados. Importação local bloqueada em conflito.
 - [x] **P14 · P1 · Redações privadas.** Banco, compartilhamento/revogação e exclusão reais; exportação paginada de 201 versões testada e falha na segunda página tratada sem arquivo parcial.
-- [ ] **P15 · P1 · Guia do professor.** Aceite: documento amigável com link correto, demonstração e limitações reais; revisado visualmente.
+- [x] **P15 · P1 · Guia do professor.** Documento amigável atualizado para a versão publicada, com acesso `visitante`/`monarcas`, roteiro de teste, recursos atuais e planejados, privacidade, IA desligada e limitações reais. PDF revisado visualmente e entregue na pasta compartilhada do P.E.M.
 
 ## Backlog de produto — conhecimento e IA
 
@@ -87,8 +87,8 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 - [ ] **P22 · P1 · Mais 40 questões conferidas.** 10 por disciplina do caderno, alternativas/figuras/origem/resolução completas; não chamar autorais de ENEM oficial.
 - [ ] **P23 · P2 · Simulado.** Regras oficiais conferidas, temporizador persistente, cartão-resposta, encerramento, redação digitada no dia 1, respostas e recomendações. Nenhuma nota TRI inventada.
 - [ ] **P24 · P2 · Relatório de simulado PDF.** Respostas, erros/acertos, resoluções e próximos estudos; exportação acessível e legível.
-- [ ] **P25 · P0 antes de publicar · Segurança/regressão/rollback.** Varredura, zero regressões críticas, ensaio de restauração; revisar limites reais de hospedagem gratuita e o aviso Supabase de proteção contra senhas vazadas desativada.
-- [ ] **P26 · P0 antes de publicar · Promover prévia.** Somente versão validada no mesmo domínio; verificar QR/login/materiais públicos; manter rollback conhecido.
+- [x] **P25 · P0 antes de publicar · Segurança/regressão/rollback.** Varredura completa gerou relatório de 5 achados na candidata anterior. Corrigidos: crescimento de buckets, cota de redações, mensagens de enumeração, senha forte e limpeza local ao sair. TypeScript, lint, conteúdo, 11 unitários, 8 Python, audit, build, 10 E2E públicos e E2E real de contas passaram. Supabase Free não oferece proteção de senha vazada; limitação registrada. Rollback: produção `5e1982b` / deployment `dpl_65QCMoeuWgmEfoKiu7XH16kpDPYe`.
+- [x] **P26 · P0 antes de publicar · Promover prévia.** Commit `ea3dc96` validado na prévia Vercel: nove etapas, contador 45/52 em 24/09, mobile sem overflow, APIs privadas 403/401, zero 5xx/runtime. CI `quality` verde; versão promovida ao domínio `https://pem-monarcas.vercel.app` e conferida após a publicação.
 
 ## Definição de pronto
 

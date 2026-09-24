@@ -1,129 +1,119 @@
 P.E.M — PORTAL DE ESTUDOS MONÁRQUICOS
-Guia para conhecer o projeto, experimentar os recursos e acompanhar os próximos passos
+Guia do professor para conhecer, testar e avaliar o projeto
 MONARCAS · 3º A DS · Ordem da Fênix
-Atualizado em 22 de setembro de 2026
+Versão de 24 de setembro de 2026
 
-ANTES DA VISITA
+ACESSO RÁPIDO
 
 Site: https://pem-monarcas.vercel.app
-Este documento apresenta o projeto completo: a versão já publicada, a nova versão em validação e os próximos recursos planejados. A atualização visual ainda NÃO foi publicada. Por isso, algumas telas descritas abaixo ainda não aparecem no endereço público. Elas estão identificadas como “nova versão”. Não é necessário fornecer dados pessoais de alunos para conhecer a proposta.
+Forma recomendada: clique em “Explorar demonstração”.
+Acesso alternativo: matrícula visitante e senha monarcas.
 
-Acesso de demonstração da NOVA versão:
-Login: visitante
-Senha: monarcas
-Também será possível clicar em “Explorar demonstração”. Esse acesso é público e permite testar conteúdos e atividades sem abrir contas, anotações ou redações de alunos. Não é uma conta administrativa. Essas credenciais foram testadas na versão local; não apresentamos esse acesso como disponível na versão antiga do site.
+A demonstração é pública e não abre contas, anotações, redações ou dados pessoais dos alunos. O professor não precisa usar matrícula real. O acesso administrativo é separado e não faz parte da visita de avaliação.
 
-1. COMO TUDO COMEÇOU
+1. POR QUE O P.E.M EXISTE
 
-O P.E.M nasceu de uma ideia para a Ordem da Fênix: reunir o trabalho da turma e facilitar o compartilhamento de conhecimento. Monitorias, áudios, resumos e explicações não precisavam ficar esquecidos depois da entrega de um trabalho. Poderiam continuar ajudando outras pessoas a aprender.
+O P.E.M começou como uma ideia para a Ordem da Fênix: reunir o trabalho produzido pela turma e impedir que monitorias, áudios, resumos, explicações e aulas ficassem esquecidos depois de uma entrega. A ideia cresceu e se tornou uma plataforma real de apoio aos estudos para o ENEM.
 
-A ideia cresceu e virou uma plataforma de estudos. O objetivo é acolher especialmente quem olha para a quantidade de matérias e não sabe por onde começar. Na reta final do ENEM, quando faltam poucas semanas — aquela sensação de “faltam cerca de 40 dias e eu estou perdido” —, reunir materiais não basta. É preciso encontrar um próximo passo possível.
+O ponto de partida é uma situação comum: o estudante percebe que faltam poucas semanas para a prova, vê muitas disciplinas ao mesmo tempo e não sabe por onde começar. O portal transforma essa sensação em passos pequenos: escolher uma dúvida, entender uma explicação, praticar, conferir o raciocínio e registrar o que ainda precisa ser revisto.
 
-O portal propõe esse caminho: escolher uma dúvida, entender uma explicação, tentar uma questão, conferir o raciocínio e registrar o que ainda precisa ser revisto. A referência a 40 dias representa essa situação de reta final; o tempo real até as provas é mostrado pelo contador, e não por um número fixo no texto.
+O projeto valoriza o princípio “estudantes ensinando estudantes”. Ele organiza o conhecimento coletivo da turma, mas não substitui o professor, não promete aprovação e não apresenta autoavaliação como nota oficial.
 
-O P.E.M não promete aprovação nem substitui o professor. É uma iniciativa de estudantes para apoiar outros estudantes, valorizar o esforço coletivo e organizar uma rotina que caiba na realidade da turma.
+2. O QUE ESTÁ DISPONÍVEL NO SITE
 
-2. O QUE JÁ EXISTE NO CONTEÚDO DO PROJETO
+O conteúdo público reúne 46 explicações em 12 disciplinas, 52 questões autorais de revisão, 61 flashcards e 25 materiais da turma. A área ENEM contém nove etapas de fundamentos, 29 links de videoaulas e 15 questões selecionadas e conferidas a partir do caderno utilizado pela turma.
 
-O acervo público preservado reúne 46 explicações distribuídas em 12 disciplinas, 52 questões autorais de revisão, 61 flashcards e 25 materiais de monitoria. A área ENEM possui nove etapas de fundamentos, 29 links de videoaulas e 15 questões selecionadas e conferidas a partir do caderno utilizado pela turma.
+As questões autorais são identificadas como revisão do P.E.M. As questões provenientes do caderno mantêm sua referência. Resoluções e comentários escritos pelo portal não são apresentados como textos oficiais do Inep. Vídeos e materiais externos mantêm seus autores e links de origem.
 
-As questões autorais são identificadas como revisão do portal. As questões selecionadas do caderno mantêm suas referências; comentários e resoluções produzidos pelo portal não são apresentados como textos oficiais do Inep. Videoaulas e materiais externos mantêm os créditos dos autores e seus links de origem.
+3. PÁGINA INICIAL E NAVEGAÇÃO
 
-3. A NOVA APARÊNCIA E A PÁGINA INICIAL — NOVA VERSÃO
+A página inicial oferece três caminhos principais: estudar uma matéria, seguir a rota do ENEM ou trabalhar uma redação. Também mostra atividades já revisadas, permite continuar a última aula e oferece o download do progresso e das anotações.
 
-A identidade MONARCAS permanece no emblema, nas cores e no nome. A organização visual passa a separar melhor os caminhos de estudo e adaptar a navegação ao computador e ao celular.
+A navegação foi conferida em computador e celular. O menu reúne Início, Matérias, Questões, ENEM, Redação, Biblioteca, Tutor, Flashcards, Ordem da Fênix e, na demonstração, Visão do professor.
 
-A página inicial mostra as opções de começar por uma matéria, seguir a rota do ENEM ou trabalhar uma redação. Também exibe o progresso de etapas revisadas, permite continuar a última aula e oferece o download de anotações e progresso. A intenção é reduzir o tempo gasto procurando e aumentar o tempo realmente estudando.
+4. MATÉRIAS, QUESTÕES E FLASHCARDS
 
-4. MATÉRIAS E ANOTAÇÕES
+Em Matérias, o estudante escolhe uma disciplina e um assunto. Cada aula oferece explicação, exemplo, um cuidado sobre erro comum, uma questão de conferência, espaço para anotação e ligação com materiais da turma. A marca “Consigo explicar este assunto” é uma autoavaliação do aluno.
 
-O estudante escolhe a disciplina e o assunto. Encontra explicação, exemplo e uma atividade para verificar se entendeu. Pode escrever suas próprias anotações e marcar que consegue explicar aquele assunto.
+Em Questões, o estudante filtra matéria e assunto, escolhe uma alternativa e lê a explicação. O erro indica o que precisa ser retomado. Em Flashcards, a resposta fica escondida até o estudante tentar lembrar e só depois é revelada.
 
-Essa marcação é uma autoavaliação: não significa que um professor certificou o domínio do conteúdo. Ela ajuda o aluno a enxergar o que estudou e o que merece uma nova tentativa. Na nova versão, a opção “Continuar” leva à última aula registrada.
+5. BIBLIOTECA E ORDEM DA FÊNIX
 
-5. QUESTÕES E FLASHCARDS
+A Biblioteca reúne 19 áudios, cinco resumos visuais e uma aula gravada. Há busca, filtro por formato e marcação do material estudado. Os arquivos abrem nos serviços de origem e dependem das permissões desses serviços.
 
-Nas questões, o estudante filtra a disciplina, escolhe uma alternativa e confere a explicação. O erro serve como indicação do que retomar. Refazer a seleção permite praticar novamente.
+A seção Ordem da Fênix preserva a história do trabalho coletivo que deu origem ao portal e liga a plataforma aos registros públicos do projeto.
 
-Nos flashcards, a resposta fica escondida até que o aluno tente lembrar. Depois, ele revela a resposta e compara com o que pensou. É uma forma simples de transformar a revisão em uma atividade, em vez de apenas reler.
+6. ROTA DO ENEM E CONTADOR REAL
 
-6. BIBLIOTECA E ORDEM DA FÊNIX
+A rota organiza nove etapas de revisão. Cada etapa explica um fundamento, mostra um exemplo e sugere um próximo passo. As prioridades unem a ordem dos conteúdos encontrada nas capturas de organização com o mapa de incidência e progresso do Assad. Os percentuais de incidência são estimativas de apoio ao planejamento, não estatística oficial do Inep.
 
-A biblioteca reúne 19 áudios, cinco resumos visuais e uma aula gravada. Há busca e filtros para encontrar o material. Na nova versão, o aluno também pode marcar o que já estudou.
+O contador mostra separadamente o tempo até o primeiro e o segundo dia do ENEM 2026: 8 e 15 de novembro. O cálculo usa o calendário de Brasília, muda com a data real e permanece em zero depois de cada prova. O link do próprio contador leva à fonte do Inep.
 
-Os arquivos abrem nos serviços de origem, incluindo o Drive, e dependem das permissões desses arquivos. A seção Ordem da Fênix preserva a ligação com os registros do projeto e com o trabalho coletivo que deu origem à plataforma.
+O roteiro sugere ciclos de 40 minutos para escolher uma dúvida, estudar, praticar e anotar o que revisar. É uma orientação adaptável, não uma obrigação.
 
-7. ENEM: ROTEIRO, VÍDEOS, PRÁTICA E CONTADOR
+7. OFICINA DE REDAÇÃO
 
-O roteiro organiza fundamentos em nove etapas. Cada etapa apresenta uma explicação, um exemplo e uma orientação de estudo. O aluno pode registrar o que revisou.
+A oficina apresenta oito lições: leitura do tema, tese, planejamento dos parágrafos, desenvolvimento do argumento, uso do repertório, coesão, proposta de intervenção e revisão. A referência indicada é a Cartilha do Participante do Inep de 2026.
 
-As 29 videoaulas podem ser encontradas por assunto ou área. O portal preserva a autoria e oferece acesso ao vídeo de origem. As 15 questões conferidas permitem praticar e ler a resolução. O caderno de referência possui muitas outras questões, mas isso não significa que todas já estejam disponíveis como atividades corrigidas no site.
+Na demonstração, o professor pode escrever um texto fictício, salvar versões, reabrir, comparar, exportar e excluir. Esses dados ficam somente no navegador. Em contas pessoais, as redações são privadas no banco; o aluno pode compartilhar uma versão com outra conta autorizada e revogar o acesso.
 
-Na nova versão, há um contador real para o primeiro e o segundo dia do ENEM, tanto na página inicial quanto na área ENEM. Ele calcula os dias a partir da data atual no horário de Brasília, atualiza durante o uso e permanece em zero após a data. As datas configuradas são 8 e 15 de novembro de 2026, com ligação para a fonte do Inep. Não se trata de uma imagem com número fixo.
+O feedback por inteligência artificial continua desativado. O recurso planejado deverá citar trechos do próprio texto, apontar três prioridades de revisão e relacionar observações às cinco competências. Ele não apresentará uma nota como se fosse correção oficial.
 
-O roteiro sugere um ciclo de 40 minutos: escolher uma dúvida, estudar, praticar e anotar o que revisar. É uma sugestão de organização, não uma exigência. Prioridades podem ser adaptadas à dificuldade e ao tempo disponível de cada estudante.
+8. CONTAS, PERFIL, RECUPERAÇÃO E PRIVACIDADE
 
-8. OFICINA DE REDAÇÃO — NOVA VERSÃO
+A lista correta da turma contém 41 estudantes do 3º A DS. Cada conta usa matrícula, código individual de uso único e senha criada pelo próprio aluno. A senha precisa ter pelo menos 12 caracteres com letra maiúscula, minúscula, número e símbolo. A recuperação gera um novo código pelo responsável.
 
-A oficina reúne oito lições de orientação. O estudante pode informar o tema, escrever, salvar versões, reabrir um texto, comparar versões, baixar uma cópia e excluir o que não quiser manter. A comparação ajuda a perceber como o argumento e a organização mudaram durante a reescrita.
+O perfil permite escolher apelido e avatar. O progresso sincroniza com a conta e mantém uma cópia local para continuidade em falhas de rede. Ao sair, o aluno escolhe manter essa cópia ou apagá-la daquele navegador. Também pode exportar suas anotações antes da limpeza.
 
-Na demonstração, as versões ficam no navegador utilizado. Em contas pessoais habilitadas, a nova versão permite guardar redações no banco e compartilhar uma versão com outra conta autorizada, além de revogar esse compartilhamento. Esses fluxos foram testados com duas contas temporárias; a turma real ainda não foi cadastrada.
+Os dados são separados por conta no Supabase. Testes com usuários sintéticos reais confirmaram que um aluno não lê o progresso, perfil ou redações de outro. As contas de teste são apagadas ao final de cada execução.
 
-A correção por inteligência artificial está em desenvolvimento e permanece desativada. O projeto prevê comentários formativos relacionados às cinco competências do ENEM, com trechos do próprio texto e três prioridades para revisão. A referência da implementação é a cartilha do participante do Inep de 2026. O sistema não deve apresentar uma nota como se fosse uma avaliação oficial.
+9. ADMINISTRAÇÃO
 
-9. CONTA PESSOAL, PERFIL E PRIVACIDADE — NOVA VERSÃO
+Há duas identidades administrativas separadas, cada uma com login de aluno e login de administração independentes. Elas pertencem aos dois responsáveis indicados pelo projeto. O professor visitante não recebe esse acesso.
 
-Está implementado o fluxo de ativação com matrícula e código individual, criação de senha pessoal e solicitação de recuperação. O código tem prazo de validade e uso único. O perfil permite editar apelido e avatar.
+O painel permite consultar os 41 estudantes, buscar uma matrícula, ver o estado de ativação e os pedidos de recuperação e gerar ou ocultar códigos individuais. Alunos e visitantes recebem acesso negado. Revogar a ativação administrativa bloqueia o painel mesmo quando uma sessão antiga ainda existe.
 
-Há mecanismos de persistência de progresso e separação dos dados por conta. Redações privadas não são expostas na visita do professor. Os testes utilizaram contas fictícias no serviço real para verificar o acesso e o isolamento; isso não equivale ao cadastro definitivo dos 41 estudantes.
+Senhas e códigos individuais não aparecem neste guia nem ficam no repositório público. Cada titular deve ativar o próprio acesso e guardar sua senha.
 
-A implantação das contas da turma depende da lista correta e da definição do responsável. Até isso ocorrer, não se deve distribuir códigos reais nem anunciar que todos já podem ativar suas contas. Na demonstração, os dados ficam no navegador: limpar os dados desse navegador pode removê-los. O download permite guardar uma cópia.
+10. TUTOR COM IA E ACERVO EM PREPARAÇÃO
 
-10. ADMINISTRAÇÃO — NOVA VERSÃO
+O tutor foi desenhado para responder com base em fontes, indicar documento e página e reconhecer quando não houver material suficiente. Ele deverá complementar o estudo e incentivar a leitura da fonte.
 
-O painel administrativo já foi implementado e testado. Ele permite consultar a lista cadastrada, verificar o estado de ativação, acompanhar pedidos de recuperação e emitir códigos individuais. O código aparece para entrega ao destinatário e pode ser ocultado da tela.
+Foram inventariados 185 PDFs, com 1.868 páginas e 2.296 trechos extraídos. Isso não significa que todo o acervo esteja pronto para uso pela IA. A fila inicial apontou 323 páginas que precisavam de OCR ou revisão visual. Doze capas e divisórias já foram triadas e 25 páginas de Biologia passaram por OCR seletivo; a conferência pedagógica e visual continua.
 
-Somente uma conta com papel de administrador pode abrir esse painel. Alunos e visitantes não recebem esse acesso. Ainda falta designar o administrador real. O login público do professor não é administrador e não permite consultar informações pessoais da turma.
+Um piloto privado de dois documentos e seis trechos validou a estrutura de busca, mas ainda não representa o acervo inteiro. A IA permanece desligada na versão publicada até concluir curadoria, benchmark de fontes, defesa contra instruções maliciosas, limites de custo e testes de redação.
 
-11. TUTOR COM IA E ACERVO — EM DESENVOLVIMENTO
+11. O QUE AINDA SERÁ IMPLEMENTADO
 
-A proposta do tutor é responder dúvidas usando trechos de um acervo organizado, indicar as fontes e reconhecer quando não houver base suficiente. Ele deve complementar o estudo e incentivar a consulta ao material, sem substituir o trabalho do professor.
+O planejamento inclui concluir o mapa curricular e o OCR, revisar o acervo por lotes, criar um benchmark de pelo menos 30 perguntas, ativar o tutor somente com fontes confiáveis e validar o feedback formativo de redação.
 
-Foram processados 185 PDFs: 1.868 páginas e 2.296 trechos extraídos. Isso é uma etapa de preparação, não uma comprovação de que a IA domina todo esse material. Há 323 páginas sinalizadas para revisão visual ou reconhecimento de texto. Um primeiro lote de seis páginas de dois documentos foi revisado e indexado para testar a busca.
+Também estão previstas mais 40 questões conferidas, simulado com temporizador persistente, cartão-resposta e redação digitada no primeiro dia, além de relatório em PDF com respostas, resoluções e próximos estudos. O projeto não inventará nota TRI a partir de porcentagem de acertos.
 
-Os PDFs originais continuam fora do código público. O plano é ampliar o índice por lotes revisados, com identificação de documento e página, respeitando as condições de uso dos materiais. Não se trata de publicar todos os arquivos nem de treinar um modelo do zero.
+Esses itens são próximos passos e não devem ser avaliados como recursos já entregues. O tutor aparece no menu para apresentar a direção do projeto, mas chamadas de IA estão bloqueadas.
 
-O piloto já produziu resposta com fonte em um teste, mas também apresentou falhas em outras chamadas. Por isso, o tutor e o feedback automático de redação ainda não estão liberados. Antes da liberação, serão avaliadas perguntas com resposta conhecida, falta de fontes, referências incorretas, instruções maliciosas dentro de textos e limites de uso.
+12. ROTEIRO DE TESTE PARA O PROFESSOR
 
-12. O QUE ESTÁ PLANEJADO
+1) Abra https://pem-monarcas.vercel.app e clique em “Explorar demonstração”.
+2) Abra “Visão do professor” e leia a apresentação do projeto.
+3) Entre em Matérias, escolha um assunto, abra o exemplo e responda à questão.
+4) Escreva uma anotação fictícia, marque a etapa e recarregue a página.
+5) Abra Questões, filtre uma disciplina e confira a resolução depois de responder.
+6) Revele alguns Flashcards.
+7) No ENEM, confira os dois contadores, as nove etapas, videoaulas e questões.
+8) Em Redação, abra uma lição, escreva texto fictício, salve duas versões e compare.
+9) Exporte o texto e exclua uma versão de teste.
+10) Abra a Biblioteca e um material produzido pela turma.
+11) Volte ao Início, confira “Continuar” e baixe o progresso da demonstração.
+12) Saia da demonstração.
 
-O plano inclui completar o mapa curricular por matéria, assunto e pré-requisito; revisar os lotes do acervo; testar a busca com pelo menos 30 perguntas de referência; ampliar o banco com 40 questões conferidas; e liberar o tutor e o feedback de redação somente após validação.
+O professor pode avaliar clareza, linguagem, organização, facilidade de navegação, utilidade para quem está perdido e coerência entre explicação e prática. Não é necessário informar dados pessoais nem testar o painel administrativo.
 
-Também estão previstos simulados com temporizador persistente, cartão-resposta, encerramento e registro da redação. Um relatório em PDF deverá reunir respostas, erros, explicações e sugestões do que estudar em seguida. Não será inventada uma nota TRI a partir de uma simples porcentagem de acertos.
+13. TESTES E ESTADO DA ENTREGA
 
-Essas etapas fazem parte do planejamento e ainda não devem ser avaliadas como funcionalidades disponíveis. Não há data de entrega garantida neste documento. Estabilidade, privacidade e conteúdo conferido vêm antes da quantidade de recursos.
+A versão publicada passou por TypeScript, lint, verificação do conteúdo, build de produção, auditoria de dependências sem vulnerabilidades conhecidas, 11 testes unitários, oito testes do pipeline OCR e dez testes de navegador da demonstração. O cenário de contas reais sintéticas também passou, cobrindo ativação concorrente, expiração, senha forte, login de aluno e admin, perfil, sincronização, conflito, redações, compartilhamento, revogação, recuperação, desativação e isolamento por RLS.
 
-13. ROTEIRO DE VISITA PARA O PROFESSOR — APÓS A PUBLICAÇÃO DA NOVA VERSÃO
+A prévia na Vercel foi conferida visualmente em computador e celular. Não houve overflow, erro 5xx ou erro de runtime. APIs privadas e IA recusaram a demonstração. O banco recebeu limites para tentativas e redações, e o relatório de segurança foi concluído antes da publicação.
 
-1) Abra o site e entre por “Explorar demonstração”, ou use visitante / monarcas.
-2) Abra “Visão do professor” para conhecer a proposta.
-3) Entre em Matérias, escolha um assunto, leia o exemplo e responda à atividade.
-4) Escreva uma anotação de teste, marque a leitura e recarregue a página.
-5) Abra Questões, escolha uma disciplina e confira a resolução após responder.
-6) Experimente revelar uma resposta nos Flashcards.
-7) No ENEM, veja o contador, as etapas, as videoaulas e as questões.
-8) Na Redação, leia uma lição, escreva um texto fictício, salve duas versões e compare.
-9) Baixe uma versão e teste a exclusão de um rascunho que não precise guardar.
-10) Abra a Biblioteca e conheça um material produzido pela turma.
-11) Volte ao início, confira “Continuar” e baixe o progresso de demonstração.
-12) Saia da demonstração. Não é necessário testar com dados pessoais de estudantes.
+A proteção automática contra senhas vazadas do Supabase não está disponível no plano gratuito atual. Por isso, o P.E.M reforça a senha na própria ativação. Nenhum teste torna um sistema absolutamente livre de erros; esta versão representa a candidata estável verificada para a apresentação, com a IA deliberadamente desligada.
 
-O professor poderá avaliar clareza das explicações, qualidade das atividades, facilidade de navegação, adequação da linguagem e utilidade para quem está sem direção nos estudos. A demonstração não exibe o desempenho individual de alunos nem permite testar administração ou IA desativada.
-
-14. ESTADO DA ENTREGA
-
-Em 22/09/2026, a nova versão passou por build de produção, checagem de tipos, conferência do conteúdo, oito testes unitários e 11 testes de navegador, incluindo autenticação no serviço real com contas temporárias. O teste de IA ficou excluído da candidata estável porque o piloto ainda apresentou falhas. Testes reduzem riscos, mas não permitem afirmar que qualquer sistema é absolutamente livre de erros.
-
-O endereço público foi preservado na versão anterior enquanto a compatibilidade do acesso antigo, a prévia na hospedagem e a publicação não forem verificadas. Este guia deverá ter esta seção atualizada depois da confirmação pública da nova versão.
-
-O propósito continua o mesmo: fazer o conhecimento produzido pela turma permanecer útil, ajudar quem não sabe por onde começar e transformar uma dúvida em um próximo passo de estudo.
+O propósito permanece: conservar o conhecimento produzido pela turma, dar um ponto de partida a quem está sem direção e transformar uma dúvida em um próximo passo possível.

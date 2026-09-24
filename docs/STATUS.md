@@ -1,4 +1,13 @@
-# Estado atual — 23/09/2026
+# Estado atual — 24/09/2026
+## Publicação estável, segurança e guia
+- Nova versão publicada em `https://pem-monarcas.vercel.app`; rollback conhecido no commit `5e1982b` e deployment `dpl_65QCMoeuWgmEfoKiu7XH16kpDPYe`.
+- Release funcional `ea3dc96`: CI verde, prévia READY, QA desktop/mobile, zero 5xx/runtime, demo bloqueada em APIs privadas e IA.
+- Supabase atualizado com limpeza de rate limits, cota de 500 versões/5 MB de redações por aluno e índices de consulta. Teste transacional confirmou bloqueio da 501ª versão; migrações locais e remotas alinhadas.
+- Segurança: mensagens de login/compartilhamento uniformizadas, throttle de login e compartilhamento, senha forte no primeiro acesso e escolha para apagar a cópia local ao sair.
+- Regressão: tipos, lint, conteúdo, 11 unitários, 8 Python, audit, build, 10 E2E públicos e E2E real de contas aprovados. IA real continua desligada.
+- Guia final do professor revisado visualmente e entregue no Drive do P.E.M, com login de demonstração e roteiro completo. Kanban em 17/26.
+
+## Histórico de 23/09/2026
 ## P16 em andamento; prioridade de publicação movida para depois das funcionalidades
 Mapa privado de 22 capturas, 165 grupos e 183 PDFs: 146 vínculos diretos, 37 lacunas, ordem visível de estudo, 30 incidências diretas do gráfico do Assad (estimativas, não dados oficiais) e 11 tópicos suplementares do mapa de progresso. Há 29 referências suplementares a PDFs pendentes (26 propostas de Redação) e 8 sem referência. Pré-requisitos são propostas para validação. Relatório `MAPA-CURRICULAR.md`. P25/P26 permanecem bloqueio obrigatório antes de promover produção; P15 final acompanha a versão publicada. Kanban 14/26.
 P17 começou com fila privada e reproduzível de 323 páginas para revisão visual/OCR; 183 em Biologia. Ver `TRIAGEM-P17.md`.

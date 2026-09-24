@@ -1,4 +1,11 @@
-# Retomada exata — 23/09/2026
+# Retomada exata — 24/09/2026
+## Release estável concluído; próximo bloco P16/P17
+Produção atualizada em `https://pem-monarcas.vercel.app`. Release funcional `ea3dc96`, CI `quality` verde, prévia `dpl_BPFKVtXCvem8kozneRkH1mv1kADJ` conferida e rollback preservado em `5e1982b` / `dpl_65QCMoeuWgmEfoKiu7XH16kpDPYe`. P25/P26 e P15 concluídas; Kanban 17/26, nove abertas.
+
+Segurança e regressão: cinco achados da candidata anterior tratados em código/banco; duas migrações aplicadas. Tipos, lint, conteúdo, 11 unitários, 8 Python, audit zero, build, 10 E2E públicos e E2E real de contas passaram. Demo retorna 403/401 para admin/IA, sem 5xx/runtime. IA segue desligada. Supabase mantém 41 alunos reais, dois admins separados e zero fixtures.
+
+Guia final do professor atualizado com acesso `visitante` / `monarcas`, recursos atuais, limitações e roteiro de avaliação; PDF revisado e colocado na pasta compartilhada do P.E.M substituindo o TXT antigo. Próxima execução deve retomar P16/P17 sem reabrir a porta de publicação já concluída, salvo regressão comprovada.
+
 ## Foco vigente — P16/P17 antes do release gate
 Usuário decidiu aproveitar a cota avançando produto/acervo; P25/P26 continuam indispensáveis imediatamente antes de qualquer publicação e P15 final vem com a versão publicada. P16 parcial: script `scripts/build-curriculum.mjs` conferiu 22 capturas, 183 títulos, gráfico de incidência e mapa de progresso do Assad. Mapa privado fora do Git com 165 grupos na ordem visível de estudo, 146 vínculos diretos, 37 pendências, 30 incidências diretas atribuídas ao Assad (estimativas até ENEM 2025, não dados oficiais do Inep) e 11 tópicos suplementares de progresso. Há 29 PDFs com referência suplementar (26 propostas de Redação, 3 de Linguagens/História) e 8 sem referência. Trimestre da turma não se aplica; propostas e pré-requisitos aguardam validação. `docs/MAPA-CURRICULAR.md`. Kanban 14/26, 12 abertas; produção antiga preservada.
 P17, linha de base: `scripts/build-ocr-queue.mjs` gerou `../analise/acervo/extracted/ocr-queue.json` com 323 páginas sinalizadas, sem copiar texto; 183 eram de Biologia. `docs/TRIAGEM-P17.md`.
