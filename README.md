@@ -1,10 +1,10 @@
 # P.E.M — Monarcas
-## Nova versão em validação
-Esta branch migra para Next.js16/React19 e ainda NÃO foi publicada. Estado e retomada: CHECKPOINT.md e CONTEXTO.md. Guia completo: docs/GUIA-PROFESSOR.txt (upload Drive pendente de permissão).
+## Versão pública atual
+A migração para Next.js 16/React 19 está publicada em https://pem-monarcas.vercel.app. Estado e retomada: CHECKPOINT.md e CONTEXTO.md. O guia completo está em docs/GUIA-PROFESSOR.txt e o PDF final foi entregue na pasta compartilhada do P.E.M no Drive.
 
-Node22: npm ci; npm run dev (4180); npm run build e npm start para produção local. Configurar .env.local conforme .env.example, sem publicar segredos. IA off até passar piloto. Não substituir login legado antes de validar transição e contas da turma.
+Node 22: npm ci; npm run dev (4180); npm run build e npm start para produção local. Configurar .env.local conforme .env.example, sem publicar segredos. IA permanece desligada até passar curadoria e benchmark reais. O login novo e a transição do acesso legado foram validados antes da publicação.
 
-Validação: lint, typecheck, test, check:content, build e test:e2e. Contas reais: opt-in PEM_REAL_AUTH_TESTS=1 com fixtures removidas. IA real ainda não aprovada. Para publicar esta branch, usar Next.js e npm run build no projeto existente, com preview e rollback; a configuração Other abaixo pertence somente à versão antiga.
+Validação: lint, typecheck, test, check:content, build e test:e2e. Contas reais: opt-in PEM_REAL_AUTH_TESTS=1 com fixtures removidas. IA real ainda não aprovada. A produção usa o projeto Vercel existente com preview, CI obrigatório e rollback conhecido; a configuração Other abaixo pertence somente à versão antiga.
 
 ## Referência histórica da produção antiga
 

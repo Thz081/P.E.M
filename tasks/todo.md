@@ -30,9 +30,9 @@ Trocar modelo ou esforço somente ao chegar ao tipo de trabalho indicado. Para r
 
 1. P10 concluída: workflow executa lint, tipos, conteúdo, testes TS/Python, audit, build e E2E; proteção da main exige o check `quality` atualizado e vale para admin, sem force push/exclusão. CI de a8278cc e eae78c2 passaram; preview continua separado da produção. Detalhes em ../docs/CI.md.
 2. P11/P12 concluídas: E2E real passou para ativação/recuperação e painel. Admin listou 41 alunos reais + 2 fixtures temporárias, todas 3A DS com nome; estado, busca, pedido e código funcionaram. Aluno/público bloqueados e zero fixtures restantes. A ativação pessoal dos dois responsáveis continua operacional, pois cada titular deve escolher a senha. Quatro códigos privados iniciais expiram em 24/09 00h14 Brasília; outros 39 alunos ainda sem código.
-3. P13 corrigida: matrícula da conta autenticada é verificada no serviço legado; só a chave correspondente autoriza importação local. Teste real cobre chave errada/certa e persistência, com originais preservados. Produção permanece no baseline antigo.
-4. P04/P05/P06/P08 e revisão adicional UI concluídas. P07 também fechada após auditoria Astra médio, correção da lista admin na RLS e testes reais; detalhes no relatório P07. Nenhuma promoção de produção realizada.
-5. P15: PDF final do professor revisado localmente (7 páginas), atualizar após a publicação. Drive segue com bloqueio de escrita 403; não anunciar upload.
+3. P13 corrigida: matrícula da conta autenticada é verificada no serviço legado; só a chave correspondente autoriza importação local. Teste real cobre chave errada/certa e persistência, com originais preservados. A correção faz parte da versão publicada.
+4. P04/P05/P06/P08 e revisão adicional UI concluídas. P07 também fechada após auditoria, correção da lista admin na RLS e testes reais; detalhes no relatório P07. A versão aprovada foi promovida em 24/09.
+5. P15: guia final do professor com 9 páginas revisado visualmente e entregue no Drive. Ele substituiu o TXT antigo no mesmo arquivo, sem expor credenciais no nome.
 6. P18/P19/P20: lote de 2 documentos/6 trechos indexado. Filtro de fontes passou em tipos/lint/9 unitários/build/conteúdo, mas teste com IA real e feedback de redação pendentes. IA off. Último orçamento Cloudflare: 7200/8500 neurônios reservados em 23/09 UTC.
 7. P16/P17/P18 e P22–P24: currículo/curadoria/OCR, questões, simulado e relatório conforme critérios abaixo. Pode haver versão estável com IA desligada antes de concluir todo o backlog.
 
@@ -88,7 +88,7 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 - [ ] **P23 · P2 · Simulado.** Regras oficiais conferidas, temporizador persistente, cartão-resposta, encerramento, redação digitada no dia 1, respostas e recomendações. Nenhuma nota TRI inventada.
 - [ ] **P24 · P2 · Relatório de simulado PDF.** Respostas, erros/acertos, resoluções e próximos estudos; exportação acessível e legível.
 - [x] **P25 · P0 antes de publicar · Segurança/regressão/rollback.** Varredura completa gerou relatório de 5 achados na candidata anterior. Corrigidos: crescimento de buckets, cota de redações, mensagens de enumeração, senha forte e limpeza local ao sair. TypeScript, lint, conteúdo, 11 unitários, 8 Python, audit, build, 10 E2E públicos e E2E real de contas passaram. Supabase Free não oferece proteção de senha vazada; limitação registrada. Rollback: produção `5e1982b` / deployment `dpl_65QCMoeuWgmEfoKiu7XH16kpDPYe`.
-- [x] **P26 · P0 antes de publicar · Promover prévia.** Commit `ea3dc96` validado na prévia Vercel: nove etapas, contador 45/52 em 24/09, mobile sem overflow, APIs privadas 403/401, zero 5xx/runtime. CI `quality` verde; versão promovida ao domínio `https://pem-monarcas.vercel.app` e conferida após a publicação.
+- [x] **P26 · P0 antes de publicar · Promover prévia.** Release integrada em `2681d52` e publicada no deployment `dpl_5BrhyUHt6JgtFUFWe7GBRDQoubUs`: nove etapas, contador 45/52 em 24/09, mobile sem overflow, APIs privadas protegidas, zero 5xx/runtime. CI `quality` verde e suíte de navegador executada diretamente em `https://pem-monarcas.vercel.app`.
 
 ## Definição de pronto
 
