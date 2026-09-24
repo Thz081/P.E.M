@@ -1,7 +1,7 @@
 # Estado atual — 24/09/2026
 ## Publicação estável, segurança e guia
 - Nova versão publicada em `https://pem-monarcas.vercel.app`; rollback conhecido no commit `5e1982b` e deployment `dpl_65QCMoeuWgmEfoKiu7XH16kpDPYe`.
-- Release de produção `2681d52`, deployment `dpl_5BrhyUHt6JgtFUFWe7GBRDQoubUs`: CI verde, QA desktop/mobile e suíte de navegador no domínio oficial, zero 5xx/runtime, demo bloqueada em APIs privadas e IA.
+- Release inicial `2681d52` seguida da estabilização da PR #2: CI verde, QA desktop/mobile e suíte final 10/10 no domínio oficial, zero 5xx/runtime, demo bloqueada em APIs privadas e IA. A oficina de redação agora impede cliques antes da hidratação.
 - Supabase atualizado com limpeza de rate limits, cota de 500 versões/5 MB de redações por aluno e índices de consulta. Teste transacional confirmou bloqueio da 501ª versão; migrações locais e remotas alinhadas.
 - Segurança: mensagens de login/compartilhamento uniformizadas, throttle de login e compartilhamento, senha forte no primeiro acesso e escolha para apagar a cópia local ao sair.
 - Regressão: tipos, lint, conteúdo, 11 unitários, 8 Python, audit, build, 10 E2E públicos e E2E real de contas aprovados. IA real continua desligada.

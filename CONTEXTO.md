@@ -1,6 +1,6 @@
 # Retomada exata — 24/09/2026
 ## Release estável concluído; próximo bloco P16/P17
-Produção atualizada em `https://pem-monarcas.vercel.app`. Merge `2681d52934ddcd8e45a9efec9466885333a28008`, deployment `dpl_5BrhyUHt6JgtFUFWe7GBRDQoubUs` READY, CI `quality` verde e rollback preservado em `5e1982b` / `dpl_65QCMoeuWgmEfoKiu7XH16kpDPYe`. P25/P26 e P15 concluídas; Kanban 17/26, nove abertas.
+Produção atualizada em `https://pem-monarcas.vercel.app`. A release inicial `2681d52` e a estabilização posterior da PR #2 estão no `main`; CI `quality` verde, deploy READY e rollback preservado em `5e1982b` / `dpl_65QCMoeuWgmEfoKiu7XH16kpDPYe`. A suíte final no domínio oficial passou 10/10 testes públicos. P25/P26 e P15 concluídas; Kanban 17/26, nove abertas.
 
 Segurança e regressão: cinco achados da candidata anterior tratados em código/banco; duas migrações aplicadas. Tipos, lint, conteúdo, 11 unitários, 8 Python, audit zero, build, 10 E2E públicos e E2E real de contas passaram. Demo retorna 403/401 para admin/IA, sem 5xx/runtime. IA segue desligada. Supabase mantém 41 alunos reais, dois admins separados e zero fixtures.
 

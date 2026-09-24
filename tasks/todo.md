@@ -88,7 +88,7 @@ Sprint atual: **1 — base e experiência**, com preparação do Sprint 2. Atual
 - [ ] **P23 · P2 · Simulado.** Regras oficiais conferidas, temporizador persistente, cartão-resposta, encerramento, redação digitada no dia 1, respostas e recomendações. Nenhuma nota TRI inventada.
 - [ ] **P24 · P2 · Relatório de simulado PDF.** Respostas, erros/acertos, resoluções e próximos estudos; exportação acessível e legível.
 - [x] **P25 · P0 antes de publicar · Segurança/regressão/rollback.** Varredura completa gerou relatório de 5 achados na candidata anterior. Corrigidos: crescimento de buckets, cota de redações, mensagens de enumeração, senha forte e limpeza local ao sair. TypeScript, lint, conteúdo, 11 unitários, 8 Python, audit, build, 10 E2E públicos e E2E real de contas passaram. Supabase Free não oferece proteção de senha vazada; limitação registrada. Rollback: produção `5e1982b` / deployment `dpl_65QCMoeuWgmEfoKiu7XH16kpDPYe`.
-- [x] **P26 · P0 antes de publicar · Promover prévia.** Release integrada em `2681d52` e publicada no deployment `dpl_5BrhyUHt6JgtFUFWe7GBRDQoubUs`: nove etapas, contador 45/52 em 24/09, mobile sem overflow, APIs privadas protegidas, zero 5xx/runtime. CI `quality` verde e suíte de navegador executada diretamente em `https://pem-monarcas.vercel.app`.
+- [x] **P26 · P0 antes de publicar · Promover prévia.** Release inicial integrada em `2681d52`, seguida da estabilização da oficina de redação pela PR #2: nove etapas, contador 45/52 em 24/09, mobile sem overflow, APIs privadas protegidas, zero 5xx/runtime. CI `quality` verde e suíte final 10/10 executada diretamente em `https://pem-monarcas.vercel.app`.
 
 ## Definição de pronto
 
