@@ -1,11 +1,11 @@
 # Estado atual — 24/09/2026
 ## Publicação estável, segurança e guia
 - Nova versão publicada em `https://pem-monarcas.vercel.app`; rollback conhecido no commit `5e1982b` e deployment `dpl_65QCMoeuWgmEfoKiu7XH16kpDPYe`.
-- Release funcional `ea3dc96`: CI verde, prévia READY, QA desktop/mobile, zero 5xx/runtime, demo bloqueada em APIs privadas e IA.
+- Release de produção `2681d52`, deployment `dpl_5BrhyUHt6JgtFUFWe7GBRDQoubUs`: CI verde, QA desktop/mobile e suíte de navegador no domínio oficial, zero 5xx/runtime, demo bloqueada em APIs privadas e IA.
 - Supabase atualizado com limpeza de rate limits, cota de 500 versões/5 MB de redações por aluno e índices de consulta. Teste transacional confirmou bloqueio da 501ª versão; migrações locais e remotas alinhadas.
 - Segurança: mensagens de login/compartilhamento uniformizadas, throttle de login e compartilhamento, senha forte no primeiro acesso e escolha para apagar a cópia local ao sair.
 - Regressão: tipos, lint, conteúdo, 11 unitários, 8 Python, audit, build, 10 E2E públicos e E2E real de contas aprovados. IA real continua desligada.
-- Guia final do professor revisado visualmente e entregue no Drive do P.E.M, com login de demonstração e roteiro completo. Kanban em 17/26.
+- Guia final do professor com 9 páginas revisado visualmente e entregue no Drive do P.E.M, substituindo o TXT antigo no mesmo arquivo, com login de demonstração e roteiro completo. Kanban em 17/26.
 
 ## Histórico de 23/09/2026
 ## P16 em andamento; prioridade de publicação movida para depois das funcionalidades
