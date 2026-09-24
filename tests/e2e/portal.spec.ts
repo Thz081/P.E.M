@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test';
 test('demo: study, notes, questions, flashcards, ENEM and writing stay functional',async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
- await page.goto('/');await expect(page.getByRole('heading',{name:'Bom ter você aqui.'})).toBeVisible();
+ await page.goto('/');await expect(page.getByRole('heading',{name:'Bom ter você aqui.'})).toBeVisible();await expect(page.locator('.login-form-wrap>.seal')).toHaveText('P');await expect(page.locator('.login-form-wrap>.seal svg')).toHaveCount(0);
  await page.getByRole('link',{name:'Explorar demonstração'}).click();await expect(page.locator('.home-hero')).toBeVisible();
  await page.getByRole('link',{name:'Matérias',exact:true}).click();await expect(page.locator('.subject-tile')).toHaveCount(12);
  await page.getByRole('button',{name:/MATEMÁTICA|Matemática/}).click();await expect(page.locator('.lesson-list button')).toHaveCount(4);

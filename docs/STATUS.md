@@ -1,11 +1,21 @@
 # Estado atual — 24/09/2026
-## Publicação estável, segurança e guia
+## Corte confirmado — 24/09/2026 às 09:51 (Brasília)
+### Publicação estável, segurança e guia sem data
 - Nova versão publicada em `https://pem-monarcas.vercel.app`; rollback conhecido no commit `5e1982b` e deployment `dpl_65QCMoeuWgmEfoKiu7XH16kpDPYe`.
 - Release inicial `2681d52` seguida da estabilização da PR #2: CI verde, QA desktop/mobile e suíte final 10/10 no domínio oficial, zero 5xx/runtime, demo bloqueada em APIs privadas e IA. A oficina de redação agora impede cliques antes da hidratação.
 - Supabase atualizado com limpeza de rate limits, cota de 500 versões/5 MB de redações por aluno e índices de consulta. Teste transacional confirmou bloqueio da 501ª versão; migrações locais e remotas alinhadas.
 - Segurança: mensagens de login/compartilhamento uniformizadas, throttle de login e compartilhamento, senha forte no primeiro acesso e escolha para apagar a cópia local ao sair.
 - Regressão: tipos, lint, conteúdo, 11 unitários, 8 Python, audit, build, 10 E2E públicos e E2E real de contas aprovados. IA real continua desligada.
-- Guia final do professor com 9 páginas revisado visualmente e entregue no Drive do P.E.M, substituindo o TXT antigo no mesmo arquivo, com login de demonstração e roteiro completo. Kanban em 17/26.
+- Guia final do professor com 9 páginas revisado visualmente e entregue no Drive do P.E.M. Às 09:50, o PDF sem data na capa (355 KB) substituiu a versão datada no mesmo arquivo/ID, com login de demonstração e roteiro completo. Kanban em 17/26.
+
+### Próximo ciclo e pendências
+Restam P16–P24 (nove missões): mapa curricular; OCR retomável; curadoria/benchmark 30 perguntas; tutor; feedback de redação; fallback gratuito; 40 questões revisadas; simulado; relatório PDF. Ordem recomendada e critérios estão em `tasks/todo.md`. P17 parte de 311 páginas na fila (286 sem tentativa, 24 aguardam revisão visual e uma precisa de correção de fórmulas). Tutor/feedback não passaram por teste real; IA permanece desligada. Os dois administradores ainda precisam ativar pessoalmente seus logins separados. A verificação de senhas vazadas não existe no plano atual do Supabase.
+
+Quota reportada no corte: 6% na janela de 5 horas, 7% semanal. Modelo recomendado para o próximo trabalho repetitivo: GPT-6 Luna médio; Sol médio apenas para ambiguidades/depuração. Evitar lote amplo e chamadas pagas de IA neste ciclo.
+
+Pedido para o próximo ciclo: reposicionar o produto como plataforma ENEM; tirar do site identidade/narrativa da Ordem da Fênix e Taça, encerrar a visita guiada para professor e manter a demonstração de visitante. Auditar rotas, navegação, assets, dados e guias antes de remover e planejar migrações/backup. Expandir muito o conteúdo e resumos de cada matéria; remover/substituir a captura de WhatsApp incompleta (“resumo gráfico”) por material original ou autorizado. Não copiar Ferretto sem licença.
+
+As seções posteriores intituladas “Histórico” são registros de etapas anteriores; não representam pendências atuais quando divergirem deste bloco ou do Kanban.
 
 ## Histórico de 23/09/2026
 ## P16 em andamento; prioridade de publicação movida para depois das funcionalidades

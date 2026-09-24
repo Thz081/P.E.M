@@ -1,11 +1,26 @@
 # Quadro de trabalho — P.E.M
-## Estado atual — 23/09/2026
+## Estado atual — 24/09/2026, corte às 09:51 (Brasília)
 
 Contagem principal: 26 missões; **17 concluídas, 9 abertas**. P01–P15, P25 e P26 estão fechadas; P16–P24 permanecem abertas. Subetapas não entram nessa contagem. Só fechar uma missão quando todos os critérios abaixo tiverem evidência; implementação parcial não equivale a entrega.
 
-Atualização de entrega em 24/09: P25/P26 concluídas. A auditoria registrou cinco achados na candidata anterior; todos receberam correção ou controle explícito. Migrações de limite e índices foram aplicadas, CI `quality` passou, prévia Vercel READY foi conferida em desktop/mobile e o baseline `5e1982b` permaneceu disponível para rollback. P15 foi refeito como guia do professor da versão publicada e entregue na pasta compartilhada.
+Atualização de entrega em 24/09: P25/P26 concluídas. A auditoria registrou cinco achados na candidata anterior; todos receberam correção ou controle explícito. Migrações de limite e índices foram aplicadas, CI `quality` passou, produção Vercel READY foi conferida em desktop/mobile e o baseline `5e1982b` permaneceu disponível para rollback. P15 foi refeito como guia do professor da versão publicada e entregue na pasta compartilhada. Às 09:50, PDF revisado sem data na capa (9 páginas, 355 KB) substituiu o arquivo anterior no mesmo ID do Drive.
 
 Próximo foco: P16/P17. P16 gerou mapa privado de 22 capturas, 165 grupos e 183 PDFs; 146 vínculos diretos, 37 pendentes, ordem visível de estudo, 30 incidências diretas e 11 tópicos suplementares do mapa de progresso do Assad. Há 29 referências suplementares a PDFs pendentes, das quais 26 propostas de Redação. É estudo para ENEM, não trimestre da turma. Relatório em `../docs/MAPA-CURRICULAR.md`.
+
+### Plano recomendado — próxima semana
+0. Preparar o reposicionamento público do produto como plataforma de estudos para o ENEM: tirar do site a narrativa/identidade da Ordem da Fênix e a Taça, encerrar a visita guiada específica para professores e manter somente a demonstração de visitante para estudantes. Fazer inventário de rotas, navegação, textos, imagens, dados persistidos, testes, links e guia; não remover registros internos de auditoria nem apagar dados sem avaliar migração/backup.
+1. P16: revisar os 37 vínculos pendentes e organizar expansão por matéria, categorias e pré-requisitos com o mapa curricular/incidência ENEM; não fechar até aprovação pedagógica documentada.
+2. P17: continuar OCR por lotes retomáveis. Estado de partida: fila 311 páginas, 286 sem tentativa, 24 aguardando inspeção visual e uma precisa de correção de fórmulas. Conferir cada página, provar reexecução sem retrabalho e não publicar trechos privados.
+3. P18: ampliar significativamente assuntos e explicações/resumos por matéria; curar fontes permitidas, substituir o resumo gráfico que é uma captura incompleta do WhatsApp por conteúdo original ou fonte autorizada, criar e executar benchmark de 30 perguntas (meta mínima de 90%) e diagnosticar a falha 503 antes de aumentar uso de modelo. Ferretto é referência visual, não permissão para copiar.
+4. P19/P20: somente após P18, validar tutor com fontes, recusa sem fonte, conflito e injeção; feedback alinhado à rubrica Inep com evidências textuais e sem nota automática até calibração. IA fica desligada até os testes reais passarem.
+5. P22: conferir as 40 questões adicionais (10 por disciplina) com origem, imagens, alternativas e resolução. Pode avançar em paralelo quando a fonte do caderno estiver acessível e revisável.
+6. P23/P24: especificar regras de simulado e relatório PDF; implementar depois que critérios, conteúdo e acessibilidade estiverem definidos. P21 (fallback) só se houver provedor compatível e limite gratuito comprovado.
+
+### Pedido adicional — ampliar e melhorar o conteúdo educacional
+Na próxima semana, junto às missões de acervo, priorizar uma expansão substancial e revisada dos conteúdos de cada matéria: mais assuntos, explicações e resumos completos, ligados ao mapa curricular e à incidência do ENEM. Auditar links atuais e remover/substituir materiais incompletos ou de baixa qualidade, incluindo a captura de WhatsApp que hoje aparece como “resumo gráfico”. Preferir materiais originais do P.E.M. e fontes abertas/autorizadas, com referência clara; Ferretto pode inspirar o formato, mas imagens, resumos ou PDFs da plataforma só entram com permissão/licença. Não fechar P16/P18 sem validar conteúdo e fontes.
+
+Com 6% da janela de cinco horas e 7% semanal reportados pelo usuário, usar Luna médio em processamento e documentação; Sol médio apenas para casos ambíguos/depuração. Reservar Astra para um risco crítico que apareça. Não iniciar processamento em massa nem chamadas IA reais neste ciclo. É improvável fechar todas as nove missões abertas numa semana; OCR continua com centenas de páginas.
+Operação pendente que não altera a contagem 17/26: os dois responsáveis precisam ativar suas próprias contas separadas de aluno e administração e escolher senhas pessoais. Supabase Free não disponibiliza proteção contra senha vazada; senha forte é exigida pela aplicação.
 
 ### Prioridade e modelo recomendado
 
@@ -28,6 +43,7 @@ Use o modelo mais leve que mantenha o critério de qualidade. `GPT-6 Luna` atend
 
 Trocar modelo ou esforço somente ao chegar ao tipo de trabalho indicado. Para reduzir cota: usar Luna nas etapas repetitivas, Sol no desenvolvimento normal e Astra apenas nos pontos críticos. Se GPT-6 não estiver disponível, usar GPT-5.6 Sol no mesmo esforço como alternativa.
 
+### Notas de conclusão (estado vigente acima; notas abaixo são evidências históricas)
 1. P10 concluída: workflow executa lint, tipos, conteúdo, testes TS/Python, audit, build e E2E; proteção da main exige o check `quality` atualizado e vale para admin, sem force push/exclusão. CI de a8278cc e eae78c2 passaram; preview continua separado da produção. Detalhes em ../docs/CI.md.
 2. P11/P12 concluídas: E2E real passou para ativação/recuperação e painel. Admin listou 41 alunos reais + 2 fixtures temporárias, todas 3A DS com nome; estado, busca, pedido e código funcionaram. Aluno/público bloqueados e zero fixtures restantes. A ativação pessoal dos dois responsáveis continua operacional, pois cada titular deve escolher a senha. Quatro códigos privados iniciais expiram em 24/09 00h14 Brasília; outros 39 alunos ainda sem código.
 3. P13 corrigida: matrícula da conta autenticada é verificada no serviço legado; só a chave correspondente autoriza importação local. Teste real cobre chave errada/certa e persistência, com originais preservados. A correção faz parte da versão publicada.
